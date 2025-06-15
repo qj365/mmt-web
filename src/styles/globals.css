@@ -1,0 +1,124 @@
+@import 'tailwindcss/preflight';
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-rgb: 255, 255, 255;
+    --main-color: #338dcc;
+    --red-color: #e30016;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background-color: rgb(var(--background-rgb));
+    font-family: var(--font-inter), sans-serif;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section spacing */
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+}
+
+/* Typography */
+.block-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn-1 {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.btn-1:hover {
+    background-color: var(--red-color);
+}
+
+/* Images */
+.zoom-img {
+    overflow: hidden;
+}
+
+.zoom-img img {
+    transition: transform 0.6s ease;
+}
+
+.zoom-img:hover img {
+    transform: scale(1.1);
+}
+
+/* Header */
+.header {
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Swiper customizations */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--main-color);
+}
+
+/* Text colors */
+.text-main {
+    color: var(--main-color);
+}
+
+.text-red {
+    color: var(--red-color);
+}
+
+.bg-red {
+    background-color: var(--red-color);
+}
+
+/* Hover colors */
+.group-hover\:text-red:group-hover {
+    color: var(--red-color);
+}
+
+.hover\:text-red:hover {
+    color: var(--red-color);
+}

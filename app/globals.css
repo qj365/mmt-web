@@ -1,26 +1,131 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'tailwindcss/utilities';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
+    --color-primary: #338dcc;
+    --color-secondary: #ea222d;
+    --color-accent: #56c1f9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+    body {
+        background: var(--background);
+        color: var(--foreground);
+        font-family: Arial, Helvetica, sans-serif;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer utilities {
+    .section {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    @media (min-width: 768px) {
+        .section {
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .section {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    }
+
+    .container {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .block-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        position: relative;
+    }
+
+    @media (min-width: 768px) {
+        .block-title {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .block-title {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-radius: 9999px;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+        font-weight: 500;
+    }
+
+    .btn-1 {
+        background-color: #ea222d;
+        color: white;
+    }
+
+    .btn-1:hover {
+        background-color: #d41e28;
+    }
+
+    .zoom-img {
+        overflow: hidden;
+    }
+
+    .zoom-img img {
+        transition-property: transform;
+        transition-duration: 500ms;
+    }
+
+    .zoom-img img:hover {
+        transform: scale(1.1);
+    }
+
+    .responsive-video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.section-grey {
+    background-color: #f5f5f5;
+}
+
+.homepage .text-red {
+    color: #ea222d;
+}
+
+.homepage .bg-red {
+    background-color: #ea222d;
+}
+
+.homepage .text-main {
+    color: #338dcc;
+}
+
+.rounded-3xl {
+    border-radius: 1.5rem;
 }

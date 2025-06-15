@@ -1,0 +1,119 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+
+export default function Footer() {
+    return (
+        <footer className="text-white bg-[#338dcc]">
+            <div className="footer-1 section xl:pb-16">
+                <div className="container">
+                    <div className="top-title text-white text-xl leading-normal mb-7">
+                        Thông tin liên hệ
+                    </div>
+                    <div className="flex flex-wrap gap-x-[30px] gap-y-[30px]">
+                        <div className="item w-full sm:w-[calc(50%-15px)] lg:w-[calc(33.3333%-20px)]">
+                            <div className="wrapper">
+                                <div className="title text-fs18px uppercase leading-normal font-bold mb-6">
+                                    Tổng Công ty Cổ phần Dệt may Hoà Thọ
+                                </div>
+                                <div className="content">
+                                    <p>
+                                        Địa chỉ: 36 Ông Ích Đường, Phường Hòa
+                                        Thọ Đông, Quận Cẩm Lệ, Đà Nẵng, Việt
+                                        Nam.
+                                    </p>
+                                    <br />
+                                    <p>
+                                        Email:{' '}
+                                        <a href="mailto:office@hoatho.com.vn">
+                                            office@hoatho.com.vn
+                                        </a>
+                                    </p>
+                                    <p>
+                                        Tel:{' '}
+                                        <a href="tel:(+84) 2363 846 290">
+                                            (+84) 2363 846 290
+                                        </a>
+                                    </p>
+                                    <p>
+                                        Fax:{' '}
+                                        <a href="fax:(+84) 2363 846 216">
+                                            (+84) 2363 846 216
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="item w-full sm:w-[calc(50%-15px)] lg:w-[calc(33.3333%-20px)]">
+                            <div className="wrapper">
+                                <div className="title text-fs18px uppercase leading-normal font-bold mb-6">
+                                    Chứng nhận
+                                </div>
+                                <div className="image-wrapper grid grid-cols-5 gap-x-[15px]">
+                                    <div className="img">
+                                        <Image
+                                            src="/images/footer/i-1.png"
+                                            alt="Certification"
+                                            width={60}
+                                            height={60}
+                                            className="lozad"
+                                        />
+                                    </div>
+                                    <div className="img">
+                                        <Image
+                                            src="/images/footer/i-3.png"
+                                            alt="Certification"
+                                            width={60}
+                                            height={60}
+                                            className="lozad"
+                                        />
+                                    </div>
+                                    <div className="img">
+                                        <Image
+                                            src="/images/footer/i-4.png"
+                                            alt="Certification"
+                                            width={60}
+                                            height={60}
+                                            className="lozad"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="wrapper">
+                                <div className="title text-fs18px uppercase leading-normal font-bold mb-6">
+                                    <Link
+                                        href="/media/hoa-tho-textile---garment-joint-stock-corporation-profile.pdf"
+                                        target="_blank"
+                                    >
+                                        Tải Brochure
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="item w-full lg:w-[calc(33.3333%-20px)]">
+                            <div className="iframe !w-full h-[256px] rounded-[20px] overflow-hidden">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d958.7195267909299!2d108.2019516325409!3d16.019859584145987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421988058f36a1%3A0xf8adf44d71cae063!2zMzYgw5RuZyDDjWNoIMSQLiwgS2h1w6ogVHJ1bmcsIEPhuqltIEzhu4csIMSQw6AgTuG6tW5nIDU1MDAwMA!5e0!3m2!1svi!2s!4v1651653674352!5m2!1svi!2s"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="footer-2 bg-[#56c1f9] py-4 sm:py-[22px]">
+                <div className="container">
+                    <div className="title text-center text-xs sm:text-sm leading-4 font-normal">
+                        © {new Date().getFullYear()} Tổng Công ty Cổ phần Dệt
+                        may Hoà Thọ. Thiết kế web bởi Cánh Cam.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}
