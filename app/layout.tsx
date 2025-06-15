@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Bai_Jamjuree } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter',
+const baiJamjuree = Bai_Jamjuree({
+    subsets: ['latin', 'thai', 'vietnamese', 'latin-ext'],
+    weight: ['200', '300', '400', '500', '600', '700'],
+    variable: '--font-bai-jamjuree',
 });
 
 export const metadata: Metadata = {
@@ -43,7 +44,7 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${inter.variable} canhcam homepage section-grey vi-vn`}
+                className={`${baiJamjuree.variable} canhcam homepage section-grey vi-vn`}
             >
                 {children}
             </body>

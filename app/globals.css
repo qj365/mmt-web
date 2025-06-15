@@ -13,7 +13,7 @@
     body {
         background: var(--background);
         color: var(--foreground);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--font-bai-jamjuree), system-ui, sans-serif;
     }
 }
 
@@ -112,18 +112,6 @@
 
 .section-grey {
     background-color: #f5f5f5;
-}
-
-.homepage .text-red {
-    color: #ea222d;
-}
-
-.homepage .bg-red {
-    background-color: #ea222d;
-}
-
-.homepage .text-main {
-    color: #338dcc;
 }
 
 .rounded-3xl {

@@ -7,37 +7,37 @@ import Link from 'next/link';
 // Stats data
 const stats = [
     {
-        icon: 'https://picsum.photos/100/100',
+        icon: '/images/home/introduce-1.png',
         number: 20.5,
         unit: 'HA',
         text: 'Tổng diện tích',
     },
     {
-        icon: 'https://picsum.photos/101/101',
+        icon: '/images/home/introduce-2.png',
         number: 11300,
         unit: '',
         text: 'Thiết bị may mặc',
     },
     {
-        icon: 'https://picsum.photos/102/102',
+        icon: '/images/home/introduce-3.png',
         number: 11230,
         unit: '',
         text: 'Nhân sự',
     },
     {
-        icon: 'https://picsum.photos/103/103',
+        icon: '/images/home/introduce-4.png',
         number: 26.6,
         unit: 'Triệu',
         text: 'Sản phẩm may/năm',
     },
     {
-        icon: 'https://picsum.photos/104/104',
+        icon: '/images/home/introduce-5.png',
         number: 73600,
         unit: '',
         text: 'Cọc sợi',
     },
     {
-        icon: 'https://picsum.photos/105/105',
+        icon: '/images/home/introduce-6.png',
         number: 18200,
         unit: '',
         text: 'Tấn sợi/ năm',
@@ -93,11 +93,17 @@ export default function IntroSection() {
     return (
         <section
             className="index-1 section bg-white xl:pb-[80px]"
-            style={{ backgroundColor: '#f5f5f5' }}
+            style={{
+                backgroundColor: '#f5f5f5',
+                backgroundImage: 'url(/images/home/background.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+            }}
         >
             <div className="container">
                 <h2 className="block-title text-black text-center">
-                    Giới thiệu
+                    GIỚI THIỆU
                 </h2>
                 <div className="des text-center mx-auto leading-6 text-[18px] max-w-[1050px] w-full font-medium mt-5">
                     Không chỉ là một hệ thống cung ứng Sợi - May hàng đầu Việt
@@ -113,7 +119,7 @@ export default function IntroSection() {
                             className="icon text-center flex flex-col group"
                         >
                             <div
-                                className="img relative group-hover:bg-red transition-all flex items-center rounded-full mx-auto border-white justify-center w-[100px] sm:w-[130px] shadow-[3px_4px_50px_rgba(0,0,0,0.1)]"
+                                className="img relative bg-primary group-hover:bg-red transition-all flex items-center rounded-full mx-auto border-white justify-center w-[100px] sm:w-[130px] shadow-[3px_4px_50px_rgba(0,0,0,0.1)]"
                                 style={{ aspectRatio: '1/1' }}
                             >
                                 <Image
@@ -124,7 +130,7 @@ export default function IntroSection() {
                                     loading="lazy"
                                 />
                             </div>
-                            <div className="block-title no-border flex flex-col group-hover:text-red transition-all flex-1 text-[#338dcc] uppercase mt-4">
+                            <div className="block-title no-border flex flex-col group-hover:text-red transition-all flex-1 text-[var(--color-primary)] uppercase mt-4">
                                 <span
                                     className="number counter"
                                     data-target={stat.number}

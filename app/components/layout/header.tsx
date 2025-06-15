@@ -124,7 +124,7 @@ export default function Header() {
 
     return (
         <header>
-            <div className="container w-full h-full xl:block flex items-center w-full">
+            <div className="container w-full h-full xl:block flex items-center">
                 <div className="header-wrapper flex items-center relative w-full h-full xl:justify-start justify-between">
                     {/* Mobile burger menu */}
                     <div
@@ -142,7 +142,7 @@ export default function Header() {
                     <div className="logo absolute xl:static -translate-x-1/2 xl:translate-x-0 left-1/2 top-0">
                         <Link href="/">
                             <Image
-                                src="/images/logo.png"
+                                src="/images/home/logo.png"
                                 alt="Dệt may Hoà Thọ"
                                 width={180}
                                 height={80}
