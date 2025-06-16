@@ -26,21 +26,26 @@ export default function BrandsSection() {
         <section className="index-5 section pb-0">
             <div className="container">
                 <h2 className="block-title text-center text-black">
-                    Thương hiệu trực thuộc
+                    THƯƠNG HIỆU TRỰC THUỘC
                 </h2>
                 <div className="button mt-7 mb-11">
                     <Link
-                        className="btn btn-1 mx-auto block w-fit"
-                        href="/nha-may-thuong-hieu/thuong-hieu-truc-thuoc"
+                        href="/gioi-thieu/tong-quan"
+                        className="mx-auto mt-7 w-fit block border-2 border-primary rounded-3xl text-primary text-[16px] font-semibold px-[30px] py-2 hover:bg-secondary hover:text-white hover:border-secondary transition-all"
                     >
-                        Xem thêm
+                        XEM THÊM
                     </Link>
                 </div>
             </div>
 
             <div
                 className="icon-wrapper flex items-center px-7 flex-col sm:flex-row justify-center w-full sm:gap-x-12 md:gap-x-[115px] gap-y-12 py-12 sm:py-0 sm:h-[60vh] 2xl:h-[570px]"
-                style={{ backgroundColor: '#f0f0f0' }}
+                style={{
+                    backgroundColor: '#f0f0f0',
+                    backgroundImage: 'url(/images/home/brand-bg.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
             >
                 {brands.map((brand, index) => (
                     <div

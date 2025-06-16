@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 const awards = [
@@ -19,123 +18,51 @@ const awards = [
 ];
 
 export default function AwardsSection() {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const totalSlides = awards.length;
-    const swiperRef = useRef<HTMLDivElement>(null);
-
-    // Simple swiper implementation with auto-rotation
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentSlide(prev => (prev + 1) % totalSlides);
-        }, 5000);
-
-        return () => clearInterval(interval);
-    }, [totalSlides]);
-
-    const goToSlide = (index: number) => {
-        setCurrentSlide(index);
-    };
-
-    const goToPrevSlide = () => {
-        setCurrentSlide(prev => (prev - 1 + totalSlides) % totalSlides);
-    };
-
-    const goToNextSlide = () => {
-        setCurrentSlide(prev => (prev + 1) % totalSlides);
-    };
-
     return (
-        <section className="index-6 section pb-0">
+        <section className="awards-section py-16">
             <div className="container">
-                <h2 className="block-title text-center">
-                    Thành tích - Giải thưởng
+                <h2 className="block-title text-center text-black mb-12">
+                    THÀNH TÍCH - GIẢI THƯỞNG
                 </h2>
             </div>
 
             <div
-                className="index-6-bg mt-10"
-                style={{ backgroundColor: '#e5e5e5' }}
+                className="awards-bg"
+                style={{
+                    backgroundImage: 'url(/images/home/award-bg.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
             >
                 <div className="container">
-                    <div className="index-6-slide relative section xl:pt-[85px] xl:pb-[95px]">
-                        <div ref={swiperRef} className="swiper">
-                            <div className="swiper-wrapper flex justify-center">
-                                {awards.map((award, index) => (
-                                    <div
-                                        key={index}
-                                        className={`swiper-slide transition-opacity duration-500 ${
-                                            currentSlide === index
-                                                ? 'opacity-100'
-                                                : 'opacity-0 absolute'
-                                        }`}
-                                        style={{
-                                            display:
-                                                currentSlide === index
-                                                    ? 'block'
-                                                    : 'none',
-                                            maxWidth: '350px',
-                                            margin: '0 auto',
-                                        }}
-                                    >
-                                        <div
-                                            className="item rounded-full bg-white flex flex-col"
-                                            style={{
-                                                aspectRatio: '1/1',
-                                                padding: '20px',
-                                            }}
-                                        >
-                                            <div className="logo">
-                                                <div className="img border-b-2 text-center border-dashed border-b-[#ccc] pb-7 pt-8 xl:pt-14 mb-6">
-                                                    <Image
-                                                        className="mx-auto h-[150px] sm:h-[100px] md:h-[170px] object-contain"
-                                                        src={award.image}
-                                                        alt={award.title}
-                                                        width={170}
-                                                        height={170}
-                                                        loading="lazy"
-                                                    />
-                                                </div>
+                    <div className="relative section py-16 lg:py-24">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                            {awards.map((award, index) => (
+                                <div
+                                    key={index}
+                                    className="award-item flex flex-col items-center"
+                                >
+                                    <div className="relative w-full max-w-[380px]">
+                                        <div className="rounded-full bg-white overflow-hidden w-full aspect-square flex flex-col items-center justify-center p-6">
+                                            <div className="flex-1 flex items-center justify-center w-full">
+                                                <Image
+                                                    className="object-contain max-h-[150px]"
+                                                    src={award.image}
+                                                    alt={award.title}
+                                                    width={200}
+                                                    height={200}
+                                                    loading="lazy"
+                                                />
                                             </div>
-                                            <div className="title max-w-[90%] sm:max-w-[195px] xl:max-w-[220px] mx-auto w-full text-black text-[18px] font-medium leading-6 text-center flex-1">
-                                                <p className="line-clamp-3">
+
+                                            <div className="text-center mt-8">
+                                                <p className="text-md font-medium text-black leading-tight mb-8">
                                                     {award.title}
                                                 </p>
                                             </div>
                                         </div>
-                                        <div className="shadow-img mt-11 text-center">
-                                            <div className="h-[30px] bg-black opacity-10 w-[80%] mx-auto rounded-full"></div>
-                                        </div>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="arrow-button">
-                            <div
-                                className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 cursor-pointer bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md"
-                                onClick={goToPrevSlide}
-                            >
-                                <span className="text-2xl">&lt;</span>
-                            </div>
-                            <div
-                                className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md"
-                                onClick={goToNextSlide}
-                            >
-                                <span className="text-2xl">&gt;</span>
-                            </div>
-                        </div>
-
-                        <div className="swiper-pagination flex justify-center gap-2 mt-6">
-                            {awards.map((_, index) => (
-                                <span
-                                    key={index}
-                                    className={`inline-block w-3 h-3 rounded-full cursor-pointer ${
-                                        currentSlide === index
-                                            ? 'bg-gray-800'
-                                            : 'bg-gray-300'
-                                    }`}
-                                    onClick={() => goToSlide(index)}
-                                />
+                                </div>
                             ))}
                         </div>
                     </div>

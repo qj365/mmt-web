@@ -17,6 +17,12 @@
     }
 }
 
+@theme {
+    --color-primary: #338dcc;
+    --color-secondary: #ea222d;
+    --color-accent: #56c1f9;
+}
+
 @layer utilities {
     .section {
         padding-top: 2.5rem;

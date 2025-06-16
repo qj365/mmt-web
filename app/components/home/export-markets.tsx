@@ -14,13 +14,13 @@ export default function ExportMarkets() {
         <section className="index-3 section pb-0">
             <div className="container">
                 <h2 className="block-title text-black text-center">
-                    Thị trường xuất khẩu
+                    THỊ TRƯỜNG XUẤT KHẨU
                 </h2>
             </div>
             <div className="image mt-7 cursor-pointer" onClick={handleMapClick}>
                 <div className="relative h-[400px] w-full">
                     <Image
-                        src="https://picsum.photos/1200/600"
+                        src="/images/home/global.gif"
                         alt="Thị trường xuất khẩu"
                         fill
                         className="object-cover"

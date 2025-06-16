@@ -25,7 +25,7 @@ export default function ProductsSection() {
     return (
         <section className="index-4 section pb-5">
             <div className="container">
-                <h2 className="block-title text-black text-center">Sản phẩm</h2>
+                <h2 className="block-title text-black text-center">SẢN PHẨM</h2>
                 <div className="index-4-grid grid grid-cols-1 sm:grid-cols-3 gap-[30px] mt-9">
                     {productCategories.map((category, index) => (
                         <div

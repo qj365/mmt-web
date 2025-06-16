@@ -119,7 +119,7 @@ export default function IntroSection() {
                             className="icon text-center flex flex-col group"
                         >
                             <div
-                                className="img relative bg-primary group-hover:bg-red transition-all flex items-center rounded-full mx-auto border-white justify-center w-[100px] sm:w-[130px] shadow-[3px_4px_50px_rgba(0,0,0,0.1)]"
+                                className="img relative bg-primary group-hover:bg-secondary transition-all flex items-center rounded-full mx-auto border-white justify-center w-[100px] sm:w-[130px] shadow-[3px_4px_50px_rgba(0,0,0,0.1)]"
                                 style={{ aspectRatio: '1/1' }}
                             >
                                 <Image
@@ -130,7 +130,7 @@ export default function IntroSection() {
                                     loading="lazy"
                                 />
                             </div>
-                            <div className="block-title no-border flex flex-col group-hover:text-red transition-all flex-1 text-[var(--color-primary)] uppercase mt-4">
+                            <div className="block-title no-border flex flex-col group-hover:text-secondary transition-all flex-1 text-primary uppercase mt-4">
                                 <span
                                     className="number counter"
                                     data-target={stat.number}
@@ -150,12 +150,12 @@ export default function IntroSection() {
                     ))}
                 </div>
 
-                <div className="button">
+                <div className="button w-full text-center">
                     <Link
                         href="/gioi-thieu/tong-quan"
-                        className="btn btn-1 mx-auto mt-7 block w-fit"
+                        className="mx-auto mt-7 w-fit block border-2 border-primary rounded-3xl text-primary text-[16px] font-semibold px-[30px] py-2 hover:bg-secondary hover:text-white hover:border-secondary transition-all"
                     >
-                        Xem thêm
+                        XEM THÊM
                     </Link>
                 </div>
             </div>

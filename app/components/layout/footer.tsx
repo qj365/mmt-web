@@ -14,7 +14,7 @@ export default function Footer() {
                     <div className="flex flex-wrap gap-x-[30px] gap-y-[30px]">
                         <div className="item w-full sm:w-[calc(50%-15px)] lg:w-[calc(33.3333%-20px)]">
                             <div className="wrapper">
-                                <div className="title text-fs18px uppercase leading-normal font-bold mb-6">
+                                <div className="title text-lg uppercase leading-normal font-bold mb-6">
                                     Tổng Công ty Cổ phần Dệt may Hoà Thọ
                                 </div>
                                 <div className="content">
@@ -47,45 +47,39 @@ export default function Footer() {
                         </div>
                         <div className="item w-full sm:w-[calc(50%-15px)] lg:w-[calc(33.3333%-20px)]">
                             <div className="wrapper">
-                                <div className="title text-fs18px uppercase leading-normal font-bold mb-6">
+                                <div className="title text-lg uppercase leading-normal font-bold mb-6">
                                     Chứng nhận
                                 </div>
                                 <div className="image-wrapper grid grid-cols-5 gap-x-[15px]">
-                                    <div className="img">
+                                    <div className="flex justify-center relative w-16 h-16">
                                         <Image
                                             src="/images/footer/i-1.png"
                                             alt="Certification"
-                                            width={60}
-                                            height={60}
-                                            className="lozad"
+                                            fill
+                                            className="object-contain"
                                         />
                                     </div>
-                                    <div className="img">
+                                    <div className="flex justify-center relative">
+                                        <Image
+                                            src="/images/footer/i-2.png"
+                                            alt="Certification"
+                                            layout="fill"
+                                            objectFit="contain"
+                                        />
+                                    </div>
+                                    <div className="flex justify-center relative">
                                         <Image
                                             src="/images/footer/i-3.png"
                                             alt="Certification"
-                                            width={60}
-                                            height={60}
-                                            className="lozad"
-                                        />
-                                    </div>
-                                    <div className="img">
-                                        <Image
-                                            src="/images/footer/i-4.png"
-                                            alt="Certification"
-                                            width={60}
-                                            height={60}
-                                            className="lozad"
+                                            layout="fill"
+                                            objectFit="contain"
                                         />
                                     </div>
                                 </div>
                             </div>
                             <div className="wrapper">
-                                <div className="title text-fs18px uppercase leading-normal font-bold mb-6">
-                                    <Link
-                                        href="/media/hoa-tho-textile---garment-joint-stock-corporation-profile.pdf"
-                                        target="_blank"
-                                    >
+                                <div className="title text-fs18px uppercase leading-normal font-bold mt-6">
+                                    <Link href="" target="_blank">
                                         Tải Brochure
                                     </Link>
                                 </div>
@@ -110,7 +104,7 @@ export default function Footer() {
                 <div className="container">
                     <div className="title text-center text-xs sm:text-sm leading-4 font-normal">
                         © {new Date().getFullYear()} Tổng Công ty Cổ phần Dệt
-                        may Hoà Thọ. Thiết kế web bởi Cánh Cam.
+                        may Hoà Thọ.
                     </div>
                 </div>
             </div>
