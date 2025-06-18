@@ -51,6 +51,14 @@
         padding-right: 1rem;
     }
 
+    @media (min-width: 1280px) {
+        .container {
+            max-width: 1920px;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+
     .block-title {
         font-size: 1.5rem;
         line-height: 2rem;
