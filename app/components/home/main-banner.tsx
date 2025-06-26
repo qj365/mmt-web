@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,6 +11,36 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export default function MainBanner() {
+    const [viewportHeight, setViewportHeight] = useState(0);
+    const [headerHeight, setHeaderHeight] = useState(0);
+
+    useEffect(() => {
+        // Get viewport height
+        const updateViewportHeight = () => {
+            setViewportHeight(window.innerHeight);
+
+            // Get header height
+            const header = document.querySelector('header');
+            if (header) {
+                setHeaderHeight(header.offsetHeight);
+            }
+        };
+
+        // Initial calculation
+        updateViewportHeight();
+
+        // Update on resize
+        window.addEventListener('resize', updateViewportHeight);
+
+        return () => {
+            window.removeEventListener('resize', updateViewportHeight);
+        };
+    }, []);
+
+    // Calculate banner height (viewport height minus header height)
+    const bannerHeight =
+        viewportHeight > 0 ? viewportHeight - headerHeight : 600;
+
     return (
         <section id="main-banner">
             <div className="main-banner relative">
@@ -36,11 +67,13 @@ export default function MainBanner() {
                         <div className="swiper-slide relative">
                             <div className="img">
                                 <Image
-                                    src="https://picsum.photos/1920/600"
+                                    src="https://picsum.photos/1920/1080"
                                     alt="Banner 1"
                                     width={1920}
-                                    height={600}
-                                    className="w-full"
+                                    height={1080}
+                                    className="w-full h-full object-cover"
+                                    style={{ height: `${bannerHeight}px` }}
+                                    priority
                                 />
                             </div>
                             <div className="container absolute left-1/2 -translate-x-1/2 bottom-[13px] sm:bottom-[30px] lg:bottom-[60px] xl:bottom-[80px] 2xl:bottom-[120px] 3xl:bottom-[165px]">
@@ -54,11 +87,13 @@ export default function MainBanner() {
                         <div className="swiper-slide relative">
                             <div className="img">
                                 <Image
-                                    src="https://picsum.photos/1920/601"
+                                    src="https://picsum.photos/1920/1081"
                                     alt="Banner 2"
                                     width={1920}
-                                    height={600}
-                                    className="w-full"
+                                    height={1080}
+                                    className="w-full h-full object-cover"
+                                    style={{ height: `${bannerHeight}px` }}
+                                    priority
                                 />
                             </div>
                             <div className="container absolute left-1/2 -translate-x-1/2 bottom-[13px] sm:bottom-[30px] lg:bottom-[60px] xl:bottom-[80px] 2xl:bottom-[120px] 3xl:bottom-[165px]">
