@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import Image from 'next/image';
+import { useViewportHeight } from '../../hook/useViewportHeight';
 
 // Video data with YouTube embed ID
 const videoData = {
@@ -13,6 +14,7 @@ const videoData = {
 export default function VideoSection() {
     const [isPlaying, setIsPlaying] = useState(false);
     const videoRef = useRef<HTMLIFrameElement>(null);
+    const { sectionHeight } = useViewportHeight();
 
     const handlePlayVideo = () => {
         setIsPlaying(true);
@@ -23,8 +25,11 @@ export default function VideoSection() {
 
     return (
         <section
-            className="index-2 section xl:pb-[85px]"
-            style={{ backgroundColor: '#e0e0e0' }}
+            className="index-2 section xl:pb-[85px] flex items-center"
+            style={{
+                backgroundColor: '#e0e0e0',
+                ...(sectionHeight ? { minHeight: `${sectionHeight}px` } : {}),
+            }}
         >
             <div className="container">
                 <div className="box-wrapper flex gap-x-[30px] flex-col lg:flex-row">

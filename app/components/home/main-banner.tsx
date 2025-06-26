@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useViewportHeight } from '../../hook/useViewportHeight';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,35 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export default function MainBanner() {
-    const [viewportHeight, setViewportHeight] = useState(0);
-    const [headerHeight, setHeaderHeight] = useState(0);
-
-    useEffect(() => {
-        // Get viewport height
-        const updateViewportHeight = () => {
-            setViewportHeight(window.innerHeight);
-
-            // Get header height
-            const header = document.querySelector('header');
-            if (header) {
-                setHeaderHeight(header.offsetHeight);
-            }
-        };
-
-        // Initial calculation
-        updateViewportHeight();
-
-        // Update on resize
-        window.addEventListener('resize', updateViewportHeight);
-
-        return () => {
-            window.removeEventListener('resize', updateViewportHeight);
-        };
-    }, []);
-
-    // Calculate banner height (viewport height minus header height)
-    const bannerHeight =
-        viewportHeight > 0 ? viewportHeight - headerHeight : 600;
+    const { sectionHeight } = useViewportHeight();
 
     return (
         <section id="main-banner">
@@ -72,7 +44,11 @@ export default function MainBanner() {
                                     width={1920}
                                     height={1080}
                                     className="w-full h-full object-cover"
-                                    style={{ height: `${bannerHeight}px` }}
+                                    style={
+                                        sectionHeight
+                                            ? { height: `${sectionHeight}px` }
+                                            : {}
+                                    }
                                     priority
                                 />
                             </div>
@@ -92,7 +68,11 @@ export default function MainBanner() {
                                     width={1920}
                                     height={1080}
                                     className="w-full h-full object-cover"
-                                    style={{ height: `${bannerHeight}px` }}
+                                    style={
+                                        sectionHeight
+                                            ? { height: `${sectionHeight}px` }
+                                            : {}
+                                    }
                                     priority
                                 />
                             </div>

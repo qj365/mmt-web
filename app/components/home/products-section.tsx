@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useViewportHeight } from '../../hook/useViewportHeight';
 
 const productCategories = [
     {
@@ -22,20 +23,26 @@ const productCategories = [
 ];
 
 export default function ProductsSection() {
+    const { sectionHeight } = useViewportHeight();
+
     return (
-        <section className="index-4 section pb-5">
+        <section
+            className="index-4 section pb-5 flex items-center"
+            style={sectionHeight ? { minHeight: `${sectionHeight}px` } : {}}
+        >
             <div className="container">
                 <h2 className="block-title text-black text-center">SẢN PHẨM</h2>
                 <div className="index-4-grid grid grid-cols-1 sm:grid-cols-3 gap-[30px] mt-9">
                     {productCategories.map((category, index) => (
                         <div
                             key={index}
-                            className="item relative zoom-img rounded-3xl overflow-hidden"
+                            className="item relative zoom-img rounded-3xl overflow-hidden flex flex-col"
                         >
-                            <div className="img h-[300px] sm:h-[400px] relative">
+                            <div className="img h-[400px] sm:h-[450px] md:h-[500px] relative flex-grow">
                                 <Link
                                     href={category.url}
                                     title={category.title}
+                                    className="block h-full"
                                 >
                                     <Image
                                         src={category.image}
@@ -43,6 +50,7 @@ export default function ProductsSection() {
                                         fill
                                         className="object-cover"
                                         loading="lazy"
+                                        sizes="(max-width: 640px) 100vw, 33vw"
                                     />
                                 </Link>
                             </div>

@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useViewportHeight } from '../../hook/useViewportHeight';
 
 const brands = [
     {
@@ -22,9 +23,14 @@ const brands = [
 ];
 
 export default function BrandsSection() {
+    const { sectionHeight } = useViewportHeight();
+
     return (
-        <section className="index-5 section pb-0">
-            <div className="container">
+        <section
+            className="index-5 section pb-0"
+            style={sectionHeight ? { minHeight: `${sectionHeight}px` } : {}}
+        >
+            <div className="container pt-10">
                 <h2 className="block-title text-center text-black">
                     THƯƠNG HIỆU TRỰC THUỘC
                 </h2>
@@ -39,12 +45,13 @@ export default function BrandsSection() {
             </div>
 
             <div
-                className="icon-wrapper flex items-center px-7 flex-col sm:flex-row justify-center w-full sm:gap-x-12 md:gap-x-[115px] gap-y-12 py-12 sm:py-0 sm:h-[60vh] 2xl:h-[570px]"
+                className="icon-wrapper flex items-center px-7 flex-col sm:flex-row justify-center w-full sm:gap-x-12 md:gap-x-[115px] gap-y-12 py-12 sm:py-0 flex-grow"
                 style={{
                     backgroundColor: '#f0f0f0',
                     backgroundImage: 'url(/images/home/brand-bg.png)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    minHeight: '50%',
                 }}
             >
                 {brands.map((brand, index) => (

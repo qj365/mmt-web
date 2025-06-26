@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useViewportHeight } from '../../hook/useViewportHeight';
 
 // Stats data
 const stats = [
@@ -45,6 +46,8 @@ const stats = [
 ];
 
 export default function IntroSection() {
+    const { sectionHeight } = useViewportHeight();
+
     // Counter animation using vanilla JS
     useEffect(() => {
         const counters = document.querySelectorAll('.counter');
@@ -92,13 +95,14 @@ export default function IntroSection() {
 
     return (
         <section
-            className="index-1 section bg-white xl:pb-[80px]"
+            className="index-1 section bg-white xl:pb-[80px] flex flex-col justify-center"
             style={{
                 backgroundColor: '#f5f5f5',
                 backgroundImage: 'url(/images/home/background.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
+                ...(sectionHeight ? { minHeight: `${sectionHeight}px` } : {}),
             }}
         >
             <div className="container">

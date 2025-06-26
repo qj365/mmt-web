@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useViewportHeight } from '../../hook/useViewportHeight';
 
 const awards = [
     {
@@ -18,8 +19,13 @@ const awards = [
 ];
 
 export default function AwardsSection() {
+    const { sectionHeight } = useViewportHeight();
+
     return (
-        <section className="awards-section py-16">
+        <section
+            className="awards-section py-16 flex flex-col"
+            style={sectionHeight ? { minHeight: `${sectionHeight}px` } : {}}
+        >
             <div className="container">
                 <h2 className="block-title text-center text-black mb-12">
                     THÀNH TÍCH - GIẢI THƯỞNG
@@ -27,7 +33,7 @@ export default function AwardsSection() {
             </div>
 
             <div
-                className="awards-bg"
+                className="awards-bg flex-grow flex items-center"
                 style={{
                     backgroundImage: 'url(/images/home/award-bg.png)',
                     backgroundSize: 'cover',

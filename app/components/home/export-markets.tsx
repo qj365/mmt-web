@@ -1,29 +1,53 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useViewportHeight } from '../../hook/useViewportHeight';
 
 export default function ExportMarkets() {
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+    const { sectionHeight } = useViewportHeight();
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     const handleMapClick = () => {
         setIsLightboxOpen(true);
     };
 
     return (
-        <section className="index-3 section pb-0">
-            <div className="container">
+        <section
+            className="index-3 section py-4 md:py-0 flex flex-col"
+            style={
+                !isMobile && sectionHeight
+                    ? { minHeight: `${sectionHeight}px` }
+                    : {}
+            }
+        >
+            <div className="container mt-0 md:mt-auto">
                 <h2 className="block-title text-black text-center">
                     THỊ TRƯỜNG XUẤT KHẨU
                 </h2>
             </div>
-            <div className="image mt-7 cursor-pointer" onClick={handleMapClick}>
-                <div className="relative h-[400px] w-full">
+            <div
+                className="image mt-2 md:mt-7 cursor-pointer mb-0 md:mb-auto flex-grow flex justify-center"
+                onClick={handleMapClick}
+            >
+                <div className="relative h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full">
                     <Image
                         src="/images/home/global.gif"
                         alt="Thị trường xuất khẩu"
                         fill
-                        className="object-cover"
+                        className="object-contain scale-125 sm:scale-100"
                         priority={false}
                     />
                 </div>
