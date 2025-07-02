@@ -119,24 +119,22 @@ const NavLink = ({
 
     if (!item.children) {
         return (
-            <li className={item.href === '/' ? 'first:text-0' : ''}>
-                <Link
-                    href={item.href}
-                    title={item.title}
-                    className={
-                        item.href === '/'
-                            ? 'flex items-center justify-center bg-red-600 text-white rounded-full w-8 h-8 p-0 before:content-["\\f015"] before:font-["Font_Awesome_5_Pro"] before:text-base before:font-light before:transition-all'
-                            : 'inline-block rounded-[50px] px-[15px] py-1 hover:bg-red-600 hover:text-white text-[#111111] font-medium text-base leading-6 whitespace-nowrap'
-                    }
-                >
-                    {item.title}
-                </Link>
-            </li>
+            <Link
+                href={item.href}
+                title={item.title}
+                className={
+                    item.href === '/'
+                        ? 'flex items-center justify-center bg-red-600 text-white rounded-full w-8 h-8 p-0 before:content-["\\f015"] before:font-["Font_Awesome_5_Pro"] before:text-base before:font-light before:transition-all'
+                        : 'inline-block rounded-[50px] px-[15px] py-1 hover:bg-red-600 hover:text-white text-[#111111] font-medium text-base leading-6 whitespace-nowrap'
+                }
+            >
+                {item.title}
+            </Link>
         );
     }
 
     return (
-        <li className="has-child relative w-full whitespace-nowrap">
+        <div className="has-child relative w-full whitespace-nowrap">
             <div className="parent flex justify-between">
                 <Link
                     href={item.href}
@@ -176,7 +174,7 @@ const NavLink = ({
                     ))}
                 </ul>
             </div>
-        </li>
+        </div>
     );
 };
 

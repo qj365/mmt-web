@@ -4,7 +4,7 @@ import MainBanner from './components/home/MainBanner';
 import IntroSection from './components/home/IntroSection';
 import VideoSection from './components/home/VideoSection';
 import ExportMarkets from './components/home/ExportMarkets';
-import ProductsSection from './components/home/';
+import ProductsSection from './components/home/ProductsSection';
 import BrandsSection from './components/home/BrandsSection';
 import AwardsSection from './components/home/AwardsSection';
 
