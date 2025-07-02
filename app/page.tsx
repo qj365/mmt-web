@@ -1,12 +1,12 @@
-import Header from './components/layout/header';
-import Footer from './components/layout/footer';
-import MainBanner from './components/home/main-banner';
-import IntroSection from './components/home/intro-section';
-import VideoSection from './components/home/video-section';
-import ExportMarkets from './components/home/export-markets';
-import ProductsSection from './components/home/products-section';
-import BrandsSection from './components/home/brands-section';
-import AwardsSection from './components/home/awards-section';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import MainBanner from './components/home/MainBanner';
+import IntroSection from './components/home/IntroSection';
+import VideoSection from './components/home/VideoSection';
+import ExportMarkets from './components/home/ExportMarkets';
+import ProductsSection from './components/home/';
+import BrandsSection from './components/home/BrandsSection';
+import AwardsSection from './components/home/AwardsSection';
 
 export default function Home() {
     return (
