@@ -274,3 +274,29 @@
     list-style: disc;
     padding-left: 17px;
 }
+
+.pd.pd-1 .img {
+    background: #fff;
+}
+.pd.pd-1 .img,
+.pd.pd-1 .img a {
+    overflow: hidden;
+    position: relative;
+}
+.pd.pd-1 .img a {
+    display: block;
+    height: 0;
+    padding-top: 100%;
+}
+.pd.pd-1 .img a iframe,
+.pd.pd-1 .img a img,
+.pd.pd-1 .img a video {
+    height: 100%;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}

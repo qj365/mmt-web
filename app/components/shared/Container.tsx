@@ -19,9 +19,15 @@ export default function Container({
           }
         : {};
 
+    // Check if className contains a bg- class to avoid default bg-white
+    const hasCustomBg = className.includes('bg-');
+    const baseClasses = `w-full ${
+        hasCustomBg ? '' : 'bg-white'
+    } py-8 sm:py-12 md:py-16 lg:py-[85px] pb-6 sm:pb-8 md:pb-10 lg:pb-[45px] relative`;
+
     return (
         <section
-            className={`w-full bg-white py-8 sm:py-12 md:py-16 lg:py-[85px] pb-6 sm:pb-8 md:pb-10 lg:pb-[45px] relative ${className}`}
+            className={`${baseClasses} ${className}`}
             style={backgroundStyle}
         >
             <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px] flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-[56px]">
