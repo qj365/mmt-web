@@ -21,7 +21,7 @@ const ProductCard: React.FC<ProductType> = ({
 
     return (
         <div className="pd pd-1 group">
-            <div className="img bg-white overflow-hidden">
+            <div className="img bg-white overflow-hidden rounded-t-3xl">
                 <Link href={href} className="relative block">
                     <Image
                         src={imageSrc}
