@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './header';
-import Footer from './Footer';
+import Footer from './footer';
 import PageBanner from '../shared/PageBanner';
 import Breadcrumb from '../shared/Breadcrumb';
 import Container from '../shared/Container';
