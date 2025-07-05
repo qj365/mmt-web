@@ -387,7 +387,7 @@ export default function LichSuPage() {
                                     <div className="content mt-5 text-base leading-5 text-gray-700 font-normal">
                                         {item.content}
                                     </div>
-                                    <div className="year absolute z-10 top-0 text-center font-normal text-xl md:text-4xl text-white py-2 px-6 bg-red-600 rounded-r-md">
+                                    <div className="year absolute z-10 top-0 text-center font-normal text-xl md:text-4xl text-white py-2 px-6 bg-secondary rounded-r-md">
                                         {item.year}
                                     </div>
                                 </div>

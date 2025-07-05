@@ -72,7 +72,9 @@ const NavLink = ({
                 className={
                     item.href === '/'
                         ? 'flex items-center justify-center bg-red-600 text-white rounded-full w-8 h-8 p-0 before:content-["\\f015"] before:font-["Font_Awesome_5_Pro"] before:text-base before:font-light before:transition-all'
-                        : 'inline-block rounded-[50px] px-[15px] py-1 hover:bg-red-600 hover:text-white text-[#111111] font-medium text-base leading-6 whitespace-nowrap'
+                        : `inline-block rounded-[50px] px-[15px] py-1 hover:bg-red-600 hover:text-white text-[#111111] ${
+                              isMobile ? 'text-[18px]' : 'text-base'
+                          } font-medium leading-6 whitespace-nowrap`
                 }
             >
                 {item.title}
@@ -86,26 +88,75 @@ const NavLink = ({
                 <Link
                     href={item.href}
                     title={item.title}
-                    className="inline-block rounded-[50px] px-[15px] py-1 hover:bg-red-600 hover:text-white text-[#111111] font-medium text-base leading-6 whitespace-nowrap"
+                    className={`inline-block rounded-[50px] px-[15px] py-1 hover:bg-red-600 hover:text-white text-[#111111] ${
+                        isMobile ? 'text-[18px]' : 'text-base'
+                    } font-medium leading-6 whitespace-nowrap`}
                 >
                     {item.title}
                 </Link>
-                <em
-                    className="fal fa-angle-down xl:!hidden text-[1.875rem] relative transition-all cursor-pointer flex-none w-10"
+                <button
+                    type="button"
+                    className="flex items-center justify-center w-10 flex-none xl:hidden"
                     onClick={() => isMobile && setIsOpen(!isOpen)}
-                    style={{
-                        transform: isOpen ? 'rotate(180deg)' : 'none',
-                    }}
-                ></em>
+                    aria-label={isOpen ? 'Close submenu' : 'Open submenu'}
+                >
+                    <i
+                        className="fal fa-angle-down xl:!hidden text-[1.875rem]"
+                        style={{
+                            transform: isOpen
+                                ? 'rotate(180deg)'
+                                : 'rotate(0deg)',
+                            transition:
+                                'transform 0.4s cubic-bezier(0.45, 0, 0.55, 1)',
+                        }}
+                    ></i>
+                </button>
             </div>
             <div
                 className={`child ${
                     isMobile
-                        ? isOpen
-                            ? 'block'
-                            : 'hidden'
-                        : 'xl:absolute xl:min-w-[230px] xl:bg-white xl:left-[-20px] xl:top-[calc(100%-1px)] xl:shadow-[2px_4px_12px_rgba(0,0,0,0.1)] xl:opacity-0 xl:pointer-events-none xl:transition-all xl:duration-300 xl:py-[10px] xl:px-0 xl:group-hover:opacity-100 xl:group-hover:pointer-events-auto'
+                        ? 'overflow-hidden transition-all duration-500 ease-in-out'
+                        : 'xl:absolute xl:min-w-[230px] xl:bg-white xl:left-[-20px] xl:top-[calc(100%-1px)] xl:shadow-[2px_4px_12px_rgba(0,0,0,0.1)] xl:transition-all xl:duration-300 xl:ease-in-out xl:py-[10px] xl:px-0'
                 }`}
+                style={
+                    isMobile
+                        ? {
+                              maxHeight: isOpen ? '500px' : '0px',
+                              opacity: isOpen ? 1 : 0,
+                              transform: isOpen
+                                  ? 'translateY(0)'
+                                  : 'translateY(-10px)',
+                              transition:
+                                  'all 0.4s cubic-bezier(0.45, 0, 0.55, 1)',
+                          }
+                        : {
+                              opacity: 0,
+                              pointerEvents: 'none',
+                              transform: 'translateY(-10px)',
+                              transition:
+                                  'all 0.4s cubic-bezier(0.45, 0, 0.55, 1)',
+                          }
+                }
+                onMouseEnter={
+                    !isMobile
+                        ? (e: React.MouseEvent<HTMLDivElement>) => {
+                              const target = e.currentTarget;
+                              target.style.opacity = '1';
+                              target.style.pointerEvents = 'auto';
+                              target.style.transform = 'translateY(0)';
+                          }
+                        : undefined
+                }
+                onMouseLeave={
+                    !isMobile
+                        ? (e: React.MouseEvent<HTMLDivElement>) => {
+                              const target = e.currentTarget;
+                              target.style.opacity = '0';
+                              target.style.pointerEvents = 'none';
+                              target.style.transform = 'translateY(-10px)';
+                          }
+                        : undefined
+                }
             >
                 <ul className="list-none p-0 flex flex-col ul-child xl:items-start items-center">
                     {item.children.map((child, index) => (
@@ -113,7 +164,11 @@ const NavLink = ({
                             <Link
                                 href={child.href}
                                 title={child.title}
-                                className="block py-2 px-5 hover:bg-red-600 hover:text-white"
+                                className={`block py-2 px-5 hover:bg-red-600 hover:text-white ${
+                                    isMobile
+                                        ? 'text-[16px] font-normal'
+                                        : 'text-base xl:text-inherit'
+                                }`}
                             >
                                 {child.title}
                             </Link>
@@ -159,6 +214,19 @@ const Header = () => {
         };
     }, [prevScrollY]);
 
+    // Add effect to control body scroll when mobile menu is open
+    useEffect(() => {
+        if (mobileMenuOpen || searchOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [mobileMenuOpen, searchOpen]);
+
     return (
         <>
             <header
@@ -166,8 +234,8 @@ const Header = () => {
                     mobileMenuOpen ? 'navMobileOpen' : ''
                 } ${isScrollingDown ? '-translate-y-full' : 'translate-y-0'}`}
             >
-                <div className="container w-full h-full xl:block flex items-center 2xl:px-[210px] 2xl:pr-[263px] xl:min-w-max">
-                    <div className="header-wrapper flex items-center relative w-full h-full xl:justify-start justify-between">
+                <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px] h-full">
+                    <div className="header-wrapper flex items-center relative w-full h-full xl:justify-between justify-between">
                         <div
                             className={`burger xl:hidden relative ${
                                 mobileMenuOpen ? 'active' : ''
@@ -177,7 +245,7 @@ const Header = () => {
                             <div
                                 className={`line-1 bg-[#338dcc] h-[3px] w-[22px] my-1 mx-0 transition-all duration-500 ${
                                     mobileMenuOpen
-                                        ? 'transform -rotate-45 translate-x-[-4px] translate-y-[5px]'
+                                        ? 'transform -rotate-45 translate-x-[-7px] translate-y-[7px]'
                                         : ''
                                 }`}
                             ></div>
@@ -189,13 +257,13 @@ const Header = () => {
                             <div
                                 className={`line-3 bg-[#338dcc] h-[3px] w-[22px] my-1 mx-0 transition-all duration-500 ${
                                     mobileMenuOpen
-                                        ? 'transform rotate-45 translate-x-[-5px] translate-y-[-6px]'
+                                        ? 'transform rotate-45 translate-x-[-7px] translate-y-[-7px]'
                                         : ''
                                 }`}
                             ></div>
                         </div>
 
-                        <div className="logo absolute xl:static -translate-x-1/2 xl:translate-x-0 left-1/2 top-0 h-full xl:w-[180px] xl:ml-16">
+                        <div className="logo xl:static xl:translate-x-0 xl:mr-8 flex items-center justify-center h-full xl:w-[180px]">
                             <Link
                                 href="/"
                                 className="flex items-center justify-center h-full w-full relative"
@@ -205,16 +273,19 @@ const Header = () => {
                                     alt="Dệt may Hoà Thọ"
                                     width={150}
                                     height={80}
-                                    className="w-full h-full object-contain py-[5px] relative z-[1] xl:transform xl:scale-100 xl:translate-y-[20px] transition-all duration-300"
+                                    className="w-full h-full object-contain py-[5px] relative z-[1] xl:translate-y-5"
                                     priority
                                 />
                                 <span className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-[90px] w-[160px] h-[160px] z-0 transition-all duration-300 after:content-['']"></span>
                             </Link>
                         </div>
 
-                        <div className="nav-desktop xl:block hidden ml-auto">
+                        <div className="nav-desktop xl:block hidden">
                             <nav className="flex items-center">
-                                <div className="bg-secondary rounded-[16px] w-8 h-8 flex items-center justify-center mr-[4px]">
+                                <Link
+                                    href="/"
+                                    className="bg-secondary rounded-[16px] w-8 h-8 flex items-center justify-center mr-[4px]"
+                                >
                                     <Image
                                         src="/images/home/menu-icon.svg"
                                         alt="Menu"
@@ -222,8 +293,8 @@ const Header = () => {
                                         height={14}
                                         className="text-white"
                                     />
-                                </div>
-                                <ul className="list-none p-0 flex ul-parent xl:flex-row flex-col items-center xl:flex-nowrap overflow-visible">
+                                </Link>
+                                <ul className="list-none p-0 flex ul-parent xl:flex-row flex-col items-center xl:gap-1 xl:flex-nowrap overflow-visible">
                                     {navItems.map((item, index) => (
                                         <li
                                             key={index}
@@ -236,37 +307,29 @@ const Header = () => {
                             </nav>
                         </div>
 
-                        <div className="tool-items ml-[18px]">
-                            <div className="flex items-center">
-                                {/* <div
-                                    className="search-icon text-[#338dcc] cursor-pointer text-base font-normal"
-                                    onClick={toggleSearch}
-                                >
-                                    <em className="far fa-search"></em>
-                                </div> */}
-                                <div className="language ml-[19px]">
-                                    <div className="language-list">
-                                        <ul className="list-none p-0 flex items-center">
-                                            <li className="active text-sm font-normal leading-[1.8571428571428572em] uppercase">
-                                                <Link
-                                                    href="/"
-                                                    title="VI"
-                                                    className="text-[#ea222d]"
-                                                >
-                                                    VI
-                                                </Link>
-                                            </li>
-                                            <li className="text-sm font-normal leading-[1.8571428571428572em] uppercase border-l border-[#e5e5e5] ml-[11px] pl-[11px]">
-                                                <Link
-                                                    href="/en-US/"
-                                                    title="EN"
-                                                    className="text-[#999] hover:text-[#338dcc]"
-                                                >
-                                                    EN
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div className="tool-items flex items-center">
+                            <div className="language">
+                                <div className="language-list">
+                                    <ul className="list-none p-0 flex items-center">
+                                        <li className="active text-sm font-normal leading-[1.8571428571428572em] uppercase">
+                                            <Link
+                                                href="/"
+                                                title="VI"
+                                                className="text-[#ea222d]"
+                                            >
+                                                VI
+                                            </Link>
+                                        </li>
+                                        <li className="text-sm font-normal leading-[1.8571428571428572em] uppercase border-l border-[#e5e5e5] ml-[11px] pl-[11px]">
+                                            <Link
+                                                href="/en-US/"
+                                                title="EN"
+                                                className="text-[#999] hover:text-[#338dcc]"
+                                            >
+                                                EN
+                                            </Link>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -281,7 +344,7 @@ const Header = () => {
                             : 'opacity-0 pointer-events-none top-[15vh]'
                     }`}
                 >
-                    <div className="nav-mobile-wrapper p-3">
+                    <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px]">
                         <div className="mobile-nav">
                             <ul className="list-none p-0 flex flex-col items-center max-w-full mx-auto sm:max-w-[320px]">
                                 {navItems.map((item, index) => (
@@ -309,7 +372,7 @@ const Header = () => {
                         isScrollingDown ? '-translate-y-full' : 'translate-y-0'
                     }`}
                 >
-                    <div className="container w-full">
+                    <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px]">
                         <div className="wrapper">
                             <div className="searchbox productsearchbox flex items-center w-full py-[10px] xl:py-[20px]">
                                 <input
