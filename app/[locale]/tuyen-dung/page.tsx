@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ContentPageLayout from '../components/layout/ContentPageLayout';
-import PageTitle from '../components/shared/PageTitle';
+import ContentPageLayout from '@/components/layout/ContentPageLayout';
+import PageTitle from '@/shared/PageTitle';
 
 export default function TuyenDungPage() {
     const breadcrumbItems = [{ label: 'Tuyển dụng', href: '/tuyen-dung' }];
