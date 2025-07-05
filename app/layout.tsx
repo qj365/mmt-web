@@ -9,14 +9,14 @@ const baiJamjuree = Bai_Jamjuree({
 });
 
 export const metadata: Metadata = {
-    title: 'Trang chủ - Dệt may Hoà Thọ',
+    title: 'Trang chủ - Dệt may MINH MINH TÂM',
     description:
-        'Trang chủ Tổng Công ty CP Dệt May Hòa Thọ (TP Đà Nẵng, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
+        'Trang chủ Tổng Công ty CP Dệt May MINH MINH TÂM (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
     openGraph: {
         title: 'Trang chủ',
         description:
-            'Trang chủ Tổng Công ty CP Dệt May Hòa Thọ (TP Đà Nẵng, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
-        siteName: 'Dệt may Hoà Thọ',
+            'Trang chủ Tổng Công ty CP Dệt May MINH MINH TÂM (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
+        siteName: 'Dệt may MINH MINH TÂM',
     },
 };
 

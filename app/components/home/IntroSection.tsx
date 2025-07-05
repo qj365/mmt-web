@@ -111,7 +111,7 @@ export default function IntroSection() {
                 </h2>
                 <div className="des text-center mx-auto leading-6 text-[18px] max-w-[1050px] w-full font-medium mt-5">
                     Không chỉ là một hệ thống cung ứng Sợi - May hàng đầu Việt
-                    Nam, Hòa Thọ còn giữ vai trò nòng cốt, trong các hoạt động
+                    Nam, MINH MINH TÂM còn giữ vai trò nòng cốt, trong các hoạt động
                     của Vinatex và Vitas, tích cực đóng góp to lớn vào ngành dệt
                     may Việt Nam trong nhiều thập kỷ qua với quy mô lớn.
                 </div>

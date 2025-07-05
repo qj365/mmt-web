@@ -75,25 +75,28 @@ export default function TamNhinSuMenh() {
                             <span className="text-red-600">Khẩu hiệu: </span>
                         </strong>
                         <em>
-                            &ldquo;Hòa cùng thời đại, Thọ với nhân văn&rdquo;
+                            &ldquo;May mặc tận tâm – An tâm sử dụng&rdquo;
                         </em>
                     </p>
                     <p>&nbsp;</p>
                     <p>
                         <strong>
                             <span className="text-red-600">
-                                Triết lý kinh doanh:
+                                Nguyên tắc hoạt động:
                             </span>
                         </strong>
                         <br />
-                        • Người lao động phù hợp là tài sản quý giá nhất của Dệt
-                        May Hòa Thọ.
+                        • Cân bằng giữa công việc và cuộc sống: tổ chức thời gian sản xuất hợp lý, tối ưu hiệu quả, giảm làm thêm giờ, giúp nhân viên có cuộc sống khỏe mạnh.
+                        • Mục tiêu lâu dài: đảm bảo chất lượng cao để duy trì sự tồn tại và sự hài lòng của khách hàng.
+
+                        • Kinh doanh với sự trung thực & tuân thủ.
                         <br />
                         • Tạo ra giá trị thực sự cho khách hàng, người lao động
                         và cổ đông.
                         <br />• Đóng góp vào sự phát triển của đất nước, môi
                         trường sống và đáp ứng kỳ vọng của các cổ đông.
                     </p>
+                    
                 </div>
             </div>
         </ContentPageLayout>

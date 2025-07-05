@@ -144,9 +144,9 @@ export default function QuanTayPage() {
                                     </p>
                                     <p>
                                         Quần tây là một trong những dòng sản
-                                        phẩm xuất khẩu chủ lực của Hòa Thọ. Với
+                                        phẩm xuất khẩu chủ lực của MINH MINH TÂM. Với
                                         nhiều kinh nghiệm sản xuất, sản phẩm
-                                        quần tây của Hòa Thọ được nhiều khách
+                                        quần tây của MINH MINH TÂM được nhiều khách
                                         hàng trong và ngoài nước tin dùng nhờ
                                         chất lượng đảm bảo, thiết kế phù hợp
                                         nhiều phong cách, và giá thành hợp lý.

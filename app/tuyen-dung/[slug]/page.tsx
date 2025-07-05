@@ -18,7 +18,7 @@ const jobData = {
             {
                 icon: 'maps_home_work',
                 label: 'Địa điểm làm việc',
-                value: 'Đà Nẵng',
+                value: 'Bình Thuận',
             },
             {
                 icon: 'supervisor_account',
@@ -64,8 +64,8 @@ const jobData = {
         application: `
       <p>- Đơn xin việc.</p>
       <p>- Sơ yếu lý lịch, Phiếu khám sức khỏe; Bản sao các giấy tờ Sổ hộ khẩu/Xác nhận nơi cư trú, CCCD, Giấy khai sinh, Các văn bằng, chứng chỉ có liên quan đến công việc.</p>
-      <p>- Bảng thông tin ứng viên theo mẫu của Tổng công ty được đăng tại mục Tuyển dụng trên website: www.hoatho.com.vn. Link tải trực tiếp: bit.ly/3XZvd7A.</p>
-      <p>• Nộp hồ sơ qua email hoặc trực tiếp tại: Văn phòng Tổng Công ty CP Dệt May Hoà Thọ - 36 Ông Ích Đường, Quận Cẩm Lệ, TP. Đà Nẵng. Mọi chi tiết xin liên hệ: Mr Hải - Chuyên viên Văn phòng qua điện thoại số: 0963 736 657 hoặc email: hailt@hoatho.com.vn.</p>
+      <p>- Bảng thông tin ứng viên theo mẫu của Tổng công ty được đăng tại mục Tuyển dụng trên website: www.minhminhtam.com.vn. Link tải trực tiếp: bit.ly/3XZvd7A.</p>
+      <p>• Nộp hồ sơ qua email hoặc trực tiếp tại: Văn phòng Tổng Công ty CP Dệt May MINH MINH TÂM - Khu phố 1, Thị trấn Tân Nghĩa, Quận Hàm Tân, Tỉnh Bình Thuận, Việt Nam. Mọi chi tiết xin liên hệ: Mr Dũng - Chuyên viên Văn phòng qua điện thoại số: 0252 672 5858 hoặc email: minhminhtam.binhthuan@gmail.com.</p>
       <p>THỜI GIAN NHẬN HỒ SƠ: đến 20/09/2024 hoặc khi đã tuyển được ứng viên.</p>
     `,
     },
@@ -78,13 +78,13 @@ const otherJobs = [
         slug: 'chuyen-gia-cao-cap',
         title: 'Chuyên gia cao cấp Nghiên cứu và phát triển sản phẩm may (R&D Team Leader)',
         image: '/images/tuyen-dung/tuyen-dung-1.png',
-        location: 'Đà Nẵng',
+        location: 'Bình Thuận',
     },
     {
         slug: 'nhan-vien-theo-doi-don-hang',
         title: 'NHÂN VIÊN THEO DÕI ĐƠN HÀNG MAY MẶC XUẤT KHẨU (MERCHANDISER)',
         image: '/images/tuyen-dung/tuyen-dung-1.png',
-        location: 'Đà Nẵng',
+        location: 'Bình Thuận',
     },
 ];
 

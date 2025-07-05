@@ -4,14 +4,14 @@ import PageTitle from '@/app/components/shared/PageTitle';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-    title: 'Cơ cấu tổ chức - Dệt may Hoà Thọ',
+    title: 'Cơ cấu tổ chức - Dệt may MINH MINH TÂM',
     description:
-        'Cơ cấu tổ chức Tổng Công ty CP Dệt May Hòa Thọ (TP Đà Nẵng, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
+        'Cơ cấu tổ chức Tổng Công ty CP Dệt May MINH MINH TÂM (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
     openGraph: {
         title: 'Cơ cấu tổ chức',
         description:
-            'Cơ cấu tổ chức Tổng Công ty CP Dệt May Hòa Thọ (TP Đà Nẵng, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
-        siteName: 'Dệt may Hoà Thọ',
+            'Cơ cấu tổ chức Tổng Công ty CP Dệt May MINH MINH TÂM (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
+        siteName: 'Dệt may MINH MINH TÂM',
     },
 };
 

@@ -21,25 +21,24 @@ export default function ContactPage() {
             containerClassName="py-10"
         >
             <div className="contact-information">
-                <PageTitle title="TỔNG CÔNG TY CỔ PHẦN DỆT MAY HOÀ THỌ" />
+                <PageTitle title="TỔNG CÔNG TY CỔ PHẦN DỆT MAY MINH MINH TÂM" />
 
                 <div className="content-wrapper mt-8 bg-white shadow-lg mt-10 rounded-[20px] p-8">
                     <div className="block mb-6">
                         <div className="ctn">
                             <p>
-                                Địa chỉ: 36 Ông Ích Đường, Phường Hòa Thọ Đông,
-                                Quận Cẩm Lệ, Đà Nẵng{' '}
+                                Địa chỉ: Khu phố 1, Thị trấn Tân Nghĩa, Quận Hàm Tân, Tỉnh Bình Thuận, Việt Nam{' '}
                             </p>
                             <p>
                                 Email:{' '}
-                                <a href="mailto:office@hoatho.com.vn">
-                                    office@hoatho.com.vn
+                                <a href="mailto:minhminhtam.binhthuan@gmail.com">
+                                    minhminhtam.binhthuan@gmail.com
                                 </a>
                             </p>
                             <p>
                                 Tổng đài:{' '}
-                                <a href="tel:(+84)2363846290">
-                                    (+84) 2363 846 290
+                                <a href="tel:(+84) 252 672 5858">
+                                    (+84) 252 672 5858
                                 </a>
                             </p>
                         </div>
@@ -75,16 +74,16 @@ export default function ContactPage() {
                                     </span>
                                     <br />
                                     Email:{' '}
-                                    <a href="mailto:oanhht@hoatho.com.vn">
-                                        oanhht@hoatho.com.vn
+                                    <a href="mailto:minhminhtam.binhthuan@gmail.com">
+                                        minhminhtam.binhthuan@gmail.com
                                     </a>
                                     <br />
                                     Điện thoại:{' '}
-                                    <a href="tel:+84.2363.846290">
-                                        +84.2363.846290
+                                    <a href="(+84) 252 672 5858">
+                                        (+84) 252 672 5858
                                     </a>
                                     <br />
-                                    Fax: +84.2363.846216
+                                    Fax: (+84) 28 6272 5525
                                     <br />
                                     <br />
                                     <strong>
@@ -97,16 +96,16 @@ export default function ContactPage() {
                                     loại.
                                     <br />
                                     Email:{' '}
-                                    <a href="mailto:chauth@hoatho.com.vn">
-                                        chauth@hoatho.com.vn
+                                    <a href="mailto:minhminhtam.binhthuan@gmail.com">
+                                        minhminhtam.binhthuan@gmail.com
                                     </a>
                                     <br />
                                     Điện thoại:{' '}
-                                    <a href="tel:+84.2363.846290">
-                                        +84.2363.846290
+                                    <a href="(+84) 252 672 5858">
+                                        (+84) 252 672 5858
                                     </a>
                                     <br />
-                                    Fax: +84.2363.846216
+                                    Fax: (+84) 28 6272 5525
                                 </p>
                                 <p>
                                     <a
@@ -130,17 +129,17 @@ export default function ContactPage() {
                                 </p>
                                 <p>
                                     Email:{' '}
-                                    <a href="mailto:thanhnth@hoatho.com.vn">
-                                        thanhnth@hoatho.com.vn
+                                    <a href="mailto:minhminhtam.binhthuan@gmail.co">
+                                        minhminhtam.binhthuan@gmail.co
                                     </a>
                                 </p>
                                 <p>
                                     Điện thoại:{' '}
-                                    <a href="tel:+84.905408588">
-                                        +84.905408588
+                                    <a href="tel:(+84) 252 672 5858">
+                                        (+84) 252 672 5858
                                     </a>
                                 </p>
-                                <p>Fax: +84.2363.846217</p>
+                                <p>Fax: (+84) 28 6272 5525</p>
                                 <p>
                                     <a
                                         href="/Data/Sites/1/media/HoaThoYarnProfile2024.pdf"
@@ -165,7 +164,7 @@ export default function ContactPage() {
                         style={{ border: 0 }}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="Hoà Thọ Location"
+                        title="MINH MINH TÂM Location"
                     ></iframe>
                 </div>
             </div>
