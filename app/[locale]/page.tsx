@@ -1,5 +1,5 @@
-import Header from '../components/layout/Header';
-import Footer from '../components/layout/Footer';
+import Header from '../components/layout/header';
+import Footer from '../components/layout/footer';
 import MainBanner from '../components/home/MainBanner';
 import IntroSection from '../components/home/IntroSection';
 import ExportMarkets from '../components/home/ExportMarkets';

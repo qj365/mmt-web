@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { BreadcrumbItem } from '../types';
 import PageTitle from '../components/shared/PageTitle';
-import Header from '../components/layout/Header';
+import Header from '../components/layout/header';
 import Footer from '../components/layout/Footer';
 import PageBanner from '../components/shared/PageBanner';
 import Breadcrumb from '../components/shared/Breadcrumb';

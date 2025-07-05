@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import Header from './header';
 import Footer from './Footer';
 import PageBanner from '../shared/PageBanner';
 import Breadcrumb from '../shared/Breadcrumb';

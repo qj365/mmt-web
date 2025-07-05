@@ -44,7 +44,7 @@ export default async function LocaleLayout({
     setRequestLocale(locale);
 
     return (
-        <html lang={locale} className="canhcam">
+        <html lang={locale}>
             <head>
                 <link rel="preconnect" href="https://fonts.googleapis.com/" />
                 <link
@@ -62,7 +62,7 @@ export default async function LocaleLayout({
                 />
             </head>
             <body
-                className={`${baiJamjuree.variable} canhcam homepage section-grey ${locale} bg-[#F5F5F5]`}
+                className={`${baiJamjuree.variable} homepage section-grey ${locale} bg-[#F5F5F5]`}
             >
                 <NextIntlClientProvider>{children}</NextIntlClientProvider>
             </body>
