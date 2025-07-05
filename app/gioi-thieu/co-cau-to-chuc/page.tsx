@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import PageTitle from '@/app/components/shared/PageTitle';
-import ImageWithCaption from '@/app/components/shared/ImageWithCaption';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
     title: 'Cơ cấu tổ chức - Dệt may Hoà Thọ',
@@ -30,14 +30,12 @@ export default function OrganizationalStructure() {
         >
             <PageTitle title="Cơ cấu tổ chức" />
 
-            <ImageWithCaption
+            <Image
                 src="/images/co-cau-to-chuc/image.png"
                 alt="Cơ cấu tổ chức"
                 width={1920}
                 height={950}
-                minWidth="min-w-[768px]"
-                linkToFullSize={true}
-                caption="Nhấn vào hình để xem kích thước đầy đủ"
+                className="min-w-[768px]"
             />
         </ContentPageLayout>
     );

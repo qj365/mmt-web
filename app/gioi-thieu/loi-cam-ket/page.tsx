@@ -1,6 +1,7 @@
 import React from 'react';
 import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/app/types';
+import PageTitle from '@/app/components/shared/PageTitle';
 
 export default function LoiCamKet() {
     // Define breadcrumb items for navigation
@@ -16,10 +17,8 @@ export default function LoiCamKet() {
             breadcrumbItems={breadcrumbItems}
             containerBackground="/images/gioi-thieu/loi-cam-ket/bg.png"
         >
-            <div className="py-10 md:py-16">
-                <h1 className="text-center text-3xl md:text-4xl font-bold mb-10 uppercase">
-                    Lời cam kết
-                </h1>
+            <div>
+                <PageTitle title="Lời cam kết" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Commitment to Customers */}
