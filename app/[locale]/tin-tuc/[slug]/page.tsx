@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import ContentPageLayout from '@/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/types/index';
@@ -63,14 +61,14 @@ const article = {
 //     },
 // ];
 
-export default function NewsDetailPage({
+export default async function NewsDetailPage({
     params,
 }: {
-    params: { slug: string };
+    params: Promise<{ locale: string; slug: string }>;
 }) {
     // In a real app, we would fetch the article data based on the slug parameter
     // For now, we'll just use our mock data
-    const { slug } = params;
+    const { slug } = await params;
 
     // Define breadcrumb items
     const breadcrumbItems: BreadcrumbItem[] = [
