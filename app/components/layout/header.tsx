@@ -49,19 +49,7 @@ const navItems: NavMenuItem[] = [
     },
     {
         title: 'Tin tức',
-        href: '/tin-tuc/tin-tuc-2',
-        children: [
-            {
-                title: 'Thông tin ngành',
-                href: '/tin-tuc/tin-tuc-2/thong-tin-nganh',
-            },
-            {
-                title: 'Thông Tin Tổng Công ty',
-                href: '/tin-tuc/tin-tuc-2/thong-tin-tong-cong-ty',
-            },
-            { title: 'Hình Ảnh', href: '/tin-tuc/tin-tuc-2/hinh-anh' },
-            { title: 'Video', href: '/tin-tuc/tin-tuc-2/video' },
-        ],
+        href: '/tin-tuc',
     },
     {
         title: 'Quan hệ cổ đông',
