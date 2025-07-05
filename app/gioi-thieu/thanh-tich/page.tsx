@@ -41,7 +41,7 @@ export default function ThanhTichPage() {
             breadcrumbItems={breadcrumbItems}
             containerBackground="/images/gioi-thieu/thanh-tich/bg.png"
         >
-            <div className="py-10">
+            <div>
                 <PageTitle title="Thành tích" className="text-center mb-10" />
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">

@@ -44,12 +44,6 @@ export default function SoiTCPage() {
             imageSrc: '/images/san-pham/san-pham-soi/so-xe-cac-loai.png',
             basePath: '/san-pham/san-pham-soi',
         },
-        {
-            name: 'Sợ xe các loại',
-            slug: 'so-xe-cac-loai',
-            imageSrc: '/images/san-pham/san-pham-soi/so-xe-cac-loai.png',
-            basePath: '/san-pham/san-pham-soi',
-        },
     ];
 
     // Product images for the gallery
