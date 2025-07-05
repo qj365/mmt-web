@@ -3,7 +3,7 @@
 import React from 'react';
 import ContentPageLayout from '@/components/layout/ContentPageLayout';
 import PageTitle from '@/components/shared/PageTitle';
-import { BreadcrumbItem } from '@/types/breadcrumb';
+import { BreadcrumbItem } from '@/app/types';
 
 export default function ContactPage() {
     // Define breadcrumb items

@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import { BreadcrumbItem } from '../types';
-import PageTitle from '../components/shared/PageTitle';
-import Header from '../components/layout/header';
-import Footer from '../components/layout/footer';
-import PageBanner from '../components/shared/PageBanner';
-import Breadcrumb from '../components/shared/Breadcrumb';
-import Container from '../components/shared/Container';
+import { BreadcrumbItem } from '@/app/types';
+import PageTitle from '@/app/components/shared/PageTitle';
+import Header from '@/app/components/layout/header';
+import Footer from '@/app/components/layout/footer';
+import PageBanner from '@/app/components/shared/PageBanner';
+import Breadcrumb from '@/app/components/shared/Breadcrumb';
+import Container from '@/app/components/shared/Container';
 
 export default function ExportMarketsPage() {
     const breadcrumbItems: BreadcrumbItem[] = [

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { BreadcrumbItem } from '../../types';
+import { BreadcrumbItem } from '@/app/types';
 
 interface BreadcrumbProps {
     items: BreadcrumbItem[];

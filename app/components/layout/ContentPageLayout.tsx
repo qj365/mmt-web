@@ -4,7 +4,7 @@ import Footer from './footer';
 import PageBanner from '../shared/PageBanner';
 import Breadcrumb from '../shared/Breadcrumb';
 import Container from '../shared/Container';
-import { BreadcrumbItem } from '../../types';
+import { BreadcrumbItem } from '@/app/types';
 
 interface ContentPageLayoutProps {
     children: React.ReactNode;

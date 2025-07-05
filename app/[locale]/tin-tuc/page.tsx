@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import ContentPageLayout from '../components/layout/ContentPageLayout';
-import PageTitle from '../components/shared/PageTitle';
+import ContentPageLayout from '@/components/layout/ContentPageLayout';
+import PageTitle from '@/shared/PageTitle';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BreadcrumbItem } from '../types';
+import { BreadcrumbItem } from '@/app/types';
 
 interface NewsItem {
     id: string;

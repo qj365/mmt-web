@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import ContentPageLayout from '@/components/layout/ContentPageLayout';
-import { BreadcrumbItem } from '@/types/breadcrumb';
+import { BreadcrumbItem } from '@/app/types/';
 
 const breadcrumbItems: BreadcrumbItem[] = [
     { label: 'Giới thiệu', href: '/gioi-thieu/tong-quan' },

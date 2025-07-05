@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ContentPageLayout from '@/components/layout/ContentPageLayout';
-import { BreadcrumbItem } from '@/types/breadcrumb';
+import { BreadcrumbItem } from '@/types/index';
 
 // Mock data for the article
 const article = {
