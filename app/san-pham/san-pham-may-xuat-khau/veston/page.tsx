@@ -57,9 +57,12 @@ export default function VestonPage() {
 
     // Product images for the gallery
     const productImages = [
-        '/images/san-pham/san-pham-may-xuat-khau/veston.png',
-        '/images/san-pham/san-pham-may-xuat-khau/quan-tay.png',
-        '/images/san-pham/san-pham-may-xuat-khau/quan-tay.png',
+        '/images/san-pham/san-pham-may-xuat-khau/veston/image-1.png',
+        '/images/san-pham/san-pham-may-xuat-khau/veston/image-2.png',
+        '/images/san-pham/san-pham-may-xuat-khau/veston/image-3.png',
+        '/images/san-pham/san-pham-may-xuat-khau/veston/image-4.png',
+        '/images/san-pham/san-pham-may-xuat-khau/veston/image-5.png',
+        '/images/san-pham/san-pham-may-xuat-khau/veston/image-6.png',
     ];
 
     return (
