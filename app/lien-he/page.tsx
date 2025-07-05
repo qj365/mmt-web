@@ -23,11 +23,12 @@ export default function ContactPage() {
             <div className="contact-information">
                 <PageTitle title="TỔNG CÔNG TY CỔ PHẦN DỆT MAY MINH MINH TÂM" />
 
-                <div className="content-wrapper mt-8 bg-white shadow-lg mt-10 rounded-[20px] p-8">
+                <div className="content-wrapper mt-8 bg-white shadow-lg rounded-[20px] p-8">
                     <div className="block mb-6">
                         <div className="ctn">
                             <p>
-                                Địa chỉ: Khu phố 1, Thị trấn Tân Nghĩa, Quận Hàm Tân, Tỉnh Bình Thuận, Việt Nam{' '}
+                                Địa chỉ: Khu phố 1, Thị trấn Tân Nghĩa, Quận Hàm
+                                Tân, Tỉnh Bình Thuận, Việt Nam{' '}
                             </p>
                             <p>
                                 Email:{' '}

@@ -1,9 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useParams } from 'next/navigation';
+import { useLanguageSwitcher } from '../../i18n/client';
+import { localeLabels, locales } from '../../i18n/settings';
 
 interface NavMenuItem {
     title: string;
@@ -215,6 +218,9 @@ const Header = () => {
     const [searchOpen, setSearchOpen] = useState(false);
     const [isScrollingDown, setIsScrollingDown] = useState(false);
     const [prevScrollY, setPrevScrollY] = useState(0);
+    const { switchLanguage } = useLanguageSwitcher();
+    const params = useParams();
+    const currentLocale = (params.locale || 'vi') as string;
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
@@ -343,24 +349,35 @@ const Header = () => {
                             <div className="language">
                                 <div className="language-list">
                                     <ul className="list-none p-0 flex items-center">
-                                        <li className="active text-sm font-normal leading-[1.8571428571428572em] uppercase">
-                                            <Link
-                                                href="/"
-                                                title="VI"
-                                                className="text-[#ea222d]"
+                                        {locales.map(locale => (
+                                            <li
+                                                key={locale}
+                                                className={`text-sm font-normal uppercase ${
+                                                    locale !== 'vi'
+                                                        ? 'border-l border-[#e5e5e5] ml-[11px] pl-[11px]'
+                                                        : ''
+                                                } ${
+                                                    currentLocale === locale
+                                                        ? 'active'
+                                                        : ''
+                                                }`}
                                             >
-                                                VI
-                                            </Link>
-                                        </li>
-                                        <li className="text-sm font-normal leading-[1.8571428571428572em] uppercase border-l border-[#e5e5e5] ml-[11px] pl-[11px]">
-                                            <Link
-                                                href="/en-US/"
-                                                title="EN"
-                                                className="text-[#999] hover:text-[#338dcc]"
-                                            >
-                                                EN
-                                            </Link>
-                                        </li>
+                                                <button
+                                                    onClick={() =>
+                                                        switchLanguage(locale)
+                                                    }
+                                                    className={`
+                                                        cursor-pointer ${
+                                                            currentLocale ===
+                                                            locale
+                                                                ? 'text-[#ea222d]'
+                                                                : 'text-[#999] hover:text-[#338dcc]'
+                                                        }`}
+                                                >
+                                                    {localeLabels[locale]}
+                                                </button>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>

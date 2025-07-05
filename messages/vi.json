@@ -1,0 +1,52 @@
+{
+    "meta": {
+        "title": "Trang chủ - Dệt may MINH MINH TÂM",
+        "description": "Trang chủ Tổng Công ty CP Dệt May MINH MINH TÂM (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu."
+    },
+    "menu": {
+        "home": "Trang chủ",
+        "about": "Giới thiệu",
+        "overview": "Tổng quan",
+        "history": "Lịch sử hình thành",
+        "structure": "Cơ cấu tổ chức",
+        "vision": "Tầm nhìn sứ mệnh",
+        "commitment": "Lời cam kết",
+        "achievements": "Thành tích",
+        "export_markets": "Thị trường xuất khẩu",
+        "products": "Sản phẩm",
+        "yarn_products": "Sản phẩm sợi",
+        "garment_products": "Sản phẩm may xuất khẩu",
+        "domestic_fashion": "Thời trang nội địa",
+        "factories": "Nhà máy - Thương hiệu",
+        "news": "Tin tức",
+        "careers": "Tuyển dụng",
+        "contact": "Liên hệ"
+    },
+    "home": {
+        "intro": {
+            "title": "Về chúng tôi",
+            "description": "Tổng Công ty CP Dệt May MINH MINH TÂM được thành lập từ năm 1966, là một trong những đơn vị dệt may hàng đầu của Tập đoàn Dệt May Việt Nam (VINATEX) và cả nước.",
+            "readMore": "Tìm hiểu thêm"
+        },
+        "products": {
+            "title": "Sản phẩm chính",
+            "yarn": "Sản phẩm sợi",
+            "garment": "Sản phẩm may xuất khẩu",
+            "viewAll": "Xem tất cả"
+        },
+        "exportMarkets": {
+            "title": "Thị trường xuất khẩu",
+            "description": "Các sản phẩm của chúng tôi đã có mặt trên nhiều quốc gia và vùng lãnh thổ trên toàn cầu."
+        },
+        "awards": {
+            "title": "Thành tích nổi bật"
+        }
+    },
+    "footer": {
+        "address": "Địa chỉ",
+        "phone": "Điện thoại",
+        "email": "Email",
+        "fax": "Fax",
+        "copyright": "© 2023 Tổng Công ty CP Dệt May MINH MINH TÂM"
+    }
+}

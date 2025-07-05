@@ -1,111 +1,200 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
-export default function Footer() {
+const Footer = () => {
+    const t = useTranslations('footer');
+    const menuT = useTranslations('menu');
+
     return (
-        <footer className="text-white bg-[#338dcc]">
-            <div className="footer-1 section xl:pb-16">
-                <div className="container">
-                    <div className="top-title text-white text-xl leading-normal mb-7">
-                        Thông tin liên hệ
+        <footer className="bg-[#171717] pt-[40px] pb-[20px]">
+            <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px]">
+                <div className="flex flex-col sm:flex-row flex-wrap">
+                    <div className="flex-1 px-0 md:px-[15px] mb-[30px] md:min-w-[310px] max-w-full">
+                        <div className="logo">
+                            <Link href="/">
+                                <Image
+                                    src="/images/home/logo.png"
+                                    alt="MINH MINH TÂM"
+                                    width={180}
+                                    height={95}
+                                />
+                            </Link>
+                        </div>
+                        <div className="info mt-5">
+                            <ul className="list-none p-0 m-0 text-white">
+                                <li className="mb-[15px] pl-0 relative text-sm font-normal leading-5 flex items-start">
+                                    <i className="far fa-map-marker-alt mt-[3px] mr-[10px] text-[#338dcc] w-5 text-center block flex-none"></i>
+                                    <div className="contact-info">
+                                        <span className="block font-bold mb-1">
+                                            {t('address')}:
+                                        </span>
+                                        Tháp B, Tòa nhà Sông Đà, đường Phạm
+                                        Hùng, phường Mỹ Đình 1, quận Nam Từ
+                                        Liêm, Hà Nội, Việt Nam
+                                    </div>
+                                </li>
+                                <li className="mb-[15px] pl-0 relative text-sm font-normal leading-5 flex items-start">
+                                    <i className="far fa-phone-alt mt-[3px] mr-[10px] text-[#338dcc] w-5 text-center block flex-none"></i>
+                                    <div className="contact-info">
+                                        <span className="block font-bold mb-1">
+                                            {t('phone')}:
+                                        </span>
+                                        (84-24) 38264063
+                                    </div>
+                                </li>
+                                <li className="mb-[15px] pl-0 relative text-sm font-normal leading-5 flex items-start">
+                                    <i className="far fa-fax mt-[3px] mr-[10px] text-[#338dcc] w-5 text-center block flex-none"></i>
+                                    <div className="contact-info">
+                                        <span className="block font-bold mb-1">
+                                            {t('fax')}:
+                                        </span>
+                                        (84-24) 38264063
+                                    </div>
+                                </li>
+                                <li className="mb-[15px] pl-0 relative text-sm font-normal leading-5 flex items-start">
+                                    <i className="far fa-envelope mt-[3px] mr-[10px] text-[#338dcc] w-5 text-center block flex-none"></i>
+                                    <div className="contact-info">
+                                        <span className="block font-bold mb-1">
+                                            {t('email')}:
+                                        </span>
+                                        contact@hoatho.com.vn
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div className="flex flex-wrap gap-x-[30px] gap-y-[30px]">
-                        <div className="item w-full sm:w-[calc(50%-15px)] lg:w-[calc(33.3333%-20px)]">
-                            <div className="wrapper">
-                                <div className="title text-lg uppercase leading-normal font-bold mb-6">
-                                    Tổng Công ty Cổ phần Dệt may MINH MINH TÂM
-                                </div>
-                                <div className="content">
-                                    <p>
-                                        Địa chỉ: Khu phố 1, Thị trấn Tân Nghĩa, Quận Hàm Tân, Tỉnh Bình Thuận, Việt Nam
-                                    </p>
-                                    <br />
-                                    <p>
-                                        Email:{' '}
-                                        <a href="mailto:minhminhtam.binhthuan@gmail.com">
-                                            minhminhtam.binhthuan@gmail.com
-                                        </a>
-                                    </p>
-                                    <p>
-                                        Tel:{' '}
-                                        <a href="tel:(+84) 252 672 5858">
-                                            (+84) 252 672 5858
-                                        </a>
-                                    </p>
-                                    <p>
-                                        Fax:{' '}
-                                        <a href="fax:(+84) 28 6272 5525">
-                                            (+84) 28 6272 5525
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
+
+                    <div className="flex-1 px-0 md:px-[15px] mb-[30px] min-w-[200px]">
+                        <div className="title font-medium text-base text-white mb-[10px] pb-[10px] uppercase relative before:content-[''] before:absolute before:left-0 before:bottom-0 before:h-[3px] before:w-[40px] before:bg-[#338dcc]">
+                            {menuT('about')}
                         </div>
-                        <div className="item w-full sm:w-[calc(50%-15px)] lg:w-[calc(33.3333%-20px)]">
-                            <div className="wrapper">
-                                <div className="title text-lg uppercase leading-normal font-bold mb-6">
-                                    Chứng nhận
-                                </div>
-                                <div className="image-wrapper grid grid-cols-5 gap-x-[15px]">
-                                    <div className="flex justify-center relative w-16 h-16">
-                                        <Image
-                                            src="/images/footer/i-1.png"
-                                            alt="Certification"
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                    <div className="flex justify-center relative">
-                                        <Image
-                                            src="/images/footer/i-2.png"
-                                            alt="Certification"
-                                            layout="fill"
-                                            objectFit="contain"
-                                        />
-                                    </div>
-                                    <div className="flex justify-center relative">
-                                        <Image
-                                            src="/images/footer/i-3.png"
-                                            alt="Certification"
-                                            layout="fill"
-                                            objectFit="contain"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="wrapper">
-                                <div className="title text-fs18px uppercase leading-normal font-bold mt-6">
-                                    <Link href="" target="_blank">
-                                        Tải Brochure
+                        <div className="content">
+                            <ul className="list-none p-0 m-0">
+                                <li className="mb-2 text-sm font-normal text-white">
+                                    <Link
+                                        href="/gioi-thieu/tong-quan"
+                                        className="text-sm font-normal text-white hover:text-[#338dcc] transition-all"
+                                    >
+                                        {menuT('overview')}
                                     </Link>
-                                </div>
-                            </div>
+                                </li>
+                                <li className="mb-2 text-sm font-normal text-white">
+                                    <Link
+                                        href="/gioi-thieu/tam-nhin-su-menh"
+                                        className="text-sm font-normal text-white hover:text-[#338dcc] transition-all"
+                                    >
+                                        {menuT('vision')}
+                                    </Link>
+                                </li>
+                                <li className="mb-2 text-sm font-normal text-white">
+                                    <Link
+                                        href="/gioi-thieu/lich-su-hinh-thanh"
+                                        className="text-sm font-normal text-white hover:text-[#338dcc] transition-all"
+                                    >
+                                        {menuT('history')}
+                                    </Link>
+                                </li>
+                                <li className="mb-2 text-sm font-normal text-white">
+                                    <Link
+                                        href="/gioi-thieu/co-cau-to-chuc"
+                                        className="text-sm font-normal text-white hover:text-[#338dcc] transition-all"
+                                    >
+                                        {menuT('structure')}
+                                    </Link>
+                                </li>
+                                <li className="mb-2 text-sm font-normal text-white">
+                                    <Link
+                                        href="/nha-may-thuong-hieu"
+                                        className="text-sm font-normal text-white hover:text-[#338dcc] transition-all"
+                                    >
+                                        {menuT('factories')}
+                                    </Link>
+                                </li>
+                            </ul>
                         </div>
-                        <div className="item w-full lg:w-[calc(33.3333%-20px)]">
-                            <div className="iframe !w-full h-[256px] rounded-[20px] overflow-hidden">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d958.7195267909299!2d108.2019516325409!3d16.019859584145987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421988058f36a1%3A0xf8adf44d71cae063!2zMzYgw5RuZyDDjWNoIMSQLiwgS2h1w6ogVHJ1bmcsIEPhuqltIEzhu4csIMSQw6AgTuG6tW5nIDU1MDAwMA!5e0!3m2!1svi!2s!4v1651653674352!5m2!1svi!2s"
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 0 }}
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                ></iframe>
-                            </div>
+                    </div>
+
+                    <div className="flex-1 px-0 md:px-[15px] mb-[30px] min-w-[200px]">
+                        <div className="title font-medium text-base text-white mb-[10px] pb-[10px] uppercase relative before:content-[''] before:absolute before:left-0 before:bottom-0 before:h-[3px] before:w-[40px] before:bg-[#338dcc]">
+                            {menuT('products')}
+                        </div>
+                        <div className="content">
+                            <ul className="list-none p-0 m-0">
+                                <li className="mb-2 text-sm font-normal text-white">
+                                    <Link
+                                        href="/san-pham/san-pham-soi"
+                                        className="text-sm font-normal text-white hover:text-[#338dcc] transition-all"
+                                    >
+                                        {menuT('yarn_products')}
+                                    </Link>
+                                </li>
+                                <li className="mb-2 text-sm font-normal text-white">
+                                    <Link
+                                        href="/san-pham/san-pham-may-xuat-khau"
+                                        className="text-sm font-normal text-white hover:text-[#338dcc] transition-all"
+                                    >
+                                        {menuT('garment_products')}
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="title font-medium text-base text-white mb-[10px] mt-[20px] pb-[10px] uppercase relative before:content-[''] before:absolute before:left-0 before:bottom-0 before:h-[3px] before:w-[40px] before:bg-[#338dcc]">
+                            {menuT('news')}
+                        </div>
+                        <div className="content">
+                            <ul className="list-none p-0 m-0">
+                                <li className="mb-2 text-sm font-normal text-white">
+                                    <Link
+                                        href="/tin-tuc"
+                                        className="text-sm font-normal text-white hover:text-[#338dcc] transition-all"
+                                    >
+                                        {menuT('news')}
+                                    </Link>
+                                </li>
+                                <li className="mb-2 text-sm font-normal text-white">
+                                    <Link
+                                        href="/tuyen-dung"
+                                        className="text-sm font-normal text-white hover:text-[#338dcc] transition-all"
+                                    >
+                                        {menuT('careers')}
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className="flex-1 px-0 md:px-[15px] mb-[30px] md:min-w-[310px]">
+                        <div className="title font-medium text-base text-white mb-[10px] pb-[10px] uppercase relative before:content-[''] before:absolute before:left-0 before:bottom-0 before:h-[3px] before:w-[40px] before:bg-[#338dcc]">
+                            Facebook
+                        </div>
+                        <div className="relative overflow-hidden">
+                            <iframe
+                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fminhminhcorp&tabs=timeline&width=290&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1041651659294940"
+                                width="290"
+                                height="250"
+                                style={{ border: 'none', overflow: 'hidden' }}
+                                allow="encrypted-media"
+                            ></iframe>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="footer-2 bg-[#56c1f9] py-4 sm:py-[22px]">
-                <div className="container">
-                    <div className="title text-center text-xs sm:text-sm leading-4 font-normal">
-                        © {new Date().getFullYear()} Tổng Công ty Cổ phần Dệt
-                        may MINH MINH TÂM.
+            <div className="copyright py-3 bg-[#111]">
+                <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px]">
+                    <div className="flex items-center justify-between">
+                        <div className="text-xs sm:text-sm font-normal text-white">
+                            {t('copyright')}
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
     );
-}
+};
+
+export default Footer;

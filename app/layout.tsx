@@ -22,32 +22,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
-}: Readonly<{
+}: {
     children: React.ReactNode;
-}>) {
+}) {
     return (
-        <html lang="vi" className="canhcam">
-            <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com/" />
-                <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com/"
-                    crossOrigin=""
-                />
-                <link
-                    rel="stylesheet"
-                    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-                />
-                <link
-                    rel="stylesheet"
-                    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-                />
-            </head>
-            <body
-                className={`${baiJamjuree.variable} canhcam homepage section-grey vi-vn bg-[#F5F5F5]`}
-            >
-                {children}
-            </body>
+        <html lang="vi" className={`${baiJamjuree.variable}`}>
+            <body>{children}</body>
         </html>
     );
 }

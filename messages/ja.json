@@ -1,0 +1,52 @@
+{
+    "meta": {
+        "title": "ホームページ - ミン ミン タム紡織会社",
+        "description": "ミン ミン タム紡織株式会社（ビンタン市、ベトナム）- Vinatexのメンバー、糸および輸出衣料品の製造・販売を専門としています。"
+    },
+    "menu": {
+        "home": "ホーム",
+        "about": "会社概要",
+        "overview": "概観",
+        "history": "沿革",
+        "structure": "組織体制",
+        "vision": "ビジョンと使命",
+        "commitment": "コミットメント",
+        "achievements": "業績",
+        "export_markets": "輸出市場",
+        "products": "製品",
+        "yarn_products": "糸製品",
+        "garment_products": "輸出衣料品",
+        "domestic_fashion": "国内ファッション",
+        "factories": "工場・ブランド",
+        "news": "ニュース",
+        "careers": "採用情報",
+        "contact": "お問い合わせ"
+    },
+    "home": {
+        "intro": {
+            "title": "私たちについて",
+            "description": "ミン ミン タム紡織株式会社は1966年に設立され、ベトナム紡織グループ（VINATEX）および国内の主要繊維企業の一つです。",
+            "readMore": "詳細を見る"
+        },
+        "products": {
+            "title": "主な製品",
+            "yarn": "糸製品",
+            "garment": "輸出衣料品",
+            "viewAll": "すべて表示"
+        },
+        "exportMarkets": {
+            "title": "輸出市場",
+            "description": "当社の製品は世界中の多くの国や地域で展開されています。"
+        },
+        "awards": {
+            "title": "主な業績"
+        }
+    },
+    "footer": {
+        "address": "住所",
+        "phone": "電話番号",
+        "email": "Eメール",
+        "fax": "FAX",
+        "copyright": "© 2023 ミン ミン タム紡織株式会社"
+    }
+}

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useViewportHeight } from '../../hook/useViewportHeight';
+import { useTranslations } from 'next-intl';
 
 // Stats data
 const stats = [
@@ -45,7 +46,8 @@ const stats = [
     },
 ];
 
-export default function IntroSection() {
+const IntroSection = () => {
+    const t = useTranslations('home.intro');
     const { sectionHeight } = useViewportHeight();
 
     // Counter animation using vanilla JS
@@ -107,13 +109,10 @@ export default function IntroSection() {
         >
             <div className="container">
                 <h2 className="block-title text-black text-center">
-                    GIỚI THIỆU
+                    {t('title')}
                 </h2>
                 <div className="des text-center mx-auto leading-6 text-[18px] max-w-[1050px] w-full font-medium mt-5">
-                    Không chỉ là một hệ thống cung ứng Sợi - May hàng đầu Việt
-                    Nam, MINH MINH TÂM còn giữ vai trò nòng cốt, trong các hoạt động
-                    của Vinatex và Vitas, tích cực đóng góp to lớn vào ngành dệt
-                    may Việt Nam trong nhiều thập kỷ qua với quy mô lớn.
+                    {t('description')}
                 </div>
 
                 <div className="icon-wrapper grid gap-y-5 gap-x-4 sm:gap-x-7 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 mt-10 xl:mt-16">
@@ -126,13 +125,20 @@ export default function IntroSection() {
                                 className="img relative bg-primary group-hover:bg-secondary transition-all flex items-center rounded-full mx-auto border-white justify-center w-[100px] sm:w-[130px] shadow-[3px_4px_50px_rgba(0,0,0,0.1)]"
                                 style={{ aspectRatio: '1/1' }}
                             >
-                                <Image
-                                    src={stat.icon}
-                                    alt={stat.text}
-                                    width={80}
-                                    height={80}
-                                    loading="lazy"
-                                />
+                                <Link
+                                    href={stat.icon}
+                                    data-fancybox="gallery"
+                                    className="block relative overflow-hidden rounded-[10px] after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-black after:opacity-0 hover:after:opacity-50 after:transition-all"
+                                >
+                                    <Image
+                                        src={stat.icon}
+                                        alt={stat.text}
+                                        width={80}
+                                        height={80}
+                                        loading="lazy"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </Link>
                             </div>
                             <div className="block-title no-border flex flex-col group-hover:text-secondary transition-all flex-1 text-primary uppercase mt-4">
                                 <span
@@ -159,10 +165,12 @@ export default function IntroSection() {
                         href="/gioi-thieu/tong-quan"
                         className="mx-auto mt-7 w-fit block border-2 border-primary rounded-3xl text-primary text-[16px] font-semibold px-[30px] py-2 hover:bg-secondary hover:text-white hover:border-secondary transition-all"
                     >
-                        XEM THÊM
+                        {t('readMore')}
                     </Link>
                 </div>
             </div>
         </section>
     );
-}
+};
+
+export default IntroSection;
