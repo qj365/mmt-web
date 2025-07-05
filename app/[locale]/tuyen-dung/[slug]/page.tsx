@@ -88,8 +88,12 @@ const otherJobs = [
     },
 ];
 
-export default function JobDetail({ params }: { params: { slug: string } }) {
-    const { slug } = params;
+export default async function JobDetail({
+    params,
+}: {
+    params: Promise<{ locale: string; slug: string }>;
+}) {
+    const { slug } = await params;
     const job = jobData[slug as keyof typeof jobData];
 
     // This would be a proper 404 page in a real app
