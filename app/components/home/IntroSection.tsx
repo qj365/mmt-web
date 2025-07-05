@@ -125,11 +125,7 @@ const IntroSection = () => {
                                 className="img relative bg-primary group-hover:bg-secondary transition-all flex items-center rounded-full mx-auto border-white justify-center w-[100px] sm:w-[130px] shadow-[3px_4px_50px_rgba(0,0,0,0.1)]"
                                 style={{ aspectRatio: '1/1' }}
                             >
-                                <Link
-                                    href={stat.icon}
-                                    data-fancybox="gallery"
-                                    className="block relative overflow-hidden rounded-[10px] after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-black after:opacity-0 hover:after:opacity-50 after:transition-all"
-                                >
+                                <div>
                                     <Image
                                         src={stat.icon}
                                         alt={stat.text}
@@ -138,7 +134,7 @@ const IntroSection = () => {
                                         loading="lazy"
                                         className="w-full h-full object-cover"
                                     />
-                                </Link>
+                                </div>
                             </div>
                             <div className="block-title no-border flex flex-col group-hover:text-secondary transition-all flex-1 text-primary uppercase mt-4">
                                 <span
