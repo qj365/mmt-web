@@ -141,7 +141,7 @@ export default function DetKimPage() {
                                     </p>
                                     <p>
                                         Dệt kim là một trong những dòng sản phẩm
-                                        xuất khẩu đa dạng của Hòa Thọ. Sản phẩm
+                                        xuất khẩu đa dạng của MINH MINH TÂM. Sản phẩm
                                         dệt kim được sản xuất bằng công nghệ
                                         hiện đại, đáp ứng các tiêu chuẩn chất
                                         lượng quốc tế và được xuất khẩu đến

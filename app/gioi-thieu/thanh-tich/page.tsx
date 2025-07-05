@@ -37,7 +37,7 @@ export default function ThanhTichPage() {
     return (
         <ContentPageLayout
             bannerImage="/images/gioi-thieu/thanh-tich/banner.png"
-            bannerAlt="Thành tích Hoà Thọ"
+            bannerAlt="Thành tích MINH MINH TÂM"
             breadcrumbItems={breadcrumbItems}
             containerBackground="/images/gioi-thieu/thanh-tich/bg.png"
         >

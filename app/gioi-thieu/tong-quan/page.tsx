@@ -12,7 +12,7 @@ export default function TongQuanPage() {
     return (
         <ContentPageLayout
             bannerImage="/images/gioi-thieu/tong-quan/banner.png"
-            bannerAlt="Tổng quan - Dệt may Hoà Thọ"
+            bannerAlt="Tổng quan - Dệt may MINH MINH TÂM"
             breadcrumbItems={breadcrumbItems}
         >
             {/* Section 1: Thư ngỏ (Letter Section) */}
@@ -41,14 +41,14 @@ export default function TongQuanPage() {
                                 </div>
                                 <div className="des text-base leading-6 text-left text-gray-600 lg:pl-[44px]">
                                     <p className="mb-4">
-                                        Trong hơn nửa thế kỷ qua, Hòa Thọ luôn
+                                        Trong hơn nửa thế kỷ qua, MINH MINH TÂM luôn
                                         nhất quán một tôn chỉ hoạt động: xây
-                                        dựng Dệt May Hòa Thọ phát triển trường
+                                        dựng Dệt May MINH MINH TÂM phát triển trường
                                         tồn, mang đậm tính nhân văn, không ngừng
                                         sáng tạo, hướng đến thỏa mãn cao nhất
                                         nhu cầu của khách hàng bằng cam kết chất
                                         lượng sản phẩm và dịch vụ. Nhờ vậy, sản
-                                        phẩm của Hòa Thọ đã đi khắp năm châu và
+                                        phẩm của MINH MINH TÂM đã đi khắp năm châu và
                                         chúng tôi đã trở thành doanh nghiệp Dệt
                                         May nòng cốt tại khu vực, góp phần vào
                                         sự phát triển của ngành dệt may Việt Nam
@@ -58,7 +58,7 @@ export default function TongQuanPage() {
                                         Với tư duy không ngừng đổi mới, đội ngũ
                                         nhân sự giàu kinh nghiệm, tâm huyết,
                                         sáng tạo cùng sự tiên phong ứng dụng kỹ
-                                        thuật công nghệ tiên tiến nhất, Hòa Thọ
+                                        thuật công nghệ tiên tiến nhất, MINH MINH TÂM
                                         đã liên tục nâng cao lợi thế cạnh tranh
                                         bằng các sản phẩm mang tầm vóc và chất
                                         lượng quốc tế tại thị trường lớn như Hoa
@@ -71,27 +71,26 @@ export default function TongQuanPage() {
                                     </p>
                                     <p className="mb-4">
                                         Chúng tôi tin rằng trong chặng đường sắp
-                                        tới, Hòa Thọ sẽ viết nên những trang sử
+                                        tới, MINH MINH TÂM sẽ viết nên những trang sử
                                         mới của riêng mình, và cả ngành dệt may
                                         Việt Nam. Trên hành trình này chắc chắn
                                         và luôn luôn cần sự đồng hành, ủng hộ
                                         vững chắc từ Quý đối tác cũng như tập
-                                        thể cán bộ công nhân viên Hòa Thọ. Hòa
-                                        Thọ cam kết tạo ra những giá trị phát
+                                        thể cán bộ công nhân viên MINH MINH TÂM. MINH MINH TÂM cam kết tạo ra những giá trị phát
                                         triển bền vững cho khách hàng, đối tác,
                                         cán bộ công nhân viên, những con người
-                                        đã, đang và sẽ gắn kết với Hòa Thọ.
+                                        đã, đang và sẽ gắn kết với MINH MINH TÂM.
                                     </p>
                                     <div className="signature text-right mt-8">
                                         <p>Trân trọng,</p>
-                                        <p className="mt-4">Chủ tịch</p>
+                                        <p className="mt-4">Giám đốc</p>
                                         <p className="font-bold">
-                                            Nguyễn Văn Hải
+                                            Vũ Thị Thanh Thanh
                                         </p>
                                     </div>
                                 </div>
                                 <div className="quote text-red-600 sm:text-2xl leading-7 font-bold italic mt-6">
-                                    &ldquo;Hòa cùng thời đại - Thọ với nhân
+                                    &ldquo;May mặc tận tâm – An tâm sử dụng
                                     văn&rdquo;
                                 </div>
                             </div>
@@ -169,12 +168,12 @@ export default function TongQuanPage() {
                                         Thành lập năm
                                     </div>
                                     <div className="year font-bold text-7xl leading-8 text-red-600 ml-5">
-                                        1962
+                                        1996
                                     </div>
                                 </div>
                                 <div className="des text-2xl text-white">
                                     <p className="mb-4">
-                                        <strong>Hòa Thọ</strong> là một trong
+                                        <strong>MINH MINH TÂM</strong> là một trong
                                         những doanh nghiệp dệt may có bề dày
                                         lịch sử và quy mô lớn với 2 lĩnh vực
                                         chính:
@@ -192,7 +191,7 @@ export default function TongQuanPage() {
                                         <strong>
                                             Sợi - May hàng đầu Việt Nam
                                         </strong>
-                                        , Hòa Thọ còn giữ vai trò nòng cốt,
+                                        , MINH MINH TÂM còn giữ vai trò nòng cốt,
                                         trong các hoạt động của Vinatex và
                                         Vitas, tích cực đóng góp to lớn vào
                                         ngành dệt may Việt Nam trong nhiều thập
@@ -239,7 +238,7 @@ export default function TongQuanPage() {
                                 <div className="image w-full h-full">
                                     <Image
                                         src="https://picsum.photos/800/450?random=6"
-                                        alt="Video giới thiệu Hòa Thọ"
+                                        alt="Video giới thiệu MINH MINH TÂM"
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"

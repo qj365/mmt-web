@@ -51,7 +51,7 @@ export default function LoiCamKet() {
                         <div className="space-y-4 text-base">
                             <p className="text-justify">
                                 1. Thu nhập của người lao động là thước đo giá
-                                trị phát triển của Tổng Công Ty Dệt May Hòa Thọ.
+                                trị phát triển của Tổng Công Ty Dệt May MINH MINH TÂM.
                                 Tạo ra môi trường làm việc chuyên nghiệp, tôn
                                 trọng lẫn nhau.
                             </p>
