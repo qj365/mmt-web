@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import ContentPageLayout from '../../components/layout/ContentPageLayout';
-import { BreadcrumbItem } from '../../types';
+import ContentPageLayout from '@/components/layout/ContentPageLayout';
+import { BreadcrumbItem } from '@/types/breadcrumb';
 
 const breadcrumbItems: BreadcrumbItem[] = [
     { label: 'Giới thiệu', href: '/gioi-thieu/tong-quan' },
@@ -41,45 +41,49 @@ export default function TongQuanPage() {
                                 </div>
                                 <div className="des text-base leading-6 text-left text-gray-600 lg:pl-[44px]">
                                     <p className="mb-4">
-                                        Trong hơn nửa thế kỷ qua, MINH MINH TÂM luôn
-                                        nhất quán một tôn chỉ hoạt động: xây
-                                        dựng Dệt May MINH MINH TÂM phát triển trường
-                                        tồn, mang đậm tính nhân văn, không ngừng
-                                        sáng tạo, hướng đến thỏa mãn cao nhất
-                                        nhu cầu của khách hàng bằng cam kết chất
-                                        lượng sản phẩm và dịch vụ. Nhờ vậy, sản
-                                        phẩm của MINH MINH TÂM đã đi khắp năm châu và
-                                        chúng tôi đã trở thành doanh nghiệp Dệt
-                                        May nòng cốt tại khu vực, góp phần vào
-                                        sự phát triển của ngành dệt may Việt Nam
-                                        trên thị trường thế giới.
+                                        Trong hơn nửa thế kỷ qua, MINH MINH TÂM
+                                        luôn nhất quán một tôn chỉ hoạt động:
+                                        xây dựng Dệt May MINH MINH TÂM phát
+                                        triển trường tồn, mang đậm tính nhân
+                                        văn, không ngừng sáng tạo, hướng đến
+                                        thỏa mãn cao nhất nhu cầu của khách hàng
+                                        bằng cam kết chất lượng sản phẩm và dịch
+                                        vụ. Nhờ vậy, sản phẩm của MINH MINH TÂM
+                                        đã đi khắp năm châu và chúng tôi đã trở
+                                        thành doanh nghiệp Dệt May nòng cốt tại
+                                        khu vực, góp phần vào sự phát triển của
+                                        ngành dệt may Việt Nam trên thị trường
+                                        thế giới.
                                     </p>
                                     <p className="mb-4">
                                         Với tư duy không ngừng đổi mới, đội ngũ
                                         nhân sự giàu kinh nghiệm, tâm huyết,
                                         sáng tạo cùng sự tiên phong ứng dụng kỹ
-                                        thuật công nghệ tiên tiến nhất, MINH MINH TÂM
-                                        đã liên tục nâng cao lợi thế cạnh tranh
-                                        bằng các sản phẩm mang tầm vóc và chất
-                                        lượng quốc tế tại thị trường lớn như Hoa
-                                        Kỳ, Châu Âu, Nhật Bản, Hàn Quốc... Niềm
-                                        tin, sự đánh giá cao từ phía khách hàng
-                                        là thành quả to lớn, đáng tự hào và là
-                                        nguồn động lực của chúng tôi trong suốt
-                                        hơn 60 năm qua. Chúng tôi nhất định sẽ
-                                        giữ vững và phát huy hơn nữa.
+                                        thuật công nghệ tiên tiến nhất, MINH
+                                        MINH TÂM đã liên tục nâng cao lợi thế
+                                        cạnh tranh bằng các sản phẩm mang tầm
+                                        vóc và chất lượng quốc tế tại thị trường
+                                        lớn như Hoa Kỳ, Châu Âu, Nhật Bản, Hàn
+                                        Quốc... Niềm tin, sự đánh giá cao từ
+                                        phía khách hàng là thành quả to lớn,
+                                        đáng tự hào và là nguồn động lực của
+                                        chúng tôi trong suốt hơn 60 năm qua.
+                                        Chúng tôi nhất định sẽ giữ vững và phát
+                                        huy hơn nữa.
                                     </p>
                                     <p className="mb-4">
                                         Chúng tôi tin rằng trong chặng đường sắp
-                                        tới, MINH MINH TÂM sẽ viết nên những trang sử
-                                        mới của riêng mình, và cả ngành dệt may
-                                        Việt Nam. Trên hành trình này chắc chắn
-                                        và luôn luôn cần sự đồng hành, ủng hộ
-                                        vững chắc từ Quý đối tác cũng như tập
-                                        thể cán bộ công nhân viên MINH MINH TÂM. MINH MINH TÂM cam kết tạo ra những giá trị phát
-                                        triển bền vững cho khách hàng, đối tác,
-                                        cán bộ công nhân viên, những con người
-                                        đã, đang và sẽ gắn kết với MINH MINH TÂM.
+                                        tới, MINH MINH TÂM sẽ viết nên những
+                                        trang sử mới của riêng mình, và cả ngành
+                                        dệt may Việt Nam. Trên hành trình này
+                                        chắc chắn và luôn luôn cần sự đồng hành,
+                                        ủng hộ vững chắc từ Quý đối tác cũng như
+                                        tập thể cán bộ công nhân viên MINH MINH
+                                        TÂM. MINH MINH TÂM cam kết tạo ra những
+                                        giá trị phát triển bền vững cho khách
+                                        hàng, đối tác, cán bộ công nhân viên,
+                                        những con người đã, đang và sẽ gắn kết
+                                        với MINH MINH TÂM.
                                     </p>
                                     <div className="signature text-right mt-8">
                                         <p>Trân trọng,</p>
@@ -173,9 +177,9 @@ export default function TongQuanPage() {
                                 </div>
                                 <div className="des text-2xl text-white">
                                     <p className="mb-4">
-                                        <strong>MINH MINH TÂM</strong> là một trong
-                                        những doanh nghiệp dệt may có bề dày
-                                        lịch sử và quy mô lớn với 2 lĩnh vực
+                                        <strong>MINH MINH TÂM</strong> là một
+                                        trong những doanh nghiệp dệt may có bề
+                                        dày lịch sử và quy mô lớn với 2 lĩnh vực
                                         chính:
                                     </p>
                                     <p className="mb-2">
@@ -191,8 +195,8 @@ export default function TongQuanPage() {
                                         <strong>
                                             Sợi - May hàng đầu Việt Nam
                                         </strong>
-                                        , MINH MINH TÂM còn giữ vai trò nòng cốt,
-                                        trong các hoạt động của Vinatex và
+                                        , MINH MINH TÂM còn giữ vai trò nòng
+                                        cốt, trong các hoạt động của Vinatex và
                                         Vitas, tích cực đóng góp to lớn vào
                                         ngành dệt may Việt Nam trong nhiều thập
                                         kỷ qua.

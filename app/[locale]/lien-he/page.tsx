@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import ContentPageLayout from '../../components/layout/ContentPageLayout';
-import PageTitle from '../../components/shared/PageTitle';
-import { BreadcrumbItem } from '../../types';
+import ContentPageLayout from '@/components/layout/ContentPageLayout';
+import PageTitle from '@/components/shared/PageTitle';
+import { BreadcrumbItem } from '@/types/breadcrumb';
 
 export default function ContactPage() {
     // Define breadcrumb items

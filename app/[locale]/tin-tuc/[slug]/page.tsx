@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import ContentPageLayout from '../../components/layout/ContentPageLayout';
-import { BreadcrumbItem } from '../../types';
+import ContentPageLayout from '@/components/layout/ContentPageLayout';
+import { BreadcrumbItem } from '@/types/breadcrumb';
 
 // Mock data for the article
 const article = {

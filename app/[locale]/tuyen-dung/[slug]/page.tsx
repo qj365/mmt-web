@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ContentPageLayout from '../../components/layout/ContentPageLayout';
+import ContentPageLayout from '@/components/layout/ContentPageLayout';
 
 // This is a sample job data - in a real app, this would come from an API or CMS
 const jobData = {
