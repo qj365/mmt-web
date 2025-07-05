@@ -19,10 +19,10 @@ export default function Container({
           }
         : {};
 
-    // Check if className contains a bg- class to avoid default bg-white
+    // Check if className contains a bg- class to avoid default bg-[#F5F5F5]
     const hasCustomBg = className.includes('bg-');
     const baseClasses = `w-full ${
-        hasCustomBg ? '' : 'bg-white'
+        hasCustomBg ? '' : 'bg-[#F5F5F5]'
     } py-8 sm:py-12 md:py-16 lg:py-[85px] pb-6 sm:pb-8 md:pb-10 lg:pb-[45px] relative`;
 
     return (

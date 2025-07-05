@@ -51,36 +51,6 @@ const navItems: NavMenuItem[] = [
         title: 'Tin tức',
         href: '/tin-tuc',
     },
-    {
-        title: 'Quan hệ cổ đông',
-        href: '/quan-he-co-dong',
-        children: [
-            {
-                title: 'Thông tin cổ đông',
-                href: '/quan-he-co-dong/thong-tin-co-dong/2025',
-            },
-            {
-                title: 'Phát triển bền vững',
-                href: '/quan-he-co-dong/phat-trien-ben-vung',
-            },
-            {
-                title: 'Đại hội đồng cổ đông',
-                href: '/quan-he-co-dong/dai-hoi-dong-co-dong/2025-5',
-            },
-            {
-                title: 'Tình hình tài chính',
-                href: '/quan-he-co-dong/tinh-hinh-tai-chinh/2025-1',
-            },
-            {
-                title: 'Điều lệ quy chế',
-                href: '/quan-he-co-dong/dieu-le-quy-che/2025-3',
-            },
-            {
-                title: 'Biểu đồ cổ đông',
-                href: '/quan-he-co-dong/bieu-do-co-dong',
-            },
-        ],
-    },
     { title: 'Tuyển dụng', href: '/tuyen-dung' },
     { title: 'Liên hệ', href: '/lien-he' },
 ];

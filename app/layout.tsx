@@ -44,7 +44,7 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${baiJamjuree.variable} canhcam homepage section-grey vi-vn`}
+                className={`${baiJamjuree.variable} canhcam homepage section-grey vi-vn bg-[#F5F5F5]`}
             >
                 {children}
             </body>
