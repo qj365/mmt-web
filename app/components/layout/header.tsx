@@ -86,7 +86,9 @@ const NavLink = ({
                         title={item.title}
                         className={`inline-block rounded-[50px] px-[15px] py-1 ${
                             isActive
-                                ? 'bg-secondary text-white'
+                                ? isMobile
+                                    ? 'bg-white text-secondary'
+                                    : 'bg-secondary text-white'
                                 : 'text-[#111111] hover:bg-secondary hover:text-white'
                         } ${
                             isMobile ? 'text-[18px]' : 'text-base'
@@ -107,7 +109,9 @@ const NavLink = ({
                 title={item.title}
                 className={`inline-block rounded-[50px] px-[15px] py-1 ${
                     isActive
-                        ? 'bg-secondary text-white'
+                        ? isMobile
+                            ? 'bg-white text-secondary'
+                            : 'bg-secondary text-white'
                         : 'text-[#111111] hover:bg-secondary hover:text-white'
                 } ${
                     isMobile ? 'text-[18px]' : 'text-base'
@@ -126,7 +130,9 @@ const NavLink = ({
                     title={item.title}
                     className={`inline-block rounded-[50px] px-[15px] py-1 ${
                         isActive
-                            ? 'bg-secondary text-white'
+                            ? isMobile
+                                ? 'bg-white text-secondary'
+                                : 'bg-secondary text-white'
                             : 'text-[#111111] hover:bg-secondary hover:text-white'
                     } ${
                         isMobile ? 'text-[18px]' : 'text-base'
@@ -180,11 +186,15 @@ const NavLink = ({
                                 title={child.title}
                                 className={`block py-2 px-5 ${
                                     isChildActive(child.href)
-                                        ? 'bg-secondary text-white'
+                                        ? isMobile
+                                            ? 'bg-white text-secondary'
+                                            : 'bg-secondary text-white'
                                         : 'hover:bg-secondary hover:text-white'
                                 } ${
                                     isMobile
-                                        ? 'text-[16px] font-normal'
+                                        ? isChildActive(child.href)
+                                            ? 'text-[16px] font-normal'
+                                            : 'text-[16px] font-normal'
                                         : isChildActive(child.href)
                                         ? 'text-base text-white'
                                         : 'text-base xl:text-inherit'
