@@ -20,7 +20,7 @@ export default function SanPhamSoiPage() {
         },
         {
             name: 'Sợi xe các loại',
-            slug: 'soi-xe',
+            slug: 'soi-xe-cac-loai',
             imageSrc: '/images/san-pham/san-pham-soi/so-xe-cac-loai.png',
             basePath: '/san-pham/san-pham-soi',
         },
