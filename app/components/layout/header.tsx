@@ -3,15 +3,17 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 interface NavMenuItem {
     title: string;
     href: string;
     children?: NavMenuItem[];
+    isHome?: boolean;
 }
 
 const navItems: NavMenuItem[] = [
-    // { title: 'Trang chủ', href: '/' },
+    { title: 'Trang chủ', href: '/', isHome: true },
     {
         title: 'Giới thiệu',
         href: '/gioi-thieu/tong-quan',
@@ -63,19 +65,54 @@ const NavLink = ({
     isMobile?: boolean;
 }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+    const pathname = usePathname();
+
+    // Check if the current path matches this nav item or its children
+    const isActive =
+        pathname === item.href ||
+        (item.children?.some(child => pathname === child.href) ?? false);
+
+    // Check if active style should be applied to children items
+    const isChildActive = (childHref: string) => pathname === childHref;
 
     if (!item.children) {
+        // Special handling for home link
+        if (item.isHome) {
+            if (isMobile) {
+                // Text version for mobile
+                return (
+                    <Link
+                        href={item.href}
+                        title={item.title}
+                        className={`inline-block rounded-[50px] px-[15px] py-1 ${
+                            isActive
+                                ? 'bg-secondary text-white'
+                                : 'text-[#111111] hover:bg-secondary hover:text-white'
+                        } ${
+                            isMobile ? 'text-[18px]' : 'text-base'
+                        } font-medium leading-6 whitespace-nowrap`}
+                    >
+                        {item.title}
+                    </Link>
+                );
+            } else {
+                // Icon version for desktop - kept in desktop nav section
+                return null;
+            }
+        }
+
         return (
             <Link
                 href={item.href}
                 title={item.title}
-                className={
-                    item.href === '/'
-                        ? 'flex items-center justify-center bg-red-600 text-white rounded-full w-8 h-8 p-0 before:content-["\\f015"] before:font-["Font_Awesome_5_Pro"] before:text-base before:font-light before:transition-all'
-                        : `inline-block rounded-[50px] px-[15px] py-1 hover:bg-red-600 hover:text-white text-[#111111] ${
-                              isMobile ? 'text-[18px]' : 'text-base'
-                          } font-medium leading-6 whitespace-nowrap`
-                }
+                className={`inline-block rounded-[50px] px-[15px] py-1 ${
+                    isActive
+                        ? 'bg-secondary text-white'
+                        : 'text-[#111111] hover:bg-secondary hover:text-white'
+                } ${
+                    isMobile ? 'text-[18px]' : 'text-base'
+                } font-medium leading-6 whitespace-nowrap`}
             >
                 {item.title}
             </Link>
@@ -83,12 +120,20 @@ const NavLink = ({
     }
 
     return (
-        <div className="has-child relative w-full whitespace-nowrap">
+        <div
+            className="has-child relative w-full whitespace-nowrap group"
+            onMouseEnter={!isMobile ? () => setIsHovered(true) : undefined}
+            onMouseLeave={!isMobile ? () => setIsHovered(false) : undefined}
+        >
             <div className="parent flex justify-between">
                 <Link
                     href={item.href}
                     title={item.title}
-                    className={`inline-block rounded-[50px] px-[15px] py-1 hover:bg-red-600 hover:text-white text-[#111111] ${
+                    className={`inline-block rounded-[50px] px-[15px] py-1 ${
+                        isActive
+                            ? 'bg-secondary text-white'
+                            : 'text-[#111111] hover:bg-secondary hover:text-white'
+                    } ${
                         isMobile ? 'text-[18px]' : 'text-base'
                     } font-medium leading-6 whitespace-nowrap`}
                 >
@@ -116,7 +161,9 @@ const NavLink = ({
                 className={`child ${
                     isMobile
                         ? 'overflow-hidden transition-all duration-500 ease-in-out'
-                        : 'xl:absolute xl:min-w-[230px] xl:bg-white xl:left-[-20px] xl:top-[calc(100%-1px)] xl:shadow-[2px_4px_12px_rgba(0,0,0,0.1)] xl:transition-all xl:duration-300 xl:ease-in-out xl:py-[10px] xl:px-0'
+                        : `xl:absolute xl:min-w-[230px] xl:bg-white xl:left-[-20px] xl:top-[calc(100%-1px)] xl:shadow-[2px_4px_12px_rgba(0,0,0,0.1)] xl:transition-all xl:duration-300 xl:ease-in-out xl:py-[10px] xl:px-0 ${
+                              isHovered ? 'visible-dropdown' : ''
+                          }`
                 }`}
                 style={
                     isMobile
@@ -130,32 +177,14 @@ const NavLink = ({
                                   'all 0.4s cubic-bezier(0.45, 0, 0.55, 1)',
                           }
                         : {
-                              opacity: 0,
-                              pointerEvents: 'none',
-                              transform: 'translateY(-10px)',
+                              opacity: isHovered ? 1 : 0,
+                              pointerEvents: isHovered ? 'auto' : 'none',
+                              transform: isHovered
+                                  ? 'translateY(0)'
+                                  : 'translateY(-10px)',
                               transition:
                                   'all 0.4s cubic-bezier(0.45, 0, 0.55, 1)',
                           }
-                }
-                onMouseEnter={
-                    !isMobile
-                        ? (e: React.MouseEvent<HTMLDivElement>) => {
-                              const target = e.currentTarget;
-                              target.style.opacity = '1';
-                              target.style.pointerEvents = 'auto';
-                              target.style.transform = 'translateY(0)';
-                          }
-                        : undefined
-                }
-                onMouseLeave={
-                    !isMobile
-                        ? (e: React.MouseEvent<HTMLDivElement>) => {
-                              const target = e.currentTarget;
-                              target.style.opacity = '0';
-                              target.style.pointerEvents = 'none';
-                              target.style.transform = 'translateY(-10px)';
-                          }
-                        : undefined
                 }
             >
                 <ul className="list-none p-0 flex flex-col ul-child xl:items-start items-center">
@@ -164,7 +193,11 @@ const NavLink = ({
                             <Link
                                 href={child.href}
                                 title={child.title}
-                                className={`block py-2 px-5 hover:bg-red-600 hover:text-white ${
+                                className={`block py-2 px-5 ${
+                                    isChildActive(child.href)
+                                        ? 'bg-secondary text-white'
+                                        : 'hover:bg-secondary hover:text-white'
+                                } ${
                                     isMobile
                                         ? 'text-[16px] font-normal'
                                         : 'text-base xl:text-inherit'
@@ -288,21 +321,23 @@ const Header = () => {
                                 >
                                     <Image
                                         src="/images/home/menu-icon.svg"
-                                        alt="Menu"
+                                        alt="Trang chủ"
                                         width={18}
                                         height={14}
                                         className="text-white"
                                     />
                                 </Link>
                                 <ul className="list-none p-0 flex ul-parent xl:flex-row flex-col items-center xl:gap-1 xl:flex-nowrap overflow-visible">
-                                    {navItems.map((item, index) => (
-                                        <li
-                                            key={index}
-                                            className="group font-medium py-7 first:text-0 flex-shrink-0"
-                                        >
-                                            <NavLink item={item} />
-                                        </li>
-                                    ))}
+                                    {navItems
+                                        .filter(item => !item.isHome)
+                                        .map((item, index) => (
+                                            <li
+                                                key={index}
+                                                className="group font-medium py-7 first:text-0 flex-shrink-0"
+                                            >
+                                                <NavLink item={item} />
+                                            </li>
+                                        ))}
                                 </ul>
                             </nav>
                         </div>
