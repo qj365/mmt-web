@@ -45,18 +45,7 @@ const navItems: NavMenuItem[] = [
     },
     {
         title: 'Nhà máy - Thương hiệu',
-        href: '/nha-may-may-1',
-        children: [
-            {
-                title: 'Nhà máy may',
-                href: '/nha-may-thuong-hieu/nha-may-may-1',
-            },
-            { title: 'Nhà máy sợi', href: '/nha-may-thuong-hieu/nha-may-soi' },
-            {
-                title: 'Thương hiệu trực thuộc',
-                href: '/nha-may-thuong-hieu/thuong-hieu-truc-thuoc',
-            },
-        ],
+        href: '/nha-may-thuong-hieu',
     },
     {
         title: 'Tin tức',
@@ -188,9 +177,9 @@ const Header = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
-    const toggleSearch = () => {
-        setSearchOpen(!searchOpen);
-    };
+    // const toggleSearch = () => {
+    //     setSearchOpen(!searchOpen);
+    // };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -291,12 +280,12 @@ const Header = () => {
 
                         <div className="tool-items ml-[18px]">
                             <div className="flex items-center">
-                                <div
+                                {/* <div
                                     className="search-icon text-[#338dcc] cursor-pointer text-base font-normal"
                                     onClick={toggleSearch}
                                 >
                                     <em className="far fa-search"></em>
-                                </div>
+                                </div> */}
                                 <div className="language ml-[19px]">
                                     <div className="language-list">
                                         <ul className="list-none p-0 flex items-center">
