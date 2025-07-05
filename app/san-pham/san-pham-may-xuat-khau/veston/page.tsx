@@ -143,9 +143,9 @@ export default function VestonPage() {
                                     </p>
                                     <p>
                                         Là dòng sản phẩm may xuất khẩu chủ lực
-                                        của Hòa Thọ. Với nhiều năm kinh nghiệm
+                                        của MINH MINH TÂM. Với nhiều năm kinh nghiệm
                                         sản xuất, các dòng sản phẩm áo veston
-                                        của Hòa Thọ đã tạo được sự tin tưởng và
+                                        của MINH MINH TÂM đã tạo được sự tin tưởng và
                                         hợp tác từ các khách hàng trong và ngoài
                                         nước.
                                     </p>

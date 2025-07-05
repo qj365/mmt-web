@@ -19,9 +19,9 @@ export default function LichSuPage() {
                 <ul>
                     <li className="text-justify">
                         Được thành lập từ năm 1962, tiền thân có tên là Nhà máy
-                        Dệt Hoà Thọ (SICOVINA) thuộc Công ty Kỹ nghệ Bông vải
-                        Việt Nam. Năm 1975, khi thành phố Đà Nẵng được giải
-                        phóng, Nhà máy Dệt Hoà Thọ được chính quyền tiếp quản và
+                        Dệt MINH MINH TÂM (SICOVINA) thuộc Công ty Kỹ nghệ Bông vải
+                        Việt Nam. Năm 1975, khi thành phố Bình Thuận được giải
+                        phóng, Nhà máy Dệt MINH MINH TÂM được chính quyền tiếp quản và
                         đi vào hoạt động trở lại vào ngày 21/04/1975.
                     </li>
                 </ul>
@@ -33,7 +33,7 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Thành lập Nhà Máy Sợi Hoà Thọ: </p>
+                        <p>Thành lập Nhà Máy Sợi MINH MINH TÂM: </p>
                         <ul className="list-disc pl-5">
                             <li>Năng lực: 22.000 cọc sợi.</li>
                             <li>
@@ -72,7 +72,7 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Thành lập Nhà Máy May Hoà Thọ 1:</p>
+                        <p>Thành lập Nhà Máy May MINH MINH TÂM 1:</p>
                         <ul className="list-disc pl-5">
                             <li>Sản phẩm chính: Suits, Blazer, Pant.</li>
                             <li>
@@ -94,7 +94,7 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Thành lập Nhà Máy May Hoà Thọ 2:</p>
+                        <p>Thành lập Nhà Máy May MINH MINH TÂM 2:</p>
                         <ul className="list-disc pl-5">
                             <li>Sản phẩm chính: Suits, Blazer, Pant.</li>
                             <li>
@@ -117,7 +117,7 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Thành lập Công Ty May Hoà Thọ - Điện Bàn:</p>
+                        <p>Thành lập Công Ty May MINH MINH TÂM - Điện Bàn:</p>
                         <ul className="list-disc pl-5">
                             <li>Sản phẩm chính: Workwear, Uniform Knitwear.</li>
                             <li>
@@ -140,11 +140,11 @@ export default function LichSuPage() {
                     <p>Thành lập mới hai đơn vị:</p>
                     <ul className="text-justify">
                         <li>
-                            Thành lập Nhà Máy May Hoà Thọ 3, đến năm 2010 sát
-                            nhập vào Nhà Máy May Hòa Thọ 2 (nay là Nhà Máy May
-                            Veston Hòa Thọ)
+                            Thành lập Nhà Máy May MINH MINH TÂM 3, đến năm 2010 sát
+                            nhập vào Nhà Máy May MINH MINH TÂM 2 (nay là Nhà Máy May
+                            Veston MINH MINH TÂM)
                         </li>
-                        <li>Thành lập Công ty May Hoà Thọ - Quảng Nam.</li>
+                        <li>Thành lập Công ty May MINH MINH TÂM - Quảng Nam.</li>
                     </ul>
                 </>
             ),
@@ -155,7 +155,7 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Thành lập Công Ty May Hoà Thọ - Hội An:</p>
+                        <p>Thành lập Công Ty May MINH MINH TÂM - Hội An:</p>
                         <ul className="list-disc pl-5">
                             <li>Năng lực: 650.000 sản phẩm/năm</li>
                             <li>
@@ -178,7 +178,7 @@ export default function LichSuPage() {
                 <ul className="text-justify">
                     <li>
                         Ngày 15/11/2006, công ty đổi tên thành Tổng Công ty Cổ
-                        phần Dệt May Hoà Thọ theo quyết định số 3252/QĐ-BCN của
+                        phần Dệt May MINH MINH TÂM theo quyết định số 3252/QĐ-BCN của
                         Bộ Công nghiệp, và chính thức đi vào hoạt động vào ngày
                         01 tháng 02 năm 2007.
                     </li>
@@ -193,7 +193,7 @@ export default function LichSuPage() {
                     <p>Đầu tư mới hai Công ty:</p>
                     <ul className="text-justify">
                         <li>
-                            <p>Công ty May Hoà Thọ - Duy Xuyên:</p>
+                            <p>Công ty May MINH MINH TÂM - Duy Xuyên:</p>
                             <ul className="list-disc pl-5">
                                 <li>Sản phẩm chính: Dress pants.</li>
                                 <li>
@@ -208,7 +208,7 @@ export default function LichSuPage() {
                             </ul>
                         </li>
                         <li>
-                            <p>Công ty May Hoà Thọ - Đông Hà:</p>
+                            <p>Công ty May MINH MINH TÂM - Đông Hà:</p>
                             <ul className="list-disc pl-5">
                                 <li>Sản phẩm chính: Jacket, Workwear.</li>
                                 <li>Các chứng nhận: WRAP, BSCI, GMP, PVH.</li>
@@ -219,7 +219,7 @@ export default function LichSuPage() {
                                 </li>
                                 <li>
                                     Địa chỉ: Khu CN nam Đông Hà, Tp. Đông Hà,
-                                    Quảng Trị, cách Đà Nẵng 165km.
+                                    Quảng Trị, cách Bình Thuận 165km.
                                 </li>
                             </ul>
                         </li>
@@ -233,7 +233,7 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Thành lập Nhà Máy May Veston Hòa Thọ:</p>
+                        <p>Thành lập Nhà Máy May Veston MINH MINH TÂM:</p>
                         <ul className="list-disc pl-5">
                             <li>
                                 Sản phẩm chính: Suits, Blazer, Vest, Dress
@@ -259,10 +259,10 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        Góp vốn đầu tư vào Công Ty CP May Hòa Thọ - Phú Ninh.
+                        Góp vốn đầu tư vào Công Ty CP May MINH MINH TÂM - Phú Ninh.
                     </li>
                     <li>
-                        Thực hiện tách Công Ty Sợi Hòa Thọ thành 02 nhà máy Sợi
+                        Thực hiện tách Công Ty Sợi MINH MINH TÂM thành 02 nhà máy Sợi
                         1 và Sợi 2.
                     </li>
                 </ul>
@@ -275,7 +275,7 @@ export default function LichSuPage() {
                 <ul className="text-justify">
                     <li>
                         <p>
-                            Góp vốn đầu tư thành lập Công Ty CP Sợi Hòa Thọ
+                            Góp vốn đầu tư thành lập Công Ty CP Sợi MINH MINH TÂM
                             Thăng Bình:
                         </p>
                         <ul className="list-disc pl-5">
@@ -289,7 +289,7 @@ export default function LichSuPage() {
                         </ul>
                     </li>
                     <li>
-                        <p>Thành lập Nhà Máy May Hòa Thọ - Quãng Ngãi:</p>
+                        <p>Thành lập Nhà Máy May MINH MINH TÂM - Quãng Ngãi:</p>
                         <ul className="list-disc pl-5">
                             <li>
                                 Sản phẩm chính: Knitwear, Sleepwear, Polo-shirt,
@@ -343,7 +343,7 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Thành lập Nhà máy May Hòa Thọ - Triệu Phong:</p>
+                        <p>Thành lập Nhà máy May MINH MINH TÂM - Triệu Phong:</p>
                         <ul className="list-disc pl-5">
                             <li>Sản phẩm chính: Jacket, Workwear</li>
                             <li>Các chứng nhận: WRAP, LEED.</li>
@@ -361,7 +361,7 @@ export default function LichSuPage() {
     return (
         <ContentPageLayout
             bannerImage="/images/gioi-thieu/lich-su/banner.png"
-            bannerAlt="Lịch sử hình thành - Dệt may Hoà Thọ"
+            bannerAlt="Lịch sử hình thành - Dệt may MINH MINH TÂM"
             breadcrumbItems={breadcrumbItems}
             containerClassName="intro-lichsu section xl:pt-[80px] xl:pb-[100px]"
         >

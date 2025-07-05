@@ -7,7 +7,7 @@ import { useViewportHeight } from '../../hook/useViewportHeight';
 // Video data with YouTube embed ID
 const videoData = {
     thumbnail: 'https://picsum.photos/800/450',
-    title: 'Hòa Thọ Dệt may',
+    title: 'MINH MINH TÂM Dệt may',
     youtubeId: '-jIQSApVKbI',
 };
 
@@ -38,7 +38,7 @@ export default function VideoSection() {
                         <div className="content w-full h-full bg-white rounded-3xl lg:rounded-[50px] italic p-8">
                             <div className="text-gray-800 text-lg italic">
                                 &ldquo;Không chỉ là một hệ thống cung ứng Sợi -
-                                May hàng đầu Việt Nam, Hòa Thọ còn giữ vai trò
+                                May hàng đầu Việt Nam, MINH MINH TÂM còn giữ vai trò
                                 nòng cốt, trong các hoạt động của Vinatex và
                                 Vitas, tích cực đóng góp to lớn vào ngành dệt
                                 may Việt Nam trong nhiều thập kỷ qua với quy mô

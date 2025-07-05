@@ -11,12 +11,12 @@ const brands = [
         url: '/nha-may-thuong-hieu/thuong-hieu-truc-thuoc',
     },
     {
-        name: 'HÒA THỌ FASHION',
+        name: 'MAY MINH MINH TÂM FASHION',
         logo: 'https://picsum.photos/201/201',
         url: '/nha-may-thuong-hieu/thuong-hieu-truc-thuoc',
     },
     {
-        name: 'TRUNG TÂM THƯƠNG MẠI HÒA THỌ',
+        name: 'TRUNG TÂM THƯƠNG MẠI MAY MINH MINH TÂM',
         logo: 'https://picsum.photos/202/202',
         url: '/nha-may-thuong-hieu/thuong-hieu-truc-thuoc',
     },

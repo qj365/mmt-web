@@ -15,31 +15,29 @@ export default function Footer() {
                         <div className="item w-full sm:w-[calc(50%-15px)] lg:w-[calc(33.3333%-20px)]">
                             <div className="wrapper">
                                 <div className="title text-lg uppercase leading-normal font-bold mb-6">
-                                    Tổng Công ty Cổ phần Dệt may Hoà Thọ
+                                    Tổng Công ty Cổ phần Dệt may MINH MINH TÂM
                                 </div>
                                 <div className="content">
                                     <p>
-                                        Địa chỉ: 36 Ông Ích Đường, Phường Hòa
-                                        Thọ Đông, Quận Cẩm Lệ, Đà Nẵng, Việt
-                                        Nam.
+                                        Địa chỉ: Khu phố 1, Thị trấn Tân Nghĩa, Quận Hàm Tân, Tỉnh Bình Thuận, Việt Nam
                                     </p>
                                     <br />
                                     <p>
                                         Email:{' '}
-                                        <a href="mailto:office@hoatho.com.vn">
-                                            office@hoatho.com.vn
+                                        <a href="mailto:minhminhtam.binhthuan@gmail.com">
+                                            minhminhtam.binhthuan@gmail.com
                                         </a>
                                     </p>
                                     <p>
                                         Tel:{' '}
-                                        <a href="tel:(+84) 2363 846 290">
-                                            (+84) 2363 846 290
+                                        <a href="tel:(+84) 252 672 5858">
+                                            (+84) 252 672 5858
                                         </a>
                                     </p>
                                     <p>
                                         Fax:{' '}
-                                        <a href="fax:(+84) 2363 846 216">
-                                            (+84) 2363 846 216
+                                        <a href="fax:(+84) 28 6272 5525">
+                                            (+84) 28 6272 5525
                                         </a>
                                     </p>
                                 </div>
@@ -104,7 +102,7 @@ export default function Footer() {
                 <div className="container">
                     <div className="title text-center text-xs sm:text-sm leading-4 font-normal">
                         © {new Date().getFullYear()} Tổng Công ty Cổ phần Dệt
-                        may Hoà Thọ.
+                        may MINH MINH TÂM.
                     </div>
                 </div>
             </div>

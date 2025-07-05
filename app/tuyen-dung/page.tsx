@@ -14,21 +14,21 @@ export default function TuyenDungPage() {
             imageSrc: '/images/tuyen-dung/tuyen-dung-1.png',
             imageAlt:
                 'Chuyên gia cao cấp Nghiên cứu và phát triển sản phẩm may',
-            location: 'Đà Nẵng',
+            location: 'Bình Thuận',
         },
         {
             id: 'it-developer',
             title: 'Nhân viên theo dõi đơn hàng may mặc xuất khẩu (Merchandiser)',
             imageSrc: '/images/tuyen-dung/tuyen-dung-1.png',
             imageAlt: 'Nhân viên theo dõi đơn hàng may mặc xuất khẩu',
-            location: 'Đà Nẵng',
+            location: 'Bình Thuận',
         },
         {
             id: 'it-developer',
             title: 'Chuyên viên phát triển phần mềm (IT Developer)',
             imageSrc: '/images/tuyen-dung/tuyen-dung-1.png',
             imageAlt: 'Chuyên viên phát triển phần mềm',
-            location: 'Đà Nẵng',
+            location: 'Bình Thuận',
         },
     ];
 

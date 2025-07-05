@@ -144,7 +144,7 @@ export default function BaoHoLaoDongPage() {
                                     </p>
                                     <p>
                                         Đây chính là một trong những dòng hàng
-                                        xuất khẩu chủ lực của Hoà Thọ nhiều năm
+                                        xuất khẩu chủ lực của MINH MINH TÂM nhiều năm
                                         qua. Nhu cầu thị trường đồ BHLĐ ngày
                                         càng tăng khi nhận thức về an toàn lao
                                         động tại các công ty ngày càng tăng cao.
@@ -162,7 +162,7 @@ export default function BaoHoLaoDongPage() {
                                         dòng sản phẩm này, tạo ra nhiều sản phẩm
                                         đẹp đúng tiêu chuẩn theo yêu cầu của
                                         khách hàng. Đến nay, các sản phẩm BHLĐ
-                                        của Hòa Thọ luôn nhận được sự tin tưởng
+                                        của MINH MINH TÂM luôn nhận được sự tin tưởng
                                         và đánh giá cao từ khách hàng trong và
                                         ngoài nước.
                                     </p>

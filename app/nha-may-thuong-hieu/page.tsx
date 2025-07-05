@@ -15,11 +15,11 @@ export default function NhaMaySoiHoaTho1() {
     const factoryInfo = [
         {
             icon: '/images/nha-may-thuong-hieu/ic-1.svg',
-            text: 'Diện tích 13.000m2',
+            text: 'Diện tích 4.125m2',
         },
         {
             icon: '/images/nha-may-thuong-hieu/ic-2.svg',
-            text: 'Lao động 172 người',
+            text: 'Lao động 150 người',
         },
         {
             icon: '/images/nha-may-thuong-hieu/ic-3.svg',
@@ -28,11 +28,11 @@ export default function NhaMaySoiHoaTho1() {
         { icon: '/images/nha-may-thuong-hieu/ic-4.svg', text: '5.000 tấn/năm' },
         {
             icon: '/images/nha-may-thuong-hieu/ic-5.svg',
-            text: '36 Ông Ích Đường, Phường Hòa Thọ Đông, Quận Cẩm Lệ, Tp. Đà Nẵng, Việt Nam',
+            text: 'Khu phố 1, Thị trấn Tân Nghĩa, Quận Hàm Tân, Tỉnh Bình Thuận, Việt Nam',
         },
         {
             icon: '/images/nha-may-thuong-hieu/ic-7.svg',
-            text: 'CVC, CD, TCD, Sợi xe, Recycled Yarn',
+            text: 'Đồng phục y tế, đồng phục bảo hộ',
         },
         {
             icon: '/images/nha-may-thuong-hieu/ic-6.svg',
@@ -49,7 +49,7 @@ export default function NhaMaySoiHoaTho1() {
         >
             <div>
                 {/* Factory Title */}
-                <PageTitle title="Nhà máy Sợi Hòa Thọ 1" className="mb-10" />
+                <PageTitle title="Nhà máy Sợi MINH MINH TÂM 1" className="mb-10" />
 
                 {/* Factory Info Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] items-start">
@@ -58,7 +58,7 @@ export default function NhaMaySoiHoaTho1() {
                         <div className="rounded-3xl overflow-hidden">
                             <Image
                                 src="/images/nha-may-thuong-hieu/factory.png"
-                                alt="Nhà máy Sợi Hòa Thọ 1"
+                                alt="Nhà máy May MINH MINH TÂM"
                                 width={600}
                                 height={400}
                                 className="w-full h-auto rounded-3xl"
