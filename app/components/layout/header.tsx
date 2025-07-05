@@ -65,7 +65,6 @@ const NavLink = ({
     isMobile?: boolean;
 }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
     const pathname = usePathname();
 
     // Check if the current path matches this nav item or its children
@@ -120,11 +119,7 @@ const NavLink = ({
     }
 
     return (
-        <div
-            className="has-child relative w-full whitespace-nowrap group"
-            onMouseEnter={!isMobile ? () => setIsHovered(true) : undefined}
-            onMouseLeave={!isMobile ? () => setIsHovered(false) : undefined}
-        >
+        <div className="has-child relative w-full whitespace-nowrap group">
             <div className="parent flex justify-between">
                 <Link
                     href={item.href}
@@ -161,9 +156,7 @@ const NavLink = ({
                 className={`child ${
                     isMobile
                         ? 'overflow-hidden transition-all duration-500 ease-in-out'
-                        : `xl:absolute xl:min-w-[230px] xl:bg-white xl:left-[-20px] xl:top-[calc(100%-1px)] xl:shadow-[2px_4px_12px_rgba(0,0,0,0.1)] xl:transition-all xl:duration-300 xl:ease-in-out xl:py-[10px] xl:px-0 ${
-                              isHovered ? 'visible-dropdown' : ''
-                          }`
+                        : 'xl:absolute xl:min-w-[230px] xl:bg-white xl:left-[-20px] xl:top-[calc(100%+10px)] xl:shadow-[2px_4px_12px_rgba(0,0,0,0.1)] xl:transition-all xl:duration-300 xl:ease-in-out xl:py-[10px] xl:px-0 xl:opacity-0 xl:pointer-events-none xl:translate-y-[-10px] group-hover:xl:opacity-100 group-hover:xl:pointer-events-auto group-hover:xl:translate-y-0'
                 }`}
                 style={
                     isMobile
@@ -176,15 +169,7 @@ const NavLink = ({
                               transition:
                                   'all 0.4s cubic-bezier(0.45, 0, 0.55, 1)',
                           }
-                        : {
-                              opacity: isHovered ? 1 : 0,
-                              pointerEvents: isHovered ? 'auto' : 'none',
-                              transform: isHovered
-                                  ? 'translateY(0)'
-                                  : 'translateY(-10px)',
-                              transition:
-                                  'all 0.4s cubic-bezier(0.45, 0, 0.55, 1)',
-                          }
+                        : undefined
                 }
             >
                 <ul className="list-none p-0 flex flex-col ul-child xl:items-start items-center">
@@ -200,6 +185,8 @@ const NavLink = ({
                                 } ${
                                     isMobile
                                         ? 'text-[16px] font-normal'
+                                        : isChildActive(child.href)
+                                        ? 'text-base text-white'
                                         : 'text-base xl:text-inherit'
                                 }`}
                             >
