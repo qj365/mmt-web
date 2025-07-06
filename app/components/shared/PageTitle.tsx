@@ -22,7 +22,7 @@ export default function PageTitle({
             className={`w-full flex flex-col items-center relative ${className}`}
         >
             <h1
-                className={`text-2xl sm:text-3xl md:text-[32px] lg:text-[38px] leading-[1.25em] ${textColor} font-bold uppercase`}
+                className={`text-2xl sm:text-3xl md:text-[32px] lg:text-[38px] leading-[1.25em] ${textColor} font-bold text-center uppercase`}
             >
                 {title}
             </h1>

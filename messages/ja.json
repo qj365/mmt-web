@@ -262,5 +262,14 @@
         "contactInfo": "お問い合わせ情報",
         "certification": "認証",
         "downloadBrochure": "パンフレットダウンロード"
+    },
+    "thi-truong-xuat-khau": {
+        "banner": {
+            "alt": "輸出市場 - ミン ミン タム紡織"
+        },
+        "chart_title": "輸出金額のグラフ",
+        "chart_alt": "輸出金額のグラフ",
+        "market_title": "輸出市場",
+        "market_alt": "グローバル輸出市場"
     }
 }

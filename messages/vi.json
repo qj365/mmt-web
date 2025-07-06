@@ -262,5 +262,14 @@
         "contactInfo": "Thông tin liên hệ",
         "certification": "Chứng nhận",
         "downloadBrochure": "Tải brochure"
+    },
+    "thi-truong-xuat-khau": {
+        "banner": {
+            "alt": "Thị trường xuất khẩu - Dệt may MINH MINH TÂM"
+        },
+        "chart_title": "Biểu đồ kim ngạch xuất khẩu",
+        "chart_alt": "Biểu đồ kim ngạch xuất khẩu",
+        "market_title": "Thị trường xuất khẩu",
+        "market_alt": "Thị trường xuất khẩu toàn cầu"
     }
 }
