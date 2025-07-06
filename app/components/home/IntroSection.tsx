@@ -15,7 +15,7 @@ const IntroSection = () => {
     const stats = [
         {
             icon: '/images/home/introduce-1.png',
-            number: 20.5,
+            number: 4.125,
             unit: 'HA',
             text: t('stats.totalArea'),
         },
@@ -27,7 +27,7 @@ const IntroSection = () => {
         },
         {
             icon: '/images/home/introduce-3.png',
-            number: 11230,
+            number: 150,
             unit: '',
             text: t('stats.personnel'),
         },
