@@ -13,32 +13,27 @@ export default function LichSuPage() {
 
     const timelineItems = [
         {
-            year: '1962',
+            year: '1996',
             image: '/images/gioi-thieu/lich-su/history.png',
             content: (
                 <ul>
                     <li className="text-justify">
-                        Được thành lập từ năm 1962, tiền thân có tên là Nhà máy
-                        Dệt MINH MINH TÂM (SICOVINA) thuộc Công ty Kỹ nghệ Bông
-                        vải Việt Nam. Năm 1975, khi thành phố Bình Thuận được
-                        giải phóng, Nhà máy Dệt MINH MINH TÂM được chính quyền
-                        tiếp quản và đi vào hoạt động trở lại vào ngày
-                        21/04/1975.
+                        Bắt đầu hoạt động tại Việt Nam với Xưởng may Minh Tâm – chuyên sản xuất và gia công đồng phục y tế, gile, áo khoác,...
                     </li>
                 </ul>
             ),
         },
         {
-            year: '1975',
+            year: '2009',
             image: '/images/gioi-thieu/lich-su/history.png',
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Thành lập Nhà Máy Sợi MINH MINH TÂM: </p>
+                        <p>Đầu tư mở rộng thành Công ty TNHH May Phú Minh Tâm: </p>
                         <ul className="list-disc pl-5">
-                            <li>Năng lực: 22.000 cọc sợi.</li>
+                            <li>Chuyên sản xuất đồng phục và đồ bảo hộ y tế.</li>
                             <li>
-                                Sản phẩm chính: CD, TCD, OE, Double Yarn,
+                                Sản phẩm chính: sản xuất đồng phục y tế và đồ bảo hộ,
                                 Recycled Yarn.
                             </li>
                             <li>
@@ -51,29 +46,26 @@ export default function LichSuPage() {
             ),
         },
         {
-            year: '1993',
+            year: '2019',
             image: '/images/gioi-thieu/lich-su/history.png',
             content: (
                 <ul className="text-justify">
                     <li>
-                        Đổi tên thành lập doanh nghiệp Nhà nước: Công ty Dệt Hoà
-                        Thọ theo quyết định thành lập số 241/TCLĐ ngày
-                        24/03/1993 của Bộ Công nghiệp nhẹ.
+                        Thành lập Công ty TNHH May Minh Minh Tâm, xây dựng nhà máy trong 2 năm trước khi vận hành chính thức.
                     </li>
                     <li>
-                        Đầu tư 2 vạn cọc sợi và một xưởng dệt vải với 400 máy
-                        dệt.
+                     Mở rộng quy mô nhà máy, tập trung tăng năng lực sản xuất đồng phục y tế và đồ bảo hộ.
                     </li>
                 </ul>
             ),
         },
         {
-            year: '1997',
+            year: '2021',
             image: '/images/gioi-thieu/lich-su/history.png',
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Thành lập Nhà Máy May MINH MINH TÂM 1:</p>
+                        <p>Tổng số nhân viên là 150 người với 04 chuyền may:</p>
                         <ul className="list-disc pl-5">
                             <li>Sản phẩm chính: Suits, Blazer, Pant.</li>
                             <li>
@@ -90,12 +82,12 @@ export default function LichSuPage() {
             ),
         },
         {
-            year: '1999',
+            year: '2023',
             image: '/images/gioi-thieu/lich-su/history.png',
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Thành lập Nhà Máy May MINH MINH TÂM 2:</p>
+                        <p>Dự kiến mở thêm 2-3 chuyền may mới:</p>
                         <ul className="list-disc pl-5">
                             <li>Sản phẩm chính: Suits, Blazer, Pant.</li>
                             <li>
