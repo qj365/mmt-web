@@ -75,6 +75,9 @@
         "phone": "Điện thoại",
         "email": "Email",
         "fax": "Fax",
-        "copyright": "© 2025 Tổng Công ty CP Dệt May MINH MINH TÂM"
+        "copyright": "© 2025 Tổng Công ty CP Dệt May MINH MINH TÂM",
+        "contactInfo": "Thông tin liên hệ",
+        "certification": "Chứng nhận",
+        "downloadBrochure": "Tải brochure"
     }
 }
