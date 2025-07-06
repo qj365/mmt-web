@@ -34,7 +34,7 @@ export default function AwardsSection() {
             </div>
 
             <div
-                className="awards-bg flex-grow flex items-center"
+                className="awards-bg flex-grow flex items-center mt-7"
                 style={{
                     backgroundImage: 'url(/images/home/award-bg.png)',
                     backgroundSize: 'cover',

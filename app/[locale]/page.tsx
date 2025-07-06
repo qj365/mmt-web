@@ -4,7 +4,7 @@ import MainBanner from '../components/home/MainBanner';
 import IntroSection from '../components/home/IntroSection';
 import ExportMarkets from '../components/home/ExportMarkets';
 import AwardsSection from '../components/home/AwardsSection';
-import BrandsSection from '../components/home/BrandsSection';
+// import BrandsSection from '../components/home/BrandsSection';
 import ProductsSection from '../components/home/ProductsSection';
 import VideoSection from '../components/home/VideoSection';
 import { setRequestLocale } from 'next-intl/server';
@@ -35,7 +35,7 @@ export default async function Home({
                 <ProductsSection />
                 <AwardsSection />
                 <VideoSection />
-                <BrandsSection />
+                {/* <BrandsSection /> */}
             </main>
             <Footer />
         </>

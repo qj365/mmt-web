@@ -35,7 +35,7 @@ export default function ProductsSection() {
         >
             <div className="container">
                 <PageTitle title={t('title')} />
-                <div className="index-4-grid grid grid-cols-1 sm:grid-cols-3 gap-[30px] mt-9">
+                <div className="index-4-grid grid grid-cols-1 sm:grid-cols-3 gap-[30px] mt-7">
                     {productCategories.map((category, index) => (
                         <div
                             key={index}

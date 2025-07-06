@@ -29,7 +29,7 @@ export default function ExportMarkets() {
 
     return (
         <section
-            className="index-3 section py-4 md:py-0 flex flex-col"
+            className="index-3 section py-4 md:py-0 flex flex-col overflow-hidden"
             style={
                 !isMobile && sectionHeight
                     ? { minHeight: `${sectionHeight}px` }
@@ -40,15 +40,15 @@ export default function ExportMarkets() {
                 <PageTitle title={t('title')} />
             </div>
             <div
-                className="image mt-2 md:mt-7 cursor-pointer mb-0 md:mb-auto flex-grow flex justify-center"
+                className="image mt-7 cursor-pointer mb-0 md:mb-auto flex-grow flex justify-center w-full"
                 onClick={handleMapClick}
             >
-                <div className="relative h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full">
+                <div className="relative h-[200px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full overflow-hidden">
                     <Image
                         src="/images/home/global.gif"
                         alt={t('altText')}
                         fill
-                        className="object-contain scale-125 sm:scale-100"
+                        className="object-contain scale-150 sm:scale-125 md:scale-120"
                         priority={false}
                     />
                 </div>

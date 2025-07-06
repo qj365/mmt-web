@@ -110,7 +110,7 @@ const IntroSection = () => {
         >
             <div className="container">
                 <PageTitle title={t('title')} />
-                <div className="des text-center mx-auto leading-6 text-[18px] max-w-[1050px] w-full font-medium mt-5">
+                <div className="des text-center mx-auto leading-6 text-[18px] max-w-[1050px] w-full font-medium mt-7">
                     {t('description')}
                 </div>
 
