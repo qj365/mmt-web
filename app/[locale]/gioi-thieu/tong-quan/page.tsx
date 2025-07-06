@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import ContentPageLayout from '@/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/app/types/';
+import PageTitle from '@/app/components/shared/PageTitle';
 
 const breadcrumbItems: BreadcrumbItem[] = [
     { label: 'Giới thiệu', href: '/gioi-thieu/tong-quan' },
@@ -118,9 +119,11 @@ export default function TongQuanPage() {
                     }}
                 ></div>
                 <div className="container mx-auto px-4 relative z-10">
-                    <h2 className="block-title mx-auto text-center text-white mb-7 text-3xl md:text-4xl font-bold uppercase">
-                        Giới thiệu
-                    </h2>
+                    <PageTitle
+                        title="Giới thiệu"
+                        className="mb-10"
+                        textColor="text-white"
+                    />
                     <div className="box-wrapper flex flex-wrap lg:justify-between gap-8">
                         <div className="box-left flex-auto lg:flex-[0_0_50%] xl:flex-[0_0_calc(572/1230*100%)]">
                             <div className="image-wrapper relative">
@@ -133,32 +136,32 @@ export default function TongQuanPage() {
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="content mt-7 sm:mt-0 rounded-3xl lg:rounded-[75px] sm:rounded-br-none lg:rounded-br-none bg-primary px-3 py-5 lg:p-10 lg:pb-12 lg:pr-6 sm:absolute bottom-0 right-0 w-full sm:max-w-[253px]">
+                                <div className="content mt-7 sm:mt-0 rounded-3xl lg:rounded-[75px] sm:rounded-br-none lg:rounded-br-none bg-primary px-3 py-5 lg:p-10 lg:pb-12 lg:pr-6 sm:absolute sm:bottom-[-15px] sm:right-[-15px] lg:bottom-[-30px] lg:right-[-30px] w-full sm:max-w-[253px]">
                                     <div className="item mb-6">
-                                        <div className="icon mb-[10px]">
+                                        <div className="icon mb-[10px] flex justify-center sm:justify-start">
                                             <Image
-                                                className="max-h-[40px] sm:max-h-[60px]"
+                                                className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] object-contain"
                                                 src="/images/gioi-thieu/tong-quan/intro-icon-1.png"
                                                 alt="Sản xuất hàng may mặc"
                                                 width={60}
                                                 height={60}
                                             />
                                         </div>
-                                        <div className="title text-white font-bold text-xl leading-[25px] uppercase">
+                                        <div className="title text-white font-bold text-xl leading-[25px] uppercase text-center sm:text-left">
                                             Sản xuất hàng may mặc
                                         </div>
                                     </div>
                                     <div className="item">
-                                        <div className="icon mb-[10px]">
+                                        <div className="icon mb-[10px] flex justify-center sm:justify-start">
                                             <Image
-                                                className="max-h-[40px] sm:max-h-[60px]"
+                                                className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] object-contain"
                                                 src="/images/gioi-thieu/tong-quan/intro-icon-2.png"
                                                 alt="Kéo sợi"
                                                 width={60}
                                                 height={60}
                                             />
                                         </div>
-                                        <div className="title text-white font-bold text-xl leading-[25px] uppercase">
+                                        <div className="title text-white font-bold text-xl leading-[25px] uppercase text-center sm:text-left">
                                             Kéo sợi
                                         </div>
                                     </div>

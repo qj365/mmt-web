@@ -5,6 +5,7 @@ interface PageTitleProps {
     underlineWidth?: string;
     underlineColor?: string;
     className?: string;
+    textColor?: string;
     alignment?: 'center' | 'left' | 'left-vertical';
 }
 
@@ -13,13 +14,16 @@ export default function PageTitle({
     underlineWidth = 'w-[80px]',
     underlineColor = 'bg-[#D60000]',
     className = '',
+    textColor = 'text-[#111111]',
 }: PageTitleProps) {
     // Original layout with horizontal underline
     return (
         <div
             className={`w-full flex flex-col items-center relative ${className}`}
         >
-            <h1 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[38px] leading-[1.25em] text-[#111111] font-bold uppercase">
+            <h1
+                className={`text-2xl sm:text-3xl md:text-[32px] lg:text-[38px] leading-[1.25em] ${textColor} font-bold uppercase`}
+            >
                 {title}
             </h1>
             <div
