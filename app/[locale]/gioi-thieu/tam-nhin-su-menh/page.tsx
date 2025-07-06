@@ -1,16 +1,35 @@
 import React from 'react';
 import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/app/types';
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({
+    params: { locale },
+}: {
+    params: { locale: string };
+}) {
+    const t = await getTranslations({
+        locale,
+        namespace: 'gioi-thieu.tam-nhin-su-menh',
+    });
+
+    return {
+        title: `${t('title')} - MINH MINH TÂM`,
+    };
+}
 
 export default function TamNhinSuMenh() {
+    const t = useTranslations('gioi-thieu.tam-nhin-su-menh');
+
     // Define breadcrumb items
     const breadcrumbItems: BreadcrumbItem[] = [
         {
-            label: 'Giới thiệu',
+            label: useTranslations('menu')('about'),
             href: '/gioi-thieu/tong-quan',
         },
         {
-            label: 'Tầm nhìn sứ mệnh',
+            label: useTranslations('menu')('vision'),
             href: '/gioi-thieu/tam-nhin-su-menh',
         },
     ];
@@ -18,85 +37,75 @@ export default function TamNhinSuMenh() {
     return (
         <ContentPageLayout
             bannerImage="/images/gioi-thieu/tam-nhin/banner.png"
-            bannerAlt="Tầm nhìn sứ mệnh"
+            bannerAlt={t('banner.alt')}
             breadcrumbItems={breadcrumbItems}
             containerBackground="/images/gioi-thieu/tam-nhin/bg.png"
             containerClassName="py-24 sm:py-[134px]"
         >
             <div className="wrapper max-w-[495px]">
                 <h1 className="block-title border-left uppercase">
-                    Tầm nhìn - sứ mệnh
+                    {t('title')}
                 </h1>
                 <div className="des mt-8">
                     <p>
                         <strong>
-                            <span className="text-red-600">Tầm nhìn:</span>
+                            <span className="text-red-600">
+                                {t('vision.title')}
+                            </span>
                         </strong>
-                        <br />• Trở thành Doanh nghiệp tiên phong và phát triển
-                        bền vững trong ngành dệt may.
-                    </p>
-                    <p>&nbsp;</p>
-                    <p>
-                        <strong>
-                            <span className="text-red-600">Sứ mệnh:</span>
-                        </strong>
-                        <br />• Là Đối tác tin cậy trong chuỗi cung ứng dệt may
-                        toàn cầu.
+                        <br />• {t('vision.content')}
                     </p>
                     <p>&nbsp;</p>
                     <p>
                         <strong>
                             <span className="text-red-600">
-                                Giá trị cốt lõi:
+                                {t('mission.title')}
                             </span>
                         </strong>
-                        <br />
-                        • Thượng tôn pháp luật, quản trị minh bạch, phát triển
-                        bền vững.
-                        <br />
-                        • Thỏa mãn khách hàng khi sử dụng sản phẩm và dịch vụ.
-                        <br />• Hài hòa lợi ích cổ đông, người lao động và đóng
-                        góp cho xã hội.
+                        <br />• {t('mission.content')}
                     </p>
                     <p>&nbsp;</p>
                     <p>
                         <strong>
                             <span className="text-red-600">
-                                Tuyên bố chiến lược:
+                                {t('core_values.title')}
                             </span>
                         </strong>
-                        <br />• Tiên phong trong các giải pháp kinh doanh, liên
-                        tục cải tiến để đồng hành cùng đối tác, khách hàng trong
-                        ngành dệt may toàn cầu.
-                    </p>
-                    <p>&nbsp;</p>
-                    <p>
-                        <strong>
-                            <span className="text-red-600">Khẩu hiệu: </span>
-                        </strong>
-                        <em>
-                            &ldquo;May mặc tận tâm – An tâm sử dụng&rdquo;
-                        </em>
+                        <br />• {t('core_values.value1')}
+                        <br />• {t('core_values.value2')}
+                        <br />• {t('core_values.value3')}
                     </p>
                     <p>&nbsp;</p>
                     <p>
                         <strong>
                             <span className="text-red-600">
-                                Nguyên tắc hoạt động:
+                                {t('strategy.title')}
                             </span>
                         </strong>
-                        <br />
-                        • Cân bằng giữa công việc và cuộc sống: tổ chức thời gian sản xuất hợp lý, tối ưu hiệu quả, giảm làm thêm giờ, giúp nhân viên có cuộc sống khỏe mạnh.
-                        • Mục tiêu lâu dài: đảm bảo chất lượng cao để duy trì sự tồn tại và sự hài lòng của khách hàng.
-
-                        • Kinh doanh với sự trung thực & tuân thủ.
-                        <br />
-                        • Tạo ra giá trị thực sự cho khách hàng, người lao động
-                        và cổ đông.
-                        <br />• Đóng góp vào sự phát triển của đất nước, môi
-                        trường sống và đáp ứng kỳ vọng của các cổ đông.
+                        <br />• {t('strategy.content')}
                     </p>
-                    
+                    <p>&nbsp;</p>
+                    <p>
+                        <strong>
+                            <span className="text-red-600">
+                                {t('slogan.title')}{' '}
+                            </span>
+                        </strong>
+                        <em>&ldquo;{t('slogan.content')}&rdquo;</em>
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        <strong>
+                            <span className="text-red-600">
+                                {t('principles.title')}
+                            </span>
+                        </strong>
+                        <br />• {t('principles.principle1')}
+                        <br />• {t('principles.principle2')}
+                        <br />• {t('principles.principle3')}
+                        <br />• {t('principles.principle4')}
+                        <br />• {t('principles.principle5')}
+                    </p>
                 </div>
             </div>
         </ContentPageLayout>

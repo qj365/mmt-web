@@ -67,6 +67,42 @@
             },
             "image_alt": "Sơ đồ cơ cấu tổ chức của Dệt may MINH MINH TÂM"
         },
+        "tam-nhin-su-menh": {
+            "banner": {
+                "alt": "Tầm nhìn sứ mệnh - Dệt may MINH MINH TÂM"
+            },
+            "title": "Tầm nhìn - sứ mệnh",
+            "vision": {
+                "title": "Tầm nhìn:",
+                "content": "Trở thành Doanh nghiệp tiên phong và phát triển bền vững trong ngành dệt may."
+            },
+            "mission": {
+                "title": "Sứ mệnh:",
+                "content": "Là Đối tác tin cậy trong chuỗi cung ứng dệt may toàn cầu."
+            },
+            "core_values": {
+                "title": "Giá trị cốt lõi:",
+                "value1": "Thượng tôn pháp luật, quản trị minh bạch, phát triển bền vững.",
+                "value2": "Thỏa mãn khách hàng khi sử dụng sản phẩm và dịch vụ.",
+                "value3": "Hài hòa lợi ích cổ đông, người lao động và đóng góp cho xã hội."
+            },
+            "strategy": {
+                "title": "Tuyên bố chiến lược:",
+                "content": "Tiên phong trong các giải pháp kinh doanh, liên tục cải tiến để đồng hành cùng đối tác, khách hàng trong ngành dệt may toàn cầu."
+            },
+            "slogan": {
+                "title": "Khẩu hiệu:",
+                "content": "May mặc tận tâm – An tâm sử dụng"
+            },
+            "principles": {
+                "title": "Nguyên tắc hoạt động:",
+                "principle1": "Cân bằng giữa công việc và cuộc sống: tổ chức thời gian sản xuất hợp lý, tối ưu hiệu quả, giảm làm thêm giờ, giúp nhân viên có cuộc sống khỏe mạnh.",
+                "principle2": "Mục tiêu lâu dài: đảm bảo chất lượng cao để duy trì sự tồn tại và sự hài lòng của khách hàng.",
+                "principle3": "Kinh doanh với sự trung thực & tuân thủ.",
+                "principle4": "Tạo ra giá trị thực sự cho khách hàng, người lao động và cổ đông.",
+                "principle5": "Đóng góp vào sự phát triển của đất nước, môi trường sống và đáp ứng kỳ vọng của các cổ đông."
+            }
+        },
         "lich-su": {
             "banner": {
                 "alt": "Lịch sử hình thành - Dệt may MINH MINH TÂM"
