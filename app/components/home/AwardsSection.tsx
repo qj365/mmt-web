@@ -11,15 +11,18 @@ export default function AwardsSection() {
 
     const awards = [
         {
-            image: 'https://picsum.photos/300/300',
+            id: 1,
+            image: '/images/gioi-thieu/thanh-tich/trophy-1.png',
             title: t('items.customs'),
         },
         {
-            image: 'https://picsum.photos/301/301',
+            id: 2,
+            image: '/images/gioi-thieu/thanh-tich/trophy-2.png',
             title: t('items.nationalBrand'),
         },
         {
-            image: 'https://picsum.photos/302/302',
+            id: 3,
+            image: '/images/gioi-thieu/thanh-tich/trophy-3.png',
             title: t('items.exportCredibility'),
         },
     ];
@@ -43,30 +46,27 @@ export default function AwardsSection() {
             >
                 <div className="container">
                     <div className="relative section py-16 lg:py-24">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-                            {awards.map((award, index) => (
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {awards.map(award => (
                                 <div
-                                    key={index}
-                                    className="award-item flex flex-col items-center"
+                                    key={award.id}
+                                    className="flex flex-col items-center w-full"
                                 >
-                                    <div className="relative w-full max-w-[380px]">
-                                        <div className="rounded-full bg-white overflow-hidden w-full aspect-square flex flex-col items-center justify-center p-6">
-                                            <div className="flex-1 flex items-center justify-center w-full">
+                                    <div className="bg-white rounded-2xl p-6 flex flex-col items-center shadow-lg mb-6 w-full max-w-[280px] h-[320px]">
+                                        <div className="border-b border-dashed border-gray-300 pb-6 mb-6 text-center w-full">
+                                            <div className="relative h-[170px] w-[170px] mx-auto">
                                                 <Image
-                                                    className="object-contain max-h-[150px]"
                                                     src={award.image}
                                                     alt={award.title}
-                                                    width={200}
-                                                    height={200}
-                                                    loading="lazy"
+                                                    fill
+                                                    className="object-contain"
                                                 />
                                             </div>
-
-                                            <div className="text-center mt-8">
-                                                <p className="text-md font-medium text-black leading-tight mb-8">
-                                                    {award.title}
-                                                </p>
-                                            </div>
+                                        </div>
+                                        <div className="w-full text-center h-[70px] flex items-center justify-center">
+                                            <p className="text-lg font-medium leading-6 line-clamp-3 overflow-hidden">
+                                                {award.title}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>

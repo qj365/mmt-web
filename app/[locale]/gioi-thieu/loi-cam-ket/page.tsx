@@ -4,12 +4,16 @@ import { BreadcrumbItem } from '@/app/types';
 import PageTitle from '@/app/components/shared/PageTitle';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 
 export async function generateMetadata({
-    params: { locale },
+    params,
 }: {
-    params: { locale: string };
-}) {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Await params first to access the locale property
+    const { locale } = await params;
+
     const t = await getTranslations({
         locale,
         namespace: 'gioi-thieu.loi-cam-ket',
@@ -47,7 +51,7 @@ export default function LoiCamKet() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Commitment to Customers */}
                 <div className="bg-white p-8 md:p-10 rounded-3xl shadow">
-                    <h2 className="text-xl md:text-2xl font-bold mb-5 text-center text-red-600">
+                    <h2 className="text-xl md:text-2xl font-bold mb-5 text-center text-secondary">
                         {t('customer.title')}
                     </h2>
                     <div className="space-y-4 text-base">
@@ -65,7 +69,7 @@ export default function LoiCamKet() {
 
                 {/* Commitment to Employees */}
                 <div className="bg-white p-8 md:p-10 rounded-3xl shadow">
-                    <h2 className="text-xl md:text-2xl font-bold mb-5 text-center text-red-600">
+                    <h2 className="text-xl md:text-2xl font-bold mb-5 text-center text-secondary">
                         {t('employee.title')}
                     </h2>
                     <div className="space-y-4 text-base">

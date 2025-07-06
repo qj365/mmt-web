@@ -3,12 +3,16 @@ import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/app/types';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 
 export async function generateMetadata({
-    params: { locale },
+    params,
 }: {
-    params: { locale: string };
-}) {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Await params first to access the locale property
+    const { locale } = await params;
+
     const t = await getTranslations({
         locale,
         namespace: 'gioi-thieu.tam-nhin-su-menh',
