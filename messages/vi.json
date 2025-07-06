@@ -22,6 +22,124 @@
         "careers": "Tuyển dụng",
         "contact": "Liên hệ"
     },
+    "gioi-thieu": {
+        "tong-quan": {
+            "banner": {
+                "alt": "Tổng quan - Dệt may MINH MINH TÂM"
+            },
+            "letter": {
+                "title": "Thư ngỏ",
+                "subtitle": "Gửi khách hàng, đối tác và toàn thể CBNV",
+                "image_alt": "Gửi khách hàng, đối tác và toàn thể CBNV",
+                "paragraph_1": "Trong suốt nửa thế kỷ qua, MINH MINH TÂM luôn giữ vững triết lý kinh doanh: phát triển bền vững và nhân văn, không ngừng đổi mới, đáp ứng tối đa nhu cầu khách hàng thông qua cam kết về chất lượng sản phẩm và dịch vụ. Nhờ đó, sản phẩm của MINH MINH TÂM đã vươn ra khắp thế giới, chúng tôi đã trở thành doanh nghiệp cốt lõi trong ngành dệt may của khu vực, góp phần vào sự phát triển của ngành dệt may Việt Nam trên thị trường thế giới.",
+                "paragraph_2": "Với tư duy đổi mới, đội ngũ giàu kinh nghiệm, nhiệt huyết và sáng tạo, cùng việc tiên phong áp dụng công nghệ tiên tiến, MINH MINH TÂM liên tục nâng cao lợi thế cạnh tranh bằng các sản phẩm có chất lượng và quy mô quốc tế tại các thị trường trọng điểm như Mỹ, châu Âu, Nhật Bản, Hàn Quốc... Niềm tin và sự đánh giá cao của khách hàng là thành quả lớn, là niềm tự hào và động lực của chúng tôi trong hơn 60 năm qua, và chúng tôi sẽ tiếp tục củng cố và phát triển điều đó.",
+                "paragraph_3": "Chúng tôi tin tưởng rằng, trên chặng đường phía trước, MINH MINH TÂM sẽ tiếp tục viết nên những trang sử mới cho mình và cho ngành dệt may Việt Nam. Hành trình này cần có sự ủng hộ và hợp tác liên tục từ các đối tác và toàn thể CBNV. MINH MINH TÂM cam kết sẽ tạo ra những giá trị bền vững cho khách hàng, đối tác và cho những người đã, đang và sẽ đồng hành cùng MINH MINH TÂM.",
+                "closing": "Trân trọng,",
+                "position": "Tổng Giám đốc",
+                "name": "Vũ Thị Thanh Thanh",
+                "quote": "May bằng tâm - Dùng an tâm"
+            },
+            "intro": {
+                "title": "Giới thiệu công ty",
+                "image_alt": "Giới thiệu công ty",
+                "icon1_alt": "Sản xuất hàng may mặc",
+                "icon2_alt": "Kéo sợi",
+                "feature1": "Sản xuất hàng may mặc",
+                "feature2": "Kéo sợi",
+                "established": "Thành lập từ năm",
+                "year": "1996",
+                "company_name": "MINH MINH TÂM",
+                "description": "là một trong những doanh nghiệp dệt may có lịch sử lâu đời và quy mô lớn, tập trung chủ yếu vào 2 lĩnh vực:",
+                "area1": "1- Sản xuất hàng may mặc",
+                "area2": "2- Kéo sợi",
+                "not_only": "Không chỉ là",
+                "leading_supplier": "nhà cung cấp hàng đầu trong chuỗi cung ứng sợi và may mặc",
+                "core_role": "của Việt Nam, MINH MINH TÂM còn đóng vai trò cốt lõi trong hoạt động của Vinatex và Vitas, đóng góp lớn cho ngành dệt may Việt Nam trong nhiều thập kỷ qua."
+            },
+            "video": {
+                "slogan_alt": "Khẩu hiệu",
+                "alt": "Video giới thiệu công ty dệt may MINH MINH TÂM"
+            }
+        },
+        "co-cau-to-chuc": {
+            "banner": {
+                "alt": "Cơ cấu tổ chức - Dệt may MINH MINH TÂM"
+            },
+            "image_alt": "Sơ đồ cơ cấu tổ chức của Dệt may MINH MINH TÂM"
+        },
+        "lich-su": {
+            "banner": {
+                "alt": "Lịch sử hình thành - Dệt may MINH MINH TÂM"
+            },
+            "title": "Lịch sử hình thành",
+            "timeline": {
+                "1962": "Được thành lập vào năm 1962, ban đầu được biết đến với tên gọi Nhà máy Dệt MINH MINH TÂM (SICOVINA) trực thuộc Công ty Công nghiệp Bông sợi Việt Nam. Năm 1975, khi thành phố Bình Thuận được giải phóng, Nhà máy Dệt MINH MINH TÂM được Chính phủ tiếp quản và bắt đầu hoạt động trở lại vào ngày 21 tháng 4 năm 1975.",
+                "1975": {
+                    "title": "Thành lập Nhà máy Sợi MINH MINH TÂM:",
+                    "capacity": "Công suất: 22.000 cọc sợi",
+                    "products": "Sản phẩm chính: Sợi CD, TCD, OE, sợi xe, sợi tái chế",
+                    "certifications": "Chứng nhận: Oeko-Tex Standard 100, ISO 9001-2008, Cotton USA, BCI, Usterized"
+                },
+                "1993": {
+                    "rename": "Đổi tên thành Công ty Dệt Hòa Thọ theo quyết định số 241/TCLĐ của Bộ Công nghiệp nhẹ vào ngày 24 tháng 3 năm 1993.",
+                    "investment": "Đầu tư vào nhà máy dệt với 20.000 cọc sợi và 400 máy dệt."
+                },
+                "1997": {
+                    "title": "Thành lập Nhà máy May MINH MINH TÂM 1:",
+                    "products": "Sản phẩm chính: Veston, áo blazer, quần tây",
+                    "certifications": "Chứng nhận: WRAP, GSV, WCA (Haggar), Kohl's, Macy's, Perry Elps",
+                    "brands": "Thương hiệu: Haggar, Oakhill, Kohl's, Gold Series, Island Passport và các thương hiệu khác"
+                },
+                "1999": {
+                    "title": "Thành lập Nhà máy May MINH MINH TÂM 2:",
+                    "products": "Sản phẩm chính: Veston, áo blazer, quần tây",
+                    "certifications": "Chứng nhận: WRAP, GSV, WCA (Haggar), Walmart, Kohl's, Express và các chứng nhận khác",
+                    "brands": "Thương hiệu: Express, Marc Anthony, Michael Kors, Van Huesen, Calvin Klein, Bar III, Crown & Ivy và các thương hiệu khác"
+                },
+                "2001": {
+                    "title": "Thành lập Công ty May MINH MINH TÂM - Điện Bàn:",
+                    "products": "Sản phẩm chính: Quần áo bảo hộ lao động, đồng phục dệt kim",
+                    "certifications": "Chứng nhận: WCA, 5.11, Seven & I HLDGS, AEON",
+                    "brands": "Thương hiệu: Snickers, Kansai, Toyota, Yonex và các thương hiệu khác"
+                },
+                "2002": {
+                    "title": "Thành lập thêm 2 đơn vị:",
+                    "factory3": "Thành lập Nhà máy May MINH MINH TÂM 3, sau đó sáp nhập vào Nhà máy May MINH MINH TÂM 2 vào năm 2010 (hiện nay là Nhà máy May Veston MINH MINH TÂM)",
+                    "quangnam": "Thành lập Công ty May MINH MINH TÂM - Quảng Nam"
+                },
+                "2003": {
+                    "title": "Thành lập Công ty May MINH MINH TÂM - Hội An:",
+                    "capacity": "Công suất: 650.000 sản phẩm/năm",
+                    "products": "Sản phẩm chính: Đồng phục y tế, quần, áo khoác",
+                    "brands": "Thương hiệu: Fjallraven, Kazen",
+                    "address": "Địa chỉ: 26 Nguyễn Tất Thành, Phường Tân An, TP. Hội An, Quảng Nam, Việt Nam"
+                },
+                "2006": "Ngày 15 tháng 11 năm 2006, theo Quyết định số 3252/QĐ-BCN của Bộ Công nghiệp, công ty đổi tên thành Tổng Công ty CP Dệt May MINH MINH TÂM và chính thức hoạt động từ ngày 01 tháng 02 năm 2007.",
+                "2007": {
+                    "title": "Đầu tư thêm 2 công ty:",
+                    "duyxuyen": {
+                        "title": "Công ty May MINH MINH TÂM - Duy Xuyên:",
+                        "products": "Sản phẩm chính: Quần tây cao cấp",
+                        "certifications": "Chứng nhận: Perry Ellis Portfolio, Farah, Savane, Stafford và các chứng nhận khác",
+                        "address": "Địa chỉ: KCN Gò Đồi, Huyện Duy Xuyên, Quảng Nam, Việt Nam, cách Đà Nẵng 32km"
+                    },
+                    "dongha": {
+                        "title": "Công ty May MINH MINH TÂM - Đông Hà:",
+                        "products": "Sản phẩm chính: Áo khoác, quần áo bảo hộ lao động",
+                        "certifications": "Chứng nhận: WRAP, BSCI, GMP, PVH",
+                        "brands": "Thương hiệu: Marc O's Polo, S.Oliver, Head, Fjallraven, Lands'end, Tommy Hilger, Calvin Klein, DKNY và các thương hiệu khác",
+                        "address": "Địa chỉ: KCN Nam Đông Hà, TP. Đông Hà, Quảng Trị, Việt Nam, cách Bình Thuận 165km"
+                    }
+                },
+                "2011": {
+                    "title": "Thành lập Nhà máy May Veston MINH MINH TÂM:",
+                    "products": "Sản phẩm chính: Veston, blazer, áo gile, quần tây cao cấp",
+                    "certifications": "Chứng nhận: WRAP, GSV, PVH, Macy's, Kohl's, Express, GAP (Banana Republic)",
+                    "brands": "Thương hiệu: Calvin Klein, Chaps, Marc Anthony, Michael Kors, Express, Banana Republic, Bar III, Crown & Ivy và các thương hiệu khác"
+                }
+            }
+        }
+    },
     "home": {
         "intro": {
             "title": "Về chúng tôi",

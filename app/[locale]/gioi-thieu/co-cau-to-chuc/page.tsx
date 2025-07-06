@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import PageTitle from '@/app/components/shared/PageTitle';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { BreadcrumbItem } from '@/app/types/';
 
 export const metadata: Metadata = {
     title: 'Cơ cấu tổ chức - Dệt may MINH MINH TÂM',
@@ -16,26 +18,29 @@ export const metadata: Metadata = {
 };
 
 export default function OrganizationalStructure() {
-    const breadcrumbItems = [
-        { label: 'Giới thiệu', href: '/gioi-thieu' },
-        { label: 'Cơ cấu tổ chức', href: '/gioi-thieu/co-cau-to-chuc' },
+    const t = useTranslations('gioi-thieu.co-cau-to-chuc');
+    const breadcrumbT = useTranslations('menu');
+
+    const breadcrumbItems: BreadcrumbItem[] = [
+        { label: breadcrumbT('about'), href: '/gioi-thieu/tong-quan' },
+        { label: breadcrumbT('structure'), href: '/gioi-thieu/co-cau-to-chuc' },
     ];
 
     return (
         <ContentPageLayout
             bannerImage="/images/home/banner-1.png"
-            bannerAlt="Banner Cơ cấu tổ chức"
+            bannerAlt={t('banner.alt')}
             breadcrumbItems={breadcrumbItems}
             containerBackground="/images/home/background.png"
         >
-            <PageTitle title="Cơ cấu tổ chức" />
+            <PageTitle title={breadcrumbT('structure')} />
 
             <Image
                 src="/images/gioi-thieu/co-cau-to-chuc/image.png"
-                alt="Cơ cấu tổ chức"
+                alt={t('image_alt')}
                 width={1920}
                 height={950}
-                className="min-w-[768px]"
+                className="w-full h-auto"
             />
         </ContentPageLayout>
     );

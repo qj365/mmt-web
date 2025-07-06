@@ -31,16 +31,16 @@ export default function TongQuanPage() {
                                     alt={t('letter.image_alt')}
                                     width={400}
                                     height={500}
-                                    className="rounded-lg"
+                                    className="rounded-lg max-w-full h-auto"
                                 />
                             </div>
                         </div>
                         <div className="box-right flex-auto lg:flex-[0_0_calc(60%-30px)] xl:flex-[0_0_calc(705/1230*100%)] mt-6 lg:mt-0">
                             <div className="content text-right">
-                                <div className="big-title text-5xl md:text-6xl lg:text-7xl font-bold uppercase leading-tight text-red-600">
+                                <div className="big-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold uppercase leading-tight text-red-600 break-words">
                                     {t('letter.title')}
                                 </div>
-                                <div className="medium-title text-lg sm:text-2xl lg:text-3xl font-bold leading-tight uppercase text-gray-700 mt-[10px] mb-4 sm:mb-[30px]">
+                                <div className="medium-title text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold leading-tight uppercase text-gray-700 mt-[10px] mb-4 sm:mb-[30px]">
                                     {t('letter.subtitle')}
                                 </div>
                                 <div className="des text-base leading-6 text-left text-gray-600 lg:pl-[44px]">
@@ -63,7 +63,7 @@ export default function TongQuanPage() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="quote text-red-600 sm:text-2xl leading-7 font-bold italic mt-6">
+                                <div className="quote text-red-600 text-xl sm:text-2xl leading-7 font-bold italic mt-6 break-words">
                                     &ldquo;{t('letter.quote')}&rdquo;
                                 </div>
                             </div>
@@ -73,7 +73,7 @@ export default function TongQuanPage() {
             </section>
 
             {/* Section 2: Giới thiệu (Introduction Section) */}
-            <section className="intro-tongquan-2 section xl:pb-[77px] py-16 relative">
+            <section className="intro-tongquan-2 section xl:pb-[77px] py-16 relative overflow-hidden">
                 <div
                     className="absolute inset-0 z-0"
                     style={{
@@ -82,8 +82,6 @@ export default function TongQuanPage() {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
-                        width: '100vw',
-                        marginLeft: 'calc(50% - 50vw)',
                     }}
                 ></div>
                 <div className="container mx-auto px-4 relative z-10">
@@ -138,15 +136,15 @@ export default function TongQuanPage() {
                         </div>
                         <div className="box-right flex-auto lg:flex-[0_0_calc(50%-30px)] xl:flex-[0_0_calc(600/1230*100%)] mt-16">
                             <div className="content-wrapper xl:pl-16">
-                                <div className="top flex items-baseline mb-10">
-                                    <div className="title text-2xl font-bold text-white">
+                                <div className="top flex flex-wrap items-baseline mb-10">
+                                    <div className="title text-xl sm:text-2xl font-bold text-white">
                                         {t('intro.established')}
                                     </div>
-                                    <div className="year font-bold text-7xl leading-8 text-red-600 ml-5">
+                                    <div className="year font-bold text-5xl sm:text-7xl leading-8 text-red-600 ml-2 sm:ml-5">
                                         {t('intro.year')}
                                     </div>
                                 </div>
-                                <div className="des text-2xl text-white">
+                                <div className="des text-lg sm:text-xl lg:text-2xl text-white">
                                     <p className="mb-4">
                                         <strong>
                                             {t('intro.company_name')}
@@ -184,10 +182,11 @@ export default function TongQuanPage() {
                                     alt={t('video.slogan_alt')}
                                     width={442}
                                     height={196}
+                                    className="max-w-full h-auto"
                                 />
                             </div>
                         </div>
-                        <div className="box-right flex-[0_0_100%] lg:flex-[0_0_calc(60%-30px)] xl:flex-[0_0_calc(704/1230*100%)] xl:-mr-6">
+                        <div className="box-right flex-[0_0_100%] lg:flex-[0_0_calc(60%-30px)] xl:flex-[0_0_calc(704/1230*100%)] xl:mr-0">
                             <div className="video-wrapper relative rounded-3xl overflow-hidden">
                                 <div className="playBtn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer w-[66px] h-[40px] sm:w-[86px] sm:h-[60px] transition-all hover:scale-110">
                                     <div className="bg-white bg-opacity-80 rounded-full w-full h-full flex items-center justify-center">
