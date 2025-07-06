@@ -31,7 +31,7 @@ export default function OrganizationalStructure() {
             <PageTitle title="Cơ cấu tổ chức" />
 
             <Image
-                src="/images/co-cau-to-chuc/image.png"
+                src="/images/gioi-thieu/co-cau-to-chuc/image.png"
                 alt="Cơ cấu tổ chức"
                 width={1920}
                 height={950}
