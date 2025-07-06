@@ -22,6 +22,118 @@
         "careers": "採用情報",
         "contact": "お問い合わせ"
     },
+    "gioi-thieu": {
+        "tong-quan": {
+            "banner": {
+                "alt": "概観 - ミン ミン タム紡織"
+            },
+            "letter": {
+                "title": "ごあいさつ",
+                "subtitle": "お客様、パートナー、社員の皆様へ",
+                "image_alt": "お客様、パートナー、社員の皆様へ",
+                "paragraph_1": "過去半世紀にわたり、ミン ミン タムは一貫した事業理念を持ち続けてきました：人間性豊かで持続可能な発展を目指し、絶えず革新を続け、製品とサービスの品質へのコミットメントを通じてお客様のニーズを最大限に満たすことです。その結果、ミン ミン タムの製品は世界中に広がり、私たちは地域の繊維産業の中核企業となり、世界市場におけるベトナム繊維産業の発展に貢献しています。",
+                "paragraph_2": "常に革新的な思考、経験豊かで情熱的かつ創造的なチーム、そして最先端の技術応用への先駆的取り組みにより、ミン ミン タムは米国、欧州、日本、韓国などの主要市場で国際的な品質と規模を持つ製品による競争優位性を継続的に高めてきました。お客様からの信頼と高い評価は、過去60年以上にわたる私たちの大きな成果であり、誇りであり、原動力です。私たちはこれをさらに強化し発展させていきます。",
+                "paragraph_3": "私たちは、今後の道のりにおいて、ミン ミン タムが自社の新しい歴史、そしてベトナム繊維産業の歴史を築いていくと確信しています。この旅には、パートナーの皆様と社員全体からの継続的な支援と協力が必要です。ミン ミン タムはお客様、パートナー、そして過去、現在、未来にわたってミン ミン タムと共に歩む社員のために持続可能な価値を創造することを約束します。",
+                "closing": "敬具",
+                "position": "代表取締役",
+                "name": "ヴー・ティ・タイン・タイン",
+                "quote": "心を込めた縫製 – 安心してご使用いただけます"
+            },
+            "intro": {
+                "title": "会社紹介",
+                "image_alt": "会社紹介",
+                "icon1_alt": "衣料品製造",
+                "icon2_alt": "紡績",
+                "feature1": "衣料品製造",
+                "feature2": "紡績",
+                "established": "設立年",
+                "year": "1996",
+                "company_name": "ミン ミン タム",
+                "description": "は長い歴史と大規模な事業を持つ繊維企業の一つで、主に2つの分野に特化しています：",
+                "area1": "1- 衣料品製造",
+                "area2": "2- 紡績",
+                "not_only": "ベトナムの主要な",
+                "leading_supplier": "糸・衣料品サプライチェーン",
+                "core_role": "としてだけでなく、ミン ミン タムはVinatexとVitasの活動において中核的な役割を果たし、数十年にわたってベトナムの繊維産業に大きく貢献してきました。"
+            },
+            "video": {
+                "slogan_alt": "スローガン",
+                "alt": "ミン ミン タム紡織会社の紹介ビデオ"
+            }
+        },
+        "lich-su": {
+            "banner": {
+                "alt": "沿革 - ミン ミン タム紡織"
+            },
+            "title": "沿革",
+            "timeline": {
+                "1962": "1962年に設立され、当初はベトナム綿織物産業会社傘下のミン ミン タム繊維工場（SICOVINA）として知られていました。1975年、ビンタン市が解放された際、ミン ミン タム繊維工場は政府によって引き継がれ、1975年4月21日に操業を再開しました。",
+                "1975": {
+                    "title": "ミン ミン タム紡績工場の設立：",
+                    "capacity": "生産能力：22,000錘",
+                    "products": "主力製品：CD、TCD、OE、ダブルヤーン、リサイクルヤーン",
+                    "certifications": "認証：エコテックス・スタンダード100、ISO 9001-2008、コットンUSA、BCI、ウスターライズド"
+                },
+                "1993": {
+                    "rename": "軽工業省の決定番号241/TCLĐに基づき、1993年3月24日に国営企業ホア・トー繊維会社に改名。",
+                    "investment": "2万錘の紡績設備と400台の織機を持つ織布工場に投資。"
+                },
+                "1997": {
+                    "title": "ミン ミン タム縫製工場1の設立：",
+                    "products": "主力製品：スーツ、ブレザー、パンツ",
+                    "certifications": "認証：WRAP、GSV、WCA(Haggar)、Kohl's、Macy's、Perry Elps",
+                    "brands": "ブランド：Haggar、Oakhill、Kohl's、Gold Series、Island Passport等"
+                },
+                "1999": {
+                    "title": "ミン ミン タム縫製工場2の設立：",
+                    "products": "主力製品：スーツ、ブレザー、パンツ",
+                    "certifications": "認証：WRAP、GSV、WCA(Haggar)、Walmart、Kohl's、Express等",
+                    "brands": "ブランド：Express、Marc Anthony、Michael Kors、Van Huesen、Calvin Klein、Bar III、Crown & Ivy等"
+                },
+                "2001": {
+                    "title": "ミン ミン タム縫製会社 - ディエンバン設立：",
+                    "products": "主力製品：作業着、ニットユニフォーム",
+                    "certifications": "認証：WCA、5.11、Seven & I HLDGS、AEON",
+                    "brands": "ブランド：Snickers、Kansai、Toyota、Yonex等"
+                },
+                "2002": {
+                    "title": "新たに2つの事業体を設立：",
+                    "factory3": "ミン ミン タム縫製工場3を設立、2010年にミン ミン タム縫製工場2に統合（現在のミン ミン タムスーツ縫製工場）",
+                    "quangnam": "ミン ミン タム縫製会社 - クアンナム設立"
+                },
+                "2003": {
+                    "title": "ミン ミン タム縫製会社 - ホイアン設立：",
+                    "capacity": "生産能力：年間65万製品",
+                    "products": "主力製品：医療用ユニフォーム、パンツ、ジャケット",
+                    "brands": "ブランド：Fjallraven、Kazen",
+                    "address": "住所：ベトナム・クアンナム省・ホイアン市・タンアン区・グエンタットタイン通り26番"
+                },
+                "2006": "2006年11月15日、工業省の決定番号3252/QĐ-BCNに基づき、会社はミン ミン タム紡織株式会社に改名し、2007年2月1日から正式に運営を開始しました。",
+                "2007": {
+                    "title": "新たに2社に投資：",
+                    "duyxuyen": {
+                        "title": "ミン ミン タム縫製会社 - ドゥイスエン：",
+                        "products": "主力製品：ドレスパンツ",
+                        "certifications": "認証：Perry Ellis Portfolio、Farah、Savane、Stafford等",
+                        "address": "住所：ベトナム・クアンナム省・ドゥイスエン郡・ゴードイ工業団地、ダナンから32km"
+                    },
+                    "dongha": {
+                        "title": "ミン ミン タム縫製会社 - ドンハ：",
+                        "products": "主力製品：ジャケット、作業着",
+                        "certifications": "認証：WRAP、BSCI、GMP、PVH",
+                        "brands": "ブランド：Marc O's Polo、S.Oliver、Head、Fjallraven、Lands'end、Tommy Hilger、Calvin Klein、DKNY等",
+                        "address": "住所：ベトナム・クアンチ省・ドンハ市・南ドンハ工業団地、ビンタンから165km"
+                    }
+                },
+                "2011": {
+                    "title": "ミン ミン タムスーツ縫製工場の設立：",
+                    "products": "主力製品：スーツ、ブレザー、ベスト、ドレスパンツ",
+                    "certifications": "認証：WRAP、GSV、PVH、Macy's、Kohl's、Express、GAP（Banana Republic）",
+                    "brands": "ブランド：Calvin Klein、Chaps、Marc Anthony、Michael Kors、Express、Banana Republic、Bar III、Crown & Ivy等"
+                }
+            }
+        }
+    },
     "home": {
         "intro": {
             "title": "私たちについて",
@@ -75,6 +187,9 @@
         "phone": "電話番号",
         "email": "Eメール",
         "fax": "FAX",
-        "copyright": "© 2023 ミン ミン タム紡織株式会社"
+        "copyright": "© ミン ミン タム紡織株式会社",
+        "contactInfo": "お問い合わせ情報",
+        "certification": "認証",
+        "downloadBrochure": "パンフレットダウンロード"
     }
 }
