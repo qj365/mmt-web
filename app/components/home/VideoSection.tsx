@@ -3,18 +3,20 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { useViewportHeight } from '../../hook/useViewportHeight';
-
-// Video data with YouTube embed ID
-const videoData = {
-    thumbnail: 'https://picsum.photos/800/450',
-    title: 'MINH MINH TÂM Dệt may',
-    youtubeId: '-jIQSApVKbI',
-};
+import { useTranslations } from 'next-intl';
 
 export default function VideoSection() {
     const [isPlaying, setIsPlaying] = useState(false);
     const videoRef = useRef<HTMLIFrameElement>(null);
     const { sectionHeight } = useViewportHeight();
+    const t = useTranslations('home.video');
+
+    // Video data with YouTube embed ID
+    const videoData = {
+        thumbnail: 'https://picsum.photos/800/450',
+        title: t('title'),
+        youtubeId: '-jIQSApVKbI',
+    };
 
     const handlePlayVideo = () => {
         setIsPlaying(true);
@@ -37,12 +39,7 @@ export default function VideoSection() {
                     <div className="box-left flex-shrink-0 mb-5 lg:mb-0 flex-grow-0 lg:flex-[calc(495/1230*100%)] lg:max-w-[calc(495/1230*100%)]">
                         <div className="content w-full h-full bg-white rounded-3xl lg:rounded-[50px] italic p-8">
                             <div className="text-gray-800 text-lg italic">
-                                &ldquo;Không chỉ là một hệ thống cung ứng Sợi -
-                                May hàng đầu Việt Nam, MINH MINH TÂM còn giữ vai trò
-                                nòng cốt, trong các hoạt động của Vinatex và
-                                Vitas, tích cực đóng góp to lớn vào ngành dệt
-                                may Việt Nam trong nhiều thập kỷ qua với quy mô
-                                lớn.&rdquo;
+                                &ldquo;{t('quote')}&rdquo;
                             </div>
                         </div>
                     </div>

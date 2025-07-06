@@ -2,24 +2,27 @@
 
 import Image from 'next/image';
 import { useViewportHeight } from '../../hook/useViewportHeight';
-
-const awards = [
-    {
-        image: 'https://picsum.photos/300/300',
-        title: 'Doanh nghiệp ưu tiên về hải quan từ năm 2018 đến nay',
-    },
-    {
-        image: 'https://picsum.photos/301/301',
-        title: 'Giải thưởng Thương hiệu Quốc gia 2014, 2016, 2018, 2020, 2022, 2024',
-    },
-    {
-        image: 'https://picsum.photos/302/302',
-        title: 'Doanh nghiệp xuất khẩu uy tín',
-    },
-];
+import { useTranslations } from 'next-intl';
+import PageTitle from '../shared/PageTitle';
 
 export default function AwardsSection() {
     const { sectionHeight } = useViewportHeight();
+    const t = useTranslations('home.awards');
+
+    const awards = [
+        {
+            image: 'https://picsum.photos/300/300',
+            title: t('items.customs'),
+        },
+        {
+            image: 'https://picsum.photos/301/301',
+            title: t('items.nationalBrand'),
+        },
+        {
+            image: 'https://picsum.photos/302/302',
+            title: t('items.exportCredibility'),
+        },
+    ];
 
     return (
         <section
@@ -27,9 +30,7 @@ export default function AwardsSection() {
             style={sectionHeight ? { minHeight: `${sectionHeight}px` } : {}}
         >
             <div className="container">
-                <h2 className="block-title text-center text-black mb-12">
-                    THÀNH TÍCH - GIẢI THƯỞNG
-                </h2>
+                <PageTitle title={t('title')} />
             </div>
 
             <div

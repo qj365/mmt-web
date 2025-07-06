@@ -26,20 +26,48 @@
         "intro": {
             "title": "Về chúng tôi",
             "description": "Tổng Công ty CP Dệt May MINH MINH TÂM được thành lập từ năm 1966, là một trong những đơn vị dệt may hàng đầu của Tập đoàn Dệt May Việt Nam (VINATEX) và cả nước.",
-            "readMore": "Tìm hiểu thêm"
+            "readMore": "Tìm hiểu thêm",
+            "stats": {
+                "totalArea": "Tổng diện tích",
+                "sewingEquipment": "Thiết bị may mặc",
+                "personnel": "Nhân sự",
+                "productionYear": "Sản phẩm may/năm",
+                "yarnSpindles": "Cọc sợi",
+                "yarnTonsYear": "Tấn sợi/năm"
+            }
         },
         "products": {
-            "title": "Sản phẩm chính",
+            "title": "Sản phẩm",
             "yarn": "Sản phẩm sợi",
             "garment": "Sản phẩm may xuất khẩu",
+            "domesticFashion": "Thời trang nội địa",
             "viewAll": "Xem tất cả"
         },
         "exportMarkets": {
             "title": "Thị trường xuất khẩu",
-            "description": "Các sản phẩm của chúng tôi đã có mặt trên nhiều quốc gia và vùng lãnh thổ trên toàn cầu."
+            "description": "Các sản phẩm của chúng tôi đã có mặt trên nhiều quốc gia và vùng lãnh thổ trên toàn cầu.",
+            "altText": "Thị trường xuất khẩu"
         },
         "awards": {
-            "title": "Thành tích nổi bật"
+            "title": "Thành tích - Giải thưởng",
+            "items": {
+                "customs": "Doanh nghiệp ưu tiên về hải quan từ năm 2018 đến nay",
+                "nationalBrand": "Giải thưởng Thương hiệu Quốc gia 2014, 2016, 2018, 2020, 2022, 2024",
+                "exportCredibility": "Doanh nghiệp xuất khẩu uy tín"
+            }
+        },
+        "video": {
+            "title": "MINH MINH TÂM Dệt may",
+            "quote": "Không chỉ là một hệ thống cung ứng Sợi - May hàng đầu Việt Nam, MINH MINH TÂM còn giữ vai trò nòng cốt, trong các hoạt động của Vinatex và Vitas, tích cực đóng góp to lớn vào ngành dệt may Việt Nam trong nhiều thập kỷ qua với quy mô lớn."
+        },
+        "brands": {
+            "title": "Thương hiệu trực thuộc",
+            "viewMore": "Xem thêm",
+            "items": {
+                "merriman": "Thời trang nam MERRIMAN",
+                "fashion": "May MINH MINH TÂM Fashion",
+                "commercialCenter": "Trung tâm thương mại May MINH MINH TÂM"
+            }
         }
     },
     "footer": {

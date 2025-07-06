@@ -3,27 +3,30 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useViewportHeight } from '../../hook/useViewportHeight';
-
-const productCategories = [
-    {
-        title: 'Sản phẩm sợi',
-        image: 'https://picsum.photos/600/800',
-        url: '/san-pham/san-pham-soi',
-    },
-    {
-        title: 'Sản phẩm may xuất khẩu',
-        image: 'https://picsum.photos/601/800',
-        url: '/san-pham/san-pham-may-xuat-khau',
-    },
-    {
-        title: 'Thời trang nội địa',
-        image: 'https://picsum.photos/602/800',
-        url: '/san-pham/thoi-trang-noi-dia',
-    },
-];
+import { useTranslations } from 'next-intl';
+import PageTitle from '../shared/PageTitle';
 
 export default function ProductsSection() {
+    const t = useTranslations('home.products');
     const { sectionHeight } = useViewportHeight();
+
+    const productCategories = [
+        {
+            title: t('yarn'),
+            image: 'https://picsum.photos/600/800',
+            url: '/san-pham/san-pham-soi',
+        },
+        {
+            title: t('garment'),
+            image: 'https://picsum.photos/601/800',
+            url: '/san-pham/san-pham-may-xuat-khau',
+        },
+        {
+            title: t('domesticFashion'),
+            image: 'https://picsum.photos/602/800',
+            url: '/san-pham/thoi-trang-noi-dia',
+        },
+    ];
 
     return (
         <section
@@ -31,7 +34,7 @@ export default function ProductsSection() {
             style={sectionHeight ? { minHeight: `${sectionHeight}px` } : {}}
         >
             <div className="container">
-                <h2 className="block-title text-black text-center">SẢN PHẨM</h2>
+                <PageTitle title={t('title')} />
                 <div className="index-4-grid grid grid-cols-1 sm:grid-cols-3 gap-[30px] mt-9">
                     {productCategories.map((category, index) => (
                         <div

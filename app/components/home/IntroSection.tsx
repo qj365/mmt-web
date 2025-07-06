@@ -5,50 +5,51 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useViewportHeight } from '../../hook/useViewportHeight';
 import { useTranslations } from 'next-intl';
-
-// Stats data
-const stats = [
-    {
-        icon: '/images/home/introduce-1.png',
-        number: 20.5,
-        unit: 'HA',
-        text: 'Tổng diện tích',
-    },
-    {
-        icon: '/images/home/introduce-2.png',
-        number: 11300,
-        unit: '',
-        text: 'Thiết bị may mặc',
-    },
-    {
-        icon: '/images/home/introduce-3.png',
-        number: 11230,
-        unit: '',
-        text: 'Nhân sự',
-    },
-    {
-        icon: '/images/home/introduce-4.png',
-        number: 26.6,
-        unit: 'Triệu',
-        text: 'Sản phẩm may/năm',
-    },
-    {
-        icon: '/images/home/introduce-5.png',
-        number: 73600,
-        unit: '',
-        text: 'Cọc sợi',
-    },
-    {
-        icon: '/images/home/introduce-6.png',
-        number: 18200,
-        unit: '',
-        text: 'Tấn sợi/ năm',
-    },
-];
+import PageTitle from '../shared/PageTitle';
 
 const IntroSection = () => {
     const t = useTranslations('home.intro');
     const { sectionHeight } = useViewportHeight();
+
+    // Stats data
+    const stats = [
+        {
+            icon: '/images/home/introduce-1.png',
+            number: 20.5,
+            unit: 'HA',
+            text: t('stats.totalArea'),
+        },
+        {
+            icon: '/images/home/introduce-2.png',
+            number: 11300,
+            unit: '',
+            text: t('stats.sewingEquipment'),
+        },
+        {
+            icon: '/images/home/introduce-3.png',
+            number: 11230,
+            unit: '',
+            text: t('stats.personnel'),
+        },
+        {
+            icon: '/images/home/introduce-4.png',
+            number: 26.6,
+            unit: 'Million',
+            text: t('stats.productionYear'),
+        },
+        {
+            icon: '/images/home/introduce-5.png',
+            number: 73600,
+            unit: '',
+            text: t('stats.yarnSpindles'),
+        },
+        {
+            icon: '/images/home/introduce-6.png',
+            number: 18200,
+            unit: '',
+            text: t('stats.yarnTonsYear'),
+        },
+    ];
 
     // Counter animation using vanilla JS
     useEffect(() => {
@@ -108,9 +109,7 @@ const IntroSection = () => {
             }}
         >
             <div className="container">
-                <h2 className="block-title text-black text-center">
-                    {t('title')}
-                </h2>
+                <PageTitle title={t('title')} />
                 <div className="des text-center mx-auto leading-6 text-[18px] max-w-[1050px] w-full font-medium mt-5">
                     {t('description')}
                 </div>

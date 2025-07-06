@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { useParams } from 'next/navigation';
 import { useLanguageSwitcher } from '../../i18n/client';
 import { localeLabels, locales } from '../../i18n/settings';
+import { useTranslations } from 'next-intl';
 
 interface NavMenuItem {
     title: string;
@@ -15,50 +16,89 @@ interface NavMenuItem {
     isHome?: boolean;
 }
 
-const navItems: NavMenuItem[] = [
-    { title: 'Trang chủ', href: '/', isHome: true },
-    {
-        title: 'Giới thiệu',
-        href: '/gioi-thieu/tong-quan',
-        children: [
-            { title: 'Tổng quan', href: '/gioi-thieu/tong-quan' },
-            {
-                title: 'Lịch sử hình thành',
-                href: '/gioi-thieu/lich-su-hinh-thanh',
-            },
-            { title: 'Cơ cấu tổ chức', href: '/gioi-thieu/co-cau-to-chuc' },
-            { title: 'Tầm nhìn sứ mệnh', href: '/gioi-thieu/tam-nhin-su-menh' },
-            { title: 'Lời cam kết', href: '/gioi-thieu/loi-cam-ket' },
-            { title: 'Thành tích', href: '/gioi-thieu/thanh-tich' },
-        ],
-    },
-    { title: 'Thị trường xuất khẩu', href: '/thi-truong-xuat-khau' },
-    {
-        title: 'Sản phẩm',
-        href: '/san-pham/san-pham-soi',
-        children: [
-            { title: 'Sản phẩm sợi', href: '/san-pham/san-pham-soi' },
-            {
-                title: 'Sản phẩm may xuất khẩu',
-                href: '/san-pham/san-pham-may-xuat-khau',
-            },
-            {
-                title: 'Thời trang nội địa',
-                href: '/san-pham/thoi-trang-noi-dia',
-            },
-        ],
-    },
-    {
-        title: 'Nhà máy - Thương hiệu',
-        href: '/nha-may-thuong-hieu',
-    },
-    {
-        title: 'Tin tức',
-        href: '/tin-tuc',
-    },
-    { title: 'Tuyển dụng', href: '/tuyen-dung' },
-    { title: 'Liên hệ', href: '/lien-he' },
-];
+// Base navigation structure with Vietnamese hrefs
+const getNavItems = (
+    t: (key: string) => string,
+    locale: string
+): NavMenuItem[] => {
+    // For Japanese, use English hrefs; for Vietnamese, use Vietnamese hrefs
+    const hrefs =
+        locale === 'ja'
+            ? {
+                  home: '/',
+                  about: '/about/overview',
+                  overview: '/about/overview',
+                  history: '/about/history',
+                  structure: '/about/structure',
+                  vision: '/about/vision',
+                  commitment: '/about/commitment',
+                  achievements: '/about/achievements',
+                  exportMarkets: '/export-markets',
+                  products: '/products/yarn-products',
+                  yarnProducts: '/products/yarn-products',
+                  garmentProducts: '/products/garment-products',
+                  domesticFashion: '/products/domestic-fashion',
+                  factories: '/factories-brands',
+                  news: '/news',
+                  careers: '/careers',
+                  contact: '/contact',
+              }
+            : {
+                  home: '/',
+                  about: '/gioi-thieu/tong-quan',
+                  overview: '/gioi-thieu/tong-quan',
+                  history: '/gioi-thieu/lich-su-hinh-thanh',
+                  structure: '/gioi-thieu/co-cau-to-chuc',
+                  vision: '/gioi-thieu/tam-nhin-su-menh',
+                  commitment: '/gioi-thieu/loi-cam-ket',
+                  achievements: '/gioi-thieu/thanh-tich',
+                  exportMarkets: '/thi-truong-xuat-khau',
+                  products: '/san-pham/san-pham-soi',
+                  yarnProducts: '/san-pham/san-pham-soi',
+                  garmentProducts: '/san-pham/san-pham-may-xuat-khau',
+                  domesticFashion: '/san-pham/thoi-trang-noi-dia',
+                  factories: '/nha-may-thuong-hieu',
+                  news: '/tin-tuc',
+                  careers: '/tuyen-dung',
+                  contact: '/lien-he',
+              };
+
+    return [
+        { title: t('home'), href: hrefs.home, isHome: true },
+        {
+            title: t('about'),
+            href: hrefs.about,
+            children: [
+                { title: t('overview'), href: hrefs.overview },
+                { title: t('history'), href: hrefs.history },
+                { title: t('structure'), href: hrefs.structure },
+                { title: t('vision'), href: hrefs.vision },
+                { title: t('commitment'), href: hrefs.commitment },
+                { title: t('achievements'), href: hrefs.achievements },
+            ],
+        },
+        { title: t('export_markets'), href: hrefs.exportMarkets },
+        {
+            title: t('products'),
+            href: hrefs.products,
+            children: [
+                { title: t('yarn_products'), href: hrefs.yarnProducts },
+                { title: t('garment_products'), href: hrefs.garmentProducts },
+                { title: t('domestic_fashion'), href: hrefs.domesticFashion },
+            ],
+        },
+        {
+            title: t('factories'),
+            href: hrefs.factories,
+        },
+        {
+            title: t('news'),
+            href: hrefs.news,
+        },
+        { title: t('careers'), href: hrefs.careers },
+        { title: t('contact'), href: hrefs.contact },
+    ];
+};
 
 const NavLink = ({
     item,
@@ -221,6 +261,7 @@ const Header = () => {
     const { switchLanguage } = useLanguageSwitcher();
     const params = useParams();
     const currentLocale = (params.locale || 'vi') as string;
+    const t = useTranslations('menu');
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
@@ -331,7 +372,7 @@ const Header = () => {
                                     />
                                 </Link>
                                 <ul className="list-none p-0 flex ul-parent xl:flex-row flex-col items-center xl:gap-1 xl:flex-nowrap overflow-visible">
-                                    {navItems
+                                    {getNavItems(t, currentLocale)
                                         .filter(item => !item.isHome)
                                         .map((item, index) => (
                                             <li
@@ -396,18 +437,20 @@ const Header = () => {
                     <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px]">
                         <div className="mobile-nav">
                             <ul className="list-none p-0 flex flex-col items-center max-w-full mx-auto sm:max-w-[320px]">
-                                {navItems.map((item, index) => (
-                                    <li
-                                        key={index}
-                                        className="text-[1.375rem] font-medium py-[10px] w-full"
-                                    >
-                                        <NavLink
+                                {getNavItems(t, currentLocale).map(
+                                    (item, index) => (
+                                        <li
                                             key={index}
-                                            item={item}
-                                            isMobile={true}
-                                        />
-                                    </li>
-                                ))}
+                                            className="text-[1.375rem] font-medium py-[10px] w-full"
+                                        >
+                                            <NavLink
+                                                key={index}
+                                                item={item}
+                                                isMobile={true}
+                                            />
+                                        </li>
+                                    )
+                                )}
                             </ul>
                         </div>
                     </div>

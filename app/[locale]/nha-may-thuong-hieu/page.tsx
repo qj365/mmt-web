@@ -28,7 +28,7 @@ export default function NhaMaySoiHoaTho1() {
         { icon: '/images/nha-may-thuong-hieu/ic-4.svg', text: '5.000 tấn/năm' },
         {
             icon: '/images/nha-may-thuong-hieu/ic-5.svg',
-            text: 'Khu phố 1, Thị trấn Tân Nghĩa, Quận Hàm Tân, Tỉnh Bình Thuận, Việt Nam',
+            text: '36 Đ. Số 19B, Phường An Khánh, Thủ Đức, Hồ Chí Minh, Việt Nam',
         },
         {
             icon: '/images/nha-may-thuong-hieu/ic-7.svg',
@@ -49,7 +49,10 @@ export default function NhaMaySoiHoaTho1() {
         >
             <div>
                 {/* Factory Title */}
-                <PageTitle title="Nhà máy Sợi MINH MINH TÂM 1" className="mb-10" />
+                <PageTitle
+                    title="Nhà máy Sợi MINH MINH TÂM 1"
+                    className="mb-10"
+                />
 
                 {/* Factory Info Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] items-start">
@@ -98,7 +101,7 @@ export default function NhaMaySoiHoaTho1() {
                     <PageTitle title="Vị trí bản đồ" className="mb-7" />
                     <div className="overflow-hidden rounded-lg">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.864858149773!2d108.20261200000002!3d16.020549000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421a280c163acf%3A0xd3dad95c5dbd82cb!2zVOG7lW5nIEPDtG5nIHR5IEPhu5UgcGjhuqduIEThu4d0IE1heSBIw7JhIFRo4buNIChIb2EgVGhvIFRleHRpbGUgQW5kIEdhcm1lbnQgSk9JTlQgU1RPQ0sgQ09SUE9SQVRJT04p!5e0!3m2!1svi!2s!4v1654594809023!5m2!1svi!2s"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d944.7519601883434!2d106.72944777790516!3d10.798034781972312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752604ae5036bd%3A0xf53ae4ee26f67df7!2zMzYgxJAuIFPhu5EgMTlCLCBQaMaw4budbmcgQW4gS2jDoW5oLCBUaOG7pyDEkOG7qWMsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e1!3m2!1svi!2s!4v1751769339570!5m2!1svi!2s"
                             width="100%"
                             height="450"
                             style={{ border: 0 }}

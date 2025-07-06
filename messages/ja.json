@@ -26,20 +26,48 @@
         "intro": {
             "title": "私たちについて",
             "description": "ミン ミン タム紡織株式会社は1966年に設立され、ベトナム紡織グループ（VINATEX）および国内の主要繊維企業の一つです。",
-            "readMore": "詳細を見る"
+            "readMore": "詳細を見る",
+            "stats": {
+                "totalArea": "総面積",
+                "sewingEquipment": "縫製設備",
+                "personnel": "従業員数",
+                "productionYear": "年間生産量",
+                "yarnSpindles": "糸錘",
+                "yarnTonsYear": "糸トン/年"
+            }
         },
         "products": {
-            "title": "主な製品",
+            "title": "製品",
             "yarn": "糸製品",
             "garment": "輸出衣料品",
+            "domesticFashion": "国内ファッション",
             "viewAll": "すべて表示"
         },
         "exportMarkets": {
             "title": "輸出市場",
-            "description": "当社の製品は世界中の多くの国や地域で展開されています。"
+            "description": "当社の製品は世界中の多くの国や地域で展開されています。",
+            "altText": "輸出市場"
         },
         "awards": {
-            "title": "主な業績"
+            "title": "業績・受賞歴",
+            "items": {
+                "customs": "2018年より優良通関企業",
+                "nationalBrand": "国家ブランド賞 2014、2016、2018、2020、2022、2024",
+                "exportCredibility": "信頼できる輸出企業"
+            }
+        },
+        "video": {
+            "title": "ミン ミン タム紡織",
+            "quote": "ベトナムの糸・縫製サプライチェーンの最前線企業であるだけでなく、ミン ミン タムはVinatexとVitasの活動において中核的な役割を果たし、大規模な運営で数十年にわたってベトナムの繊維産業に大きく貢献してきました。"
+        },
+        "brands": {
+            "title": "直属ブランド",
+            "viewMore": "詳細を見る",
+            "items": {
+                "merriman": "メンズファッション MERRIMAN",
+                "fashion": "ミン ミン タム ファッション",
+                "commercialCenter": "ミン ミン タム商業センター"
+            }
         }
     },
     "footer": {

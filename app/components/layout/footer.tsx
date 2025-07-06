@@ -19,8 +19,8 @@ export default function Footer() {
                                 </div>
                                 <div className="content">
                                     <p>
-                                        Địa chỉ: Khu phố 1, Thị trấn Tân Nghĩa,
-                                        Quận Hàm Tân, Tỉnh Bình Thuận, Việt Nam
+                                        Địa chỉ: 36 Đ. Số 19B, Phường An Khánh,
+                                        Thủ Đức, Hồ Chí Minh, Việt Nam
                                     </p>
                                     <br />
                                     <p>
@@ -87,7 +87,7 @@ export default function Footer() {
                         <div className="item w-full lg:w-[calc(33.3333%-20px)]">
                             <div className="iframe !w-full h-[256px] rounded-[20px] overflow-hidden">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d958.7195267909299!2d108.2019516325409!3d16.019859584145987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421988058f36a1%3A0xf8adf44d71cae063!2zMzYgw5RuZyDDjWNoIMSQLiwgS2h1w6ogVHJ1bmcsIEPhuqltIEzhu4csIMSQw6AgTuG6tW5nIDU1MDAwMA!5e0!3m2!1svi!2s!4v1651653674352!5m2!1svi!2s"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d944.7519601883434!2d106.72944777790516!3d10.798034781972312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752604ae5036bd%3A0xf53ae4ee26f67df7!2zMzYgxJAuIFPhu5EgMTlCLCBQaMaw4budbmcgQW4gS2jDoW5oLCBUaOG7pyDEkOG7qWMsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e1!3m2!1svi!2s!4v1751769339570!5m2!1svi!2s"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}

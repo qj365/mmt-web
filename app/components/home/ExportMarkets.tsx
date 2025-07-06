@@ -3,11 +3,14 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useViewportHeight } from '../../hook/useViewportHeight';
+import { useTranslations } from 'next-intl';
+import PageTitle from '../shared/PageTitle';
 
 export default function ExportMarkets() {
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const { sectionHeight } = useViewportHeight();
+    const t = useTranslations('home.exportMarkets');
 
     useEffect(() => {
         const checkMobile = () => {
@@ -34,9 +37,7 @@ export default function ExportMarkets() {
             }
         >
             <div className="container mt-0 md:mt-auto">
-                <h2 className="block-title text-black text-center">
-                    THỊ TRƯỜNG XUẤT KHẨU
-                </h2>
+                <PageTitle title={t('title')} />
             </div>
             <div
                 className="image mt-2 md:mt-7 cursor-pointer mb-0 md:mb-auto flex-grow flex justify-center"
@@ -45,7 +46,7 @@ export default function ExportMarkets() {
                 <div className="relative h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full">
                     <Image
                         src="/images/home/global.gif"
-                        alt="Thị trường xuất khẩu"
+                        alt={t('altText')}
                         fill
                         className="object-contain scale-125 sm:scale-100"
                         priority={false}
@@ -68,7 +69,7 @@ export default function ExportMarkets() {
                         </button>
                         <Image
                             src="https://picsum.photos/1200/600"
-                            alt="Thị trường xuất khẩu"
+                            alt={t('altText')}
                             width={1200}
                             height={600}
                             className="w-full"
