@@ -3,15 +3,20 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Link } from '../../i18n/navigation';
+import type { ComponentProps } from 'react';
 import { usePathname } from 'next/navigation';
 import { useParams } from 'next/navigation';
 import { useLanguageSwitcher } from '../../i18n/client';
 import { localeLabels, locales } from '../../i18n/settings';
 import { useTranslations } from 'next-intl';
 
+// Use the href type from Link props
+type LinkProps = ComponentProps<typeof Link>;
+type Href = LinkProps['href'];
+
 interface NavMenuItem {
     title: string;
-    href: string;
+    href: string; // Keep as string for simplicity
     children?: NavMenuItem[];
     isHome?: boolean;
 }
@@ -82,7 +87,7 @@ const NavLink = ({
                 // Text version for mobile
                 return (
                     <Link
-                        href={item.href}
+                        href={item.href as Href}
                         title={item.title}
                         className={`inline-block rounded-[50px] px-[15px] py-1 ${
                             isActive
@@ -105,7 +110,7 @@ const NavLink = ({
 
         return (
             <Link
-                href={item.href}
+                href={item.href as Href}
                 title={item.title}
                 className={`inline-block rounded-[50px] px-[15px] py-1 ${
                     isActive
@@ -126,7 +131,7 @@ const NavLink = ({
         <div className="has-child relative w-full whitespace-nowrap group">
             <div className="parent flex justify-between">
                 <Link
-                    href={item.href}
+                    href={item.href as Href}
                     title={item.title}
                     className={`inline-block rounded-[50px] px-[15px] py-1 ${
                         isActive
@@ -182,7 +187,7 @@ const NavLink = ({
                     {item.children.map((child, index) => (
                         <li key={index} className="xl:font-normal w-full">
                             <Link
-                                href={child.href}
+                                href={child.href as Href}
                                 title={child.title}
                                 className={`block py-2 px-5 ${
                                     isChildActive(child.href)
@@ -299,7 +304,7 @@ const Header = () => {
 
                         <div className="logo xl:static xl:translate-x-0 xl:mr-8 flex items-center justify-center h-full xl:w-[180px]">
                             <Link
-                                href="/"
+                                href={'/' as Href}
                                 className="flex items-center justify-center h-full w-full relative"
                             >
                                 <Image
@@ -317,7 +322,7 @@ const Header = () => {
                         <div className="nav-desktop xl:block hidden">
                             <nav className="flex items-center">
                                 <Link
-                                    href="/"
+                                    href={'/' as Href}
                                     className="bg-secondary rounded-[16px] w-8 h-8 flex items-center justify-center mr-[4px]"
                                 >
                                     <Image
