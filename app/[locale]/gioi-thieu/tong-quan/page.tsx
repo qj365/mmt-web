@@ -3,17 +3,21 @@ import Image from 'next/image';
 import ContentPageLayout from '@/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/app/types/';
 import PageTitle from '@/app/components/shared/PageTitle';
-
-const breadcrumbItems: BreadcrumbItem[] = [
-    { label: 'Giới thiệu', href: '/gioi-thieu/tong-quan' },
-    { label: 'Tổng quan', href: '/gioi-thieu/tong-quan' },
-];
+import { useTranslations } from 'next-intl';
 
 export default function TongQuanPage() {
+    const t = useTranslations('gioi-thieu.tong-quan');
+    const breadcrumbT = useTranslations('menu');
+
+    const breadcrumbItems: BreadcrumbItem[] = [
+        { label: breadcrumbT('about'), href: '/gioi-thieu/tong-quan' },
+        { label: breadcrumbT('overview'), href: '/gioi-thieu/tong-quan' },
+    ];
+
     return (
         <ContentPageLayout
             bannerImage="/images/gioi-thieu/tong-quan/banner.png"
-            bannerAlt="Tổng quan - Dệt may MINH MINH TÂM"
+            bannerAlt={t('banner.alt')}
             breadcrumbItems={breadcrumbItems}
         >
             {/* Section 1: Thư ngỏ (Letter Section) */}
@@ -24,7 +28,7 @@ export default function TongQuanPage() {
                             <div className="img mx-auto lg:mx-0 w-fit lg:w-auto">
                                 <Image
                                     src="https://picsum.photos/400/500?random=1"
-                                    alt="Thưa Quý khách hàng, Quý đối tác và toàn thể cán bộ công nhân viên"
+                                    alt={t('letter.image_alt')}
                                     width={400}
                                     height={500}
                                     className="rounded-lg"
@@ -34,69 +38,33 @@ export default function TongQuanPage() {
                         <div className="box-right flex-auto lg:flex-[0_0_calc(60%-30px)] xl:flex-[0_0_calc(705/1230*100%)] mt-6 lg:mt-0">
                             <div className="content text-right">
                                 <div className="big-title text-5xl md:text-6xl lg:text-7xl font-bold uppercase leading-tight text-red-600">
-                                    Thư ngỏ
+                                    {t('letter.title')}
                                 </div>
                                 <div className="medium-title text-lg sm:text-2xl lg:text-3xl font-bold leading-tight uppercase text-gray-700 mt-[10px] mb-4 sm:mb-[30px]">
-                                    Thưa Quý khách hàng, Quý đối tác và toàn thể
-                                    cán bộ công nhân viên
+                                    {t('letter.subtitle')}
                                 </div>
                                 <div className="des text-base leading-6 text-left text-gray-600 lg:pl-[44px]">
                                     <p className="mb-4">
-                                        Trong hơn nửa thế kỷ qua, MINH MINH TÂM
-                                        luôn nhất quán một tôn chỉ hoạt động:
-                                        xây dựng Dệt May MINH MINH TÂM phát
-                                        triển trường tồn, mang đậm tính nhân
-                                        văn, không ngừng sáng tạo, hướng đến
-                                        thỏa mãn cao nhất nhu cầu của khách hàng
-                                        bằng cam kết chất lượng sản phẩm và dịch
-                                        vụ. Nhờ vậy, sản phẩm của MINH MINH TÂM
-                                        đã đi khắp năm châu và chúng tôi đã trở
-                                        thành doanh nghiệp Dệt May nòng cốt tại
-                                        khu vực, góp phần vào sự phát triển của
-                                        ngành dệt may Việt Nam trên thị trường
-                                        thế giới.
+                                        {t('letter.paragraph_1')}
                                     </p>
                                     <p className="mb-4">
-                                        Với tư duy không ngừng đổi mới, đội ngũ
-                                        nhân sự giàu kinh nghiệm, tâm huyết,
-                                        sáng tạo cùng sự tiên phong ứng dụng kỹ
-                                        thuật công nghệ tiên tiến nhất, MINH
-                                        MINH TÂM đã liên tục nâng cao lợi thế
-                                        cạnh tranh bằng các sản phẩm mang tầm
-                                        vóc và chất lượng quốc tế tại thị trường
-                                        lớn như Hoa Kỳ, Châu Âu, Nhật Bản, Hàn
-                                        Quốc... Niềm tin, sự đánh giá cao từ
-                                        phía khách hàng là thành quả to lớn,
-                                        đáng tự hào và là nguồn động lực của
-                                        chúng tôi trong suốt hơn 60 năm qua.
-                                        Chúng tôi nhất định sẽ giữ vững và phát
-                                        huy hơn nữa.
+                                        {t('letter.paragraph_2')}
                                     </p>
                                     <p className="mb-4">
-                                        Chúng tôi tin rằng trong chặng đường sắp
-                                        tới, MINH MINH TÂM sẽ viết nên những
-                                        trang sử mới của riêng mình, và cả ngành
-                                        dệt may Việt Nam. Trên hành trình này
-                                        chắc chắn và luôn luôn cần sự đồng hành,
-                                        ủng hộ vững chắc từ Quý đối tác cũng như
-                                        tập thể cán bộ công nhân viên MINH MINH
-                                        TÂM. MINH MINH TÂM cam kết tạo ra những
-                                        giá trị phát triển bền vững cho khách
-                                        hàng, đối tác, cán bộ công nhân viên,
-                                        những con người đã, đang và sẽ gắn kết
-                                        với MINH MINH TÂM.
+                                        {t('letter.paragraph_3')}
                                     </p>
                                     <div className="signature text-right mt-8">
-                                        <p>Trân trọng,</p>
-                                        <p className="mt-4">Giám đốc</p>
+                                        <p>{t('letter.closing')}</p>
+                                        <p className="mt-4">
+                                            {t('letter.position')}
+                                        </p>
                                         <p className="font-bold">
-                                            Vũ Thị Thanh Thanh
+                                            {t('letter.name')}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="quote text-red-600 sm:text-2xl leading-7 font-bold italic mt-6">
-                                    &ldquo;May mặc tận tâm – An tâm sử dụng
-                                    văn&rdquo;
+                                    &ldquo;{t('letter.quote')}&rdquo;
                                 </div>
                             </div>
                         </div>
@@ -120,7 +88,7 @@ export default function TongQuanPage() {
                 ></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <PageTitle
-                        title="Giới thiệu"
+                        title={t('intro.title')}
                         className="mb-10"
                         textColor="text-white"
                     />
@@ -130,7 +98,7 @@ export default function TongQuanPage() {
                                 <div className="img rounded-3xl lg:rounded-[200px] lg:rounded-br-none overflow-hidden">
                                     <Image
                                         src="https://picsum.photos/600/400?random=3"
-                                        alt="Giới thiệu"
+                                        alt={t('intro.image_alt')}
                                         width={600}
                                         height={400}
                                         className="w-full h-full object-cover"
@@ -142,13 +110,13 @@ export default function TongQuanPage() {
                                             <Image
                                                 className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] object-contain"
                                                 src="/images/gioi-thieu/tong-quan/intro-icon-1.png"
-                                                alt="Sản xuất hàng may mặc"
+                                                alt={t('intro.icon1_alt')}
                                                 width={60}
                                                 height={60}
                                             />
                                         </div>
                                         <div className="title text-white font-bold text-xl leading-[25px] uppercase text-center sm:text-left">
-                                            Sản xuất hàng may mặc
+                                            {t('intro.feature1')}
                                         </div>
                                     </div>
                                     <div className="item">
@@ -156,13 +124,13 @@ export default function TongQuanPage() {
                                             <Image
                                                 className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] object-contain"
                                                 src="/images/gioi-thieu/tong-quan/intro-icon-2.png"
-                                                alt="Kéo sợi"
+                                                alt={t('intro.icon2_alt')}
                                                 width={60}
                                                 height={60}
                                             />
                                         </div>
                                         <div className="title text-white font-bold text-xl leading-[25px] uppercase text-center sm:text-left">
-                                            Kéo sợi
+                                            {t('intro.feature2')}
                                         </div>
                                     </div>
                                 </div>
@@ -172,37 +140,31 @@ export default function TongQuanPage() {
                             <div className="content-wrapper xl:pl-16">
                                 <div className="top flex items-baseline mb-10">
                                     <div className="title text-2xl font-bold text-white">
-                                        Thành lập năm
+                                        {t('intro.established')}
                                     </div>
                                     <div className="year font-bold text-7xl leading-8 text-red-600 ml-5">
-                                        1996
+                                        {t('intro.year')}
                                     </div>
                                 </div>
                                 <div className="des text-2xl text-white">
                                     <p className="mb-4">
-                                        <strong>MINH MINH TÂM</strong> là một
-                                        trong những doanh nghiệp dệt may có bề
-                                        dày lịch sử và quy mô lớn với 2 lĩnh vực
-                                        chính:
+                                        <strong>
+                                            {t('intro.company_name')}
+                                        </strong>{' '}
+                                        {t('intro.description')}
                                     </p>
                                     <p className="mb-2">
-                                        <strong>
-                                            1- Sản xuất hàng may mặc
-                                        </strong>
+                                        <strong>{t('intro.area1')}</strong>
                                     </p>
                                     <p className="mb-6">
-                                        <strong>2- Kéo sợi</strong>
+                                        <strong>{t('intro.area2')}</strong>
                                     </p>
                                     <p>
-                                        Không chỉ là một hệ thống cung ứng{' '}
+                                        {t('intro.not_only')}{' '}
                                         <strong>
-                                            Sợi - May hàng đầu Việt Nam
+                                            {t('intro.leading_supplier')}
                                         </strong>
-                                        , MINH MINH TÂM còn giữ vai trò nòng
-                                        cốt, trong các hoạt động của Vinatex và
-                                        Vitas, tích cực đóng góp to lớn vào
-                                        ngành dệt may Việt Nam trong nhiều thập
-                                        kỷ qua.
+                                        , {t('intro.core_role')}
                                     </p>
                                 </div>
                             </div>
@@ -219,7 +181,7 @@ export default function TongQuanPage() {
                             <div className="logo-svg">
                                 <Image
                                     src="/images/gioi-thieu/tong-quan/slogan.svg"
-                                    alt="Slogan"
+                                    alt={t('video.slogan_alt')}
                                     width={442}
                                     height={196}
                                 />
@@ -245,13 +207,12 @@ export default function TongQuanPage() {
                                 <div className="image w-full h-full">
                                     <Image
                                         src="https://picsum.photos/800/450?random=6"
-                                        alt="Video giới thiệu MINH MINH TÂM"
+                                        alt={t('video.alt')}
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="video-overlay absolute inset-0 bg-black bg-opacity-20"></div>
                             </div>
                         </div>
                     </div>

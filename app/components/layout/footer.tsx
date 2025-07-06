@@ -2,41 +2,49 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 export default function Footer() {
+    const params = useParams();
+    const currentLocale = (params.locale || 'vi') as string;
+    const t = useTranslations('footer');
+
     return (
         <footer className="text-white bg-[#338dcc]">
             <div className="footer-1 section xl:pb-16">
                 <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px]">
                     <div className="top-title text-white text-xl leading-normal mb-7">
-                        Thông tin liên hệ
+                        {t('contactInfo')}
                     </div>
                     <div className="flex flex-wrap gap-x-[30px] gap-y-[30px]">
                         <div className="item w-full sm:w-[calc(50%-15px)] lg:w-[calc(33.3333%-20px)]">
                             <div className="wrapper">
                                 <div className="title text-lg uppercase leading-normal font-bold mb-6">
-                                    Tổng Công ty Cổ phần Dệt may MINH MINH TÂM
+                                    {currentLocale === 'ja'
+                                        ? 'ミン ミン タム紡織株式会社'
+                                        : 'Tổng Công ty Cổ phần Dệt may MINH MINH TÂM'}
                                 </div>
                                 <div className="content">
                                     <p>
-                                        Địa chỉ: 36 Đ. Số 19B, Phường An Khánh,
-                                        Thủ Đức, Hồ Chí Minh, Việt Nam
+                                        {t('address')}: 36 Đ. Số 19B, Phường An
+                                        Khánh, Thủ Đức, Hồ Chí Minh, Việt Nam
                                     </p>
                                     <br />
                                     <p>
-                                        Email:{' '}
+                                        {t('email')}:{' '}
                                         <a href="mailto:minhminhtam.binhthuan@gmail.com">
                                             minhminhtam.binhthuan@gmail.com
                                         </a>
                                     </p>
                                     <p>
-                                        Tel:{' '}
+                                        {t('phone')}:{' '}
                                         <a href="tel:(+84) 252 672 5858">
                                             (+84) 252 672 5858
                                         </a>
                                     </p>
                                     <p>
-                                        Fax:{' '}
+                                        {t('fax')}:{' '}
                                         <a href="fax:(+84) 28 6272 5525">
                                             (+84) 28 6272 5525
                                         </a>
@@ -47,13 +55,13 @@ export default function Footer() {
                         <div className="item w-full sm:w-[calc(50%-15px)] lg:w-[calc(33.3333%-20px)]">
                             <div className="wrapper">
                                 <div className="title text-lg uppercase leading-normal font-bold mb-6">
-                                    Chứng nhận
+                                    {t('certification')}
                                 </div>
                                 <div className="image-wrapper grid grid-cols-5 gap-x-[15px]">
                                     <div className="flex justify-center relative w-16 h-16">
                                         <Image
                                             src="/images/footer/i-1.png"
-                                            alt="Certification"
+                                            alt={t('certification')}
                                             fill
                                             className="object-contain"
                                         />
@@ -61,7 +69,7 @@ export default function Footer() {
                                     <div className="flex justify-center relative">
                                         <Image
                                             src="/images/footer/i-2.png"
-                                            alt="Certification"
+                                            alt={t('certification')}
                                             layout="fill"
                                             objectFit="contain"
                                         />
@@ -69,7 +77,7 @@ export default function Footer() {
                                     <div className="flex justify-center relative">
                                         <Image
                                             src="/images/footer/i-3.png"
-                                            alt="Certification"
+                                            alt={t('certification')}
                                             layout="fill"
                                             objectFit="contain"
                                         />
@@ -79,7 +87,7 @@ export default function Footer() {
                             <div className="wrapper">
                                 <div className="title text-fs18px uppercase leading-normal font-bold mt-6">
                                     <Link href="" target="_blank">
-                                        Tải Brochure
+                                        {t('downloadBrochure')}
                                     </Link>
                                 </div>
                             </div>
@@ -102,8 +110,7 @@ export default function Footer() {
             <div className="footer-2 bg-[#56c1f9] py-4 sm:py-[22px]">
                 <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px]">
                     <div className="title text-center text-xs sm:text-sm leading-4 font-normal">
-                        © {new Date().getFullYear()} Tổng Công ty Cổ phần Dệt
-                        may MINH MINH TÂM.
+                        © {new Date().getFullYear()} {t('copyright')}
                     </div>
                 </div>
             </div>

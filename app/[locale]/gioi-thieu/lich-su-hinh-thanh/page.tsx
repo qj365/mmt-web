@@ -19,10 +19,11 @@ export default function LichSuPage() {
                 <ul>
                     <li className="text-justify">
                         Được thành lập từ năm 1962, tiền thân có tên là Nhà máy
-                        Dệt MINH MINH TÂM (SICOVINA) thuộc Công ty Kỹ nghệ Bông vải
-                        Việt Nam. Năm 1975, khi thành phố Bình Thuận được giải
-                        phóng, Nhà máy Dệt MINH MINH TÂM được chính quyền tiếp quản và
-                        đi vào hoạt động trở lại vào ngày 21/04/1975.
+                        Dệt MINH MINH TÂM (SICOVINA) thuộc Công ty Kỹ nghệ Bông
+                        vải Việt Nam. Năm 1975, khi thành phố Bình Thuận được
+                        giải phóng, Nhà máy Dệt MINH MINH TÂM được chính quyền
+                        tiếp quản và đi vào hoạt động trở lại vào ngày
+                        21/04/1975.
                     </li>
                 </ul>
             ),
@@ -140,11 +141,13 @@ export default function LichSuPage() {
                     <p>Thành lập mới hai đơn vị:</p>
                     <ul className="text-justify">
                         <li>
-                            Thành lập Nhà Máy May MINH MINH TÂM 3, đến năm 2010 sát
-                            nhập vào Nhà Máy May MINH MINH TÂM 2 (nay là Nhà Máy May
-                            Veston MINH MINH TÂM)
+                            Thành lập Nhà Máy May MINH MINH TÂM 3, đến năm 2010
+                            sát nhập vào Nhà Máy May MINH MINH TÂM 2 (nay là Nhà
+                            Máy May Veston MINH MINH TÂM)
                         </li>
-                        <li>Thành lập Công ty May MINH MINH TÂM - Quảng Nam.</li>
+                        <li>
+                            Thành lập Công ty May MINH MINH TÂM - Quảng Nam.
+                        </li>
                     </ul>
                 </>
             ),
@@ -178,9 +181,9 @@ export default function LichSuPage() {
                 <ul className="text-justify">
                     <li>
                         Ngày 15/11/2006, công ty đổi tên thành Tổng Công ty Cổ
-                        phần Dệt May MINH MINH TÂM theo quyết định số 3252/QĐ-BCN của
-                        Bộ Công nghiệp, và chính thức đi vào hoạt động vào ngày
-                        01 tháng 02 năm 2007.
+                        phần Dệt May MINH MINH TÂM theo quyết định số
+                        3252/QĐ-BCN của Bộ Công nghiệp, và chính thức đi vào
+                        hoạt động vào ngày 01 tháng 02 năm 2007.
                     </li>
                 </ul>
             ),
@@ -259,11 +262,12 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        Góp vốn đầu tư vào Công Ty CP May MINH MINH TÂM - Phú Ninh.
+                        Góp vốn đầu tư vào Công Ty CP May MINH MINH TÂM - Phú
+                        Ninh.
                     </li>
                     <li>
-                        Thực hiện tách Công Ty Sợi MINH MINH TÂM thành 02 nhà máy Sợi
-                        1 và Sợi 2.
+                        Thực hiện tách Công Ty Sợi MINH MINH TÂM thành 02 nhà
+                        máy Sợi 1 và Sợi 2.
                     </li>
                 </ul>
             ),
@@ -275,8 +279,8 @@ export default function LichSuPage() {
                 <ul className="text-justify">
                     <li>
                         <p>
-                            Góp vốn đầu tư thành lập Công Ty CP Sợi MINH MINH TÂM
-                            Thăng Bình:
+                            Góp vốn đầu tư thành lập Công Ty CP Sợi MINH MINH
+                            TÂM Thăng Bình:
                         </p>
                         <ul className="list-disc pl-5">
                             <li>
@@ -343,7 +347,9 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Thành lập Nhà máy May MINH MINH TÂM - Triệu Phong:</p>
+                        <p>
+                            Thành lập Nhà máy May MINH MINH TÂM - Triệu Phong:
+                        </p>
                         <ul className="list-disc pl-5">
                             <li>Sản phẩm chính: Jacket, Workwear</li>
                             <li>Các chứng nhận: WRAP, LEED.</li>
