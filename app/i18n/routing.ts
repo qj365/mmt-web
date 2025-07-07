@@ -4,6 +4,7 @@ import { locales, defaultLocale } from './settings';
 export const routing = defineRouting({
     locales,
     defaultLocale,
+    localePrefix: 'as-needed',
     pathnames: {
         // Home page
         '/': {
