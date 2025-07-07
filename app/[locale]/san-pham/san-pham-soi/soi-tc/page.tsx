@@ -3,6 +3,7 @@
 import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import ProductCard, { ProductType } from '@/app/components/shared/ProductCard';
 import VerticalPageTitle from '@/app/components/shared/VerticalPageTitle';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
 import 'swiper/css';
@@ -17,30 +18,38 @@ export default function SoiTCPage() {
     const [thumbsSwiper, setThumbsSwiper] = React.useState<SwiperClass | null>(
         null
     );
+    const t = useTranslations('san-pham.san-pham-soi');
+    const product = 'soi-tc';
 
     // Breadcrumb items for the page
     const breadcrumbItems = [
-        { label: 'Sản phẩm sợi', href: '/san-pham/san-pham-soi' },
-        { label: 'Sợi TC', href: '/san-pham/san-pham-soi/soi-tc' },
+        {
+            label: t('breadcrumb_yarn_products'),
+            href: '/san-pham/san-pham-soi',
+        },
+        {
+            label: t(`products.${product}.breadcrumb`),
+            href: '/san-pham/san-pham-soi/soi-tc',
+        },
     ];
 
     // Related products
     const relatedProducts: ProductType[] = [
         {
-            name: 'Sợi CVC',
+            name: t('products.soi-cvc.name'),
             slug: 'soi-cvc',
             imageSrc: '/images/san-pham/san-pham-soi/soi-cvc.png',
             basePath: '/san-pham/san-pham-soi',
         },
         {
-            name: 'Sợi CD',
+            name: t('products.soi-cd.name'),
             slug: 'soi-cd',
             imageSrc: '/images/san-pham/san-pham-soi/soi-cd.png',
             basePath: '/san-pham/san-pham-soi',
         },
         {
-            name: 'Sợ xe các loại',
-            slug: 'so-xe-cac-loai',
+            name: t('products.soi-xe-cac-loai.name'),
+            slug: 'soi-xe-cac-loai',
             imageSrc: '/images/san-pham/san-pham-soi/so-xe-cac-loai.png',
             basePath: '/san-pham/san-pham-soi',
         },
@@ -55,11 +64,15 @@ export default function SoiTCPage() {
         '/images/san-pham/san-pham-soi/soi-tc.png',
     ];
 
+    // Get features and specs as arrays
+    const features = t.raw(`products.${product}.features`) as string[];
+    const specs = t.raw(`products.${product}.specs`) as string[];
+
     return (
         <>
             <ContentPageLayout
                 bannerImage="/images/san-pham/san-pham-soi/banner.png"
-                bannerAlt="Sản phẩm"
+                bannerAlt={t('breadcrumb_products')}
                 breadcrumbItems={breadcrumbItems}
                 containerClassName="bg-[#F5F5F5]"
             >
@@ -83,9 +96,9 @@ export default function SoiTCPage() {
                                                     <div className="relative h-[400px] flex items-center justify-center">
                                                         <Image
                                                             src={image}
-                                                            alt={`Veston - ảnh ${
-                                                                index + 1
-                                                            }`}
+                                                            alt={`${t(
+                                                                `products.${product}.alt`
+                                                            )} - ${index + 1}`}
                                                             width={800}
                                                             height={600}
                                                             className="w-full h-full object-contain"
@@ -110,9 +123,9 @@ export default function SoiTCPage() {
                                                 <div className="img cursor-pointer">
                                                     <Image
                                                         src={image}
-                                                        alt={`Sợi TC - thumbnail ${
-                                                            index + 1
-                                                        }`}
+                                                        alt={`${t(
+                                                            `products.${product}.thumbnail_alt`
+                                                        )} ${index + 1}`}
                                                         width={100}
                                                         height={70}
                                                         className="w-auto h-auto object-contain"
@@ -126,59 +139,31 @@ export default function SoiTCPage() {
 
                             {/* Product Information */}
                             <div className="product-info">
-                                <VerticalPageTitle title="Sợi TC" />
+                                <VerticalPageTitle
+                                    title={t(`products.${product}.name`)}
+                                />
                                 <div className="brief mt-6">
-                                    <p>
-                                        Sợi TC là sản phẩm sợi pha trộn từ 65%
-                                        polyester và 35% cotton, mang đến chất
-                                        lượng vượt trội, độ bền cao và cảm giác
-                                        thoải mái khi sử dụng.
-                                    </p>
+                                    <p>{t(`products.${product}.brief`)}</p>
                                 </div>
                                 <div className="full-content">
                                     <h3 className="font-bold text-lg mb-2">
-                                        Đặc điểm nổi bật:
+                                        {t(
+                                            `products.${product}.features_title`
+                                        )}
                                     </h3>
                                     <ul className="list-disc pl-5 mb-4">
-                                        <li>
-                                            Đặc điểm: Được pha từ 65% polyester
-                                            và 35% cotton
-                                        </li>
-                                        <li>
-                                            Chất lượng: Đạt tiêu chuẩn xuất
-                                            khẩu, ổn định, đồng đều
-                                        </li>
-                                        <li>
-                                            Độ bền: Cao, ít nhăn và giữ dáng tốt
-                                        </li>
-                                        <li>
-                                            Cảm giác: Mềm mại, thoải mái khi sử
-                                            dụng
-                                        </li>
-                                        <li>
-                                            Ứng dụng: Dệt vải may mặc, đồng
-                                            phục, khăn trải giường...
-                                        </li>
+                                        {features.map((feature, index) => (
+                                            <li key={index}>{feature}</li>
+                                        ))}
                                     </ul>
 
                                     <h3 className="font-bold text-lg mb-2">
-                                        Thông số kỹ thuật:
+                                        {t(`products.${product}.specs_title`)}
                                     </h3>
                                     <ul className="list-disc pl-5">
-                                        <li>
-                                            Thành phần: 65% polyester / 35%
-                                            cotton
-                                        </li>
-                                        <li>
-                                            Độ mảnh: Ne 30/1, Ne 32/1, Ne 40/1
-                                        </li>
-                                        <li>Độ xoắn: TM 3.8 - 4.2</li>
-                                        <li>Độ đều: CVm% 13 - 15</li>
-                                        <li>Độ bền: CSP 2100 - 2300</li>
-                                        <li>
-                                            Màu sắc: Trắng sáng hoặc theo yêu
-                                            cầu
-                                        </li>
+                                        {specs.map((spec, index) => (
+                                            <li key={index}>{spec}</li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
@@ -187,7 +172,7 @@ export default function SoiTCPage() {
 
                     {/* Related Products */}
                     <div className="mt-12">
-                        <VerticalPageTitle title="Sản phẩm liên quan" />
+                        <VerticalPageTitle title={t('related_products')} />
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
                             {relatedProducts.map((product, index) => (
                                 <ProductCard key={index} {...product} />

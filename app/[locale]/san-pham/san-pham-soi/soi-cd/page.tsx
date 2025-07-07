@@ -3,6 +3,7 @@
 import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import ProductCard, { ProductType } from '@/app/components/shared/ProductCard';
 import VerticalPageTitle from '@/app/components/shared/VerticalPageTitle';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
 import 'swiper/css';
@@ -17,29 +18,37 @@ export default function SoiCDPage() {
     const [thumbsSwiper, setThumbsSwiper] = React.useState<SwiperClass | null>(
         null
     );
+    const t = useTranslations('san-pham.san-pham-soi');
+    const product = 'soi-cd';
 
     // Breadcrumb items for the page
     const breadcrumbItems = [
-        { label: 'Sản phẩm sợi', href: '/san-pham/san-pham-soi' },
-        { label: 'Sợi CD', href: '/san-pham/san-pham-soi/soi-cd' },
+        {
+            label: t('breadcrumb_yarn_products'),
+            href: '/san-pham/san-pham-soi',
+        },
+        {
+            label: t(`products.${product}.breadcrumb`),
+            href: '/san-pham/san-pham-soi/soi-cd',
+        },
     ];
 
     // Related products
     const relatedProducts: ProductType[] = [
         {
-            name: 'Sợi TC',
+            name: t('products.soi-tc.name'),
             slug: 'soi-tc',
             imageSrc: '/images/san-pham/san-pham-soi/soi-tc.png',
             basePath: '/san-pham/san-pham-soi',
         },
         {
-            name: 'Sợi xe các loại',
+            name: t('products.soi-xe-cac-loai.name'),
             slug: 'soi-xe-cac-loai',
             imageSrc: '/images/san-pham/san-pham-soi/so-xe-cac-loai.png',
             basePath: '/san-pham/san-pham-soi',
         },
         {
-            name: 'Sợi CVC',
+            name: t('products.soi-cvc.name'),
             slug: 'soi-cvc',
             imageSrc: '/images/san-pham/san-pham-soi/soi-cvc.png',
             basePath: '/san-pham/san-pham-soi',
@@ -55,11 +64,16 @@ export default function SoiCDPage() {
         '/images/san-pham/san-pham-soi/soi-cd.png',
     ];
 
+    // Get features and specs as arrays
+    const features = t.raw(`products.${product}.features`) as string[];
+    const specs = t.raw(`products.${product}.specs`) as string[];
+    const briefContent = t.raw(`products.${product}.brief`) as string[];
+
     return (
         <>
             <ContentPageLayout
                 bannerImage="/images/san-pham/san-pham-soi/banner.png"
-                bannerAlt="Sản phẩm"
+                bannerAlt={t('breadcrumb_products')}
                 breadcrumbItems={breadcrumbItems}
                 containerClassName="bg-[#F5F5F5]"
             >
@@ -83,9 +97,9 @@ export default function SoiCDPage() {
                                                     <div className="relative h-[400px] flex items-center justify-center">
                                                         <Image
                                                             src={image}
-                                                            alt={`Sợi CD - ảnh ${
-                                                                index + 1
-                                                            }`}
+                                                            alt={`${t(
+                                                                `products.${product}.alt`
+                                                            )} - ${index + 1}`}
                                                             width={800}
                                                             height={600}
                                                             className="w-full h-full object-contain"
@@ -110,9 +124,9 @@ export default function SoiCDPage() {
                                                 <div className="img cursor-pointer">
                                                     <Image
                                                         src={image}
-                                                        alt={`Sợi CD - thumbnail ${
-                                                            index + 1
-                                                        }`}
+                                                        alt={`${t(
+                                                            `products.${product}.thumbnail_alt`
+                                                        )} ${index + 1}`}
                                                         width={100}
                                                         height={70}
                                                         className="w-auto h-auto object-contain"
@@ -126,56 +140,42 @@ export default function SoiCDPage() {
 
                             {/* Product Information */}
                             <div className="product-info">
-                                <VerticalPageTitle title="Sợi CD" />
+                                <VerticalPageTitle
+                                    title={t(`products.${product}.name`)}
+                                />
                                 <div className="brief mt-6">
-                                    <p className="mb-4">
-                                        Sợi CD là loại sợi cotton có thành phần
-                                        100% từ xơ bông. Đây là chất liệu được
-                                        dùng phổ biến nhất trong ngành may mặc
-                                        hiện nay.
-                                    </p>
-                                    <p>
-                                        Sợi CD có tính năng hút ẩm cao, thấm hút
-                                        mồ hôi rất tốt, vì thế các loại vải được
-                                        dệt bằng sợi CD khi sử dụng rất thoáng
-                                        mát, dễ chịu.
-                                    </p>
+                                    {briefContent.map((paragraph, index) => (
+                                        <p
+                                            key={index}
+                                            className={
+                                                index < briefContent.length - 1
+                                                    ? 'mb-4'
+                                                    : ''
+                                            }
+                                        >
+                                            {paragraph}
+                                        </p>
+                                    ))}
                                 </div>
                                 <div className="full-content mt-8">
                                     <h3 className="font-bold text-lg mb-2">
-                                        Đặc điểm nổi bật:
+                                        {t(
+                                            `products.${product}.features_title`
+                                        )}
                                     </h3>
                                     <ul className="list-disc pl-5 mb-4">
-                                        <li>
-                                            Thành phần: 100% cotton từ xơ bông
-                                            tự nhiên
-                                        </li>
-                                        <li>
-                                            Tính năng: Hút ẩm cao, thấm hút mồ
-                                            hôi tốt
-                                        </li>
-                                        <li>
-                                            Cảm giác: Tạo cảm giác thoáng mát,
-                                            dễ chịu khi sử dụng
-                                        </li>
-                                        <li>
-                                            Phổ biến: Được sử dụng nhiều nhất
-                                            trong ngành may mặc
-                                        </li>
+                                        {features.map((feature, index) => (
+                                            <li key={index}>{feature}</li>
+                                        ))}
                                     </ul>
 
                                     <h3 className="font-bold text-lg mb-2">
-                                        Thông số kỹ thuật:
+                                        {t(`products.${product}.specs_title`)}
                                     </h3>
                                     <ul className="list-disc pl-5">
-                                        <li>Thành phần: 100% cotton</li>
-                                        <li>
-                                            Độ mảnh: Ne 20/1, Ne 30/1, Ne 32/1,
-                                            Ne 40/1
-                                        </li>
-                                        <li>Độ xoắn: TM 3.8 - 4.2</li>
-                                        <li>Độ đều: CVm% 13 - 15</li>
-                                        <li>Độ bền: CSP 2200 - 2400</li>
+                                        {specs.map((spec, index) => (
+                                            <li key={index}>{spec}</li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
@@ -184,7 +184,7 @@ export default function SoiCDPage() {
 
                     {/* Related Products */}
                     <div className="mt-12">
-                        <VerticalPageTitle title="Sản phẩm liên quan" />
+                        <VerticalPageTitle title={t('related_products')} />
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
                             {relatedProducts.map((product, index) => (
                                 <ProductCard key={index} {...product} />

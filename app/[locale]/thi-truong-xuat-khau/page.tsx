@@ -20,7 +20,7 @@ export default function ExportMarketsPage() {
                 bannerAlt={t('banner.alt')}
                 breadcrumbItems={breadcrumbItems}
             >
-                <section className="overflow-hidden">
+                <section className="">
                     <div className="container">
                         <PageTitle title={t('chart_title')} />
                         <div className="image mt-7">
@@ -37,7 +37,7 @@ export default function ExportMarketsPage() {
                     </div>
                 </section>
 
-                <section className="w-full overflow-hidden">
+                <section className="w-full ">
                     <div className="container mx-auto">
                         <PageTitle title={t('market_title')} />
                     </div>

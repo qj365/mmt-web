@@ -3,6 +3,7 @@
 import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import ProductCard, { ProductType } from '@/app/components/shared/ProductCard';
 import VerticalPageTitle from '@/app/components/shared/VerticalPageTitle';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
 import 'swiper/css';
@@ -17,29 +18,37 @@ export default function SoiCVCPage() {
     const [thumbsSwiper, setThumbsSwiper] = React.useState<SwiperClass | null>(
         null
     );
+    const t = useTranslations('san-pham.san-pham-soi');
+    const product = 'soi-cvc';
 
     // Breadcrumb items for the page
     const breadcrumbItems = [
-        { label: 'Sản phẩm sợi', href: '/san-pham/san-pham-soi' },
-        { label: 'Sợi CVC', href: '/san-pham/san-pham-soi/soi-cvc' },
+        {
+            label: t('breadcrumb_yarn_products'),
+            href: '/san-pham/san-pham-soi',
+        },
+        {
+            label: t(`products.${product}.breadcrumb`),
+            href: '/san-pham/san-pham-soi/soi-cvc',
+        },
     ];
 
     // Related products
     const relatedProducts: ProductType[] = [
         {
-            name: 'Sợi TC',
+            name: t('products.soi-tc.name'),
             slug: 'soi-tc',
             imageSrc: '/images/san-pham/san-pham-soi/soi-tc.png',
             basePath: '/san-pham/san-pham-soi',
         },
         {
-            name: 'Sợi xe các loại',
+            name: t('products.soi-xe-cac-loai.name'),
             slug: 'soi-xe-cac-loai',
             imageSrc: '/images/san-pham/san-pham-soi/so-xe-cac-loai.png',
             basePath: '/san-pham/san-pham-soi',
         },
         {
-            name: 'Sợi CD',
+            name: t('products.soi-cd.name'),
             slug: 'soi-cd',
             imageSrc: '/images/san-pham/san-pham-soi/soi-cd.png',
             basePath: '/san-pham/san-pham-soi',
@@ -55,11 +64,16 @@ export default function SoiCVCPage() {
         '/images/san-pham/san-pham-soi/soi-cvc.png',
     ];
 
+    // Get features and specs as arrays
+    const features = t.raw(`products.${product}.features`) as string[];
+    const specs = t.raw(`products.${product}.specs`) as string[];
+    const briefContent = t.raw(`products.${product}.brief`) as string[];
+
     return (
         <>
             <ContentPageLayout
                 bannerImage="/images/san-pham/san-pham-soi/banner.png"
-                bannerAlt="Sản phẩm"
+                bannerAlt={t('breadcrumb_products')}
                 breadcrumbItems={breadcrumbItems}
                 containerClassName="bg-[#F5F5F5]"
             >
@@ -83,9 +97,9 @@ export default function SoiCVCPage() {
                                                     <div className="relative h-[400px] flex items-center justify-center">
                                                         <Image
                                                             src={image}
-                                                            alt={`Sợi CVC - ảnh ${
-                                                                index + 1
-                                                            }`}
+                                                            alt={`${t(
+                                                                `products.${product}.alt`
+                                                            )} - ${index + 1}`}
                                                             width={800}
                                                             height={600}
                                                             className="w-full h-full object-contain"
@@ -110,9 +124,9 @@ export default function SoiCVCPage() {
                                                 <div className="img cursor-pointer">
                                                     <Image
                                                         src={image}
-                                                        alt={`Sợi CVC - thumbnail ${
-                                                            index + 1
-                                                        }`}
+                                                        alt={`${t(
+                                                            `products.${product}.thumbnail_alt`
+                                                        )} ${index + 1}`}
                                                         width={100}
                                                         height={70}
                                                         className="w-auto h-auto object-contain"
@@ -126,64 +140,42 @@ export default function SoiCVCPage() {
 
                             {/* Product Information */}
                             <div className="product-info">
-                                <VerticalPageTitle title="Sợi CVC" />
+                                <VerticalPageTitle
+                                    title={t(`products.${product}.name`)}
+                                />
                                 <div className="brief mt-6">
-                                    <p className="mb-4">
-                                        Sợi CVC là loại sợi pha giữa sợi
-                                        polyester và cotton. Ngược lại với sợi
-                                        TC, sợi CVC có thành phần cotton chiếm
-                                        trên 50%.
-                                    </p>
-                                    <p>
-                                        Sợi CVC khi sử dụng cho cảm giác dễ
-                                        chịu, dễ thấm mồ hôi khi tiếp xúc da
-                                        người.
-                                    </p>
+                                    {briefContent.map((paragraph, index) => (
+                                        <p
+                                            key={index}
+                                            className={
+                                                index < briefContent.length - 1
+                                                    ? 'mb-4'
+                                                    : ''
+                                            }
+                                        >
+                                            {paragraph}
+                                        </p>
+                                    ))}
                                 </div>
                                 <div className="full-content mt-8">
                                     <h3 className="font-bold text-lg mb-2">
-                                        Đặc điểm nổi bật:
+                                        {t(
+                                            `products.${product}.features_title`
+                                        )}
                                     </h3>
                                     <ul className="list-disc pl-5 mb-4">
-                                        <li>
-                                            Thành phần: Pha giữa polyester và
-                                            cotton, với cotton chiếm trên 50%
-                                        </li>
-                                        <li>
-                                            So với TC: Ngược lại với sợi TC, sợi
-                                            CVC có tỷ lệ cotton cao hơn
-                                        </li>
-                                        <li>
-                                            Cảm giác: Mang lại cảm giác dễ chịu
-                                            khi tiếp xúc với da
-                                        </li>
-                                        <li>
-                                            Tính năng: Dễ thấm hút mồ hôi,
-                                            thoáng khí tốt
-                                        </li>
+                                        {features.map((feature, index) => (
+                                            <li key={index}>{feature}</li>
+                                        ))}
                                     </ul>
 
                                     <h3 className="font-bold text-lg mb-2">
-                                        Thông số kỹ thuật:
+                                        {t(`products.${product}.specs_title`)}
                                     </h3>
                                     <ul className="list-disc pl-5">
-                                        <li>
-                                            Thành phần: Cotton chiếm trên 50%,
-                                            phần còn lại là polyester
-                                        </li>
-                                        <li>
-                                            Tỷ lệ phổ biến: 60% cotton / 40%
-                                            polyester
-                                        </li>
-                                        <li>
-                                            Độ mảnh: Ne 20/1, Ne 30/1, Ne 32/1,
-                                            Ne 40/1
-                                        </li>
-                                        <li>Độ xoắn: TM 3.8 - 4.2</li>
-                                        <li>
-                                            Độ bền: Kết hợp độ bền của cotton và
-                                            polyester
-                                        </li>
+                                        {specs.map((spec, index) => (
+                                            <li key={index}>{spec}</li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
@@ -192,7 +184,7 @@ export default function SoiCVCPage() {
 
                     {/* Related Products */}
                     <div className="mt-12">
-                        <VerticalPageTitle title="Sản phẩm liên quan" />
+                        <VerticalPageTitle title={t('related_products')} />
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
                             {relatedProducts.map((product, index) => (
                                 <ProductCard key={index} {...product} />
