@@ -9,6 +9,7 @@ import { useParams } from 'next/navigation';
 import { useLanguageSwitcher } from '../../i18n/client';
 import { localeLabels, locales } from '../../i18n/settings';
 import { useTranslations } from 'next-intl';
+import { pathnames } from '../../i18n/routing';
 
 // Use the href type from Link props
 type LinkProps = ComponentProps<typeof Link>;
@@ -21,44 +22,102 @@ interface NavMenuItem {
     isHome?: boolean;
 }
 
+// Type for pathnames entries
+type PathEntry = {
+    vi: string;
+    ja: string;
+    [key: string]: string;
+};
+
 // Base navigation structure using pathnames mapping
-const getNavItems = (t: (key: string) => string): NavMenuItem[] => {
+const getNavItems = (
+    t: (key: string) => string,
+    locale: string
+): NavMenuItem[] => {
     return [
         { title: t('home'), href: '/', isHome: true },
         {
             title: t('about'),
-            href: '/gioi-thieu/tong-quan',
+            href: (pathnames['/gioi-thieu/tong-quan'] as PathEntry)[locale],
             children: [
-                { title: t('overview'), href: '/gioi-thieu/tong-quan' },
-                { title: t('history'), href: '/gioi-thieu/lich-su-hinh-thanh' },
-                { title: t('structure'), href: '/gioi-thieu/co-cau-to-chuc' },
-                { title: t('vision'), href: '/gioi-thieu/tam-nhin-su-menh' },
-                { title: t('commitment'), href: '/gioi-thieu/loi-cam-ket' },
-                { title: t('achievements'), href: '/gioi-thieu/thanh-tich' },
+                {
+                    title: t('overview'),
+                    href: (pathnames['/gioi-thieu/tong-quan'] as PathEntry)[
+                        locale
+                    ],
+                },
+                {
+                    title: t('history'),
+                    href: (
+                        pathnames['/gioi-thieu/lich-su-hinh-thanh'] as PathEntry
+                    )[locale],
+                },
+                {
+                    title: t('structure'),
+                    href: (
+                        pathnames['/gioi-thieu/co-cau-to-chuc'] as PathEntry
+                    )[locale],
+                },
+                {
+                    title: t('vision'),
+                    href: (
+                        pathnames['/gioi-thieu/tam-nhin-su-menh'] as PathEntry
+                    )[locale],
+                },
+                {
+                    title: t('commitment'),
+                    href: (pathnames['/gioi-thieu/loi-cam-ket'] as PathEntry)[
+                        locale
+                    ],
+                },
+                {
+                    title: t('achievements'),
+                    href: (pathnames['/gioi-thieu/thanh-tich'] as PathEntry)[
+                        locale
+                    ],
+                },
             ],
         },
-        { title: t('export_markets'), href: '/thi-truong-xuat-khau' },
+        {
+            title: t('export_markets'),
+            href: (pathnames['/thi-truong-xuat-khau'] as PathEntry)[locale],
+        },
         {
             title: t('products'),
-            href: '/san-pham/san-pham-soi',
+            href: (pathnames['/san-pham/san-pham-soi'] as PathEntry)[locale],
             children: [
-                { title: t('yarn_products'), href: '/san-pham/san-pham-soi' },
+                {
+                    title: t('yarn_products'),
+                    href: (pathnames['/san-pham/san-pham-soi'] as PathEntry)[
+                        locale
+                    ],
+                },
                 {
                     title: t('garment_products'),
-                    href: '/san-pham/san-pham-may-xuat-khau',
+                    href: (
+                        pathnames[
+                            '/san-pham/san-pham-may-xuat-khau'
+                        ] as PathEntry
+                    )[locale],
                 },
             ],
         },
         {
             title: t('factories'),
-            href: '/nha-may-thuong-hieu',
+            href: (pathnames['/nha-may-thuong-hieu'] as PathEntry)[locale],
         },
         {
             title: t('news'),
-            href: '/tin-tuc',
+            href: (pathnames['/tin-tuc'] as PathEntry)[locale],
         },
-        { title: t('careers'), href: '/tuyen-dung' },
-        { title: t('contact'), href: '/lien-he' },
+        {
+            title: t('careers'),
+            href: (pathnames['/tuyen-dung'] as PathEntry)[locale],
+        },
+        {
+            title: t('contact'),
+            href: (pathnames['/lien-he'] as PathEntry)[locale],
+        },
     ];
 };
 
@@ -71,14 +130,29 @@ const NavLink = ({
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
+    const params = useParams();
+    const currentLocale = (params.locale || 'vi') as string;
 
     // Check if the current path matches this nav item or its children
-    const isActive =
-        pathname === item.href ||
-        (item.children?.some(child => pathname === child.href) ?? false);
+    const isActive = item.isHome
+        ? pathname === '/' ||
+          pathname === `/${currentLocale}` ||
+          pathname === `/${currentLocale}/`
+        : (currentLocale === 'vi' && pathname === item.href) || // Direct match for Vietnamese as default
+          pathname ===
+              `/${currentLocale}${item.href === '/' ? '' : item.href}` ||
+          (item.children?.some(
+              child =>
+                  (currentLocale === 'vi' && pathname === child.href) || // Direct match for Vietnamese children
+                  pathname ===
+                      `/${currentLocale}${child.href === '/' ? '' : child.href}`
+          ) ??
+              false);
 
     // Check if active style should be applied to children items
-    const isChildActive = (childHref: string) => pathname === childHref;
+    const isChildActive = (childHref: string) =>
+        (currentLocale === 'vi' && pathname === childHref) || // Direct match for Vietnamese
+        pathname === `/${currentLocale}${childHref === '/' ? '' : childHref}`;
 
     if (!item.children) {
         // Special handling for home link
@@ -341,7 +415,7 @@ const Header = () => {
                                     />
                                 </Link>
                                 <ul className="list-none p-0 flex ul-parent xl:flex-row flex-col items-center xl:gap-1 xl:flex-nowrap overflow-visible">
-                                    {getNavItems(t)
+                                    {getNavItems(t, currentLocale)
                                         .filter(item => !item.isHome)
                                         .map((item, index) => (
                                             <li
@@ -406,18 +480,20 @@ const Header = () => {
                     <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px]">
                         <div className="mobile-nav">
                             <ul className="list-none p-0 flex flex-col items-center max-w-full mx-auto sm:max-w-[320px]">
-                                {getNavItems(t).map((item, index) => (
-                                    <li
-                                        key={index}
-                                        className="text-[1.375rem] font-medium py-[10px] w-full"
-                                    >
-                                        <NavLink
+                                {getNavItems(t, currentLocale).map(
+                                    (item, index) => (
+                                        <li
                                             key={index}
-                                            item={item}
-                                            isMobile={true}
-                                        />
-                                    </li>
-                                ))}
+                                            className="text-[1.375rem] font-medium py-[10px] w-full"
+                                        >
+                                            <NavLink
+                                                key={index}
+                                                item={item}
+                                                isMobile={true}
+                                            />
+                                        </li>
+                                    )
+                                )}
                             </ul>
                         </div>
                     </div>
