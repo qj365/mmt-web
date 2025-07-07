@@ -536,5 +536,36 @@
                 }
             }
         }
+    },
+    "nha-may-thuong-hieu": {
+        "meta": {
+            "title": "糸工場 - ミン ミン タム紡織",
+            "description": "ミン ミン タム縫製有限責任会社の糸工場に関する詳細情報"
+        },
+        "banner": {
+            "alt": "工場・ブランド"
+        },
+        "title": "ミン ミン タム縫製工場",
+        "breadcrumb": {
+            "factory_brand": "工場・ブランド",
+            "yarn_factory": "糸工場"
+        },
+        "factory_image": {
+            "alt": "ミン ミン タム縫製工場"
+        },
+        "factory_info": {
+            "title": "工場情報",
+            "area": "敷地面積 4,125㎡",
+            "workers": "従業員数 150名",
+            "production_capacity": "生産能力 22,000錘",
+            "annual_output": "年間生産量 5,000トン",
+            "address": "ベトナム・ビンタン省・ハムタン郡・タンギア町・第1地区",
+            "main_products": "医療用ユニフォーム、作業服",
+            "certifications": "OEKO-TEX STANDARD 100、ISO 9001-2015、COTTON USA、BCI、USTERIZED、GOTS、GRS認証",
+            "yarn_count": "Ne16-Ne32"
+        },
+        "map": {
+            "title": "地図位置"
+        }
     }
 }

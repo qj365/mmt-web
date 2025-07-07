@@ -3,56 +3,82 @@ import Image from 'next/image';
 import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import PageTitle from '@/app/components/shared/PageTitle';
 import { BreadcrumbItem } from '@/app/types';
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 
-export default function NhaMaySoiHoaTho1() {
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const { locale } = await params;
+
+    const t = await getTranslations({
+        locale,
+        namespace: 'nha-may-thuong-hieu',
+    });
+
+    return {
+        title: t('meta.title'),
+        description: t('meta.description'),
+    };
+}
+
+export default function NhaMaySoi() {
+    const t = useTranslations('nha-may-thuong-hieu');
+
     // Breadcrumb data
     const breadcrumbItems: BreadcrumbItem[] = [
-        { label: 'Nhà máy - Thương hiệu', href: '/nha-may-thuong-hieu' },
-        { label: 'Nhà máy sợi', href: '/nha-may-thuong-hieu' },
+        { label: t('breadcrumb.factory_brand'), href: '/nha-may-thuong-hieu' },
+        { label: t('breadcrumb.yarn_factory'), href: '/nha-may-thuong-hieu' },
     ];
 
     // Factory information data
     const factoryInfo = [
         {
             icon: '/images/nha-may-thuong-hieu/ic-1.svg',
-            text: 'Diện tích 4.125m2',
+            text: t('factory_info.area'),
         },
         {
             icon: '/images/nha-may-thuong-hieu/ic-2.svg',
-            text: 'Lao động 150 người',
+            text: t('factory_info.workers'),
         },
         {
             icon: '/images/nha-may-thuong-hieu/ic-3.svg',
-            text: 'Năng lực sản xuất 22.000 cọc sợi',
+            text: t('factory_info.production_capacity'),
         },
-        { icon: '/images/nha-may-thuong-hieu/ic-4.svg', text: '5.000 tấn/năm' },
+        {
+            icon: '/images/nha-may-thuong-hieu/ic-4.svg',
+            text: t('factory_info.annual_output'),
+        },
         {
             icon: '/images/nha-may-thuong-hieu/ic-5.svg',
-            text: '36 Đ. Số 19B, Phường An Khánh, Thủ Đức, Hồ Chí Minh, Việt Nam',
+            text: t('factory_info.address'),
         },
         {
             icon: '/images/nha-may-thuong-hieu/ic-7.svg',
-            text: 'Đồng phục y tế, đồng phục bảo hộ',
+            text: t('factory_info.main_products'),
         },
         {
             icon: '/images/nha-may-thuong-hieu/ic-6.svg',
-            text: 'OEKO-TEX STANDARD 100, ISO 9001-2015, COTTON USA, BCI, USTERIZED, GOTS, GRS CERTIFICATE',
+            text: t('factory_info.certifications'),
         },
-        { icon: '/images/nha-may-thuong-hieu/ic-7.svg', text: 'Ne16-Ne32' },
+        {
+            icon: '/images/nha-may-thuong-hieu/ic-7.svg',
+            text: t('factory_info.yarn_count'),
+        },
     ];
 
     return (
         <ContentPageLayout
             bannerImage="/images/nha-may-thuong-hieu/banner-1.png"
-            bannerAlt="Nhà máy - Thương hiệu"
+            bannerAlt={t('banner.alt')}
             breadcrumbItems={breadcrumbItems}
         >
             <div>
                 {/* Factory Title */}
-                <PageTitle
-                    title="Nhà máy Sợi Minh Minh Tâm 1"
-                    className="mb-10"
-                />
+                <PageTitle title={t('title')} className="mb-10" />
 
                 {/* Factory Info Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] items-start">
@@ -61,7 +87,7 @@ export default function NhaMaySoiHoaTho1() {
                         <div className="rounded-3xl overflow-hidden">
                             <Image
                                 src="/images/nha-may-thuong-hieu/factory.png"
-                                alt="Nhà máy May Minh Minh Tâm"
+                                alt={t('factory_image.alt')}
                                 width={600}
                                 height={400}
                                 className="w-full h-auto rounded-3xl"
@@ -72,7 +98,7 @@ export default function NhaMaySoiHoaTho1() {
                     {/* Factory Info */}
                     <div className="mt-5 lg:mt-0">
                         <h2 className="font-bold text-2xl leading-7 uppercase text-black mb-5">
-                            Thông tin nhà máy
+                            {t('factory_info.title')}
                         </h2>
                         <div className="rounded-md bg-white p-6 shadow-sm">
                             {factoryInfo.map((info, index) => (
@@ -98,10 +124,10 @@ export default function NhaMaySoiHoaTho1() {
 
                 {/* Map Section */}
                 <div className="mt-16">
-                    <PageTitle title="Vị trí bản đồ" className="mb-7" />
+                    <PageTitle title={t('map.title')} className="mb-7" />
                     <div className="overflow-hidden rounded-lg">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d944.7519601883434!2d106.72944777790516!3d10.798034781972312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752604ae5036bd%3A0xf53ae4ee26f67df7!2zMzYgxJAuIFPhu5EgMTlCLCBQaMaw4budbmcgQW4gS2jDoW5oLCBUaOG7pyDEkOG7qWMsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e1!3m2!1svi!2s!4v1751769339570!5m2!1svi!2s"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.3281546998924!2d107.71732293423482!3d10.80894916508426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175cb7c2eb86f71%3A0xe890a128060c9391!2zVHJ1bmcgdMOibSBow6BuaCBjaMOtbmggSMOgbSBUw6Ju!5e1!3m2!1svi!2s!4v1751903415120!5m2!1svi!2s"
                             width="100%"
                             height="450"
                             style={{ border: 0 }}

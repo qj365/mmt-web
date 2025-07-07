@@ -536,5 +536,36 @@
                 }
             }
         }
+    },
+    "nha-may-thuong-hieu": {
+        "meta": {
+            "title": "Nhà máy sợi - Dệt may Minh Minh Tâm",
+            "description": "Thông tin chi tiết về nhà máy sợi của Công ty TNHH May Minh Minh Tâm"
+        },
+        "banner": {
+            "alt": "Nhà máy - Thương hiệu"
+        },
+        "title": "Nhà máy May Minh Minh Tâm",
+        "breadcrumb": {
+            "factory_brand": "Nhà máy - Thương hiệu",
+            "yarn_factory": "Nhà máy sợi"
+        },
+        "factory_image": {
+            "alt": "Nhà máy May Minh Minh Tâm"
+        },
+        "factory_info": {
+            "title": "Thông tin nhà máy",
+            "area": "Diện tích 4.125m2",
+            "workers": "Lao động 150 người",
+            "production_capacity": "Năng lực sản xuất 22.000 cọc sợi",
+            "annual_output": "5.000 tấn/năm",
+            "address": "Khu phố 1, TT Tân Nghĩa, Hàm Tân, Bình Thuận, Việt Nam",
+            "main_products": "Đồng phục y tế, đồng phục bảo hộ",
+            "certifications": "OEKO-TEX STANDARD 100, ISO 9001-2015, COTTON USA, BCI, USTERIZED, GOTS, GRS CERTIFICATE",
+            "yarn_count": "Ne16-Ne32"
+        },
+        "map": {
+            "title": "Vị trí bản đồ"
+        }
     }
 }
