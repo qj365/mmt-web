@@ -220,6 +220,7 @@ const Header = () => {
     const [searchOpen, setSearchOpen] = useState(false);
     const [isScrollingDown, setIsScrollingDown] = useState(false);
     const [prevScrollY, setPrevScrollY] = useState(0);
+    const [isHeaderHovered, setIsHeaderHovered] = useState(false);
     const { switchLanguage } = useLanguageSwitcher();
     const params = useParams();
     const currentLocale = (params.locale || 'vi') as string;
@@ -269,9 +270,15 @@ const Header = () => {
     return (
         <>
             <header
-                className={`bg-white border-b border-[#e5e5e5] fixed w-full left-1/2 -translate-x-1/2 top-0 z-[1000] h-[60px] sm:h-[70px] lg:h-[80px] transition-all duration-300 ${
+                className={`bg-white border-b border-[#e5e5e5] fixed w-full left-1/2 -translate-x-1/2 top-0 z-[1000] h-[60px] sm:h-[70px] lg:h-[80px] transition-all duration-400 ${
                     mobileMenuOpen ? 'navMobileOpen' : ''
-                } ${isScrollingDown ? '-translate-y-full' : 'translate-y-0'}`}
+                } ${
+                    isScrollingDown && !isHeaderHovered
+                        ? '-translate-y-full'
+                        : 'translate-y-0'
+                }`}
+                onMouseEnter={() => setIsHeaderHovered(true)}
+                onMouseLeave={() => setIsHeaderHovered(false)}
             >
                 <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px] h-full">
                     <div className="header-wrapper flex items-center relative w-full h-full xl:justify-between justify-between">
@@ -421,7 +428,9 @@ const Header = () => {
             {searchOpen && (
                 <div
                     className={`search-overlay fixed w-full bg-white shadow-[0_0_15px_rgba(0,0,0,0.15)] z-[10000] transition-all duration-300 opacity-100 pointer-events-auto top-[60px] sm:top-[70px] lg:top-[80px] hover:bg-[#f5f5f5] ${
-                        isScrollingDown ? '-translate-y-full' : 'translate-y-0'
+                        isScrollingDown && !isHeaderHovered
+                            ? '-translate-y-full'
+                            : 'translate-y-0'
                     }`}
                 >
                     <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px]">
