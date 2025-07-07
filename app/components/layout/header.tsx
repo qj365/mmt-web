@@ -128,7 +128,6 @@ const NavLink = ({
     item: NavMenuItem;
     isMobile?: boolean;
 }) => {
-    const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
     const params = useParams();
     const currentLocale = (params.locale || 'vi') as string;
@@ -153,6 +152,13 @@ const NavLink = ({
     const isChildActive = (childHref: string) =>
         (currentLocale === 'vi' && pathname === childHref) || // Direct match for Vietnamese
         pathname === `/${currentLocale}${childHref === '/' ? '' : childHref}`;
+
+    // Check if any child is active to auto-open mobile dropdown
+    const hasActiveChild =
+        item.children?.some(child => isChildActive(child.href)) || false;
+
+    // Initialize dropdown open state based on whether any child is active in mobile view
+    const [isOpen, setIsOpen] = useState(isMobile && hasActiveChild);
 
     if (!item.children) {
         // Special handling for home link
