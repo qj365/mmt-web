@@ -312,7 +312,7 @@ const Header = () => {
                                     alt="Dệt may Minh Minh Tâm"
                                     width={150}
                                     height={80}
-                                    className="w-full h-full object-contain py-[5px] relative z-[1] xl:translate-y-5"
+                                    className="scale-200 w-full h-full object-contain py-[5px] relative z-[1] xl:translate-y-6"
                                     priority
                                 />
                                 <span className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-[90px] w-[160px] h-[160px] z-0 transition-all duration-300 after:content-['']"></span>

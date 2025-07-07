@@ -86,7 +86,10 @@ export default function Footer() {
                             </div>
                             <div className="wrapper">
                                 <div className="title text-fs18px uppercase leading-normal font-bold mt-6">
-                                    <Link href="" target="_blank">
+                                    <Link
+                                        href="https://drive.google.com/file/d/12TJOpKaaw1a0WpX1MXSq0WgZzIqy_9Ec/view?fbclid=IwY2xjawLKRz9leHRuA2FlbQIxMQBicmlkETEzTGhORDhIVlJ1QUdTNmFtAR5Yp6AO0csLYtRDPWRr7QKPDgyc4jYOjZf1HvXolLVrO-Qu_5v9bi3sddYkuA_aem_XO4b2FZ4RkczI23mptHSog"
+                                        target="_blank"
+                                    >
                                         {t('downloadBrochure')}
                                     </Link>
                                 </div>
