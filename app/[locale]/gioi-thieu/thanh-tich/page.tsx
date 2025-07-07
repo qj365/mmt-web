@@ -21,7 +21,7 @@ export async function generateMetadata({
     });
 
     return {
-        title: `${t('title')} - MINH MINH TÂM`,
+        title: `${t('title')} - Minh Minh Tâm`,
     };
 }
 

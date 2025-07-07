@@ -17,12 +17,12 @@ export function generateStaticParams() {
 
 export const metadata = {
     title: {
-        vi: 'Trang chủ - Dệt may MINH MINH TÂM',
+        vi: 'Trang chủ - Dệt may Minh Minh Tâm',
         ja: 'ホームページ - ミン ミン タム紡織会社',
     },
     description: {
-        vi: 'Trang chủ Tổng Công ty CP Dệt May MINH MINH TÂM (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
-        ja: 'ミン ミン タム紡織株式会社（ビンタン市、ベトナム）- Vinatexのメンバー、糸および輸出衣料品の製造・販売を専門としています。',
+        vi: 'Trang chủ Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
+        ja: 'ミン ミン タム縫製有限責任会社（ビンタン市、ベトナム）- Vinatexのメンバー、糸および輸出衣料品の製造・販売を専門としています。',
     },
 };
 

@@ -6,14 +6,14 @@ import { useTranslations } from 'next-intl';
 import { BreadcrumbItem } from '@/app/types/';
 
 export const metadata: Metadata = {
-    title: 'Cơ cấu tổ chức - Dệt may MINH MINH TÂM',
+    title: 'Cơ cấu tổ chức - Dệt may Minh Minh Tâm',
     description:
-        'Cơ cấu tổ chức Tổng Công ty CP Dệt May MINH MINH TÂM (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
+        'Cơ cấu tổ chức Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
     openGraph: {
         title: 'Cơ cấu tổ chức',
         description:
-            'Cơ cấu tổ chức Tổng Công ty CP Dệt May MINH MINH TÂM (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
-        siteName: 'Dệt may MINH MINH TÂM',
+            'Cơ cấu tổ chức Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
+        siteName: 'Dệt may Minh Minh Tâm',
     },
 };
 

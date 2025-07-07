@@ -50,7 +50,7 @@ export default function NhaMaySoiHoaTho1() {
             <div>
                 {/* Factory Title */}
                 <PageTitle
-                    title="Nhà máy Sợi MINH MINH TÂM 1"
+                    title="Nhà máy Sợi Minh Minh Tâm 1"
                     className="mb-10"
                 />
 
@@ -61,7 +61,7 @@ export default function NhaMaySoiHoaTho1() {
                         <div className="rounded-3xl overflow-hidden">
                             <Image
                                 src="/images/nha-may-thuong-hieu/factory.png"
-                                alt="Nhà máy May MINH MINH TÂM"
+                                alt="Nhà máy May Minh Minh Tâm"
                                 width={600}
                                 height={400}
                                 className="w-full h-auto rounded-3xl"

@@ -12,8 +12,14 @@ import 'swiper/css/thumbs';
 import { Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperClass } from 'swiper/types';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 export default function DetKimPage() {
+    const t = useTranslations('products.garments.knitwear');
+    const params = useParams();
+    const locale = params.locale as string;
+
     const [thumbsSwiper, setThumbsSwiper] = React.useState<SwiperClass | null>(
         null
     );
@@ -21,34 +27,37 @@ export default function DetKimPage() {
     // Breadcrumb items for the page
     const breadcrumbItems = [
         {
-            label: 'Sản phẩm may xuất khẩu',
-            href: '/san-pham/san-pham-may-xuat-khau',
+            label: t('breadcrumb.parent'),
+            href: `/${locale}/san-pham/san-pham-may-xuat-khau`,
         },
-        { label: 'Dệt kim', href: '/san-pham/san-pham-may-xuat-khau/det-kim' },
+        {
+            label: t('breadcrumb.current'),
+            href: `/${locale}/san-pham/san-pham-may-xuat-khau/det-kim`,
+        },
     ];
 
     // Related products
     const relatedProducts: ProductType[] = [
         {
-            name: 'Veston',
+            name: t('related.suits'),
             slug: 'veston',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/veston.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Quần tây',
+            name: t('related.trousers'),
             slug: 'quan-tay',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/quan-tay.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Áo khoác',
+            name: t('related.jackets'),
             slug: 'ao-khoac',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/ao-khoac.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Bảo hộ lao động',
+            name: t('related.workwear'),
             slug: 'bao-ho-lao-dong',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/bao-ho.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
@@ -67,7 +76,7 @@ export default function DetKimPage() {
         <>
             <ContentPageLayout
                 bannerImage="/images/san-pham/san-pham-may-xuat-khau/banner.png"
-                bannerAlt="Sản phẩm may xuất khẩu"
+                bannerAlt={t('banner.alt')}
                 breadcrumbItems={breadcrumbItems}
                 containerClassName="bg-[#F5F5F5]"
             >
@@ -91,9 +100,9 @@ export default function DetKimPage() {
                                                     <div className="relative h-[400px] flex items-center justify-center">
                                                         <Image
                                                             src={image}
-                                                            alt={`Dệt kim - ảnh ${
-                                                                index + 1
-                                                            }`}
+                                                            alt={`${t(
+                                                                'product_image'
+                                                            )} ${index + 1}`}
                                                             width={800}
                                                             height={600}
                                                             className="w-full h-full object-contain"
@@ -118,9 +127,9 @@ export default function DetKimPage() {
                                                 <div className="img cursor-pointer">
                                                     <Image
                                                         src={image}
-                                                        alt={`Dệt kim - thumbnail ${
-                                                            index + 1
-                                                        }`}
+                                                        alt={`${t(
+                                                            'thumbnail'
+                                                        )} ${index + 1}`}
                                                         width={100}
                                                         height={70}
                                                         className="w-auto h-auto object-contain"
@@ -134,54 +143,26 @@ export default function DetKimPage() {
 
                             {/* Product Information */}
                             <div className="product-info">
-                                <VerticalPageTitle title="Dệt kim" />
+                                <VerticalPageTitle title={t('title')} />
                                 <div className="brief mt-6">
                                     <p>
-                                        <strong>Thông tin chung:</strong>
+                                        <strong>
+                                            {t('general_info.title')}
+                                        </strong>
                                     </p>
-                                    <p>
-                                        Dệt kim là một trong những dòng sản phẩm
-                                        xuất khẩu đa dạng của MINH MINH TÂM. Sản phẩm
-                                        dệt kim được sản xuất bằng công nghệ
-                                        hiện đại, đáp ứng các tiêu chuẩn chất
-                                        lượng quốc tế và được xuất khẩu đến
-                                        nhiều thị trường khó tính trên thế giới.
-                                    </p>
+                                    <p>{t('general_info.content')}</p>
                                 </div>
                                 <div className="full-content mt-6">
                                     <h3 className="font-bold text-lg mb-2">
-                                        Chi tiết sản phẩm:
+                                        {t('details.title')}
                                     </h3>
                                     <ul className="list-disc pl-5 mb-4">
-                                        <li>
-                                            Đa dạng về chất liệu: Cotton,
-                                            Polyester, TC, CVC, Spandex, Viscose
-                                            và các loại vải đặc biệt khác theo
-                                            yêu cầu
-                                        </li>
-                                        <li>
-                                            Phong phú về kiểu dáng: Áo thun, áo
-                                            polo, áo hoodie, áo sweater, đồ thể
-                                            thao,...
-                                        </li>
-                                        <li>
-                                            Thiết kế đa dạng: Từ casual đến
-                                            sporty, phù hợp mọi đối tượng
-                                        </li>
-                                        <li>
-                                            Có khả năng co giãn tốt, thoáng khí,
-                                            thoải mái khi mặc
-                                        </li>
-                                        <li>
-                                            Màu sắc phong phú, bền màu, không xù
-                                            lông, không co rút sau nhiều lần
-                                            giặt
-                                        </li>
-                                        <li>
-                                            Công nghệ in ấn hiện đại: In lụa, in
-                                            chuyển nhiệt, thêu vi tính cao
-                                            cấp,...
-                                        </li>
+                                        <li>{t('details.point1')}</li>
+                                        <li>{t('details.point2')}</li>
+                                        <li>{t('details.point3')}</li>
+                                        <li>{t('details.point4')}</li>
+                                        <li>{t('details.point5')}</li>
+                                        <li>{t('details.point6')}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -190,7 +171,7 @@ export default function DetKimPage() {
 
                     {/* Related Products */}
                     <div className="mt-12">
-                        <VerticalPageTitle title="Sản phẩm khác" />
+                        <VerticalPageTitle title={t('other_products')} />
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
                             {relatedProducts.map((product, index) => (
                                 <ProductCard key={index} {...product} />

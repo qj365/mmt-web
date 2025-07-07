@@ -309,7 +309,7 @@ const Header = () => {
                             >
                                 <Image
                                     src="/images/home/logo.png"
-                                    alt="Dệt may MINH MINH TÂM"
+                                    alt="Dệt may Minh Minh Tâm"
                                     width={150}
                                     height={80}
                                     className="w-full h-full object-contain py-[5px] relative z-[1] xl:translate-y-5"

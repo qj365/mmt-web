@@ -1,7 +1,7 @@
 {
     "meta": {
-        "title": "Trang chủ - Dệt may MINH MINH TÂM",
-        "description": "Tổng Công ty CP Dệt May MINH MINH TÂM được thành lập từ năm 1996, tiền thân là xưởng may Minh Tâm, tập trung chủ yếu sản xuất đồng phục y tế có trụ sở chính đặt tại Bình Thuận, Việt Nam – đảm nhiệm phát triển sản phẩm và quản trị nhân sự, ngoài ra còn có văn phòng đại diện tại TP. Hồ Chí Minh"
+        "title": "Trang chủ - Dệt may Minh Minh Tâm",
+        "description": "Công ty TNHH May Minh Minh Tâm được thành lập từ năm 1996, tiền thân là xưởng may Minh Tâm, tập trung chủ yếu sản xuất đồng phục y tế có trụ sở chính đặt tại Bình Thuận, Việt Nam – đảm nhiệm phát triển sản phẩm và quản trị nhân sự, ngoài ra còn có văn phòng đại diện tại TP. Hồ Chí Minh"
     },
     "menu": {
         "home": "Trang chủ",
@@ -25,15 +25,15 @@
     "gioi-thieu": {
         "tong-quan": {
             "banner": {
-                "alt": "Tổng quan - Dệt may MINH MINH TÂM"
+                "alt": "Tổng quan - Dệt may Minh Minh Tâm"
             },
             "letter": {
                 "title": "Thư ngỏ",
                 "subtitle": "Gửi khách hàng, đối tác và toàn thể CBNV",
                 "image_alt": "Gửi khách hàng, đối tác và toàn thể CBNV",
-                "paragraph_1": "Trong suốt nửa thế kỷ qua, MINH MINH TÂM luôn giữ vững triết lý kinh doanh: phát triển bền vững và nhân văn, không ngừng đổi mới, đáp ứng tối đa nhu cầu khách hàng thông qua cam kết về chất lượng sản phẩm và dịch vụ. Nhờ đó, sản phẩm của MINH MINH TÂM đã vươn ra khắp thế giới, chúng tôi đã trở thành doanh nghiệp cốt lõi trong ngành dệt may của khu vực, góp phần vào sự phát triển của ngành dệt may Việt Nam trên thị trường thế giới.",
-                "paragraph_2": "Với tư duy đổi mới, đội ngũ giàu kinh nghiệm, nhiệt huyết và sáng tạo, cùng việc tiên phong áp dụng công nghệ tiên tiến, MINH MINH TÂM liên tục nâng cao lợi thế cạnh tranh bằng các sản phẩm có chất lượng và quy mô quốc tế tại các thị trường trọng điểm như Mỹ, châu Âu, Nhật Bản, Hàn Quốc... Niềm tin và sự đánh giá cao của khách hàng là thành quả lớn, là niềm tự hào và động lực của chúng tôi trong hơn 60 năm qua, và chúng tôi sẽ tiếp tục củng cố và phát triển điều đó.",
-                "paragraph_3": "Chúng tôi tin tưởng rằng, trên chặng đường phía trước, MINH MINH TÂM sẽ tiếp tục viết nên những trang sử mới cho mình và cho ngành dệt may Việt Nam. Hành trình này cần có sự ủng hộ và hợp tác liên tục từ các đối tác và toàn thể CBNV. MINH MINH TÂM cam kết sẽ tạo ra những giá trị bền vững cho khách hàng, đối tác và cho những người đã, đang và sẽ đồng hành cùng MINH MINH TÂM.",
+                "paragraph_1": "Trong suốt nửa thế kỷ qua, Minh Minh Tâm luôn giữ vững triết lý kinh doanh: phát triển bền vững và nhân văn, không ngừng đổi mới, đáp ứng tối đa nhu cầu khách hàng thông qua cam kết về chất lượng sản phẩm và dịch vụ. Nhờ đó, sản phẩm của Minh Minh Tâm đã vươn ra khắp thế giới, chúng tôi đã trở thành doanh nghiệp cốt lõi trong ngành dệt may của khu vực, góp phần vào sự phát triển của ngành dệt may Việt Nam trên thị trường thế giới.",
+                "paragraph_2": "Với tư duy đổi mới, đội ngũ giàu kinh nghiệm, nhiệt huyết và sáng tạo, cùng việc tiên phong áp dụng công nghệ tiên tiến, Minh Minh Tâm liên tục nâng cao lợi thế cạnh tranh bằng các sản phẩm có chất lượng và quy mô quốc tế tại các thị trường trọng điểm như Mỹ, châu Âu, Nhật Bản, Hàn Quốc... Niềm tin và sự đánh giá cao của khách hàng là thành quả lớn, là niềm tự hào và động lực của chúng tôi trong hơn 60 năm qua, và chúng tôi sẽ tiếp tục củng cố và phát triển điều đó.",
+                "paragraph_3": "Chúng tôi tin tưởng rằng, trên chặng đường phía trước, Minh Minh Tâm sẽ tiếp tục viết nên những trang sử mới cho mình và cho ngành dệt may Việt Nam. Hành trình này cần có sự ủng hộ và hợp tác liên tục từ các đối tác và toàn thể CBNV. Minh Minh Tâm cam kết sẽ tạo ra những giá trị bền vững cho khách hàng, đối tác và cho những người đã, đang và sẽ đồng hành cùng Minh Minh Tâm.",
                 "closing": "Trân trọng,",
                 "position": "Tổng Giám đốc",
                 "name": "Vũ Thị Thanh Thanh",
@@ -48,28 +48,28 @@
                 "feature2": "Kéo sợi",
                 "established": "Thành lập từ năm",
                 "year": "1996",
-                "company_name": "MINH MINH TÂM",
+                "company_name": "Minh Minh Tâm",
                 "description": "là một trong những doanh nghiệp dệt may có lịch sử lâu đời và quy mô lớn, tập trung chủ yếu vào 2 lĩnh vực:",
                 "area1": "1- Sản xuất hàng may mặc",
                 "area2": "2- Kéo sợi",
                 "not_only": "Không chỉ là",
                 "leading_supplier": "nhà cung cấp hàng đầu trong chuỗi cung ứng sợi và may mặc",
-                "core_role": "của Việt Nam, MINH MINH TÂM còn đóng vai trò cốt lõi trong hoạt động của Vinatex và Vitas, đóng góp lớn cho ngành dệt may Việt Nam trong nhiều thập kỷ qua."
+                "core_role": "của Việt Nam, Minh Minh Tâm còn đóng vai trò cốt lõi trong hoạt động của Vinatex và Vitas, đóng góp lớn cho ngành dệt may Việt Nam trong nhiều thập kỷ qua."
             },
             "video": {
                 "slogan_alt": "Khẩu hiệu",
-                "alt": "Video giới thiệu công ty dệt may MINH MINH TÂM"
+                "alt": "Video giới thiệu công ty dệt may Minh Minh Tâm"
             }
         },
         "co-cau-to-chuc": {
             "banner": {
-                "alt": "Cơ cấu tổ chức - Dệt may MINH MINH TÂM"
+                "alt": "Cơ cấu tổ chức - Dệt may Minh Minh Tâm"
             },
-            "image_alt": "Sơ đồ cơ cấu tổ chức của Dệt may MINH MINH TÂM"
+            "image_alt": "Sơ đồ cơ cấu tổ chức của Dệt may Minh Minh Tâm"
         },
         "tam-nhin-su-menh": {
             "banner": {
-                "alt": "Tầm nhìn sứ mệnh - Dệt may MINH MINH TÂM"
+                "alt": "Tầm nhìn sứ mệnh - Dệt may Minh Minh Tâm"
             },
             "title": "Tầm nhìn - sứ mệnh",
             "vision": {
@@ -106,7 +106,7 @@
         "loi-cam-ket": {
             "title": "Lời cam kết",
             "banner": {
-                "alt": "Lời cam kết - Dệt may MINH MINH TÂM"
+                "alt": "Lời cam kết - Dệt may Minh Minh Tâm"
             },
             "customer": {
                 "title": "Lời cam kết đến khách hàng",
@@ -116,7 +116,7 @@
             },
             "employee": {
                 "title": "Lời cam kết đến nhân viên",
-                "point1": "Thu nhập của người lao động là thước đo giá trị phát triển của Tổng Công Ty Dệt May MINH MINH TÂM. Tạo ra môi trường làm việc chuyên nghiệp, tôn trọng lẫn nhau.",
+                "point1": "Thu nhập của người lao động là thước đo giá trị phát triển của Tổng Công Ty Dệt May Minh Minh Tâm. Tạo ra môi trường làm việc chuyên nghiệp, tôn trọng lẫn nhau.",
                 "point2": "Văn hóa hướng đến Chân - Thiện - Mỹ, tôn vinh các cá nhân làm việc có hiệu quả, xây dựng cá nhân điển hình tiên tiến để làm gương cho tập thể học tập.",
                 "point3": "Đào tạo nâng cao trình độ chuyên môn, tay nghề và tạo cơ hội cho người lao động học tập, phát triển khả năng và sự nghiệp."
             }
@@ -124,7 +124,7 @@
         "thanh-tich": {
             "title": "Thành tích",
             "banner": {
-                "alt": "Thành tích - Dệt may MINH MINH TÂM"
+                "alt": "Thành tích - Dệt may Minh Minh Tâm"
             },
             "achievements": {
                 "customs": "Doanh nghiệp ưu tiên về hải quan từ năm 2018 đến nay",
@@ -134,13 +134,13 @@
         },
         "lich-su": {
             "banner": {
-                "alt": "Lịch sử hình thành - Dệt may MINH MINH TÂM"
+                "alt": "Lịch sử hình thành - Dệt may Minh Minh Tâm"
             },
             "title": "Lịch sử hình thành",
             "timeline": {
-                "1962": "Được thành lập vào năm 1962, ban đầu được biết đến với tên gọi Nhà máy Dệt MINH MINH TÂM (SICOVINA) trực thuộc Công ty Công nghiệp Bông sợi Việt Nam. Năm 1975, khi thành phố Bình Thuận được giải phóng, Nhà máy Dệt MINH MINH TÂM được Chính phủ tiếp quản và bắt đầu hoạt động trở lại vào ngày 21 tháng 4 năm 1975.",
+                "1962": "Được thành lập vào năm 1962, ban đầu được biết đến với tên gọi Nhà máy Dệt Minh Minh Tâm (SICOVINA) trực thuộc Công ty Công nghiệp Bông sợi Việt Nam. Năm 1975, khi thành phố Bình Thuận được giải phóng, Nhà máy Dệt Minh Minh Tâm được Chính phủ tiếp quản và bắt đầu hoạt động trở lại vào ngày 21 tháng 4 năm 1975.",
                 "1975": {
-                    "title": "Thành lập Nhà máy Sợi MINH MINH TÂM:",
+                    "title": "Thành lập Nhà máy Sợi Minh Minh Tâm:",
                     "capacity": "Công suất: 22.000 cọc sợi",
                     "products": "Sản phẩm chính: Sợi CD, TCD, OE, sợi xe, sợi tái chế",
                     "certifications": "Chứng nhận: Oeko-Tex Standard 100, ISO 9001-2008, Cotton USA, BCI, Usterized"
@@ -150,46 +150,46 @@
                     "investment": "Đầu tư vào nhà máy dệt với 20.000 cọc sợi và 400 máy dệt."
                 },
                 "1997": {
-                    "title": "Thành lập Nhà máy May MINH MINH TÂM 1:",
+                    "title": "Thành lập Nhà máy May Minh Minh Tâm 1:",
                     "products": "Sản phẩm chính: Veston, áo blazer, quần tây",
                     "certifications": "Chứng nhận: WRAP, GSV, WCA (Haggar), Kohl's, Macy's, Perry Elps",
                     "brands": "Thương hiệu: Haggar, Oakhill, Kohl's, Gold Series, Island Passport và các thương hiệu khác"
                 },
                 "1999": {
-                    "title": "Thành lập Nhà máy May MINH MINH TÂM 2:",
+                    "title": "Thành lập Nhà máy May Minh Minh Tâm 2:",
                     "products": "Sản phẩm chính: Veston, áo blazer, quần tây",
                     "certifications": "Chứng nhận: WRAP, GSV, WCA (Haggar), Walmart, Kohl's, Express và các chứng nhận khác",
                     "brands": "Thương hiệu: Express, Marc Anthony, Michael Kors, Van Huesen, Calvin Klein, Bar III, Crown & Ivy và các thương hiệu khác"
                 },
                 "2001": {
-                    "title": "Thành lập Công ty May MINH MINH TÂM - Điện Bàn:",
+                    "title": "Thành lập Công ty May Minh Minh Tâm - Điện Bàn:",
                     "products": "Sản phẩm chính: Quần áo bảo hộ lao động, đồng phục dệt kim",
                     "certifications": "Chứng nhận: WCA, 5.11, Seven & I HLDGS, AEON",
                     "brands": "Thương hiệu: Snickers, Kansai, Toyota, Yonex và các thương hiệu khác"
                 },
                 "2002": {
                     "title": "Thành lập thêm 2 đơn vị:",
-                    "factory3": "Thành lập Nhà máy May MINH MINH TÂM 3, sau đó sáp nhập vào Nhà máy May MINH MINH TÂM 2 vào năm 2010 (hiện nay là Nhà máy May Veston MINH MINH TÂM)",
-                    "quangnam": "Thành lập Công ty May MINH MINH TÂM - Quảng Nam"
+                    "factory3": "Thành lập Nhà máy May Minh Minh Tâm 3, sau đó sáp nhập vào Nhà máy May Minh Minh Tâm 2 vào năm 2010 (hiện nay là Nhà máy May Veston Minh Minh Tâm)",
+                    "quangnam": "Thành lập Công ty May Minh Minh Tâm - Quảng Nam"
                 },
                 "2003": {
-                    "title": "Thành lập Công ty May MINH MINH TÂM - Hội An:",
+                    "title": "Thành lập Công ty May Minh Minh Tâm - Hội An:",
                     "capacity": "Công suất: 650.000 sản phẩm/năm",
                     "products": "Sản phẩm chính: Đồng phục y tế, quần, áo khoác",
                     "brands": "Thương hiệu: Fjallraven, Kazen",
                     "address": "Địa chỉ: 26 Nguyễn Tất Thành, Phường Tân An, TP. Hội An, Quảng Nam, Việt Nam"
                 },
-                "2006": "Ngày 15 tháng 11 năm 2006, theo Quyết định số 3252/QĐ-BCN của Bộ Công nghiệp, công ty đổi tên thành Tổng Công ty CP Dệt May MINH MINH TÂM và chính thức hoạt động từ ngày 01 tháng 02 năm 2007.",
+                "2006": "Ngày 15 tháng 11 năm 2006, theo Quyết định số 3252/QĐ-BCN của Bộ Công nghiệp, công ty đổi tên thành Công ty TNHH May Minh Minh Tâm và chính thức hoạt động từ ngày 01 tháng 02 năm 2007.",
                 "2007": {
                     "title": "Đầu tư thêm 2 công ty:",
                     "duyxuyen": {
-                        "title": "Công ty May MINH MINH TÂM - Duy Xuyên:",
+                        "title": "Công ty May Minh Minh Tâm - Duy Xuyên:",
                         "products": "Sản phẩm chính: Quần tây cao cấp",
                         "certifications": "Chứng nhận: Perry Ellis Portfolio, Farah, Savane, Stafford và các chứng nhận khác",
                         "address": "Địa chỉ: KCN Gò Đồi, Huyện Duy Xuyên, Quảng Nam, Việt Nam, cách Đà Nẵng 32km"
                     },
                     "dongha": {
-                        "title": "Công ty May MINH MINH TÂM - Đông Hà:",
+                        "title": "Công ty May Minh Minh Tâm - Đông Hà:",
                         "products": "Sản phẩm chính: Áo khoác, quần áo bảo hộ lao động",
                         "certifications": "Chứng nhận: WRAP, BSCI, GMP, PVH",
                         "brands": "Thương hiệu: Marc O's Polo, S.Oliver, Head, Fjallraven, Lands'end, Tommy Hilger, Calvin Klein, DKNY và các thương hiệu khác",
@@ -197,7 +197,7 @@
                     }
                 },
                 "2011": {
-                    "title": "Thành lập Nhà máy May Veston MINH MINH TÂM:",
+                    "title": "Thành lập Nhà máy May Veston Minh Minh Tâm:",
                     "products": "Sản phẩm chính: Veston, blazer, áo gile, quần tây cao cấp",
                     "certifications": "Chứng nhận: WRAP, GSV, PVH, Macy's, Kohl's, Express, GAP (Banana Republic)",
                     "brands": "Thương hiệu: Calvin Klein, Chaps, Marc Anthony, Michael Kors, Express, Banana Republic, Bar III, Crown & Ivy và các thương hiệu khác"
@@ -208,7 +208,7 @@
     "home": {
         "intro": {
             "title": "Về chúng tôi",
-            "description": "Tổng Công ty CP Dệt May MINH MINH TÂM được thành lập từ năm 1996, tiền thân là xưởng may Minh Tâm, tập trung chủ yếu sản xuất đồng phục y tế có trụ sở chính đặt tại Bình Thuận, Việt Nam – đảm nhiệm phát triển sản phẩm và quản trị nhân sự, ngoài ra còn có văn phòng đại diện tại TP. Hồ Chí Minh",
+            "description": "Công ty TNHH May Minh Minh Tâm được thành lập từ năm 1996, tiền thân là xưởng may Minh Tâm, tập trung chủ yếu sản xuất đồng phục y tế có trụ sở chính đặt tại Bình Thuận, Việt Nam – đảm nhiệm phát triển sản phẩm và quản trị nhân sự, ngoài ra còn có văn phòng đại diện tại TP. Hồ Chí Minh",
             "readMore": "Tìm hiểu thêm",
             "stats": {
                 "totalArea": "Tổng diện tích",
@@ -240,7 +240,7 @@
             }
         },
         "video": {
-            "title": "MINH MINH TÂM Dệt may",
+            "title": "Minh Minh Tâm Dệt may",
             "quote": "Trang bị đầy đủ từ trải vải, cắt tự động, hệ thống máy may điện tử, tự động hóa cao đảm bảo năng suất & chất lượng, hệ thống máy phụ trợ, kiểm tra nghiêm ngặt theo tiêu chuẩn Nhật Bản."
         },
         "brands": {
@@ -248,8 +248,8 @@
             "viewMore": "Xem thêm",
             "items": {
                 "merriman": "Thời trang nam MERRIMAN",
-                "fashion": "May MINH MINH TÂM Fashion",
-                "commercialCenter": "Trung tâm thương mại May MINH MINH TÂM"
+                "fashion": "May Minh Minh Tâm Fashion",
+                "commercialCenter": "Trung tâm thương mại May Minh Minh Tâm"
             }
         }
     },
@@ -258,14 +258,14 @@
         "phone": "Điện thoại",
         "email": "Email",
         "fax": "Fax",
-        "copyright": "© 2025 Tổng Công ty CP Dệt May MINH MINH TÂM",
+        "copyright": "© 2025 Công ty TNHH May Minh Minh Tâm",
         "contactInfo": "Thông tin liên hệ",
         "certification": "Chứng nhận",
         "downloadBrochure": "Tải brochure"
     },
     "thi-truong-xuat-khau": {
         "banner": {
-            "alt": "Thị trường xuất khẩu - Dệt may MINH MINH TÂM"
+            "alt": "Thị trường xuất khẩu - Dệt may Minh Minh Tâm"
         },
         "chart_title": "Biểu đồ kim ngạch xuất khẩu",
         "chart_alt": "Biểu đồ kim ngạch xuất khẩu",
@@ -376,6 +376,163 @@
                         "Độ xoắn: Có thể điều chỉnh theo yêu cầu cụ thể",
                         "Khả năng: Chịu lực tốt, độ bền cao"
                     ]
+                }
+            }
+        },
+        "garments": {
+            "jackets": {
+                "title": "Áo khoác",
+                "banner": {
+                    "alt": "Sản phẩm may xuất khẩu"
+                },
+                "breadcrumb": {
+                    "parent": "Sản phẩm may xuất khẩu",
+                    "current": "Áo khoác"
+                },
+                "product_image": "Áo khoác - ảnh",
+                "thumbnail": "Áo khoác - thumbnail",
+                "general_info": {
+                    "title": "Thông tin chung",
+                    "content": "Dòng sản phẩm Jacket có nhiều kiểu dáng và thiết kế đa dạng từ formal (sang trọng, nghiêm túc) cho đến casual (giản dị, thoải mái). Sản phẩm dễ phối đồ và phù hợp nhiều loại thời tiết. Jackets được sử dụng rộng rãi trong nhiều hoạt động khác nhau như chơi thể thao, đi chơi, làm việc (môi trường công nghiệp nặng, công nghiệp nhẹ)."
+                },
+                "details": {
+                    "title": "Thông tin chi tiết",
+                    "point1": "Đa dạng về chất liệu vải: vải denim, da thật hoặc giả da, Nylon, Polyester, Fleece…để đáp ứng yêu cầu sử dụng, sở thích khác nhau của khách hàng",
+                    "point2": "Đa dạng về thiết kế: Jacket seamseal (chống thấm nước), Jacket Down (Lông vịt giữ nhiệt tốt), Jacket Padding, Jacket 1 lớp, 2 lớp, 3 lớp …",
+                    "point3": "Các mẫu được thiết kế ở form rộng rãi để khoác ngoài nên rất thoải mái cho người mặc, dễ dàng vận động mà không làm khó chịu."
+                },
+                "other_products": "Sản phẩm khác",
+                "related": {
+                    "suits": "Veston",
+                    "trousers": "Quần tây",
+                    "workwear": "Bảo hộ lao động",
+                    "knitwear": "Dệt kim"
+                }
+            },
+            "trousers": {
+                "title": "Quần tây",
+                "banner": {
+                    "alt": "Sản phẩm may xuất khẩu"
+                },
+                "breadcrumb": {
+                    "parent": "Sản phẩm may xuất khẩu",
+                    "current": "Quần tây"
+                },
+                "product_image": "Quần tây - ảnh",
+                "thumbnail": "Quần tây - thumbnail",
+                "general_info": {
+                    "title": "Thông tin chung:",
+                    "content": "Quần tây là một trong những dòng sản phẩm xuất khẩu chủ lực của Minh Minh Tâm. Với nhiều kinh nghiệm sản xuất, sản phẩm quần tây của Minh Minh Tâm được nhiều khách hàng trong và ngoài nước tin dùng nhờ chất lượng đảm bảo, thiết kế phù hợp nhiều phong cách, và giá thành hợp lý."
+                },
+                "details": {
+                    "title": "Chi tiết sản phẩm:",
+                    "point1": "Form dáng phù hợp với nhiều đối tượng: Regular fit, Slim fit, Skinny fit",
+                    "point2": "Chất liệu đa dạng: Polyester, Cotton, Wool blend, Kaki, Vải stretch co giãn",
+                    "point3": "Đa dạng về màu sắc và kiểu dáng: Trơn màu, caro, kẻ sọc",
+                    "point4": "Phù hợp nhiều mục đích sử dụng: công sở, dự tiệc, đi làm, đi chơi",
+                    "point5": "Chi tiết tinh xảo: Đường may chắc chắn, túi quần thiết kế đẹp mắt, khóa kéo cao cấp, cúc và chốt quần chắc chắn"
+                },
+                "other_products": "Sản phẩm khác",
+                "related": {
+                    "suits": "Veston",
+                    "workwear": "Bảo hộ lao động",
+                    "jackets": "Áo khoác",
+                    "knitwear": "Dệt kim"
+                }
+            },
+            "suits": {
+                "title": "Veston",
+                "banner": {
+                    "alt": "Sản phẩm may xuất khẩu"
+                },
+                "breadcrumb": {
+                    "parent": "Sản phẩm may xuất khẩu",
+                    "current": "Veston"
+                },
+                "product_image": "Veston - ảnh",
+                "thumbnail": "Veston - thumbnail",
+                "general_info": {
+                    "title": "Thông tin chung:",
+                    "content": "Là dòng sản phẩm may xuất khẩu chủ lực của Minh Minh Tâm. Với nhiều năm kinh nghiệm sản xuất, các dòng sản phẩm áo veston của Minh Minh Tâm đã tạo được sự tin tưởng và hợp tác từ các khách hàng trong và ngoài nước."
+                },
+                "details": {
+                    "suit": {
+                        "title": "Chi tiết áo vest:",
+                        "point1": "Form dáng phù hợp với nhiều nhóm đối tượng khách hàng.",
+                        "point2": "Chất liệu đa dạng: cotton, polyester, wool, knit, linen,.. đi kèm nhiều chủng loại hoa văn khác nhau: trơn, caro, sọc, vải họa tiết...",
+                        "point3": "Đa dạng thiết kế: áo cơ bản, tuxedo, áo lót lửng, áo không lót..."
+                    },
+                    "vest": {
+                        "title": "Chi tiết áo ghile:",
+                        "point1": "Form dáng phù hợp với nhiều nhóm đối tượng khách hàng.",
+                        "point2": "Chất liệu đa dạng: cotton, polyester, wool, knit, linen, nhung.... đi kèm nhiều chủng loại hoa văn khác nhau: trơn, caro, sọc, vải họa tiết...",
+                        "point3": "Đa dạng thiết kế: áo ghile 1 hàng cúc, áo ghile 2 hàng cúc, áo ghile có ve."
+                    }
+                },
+                "other_products": "Sản phẩm khác",
+                "related": {
+                    "trousers": "Quần tây",
+                    "workwear": "Bảo hộ lao động",
+                    "jackets": "Áo khoác",
+                    "knitwear": "Dệt kim"
+                }
+            },
+            "knitwear": {
+                "title": "Dệt kim",
+                "banner": {
+                    "alt": "Sản phẩm may xuất khẩu"
+                },
+                "breadcrumb": {
+                    "parent": "Sản phẩm may xuất khẩu",
+                    "current": "Dệt kim"
+                },
+                "product_image": "Dệt kim - ảnh",
+                "thumbnail": "Dệt kim - thumbnail",
+                "general_info": {
+                    "title": "Thông tin chung:",
+                    "content": "Dệt kim là một trong những dòng sản phẩm xuất khẩu đa dạng của Minh Minh Tâm. Sản phẩm dệt kim được sản xuất bằng công nghệ hiện đại, đáp ứng các tiêu chuẩn chất lượng quốc tế và được xuất khẩu đến nhiều thị trường khó tính trên thế giới."
+                },
+                "details": {
+                    "title": "Chi tiết sản phẩm:",
+                    "point1": "Đa dạng về chất liệu: Cotton, Polyester, TC, CVC, Spandex, Viscose và các loại vải đặc biệt khác theo yêu cầu",
+                    "point2": "Phong phú về kiểu dáng: Áo thun, áo polo, áo hoodie, áo sweater, đồ thể thao,...",
+                    "point3": "Thiết kế đa dạng: Từ casual đến sporty, phù hợp mọi đối tượng",
+                    "point4": "Có khả năng co giãn tốt, thoáng khí, thoải mái khi mặc",
+                    "point5": "Màu sắc phong phú, bền màu, không xù lông, không co rút sau nhiều lần giặt",
+                    "point6": "Công nghệ in ấn hiện đại: In lụa, in chuyển nhiệt, thêu vi tính cao cấp,..."
+                },
+                "other_products": "Sản phẩm khác",
+                "related": {
+                    "suits": "Veston",
+                    "trousers": "Quần tây",
+                    "jackets": "Áo khoác",
+                    "workwear": "Bảo hộ lao động"
+                }
+            },
+            "workwear": {
+                "title": "Bảo hộ lao động",
+                "banner": {
+                    "alt": "Sản phẩm may xuất khẩu"
+                },
+                "breadcrumb": {
+                    "parent": "Sản phẩm may xuất khẩu",
+                    "current": "Bảo hộ lao động"
+                },
+                "product_image": "Bảo hộ lao động - ảnh",
+                "thumbnail": "Bảo hộ lao động - thumbnail",
+                "general_info": {
+                    "title": "Bảo hộ lao động (BHLĐ)",
+                    "content": "Đây chính là một trong những dòng hàng xuất khẩu chủ lực của Minh Minh Tâm nhiều năm qua. Nhu cầu thị trường đồ BHLĐ ngày càng tăng khi nhận thức về an toàn lao động tại các công ty ngày càng tăng cao. Mỗi sản phẩm bảo hộ lao động được sản xuất để dành riêng cho những người lao động đặc thù và chuyên nghiệp trong các lĩnh vực khác nhau như: công xưởng sản xuất, xây dựng, cơ khí, y tế,..."
+                },
+                "details": {
+                    "content": "Nắm bắt được nhu cầu của thị trường, Hoà Thọ đã tập trung năng lực sản xuất cho dòng sản phẩm này, tạo ra nhiều sản phẩm đẹp đúng tiêu chuẩn theo yêu cầu của khách hàng. Đến nay, các sản phẩm BHLĐ của Minh Minh Tâm luôn nhận được sự tin tưởng và đánh giá cao từ khách hàng trong và ngoài nước."
+                },
+                "other_products": "Sản phẩm khác",
+                "related": {
+                    "suits": "Veston",
+                    "trousers": "Quần tây",
+                    "jackets": "Áo khoác",
+                    "knitwear": "Dệt kim"
                 }
             }
         }

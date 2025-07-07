@@ -21,10 +21,10 @@ export default function NewsPage() {
     const newsItems: NewsItem[] = [
         {
             id: '8500',
-            title: 'LỄ PHÁT ĐỘNG THI ĐUA CHÀO MỪNG ĐẠI HỘI ĐẢNG BỘ TỔNG CÔNG TY CP DỆT MAY MINH MINH TÂM LẦN THỨ XVI, NHIỆM KỲ 2025 - 2030',
+            title: 'LỄ PHÁT ĐỘNG THI ĐUA CHÀO MỪNG ĐẠI HỘI ĐẢNG BỘ Công ty TNHH May Minh Minh Tâm LẦN THỨ XVI, NHIỆM KỲ 2025 - 2030',
             date: '09/06/2025',
             content:
-                'Hướng tới Đại hội đại biểu Đảng bộ Tổng Công ty Cổ phần Dệt May MINH MINH TÂM lần thứ XVI, Nhiệm kỳ 2025 – 2030, sáng ngày 9/6/2025, tại Hội trường Tổng Công ty, Đảng ủy Tổng Công ty đã trang trọng tổ chức "Lễ phát động thi đua chào mừng Đại hội Đảng bộ Tổng Công ty".',
+                'Hướng tới Đại hội đại biểu Đảng bộ Công ty TNHH May Minh Minh Tâm lần thứ XVI, Nhiệm kỳ 2025 – 2030, sáng ngày 9/6/2025, tại Hội trường Tổng Công ty, Đảng ủy Tổng Công ty đã trang trọng tổ chức "Lễ phát động thi đua chào mừng Đại hội Đảng bộ Tổng Công ty".',
             image: '/images/tin-tuc/image-1.png',
             url: '/tin-tuc/1',
         },

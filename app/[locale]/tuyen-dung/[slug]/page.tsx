@@ -65,7 +65,7 @@ const jobData = {
       <p>- Đơn xin việc.</p>
       <p>- Sơ yếu lý lịch, Phiếu khám sức khỏe; Bản sao các giấy tờ Sổ hộ khẩu/Xác nhận nơi cư trú, CCCD, Giấy khai sinh, Các văn bằng, chứng chỉ có liên quan đến công việc.</p>
       <p>- Bảng thông tin ứng viên theo mẫu của Tổng công ty được đăng tại mục Tuyển dụng trên website: www.minhminhtam.com.vn. Link tải trực tiếp: bit.ly/3XZvd7A.</p>
-      <p>• Nộp hồ sơ qua email hoặc trực tiếp tại: Văn phòng Tổng Công ty CP Dệt May MINH MINH TÂM - 36 Đ. Số 19B, Phường An Khánh, Thủ Đức, Hồ Chí Minh, Việt Nam. Mọi chi tiết xin liên hệ: Mr Dũng - Chuyên viên Văn phòng qua điện thoại số: 0252 672 5858 hoặc email: minhminhtam.binhthuan@gmail.com.</p>
+      <p>• Nộp hồ sơ qua email hoặc trực tiếp tại: Văn phòng Công ty TNHH May Minh Minh Tâm - 36 Đ. Số 19B, Phường An Khánh, Thủ Đức, Hồ Chí Minh, Việt Nam. Mọi chi tiết xin liên hệ: Mr Dũng - Chuyên viên Văn phòng qua điện thoại số: 0252 672 5858 hoặc email: minhminhtam.binhthuan@gmail.com.</p>
       <p>THỜI GIAN NHẬN HỒ SƠ: đến 20/09/2024 hoặc khi đã tuyển được ứng viên.</p>
     `,
     },

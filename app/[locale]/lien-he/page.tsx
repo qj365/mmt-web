@@ -21,7 +21,7 @@ export default function ContactPage() {
             containerClassName="py-10"
         >
             <div className="contact-information">
-                <PageTitle title="TỔNG CÔNG TY CỔ PHẦN DỆT MAY MINH MINH TÂM" />
+                <PageTitle title="Công ty TNHH May Minh Minh Tâm" />
 
                 <div className="content-wrapper mt-8 bg-white shadow-lg rounded-[20px] p-8">
                     <div className="block mb-6">
@@ -165,7 +165,7 @@ export default function ContactPage() {
                         style={{ border: 0 }}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="MINH MINH TÂM Location"
+                        title="Minh Minh Tâm Location"
                     ></iframe>
                 </div>
             </div>

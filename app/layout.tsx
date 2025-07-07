@@ -9,14 +9,14 @@ const baiJamjuree = Bai_Jamjuree({
 });
 
 export const metadata: Metadata = {
-    title: 'Trang chủ - Dệt may MINH MINH TÂM',
+    title: 'Trang chủ - Dệt may Minh Minh Tâm',
     description:
-        'Trang chủ Tổng Công ty CP Dệt May MINH MINH TÂM (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
+        'Trang chủ Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
     openGraph: {
         title: 'Trang chủ',
         description:
-            'Trang chủ Tổng Công ty CP Dệt May MINH MINH TÂM (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
-        siteName: 'Dệt may MINH MINH TÂM',
+            'Trang chủ Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
+        siteName: 'Dệt may Minh Minh Tâm',
     },
 };
 

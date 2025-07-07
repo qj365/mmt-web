@@ -12,8 +12,14 @@ import 'swiper/css/thumbs';
 import { Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperClass } from 'swiper/types';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 export default function AoKhoacPage() {
+    const t = useTranslations('products.garments.jackets');
+    const params = useParams();
+    const locale = params.locale as string;
+
     const [thumbsSwiper, setThumbsSwiper] = React.useState<SwiperClass | null>(
         null
     );
@@ -21,37 +27,37 @@ export default function AoKhoacPage() {
     // Breadcrumb items for the page
     const breadcrumbItems = [
         {
-            label: 'Sản phẩm may xuất khẩu',
-            href: '/san-pham/san-pham-may-xuat-khau',
+            label: t('breadcrumb.parent'),
+            href: `/${locale}/san-pham/san-pham-may-xuat-khau`,
         },
         {
-            label: 'Áo khoác',
-            href: '/san-pham/san-pham-may-xuat-khau/ao-khoac',
+            label: t('breadcrumb.current'),
+            href: `/${locale}/san-pham/san-pham-may-xuat-khau/ao-khoac`,
         },
     ];
 
     // Related products
     const relatedProducts: ProductType[] = [
         {
-            name: 'Veston',
+            name: t('related.suits'),
             slug: 'veston',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/veston.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Quần tây',
+            name: t('related.trousers'),
             slug: 'quan-tay',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/quan-tay.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Bảo hộ lao động',
+            name: t('related.workwear'),
             slug: 'bao-ho-lao-dong',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/bao-ho.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Dệt kim',
+            name: t('related.knitwear'),
             slug: 'det-kim',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/det-kim.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
@@ -70,7 +76,7 @@ export default function AoKhoacPage() {
         <>
             <ContentPageLayout
                 bannerImage="/images/san-pham/san-pham-may-xuat-khau/banner.png"
-                bannerAlt="Sản phẩm may xuất khẩu"
+                bannerAlt={t('banner.alt')}
                 breadcrumbItems={breadcrumbItems}
                 containerClassName="bg-[#F5F5F5]"
             >
@@ -94,9 +100,9 @@ export default function AoKhoacPage() {
                                                     <div className="relative h-[400px] flex items-center justify-center">
                                                         <Image
                                                             src={image}
-                                                            alt={`Áo khoác - ảnh ${
-                                                                index + 1
-                                                            }`}
+                                                            alt={`${t(
+                                                                'product_image'
+                                                            )} ${index + 1}`}
                                                             width={800}
                                                             height={600}
                                                             className="w-full h-full object-contain"
@@ -121,9 +127,9 @@ export default function AoKhoacPage() {
                                                 <div className="img cursor-pointer">
                                                     <Image
                                                         src={image}
-                                                        alt={`Áo khoác - thumbnail ${
-                                                            index + 1
-                                                        }`}
+                                                        alt={`${t(
+                                                            'thumbnail'
+                                                        )} ${index + 1}`}
                                                         width={100}
                                                         height={70}
                                                         className="w-auto h-auto object-contain"
@@ -137,49 +143,25 @@ export default function AoKhoacPage() {
 
                             {/* Product Information */}
                             <div className="product-info">
-                                <VerticalPageTitle title="Áo khoác" />
+                                <VerticalPageTitle title={t('title')} />
                                 <div className="brief mt-6">
                                     <p>
-                                        <strong>Thông tin chung</strong>
+                                        <strong>
+                                            {t('general_info.title')}
+                                        </strong>
                                     </p>
-                                    <p>
-                                        Dòng sản phẩm Jacket có nhiều kiểu dáng
-                                        và thiết kế đa dạng từ formal (sang
-                                        trọng, nghiêm túc) cho đến casual (giản
-                                        dị, thoải mái). Sản phẩm dễ phối đồ và
-                                        phù hợp nhiều loại thời tiết. Jackets
-                                        được sử dụng rộng rãi trong nhiều hoạt
-                                        động khác nhau như chơi thể thao, đi
-                                        chơi, làm việc (môi trường công nghiệp
-                                        nặng, công nghiệp nhẹ).
-                                    </p>
+                                    <p>{t('general_info.content')}</p>
                                 </div>
                                 <div className="full-content mt-6">
                                     <p>
                                         <span className="font-bold">
-                                            Thông tin chi tiết
+                                            {t('details.title')}
                                         </span>
                                     </p>
                                     <ul className="list-disc pl-5 mb-4">
-                                        <li>
-                                            Đa dạng về chất liệu vải: vải denim,
-                                            da thật hoặc giả da, Nylon,
-                                            Polyester, Fleece…để đáp ứng yêu cầu
-                                            sử dụng, sở thích khác nhau của
-                                            khách hàng
-                                        </li>
-                                        <li>
-                                            Đa dạng về thiết kế: Jacket seamseal
-                                            (chống thấm nước), Jacket Down (Lông
-                                            vịt giữ nhiệt tốt), Jacket Padding,
-                                            Jacket 1 lớp, 2 lớp, 3 lớp …
-                                        </li>
-                                        <li>
-                                            Các mẫu được thiết kế ở form rộng
-                                            rãi để khoác ngoài nên rất thoải mái
-                                            cho người mặc, dễ dàng vận động mà
-                                            không làm khó chịu.
-                                        </li>
+                                        <li>{t('details.point1')}</li>
+                                        <li>{t('details.point2')}</li>
+                                        <li>{t('details.point3')}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -188,7 +170,7 @@ export default function AoKhoacPage() {
 
                     {/* Related Products */}
                     <div className="mt-12">
-                        <VerticalPageTitle title="Sản phẩm khác" />
+                        <VerticalPageTitle title={t('other_products')} />
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
                             {relatedProducts.map((product, index) => (
                                 <ProductCard key={index} {...product} />

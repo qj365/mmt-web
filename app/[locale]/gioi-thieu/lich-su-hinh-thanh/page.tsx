@@ -18,7 +18,9 @@ export default function LichSuPage() {
             content: (
                 <ul>
                     <li className="text-justify">
-                        Bắt đầu hoạt động tại Việt Nam với Xưởng may Minh Tâm – chuyên sản xuất và gia công đồng phục y tế, gile, áo khoác,...
+                        Bắt đầu hoạt động tại Việt Nam với Xưởng may Minh Tâm –
+                        chuyên sản xuất và gia công đồng phục y tế, gile, áo
+                        khoác,...
                     </li>
                 </ul>
             ),
@@ -29,12 +31,16 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>Đầu tư mở rộng thành Công ty TNHH May Phú Minh Tâm: </p>
+                        <p>
+                            Đầu tư mở rộng thành Công ty TNHH May Phú Minh Tâm:{' '}
+                        </p>
                         <ul className="list-disc pl-5">
-                            <li>Chuyên sản xuất đồng phục và đồ bảo hộ y tế.</li>
                             <li>
-                                Sản phẩm chính: sản xuất đồng phục y tế và đồ bảo hộ,
-                                Recycled Yarn.
+                                Chuyên sản xuất đồng phục và đồ bảo hộ y tế.
+                            </li>
+                            <li>
+                                Sản phẩm chính: sản xuất đồng phục y tế và đồ
+                                bảo hộ, Recycled Yarn.
                             </li>
                             <li>
                                 Các chứng nhận: Oeko-Tex standard 100, ISO
@@ -51,10 +57,12 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        Thành lập Công ty TNHH May Minh Minh Tâm, xây dựng nhà máy trong 2 năm trước khi vận hành chính thức.
+                        Thành lập Công ty TNHH May Minh Minh Tâm, xây dựng nhà
+                        máy trong 2 năm trước khi vận hành chính thức.
                     </li>
                     <li>
-                     Mở rộng quy mô nhà máy, tập trung tăng năng lực sản xuất đồng phục y tế và đồ bảo hộ.
+                        Mở rộng quy mô nhà máy, tập trung tăng năng lực sản xuất
+                        đồng phục y tế và đồ bảo hộ.
                     </li>
                 </ul>
             ),
@@ -110,7 +118,7 @@ export default function LichSuPage() {
         //     content: (
         //         <ul className="text-justify">
         //             <li>
-        //                 <p>Thành lập Công Ty May MINH MINH TÂM - Điện Bàn:</p>
+        //                 <p>Thành lập Công Ty May Minh Minh Tâm - Điện Bàn:</p>
         //                 <ul className="list-disc pl-5">
         //                     <li>Sản phẩm chính: Workwear, Uniform Knitwear.</li>
         //                     <li>
@@ -133,12 +141,12 @@ export default function LichSuPage() {
         //             <p>Thành lập mới hai đơn vị:</p>
         //             <ul className="text-justify">
         //                 <li>
-        //                     Thành lập Nhà Máy May MINH MINH TÂM 3, đến năm 2010
-        //                     sát nhập vào Nhà Máy May MINH MINH TÂM 2 (nay là Nhà
-        //                     Máy May Veston MINH MINH TÂM)
+        //                     Thành lập Nhà Máy May Minh Minh Tâm 3, đến năm 2010
+        //                     sát nhập vào Nhà Máy May Minh Minh Tâm 2 (nay là Nhà
+        //                     Máy May Veston Minh Minh Tâm)
         //                 </li>
         //                 <li>
-        //                     Thành lập Công ty May MINH MINH TÂM - Quảng Nam.
+        //                     Thành lập Công ty May Minh Minh Tâm - Quảng Nam.
         //                 </li>
         //             </ul>
         //         </>
@@ -150,7 +158,7 @@ export default function LichSuPage() {
         //     content: (
         //         <ul className="text-justify">
         //             <li>
-        //                 <p>Thành lập Công Ty May MINH MINH TÂM - Hội An:</p>
+        //                 <p>Thành lập Công Ty May Minh Minh Tâm - Hội An:</p>
         //                 <ul className="list-disc pl-5">
         //                     <li>Năng lực: 650.000 sản phẩm/năm</li>
         //                     <li>
@@ -173,7 +181,7 @@ export default function LichSuPage() {
         //         <ul className="text-justify">
         //             <li>
         //                 Ngày 15/11/2006, công ty đổi tên thành Tổng Công ty Cổ
-        //                 phần Dệt May MINH MINH TÂM theo quyết định số
+        //                 phần Dệt May Minh Minh Tâm theo quyết định số
         //                 3252/QĐ-BCN của Bộ Công nghiệp, và chính thức đi vào
         //                 hoạt động vào ngày 01 tháng 02 năm 2007.
         //             </li>
@@ -188,7 +196,7 @@ export default function LichSuPage() {
         //             <p>Đầu tư mới hai Công ty:</p>
         //             <ul className="text-justify">
         //                 <li>
-        //                     <p>Công ty May MINH MINH TÂM - Duy Xuyên:</p>
+        //                     <p>Công ty May Minh Minh Tâm - Duy Xuyên:</p>
         //                     <ul className="list-disc pl-5">
         //                         <li>Sản phẩm chính: Dress pants.</li>
         //                         <li>
@@ -203,7 +211,7 @@ export default function LichSuPage() {
         //                     </ul>
         //                 </li>
         //                 <li>
-        //                     <p>Công ty May MINH MINH TÂM - Đông Hà:</p>
+        //                     <p>Công ty May Minh Minh Tâm - Đông Hà:</p>
         //                     <ul className="list-disc pl-5">
         //                         <li>Sản phẩm chính: Jacket, Workwear.</li>
         //                         <li>Các chứng nhận: WRAP, BSCI, GMP, PVH.</li>
@@ -228,7 +236,7 @@ export default function LichSuPage() {
         //     content: (
         //         <ul className="text-justify">
         //             <li>
-        //                 <p>Thành lập Nhà Máy May Veston MINH MINH TÂM:</p>
+        //                 <p>Thành lập Nhà Máy May Veston Minh Minh Tâm:</p>
         //                 <ul className="list-disc pl-5">
         //                     <li>
         //                         Sản phẩm chính: Suits, Blazer, Vest, Dress
@@ -254,11 +262,11 @@ export default function LichSuPage() {
         //     content: (
         //         <ul className="text-justify">
         //             <li>
-        //                 Góp vốn đầu tư vào Công Ty CP May MINH MINH TÂM - Phú
+        //                 Góp vốn đầu tư vào Công Ty CP May Minh Minh Tâm - Phú
         //                 Ninh.
         //             </li>
         //             <li>
-        //                 Thực hiện tách Công Ty Sợi MINH MINH TÂM thành 02 nhà
+        //                 Thực hiện tách Công Ty Sợi Minh Minh Tâm thành 02 nhà
         //                 máy Sợi 1 và Sợi 2.
         //             </li>
         //         </ul>
@@ -285,7 +293,7 @@ export default function LichSuPage() {
         //                 </ul>
         //             </li>
         //             <li>
-        //                 <p>Thành lập Nhà Máy May MINH MINH TÂM - Quãng Ngãi:</p>
+        //                 <p>Thành lập Nhà Máy May Minh Minh Tâm - Quãng Ngãi:</p>
         //                 <ul className="list-disc pl-5">
         //                     <li>
         //                         Sản phẩm chính: Knitwear, Sleepwear, Polo-shirt,
@@ -339,9 +347,7 @@ export default function LichSuPage() {
             content: (
                 <ul className="text-justify">
                     <li>
-                        <p>
-                            Tiếp tục phát triển:
-                        </p>
+                        <p>Tiếp tục phát triển:</p>
                         <ul className="list-disc pl-5">
                             <li>Sản phẩm chính: Jacket, Workwear</li>
                             <li>Các chứng nhận: WRAP, LEED.</li>
@@ -359,7 +365,7 @@ export default function LichSuPage() {
     return (
         <ContentPageLayout
             bannerImage="/images/gioi-thieu/lich-su/banner.png"
-            bannerAlt="Lịch sử hình thành - Dệt may MINH MINH TÂM"
+            bannerAlt="Lịch sử hình thành - Dệt may Minh Minh Tâm"
             breadcrumbItems={breadcrumbItems}
             containerClassName="intro-lichsu section xl:pt-[80px] xl:pb-[100px]"
         >

@@ -12,8 +12,14 @@ import 'swiper/css/thumbs';
 import { Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperClass } from 'swiper/types';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 export default function QuanTayPage() {
+    const t = useTranslations('products.garments.trousers');
+    const params = useParams();
+    const locale = params.locale as string;
+
     const [thumbsSwiper, setThumbsSwiper] = React.useState<SwiperClass | null>(
         null
     );
@@ -21,37 +27,37 @@ export default function QuanTayPage() {
     // Breadcrumb items for the page
     const breadcrumbItems = [
         {
-            label: 'Sản phẩm may xuất khẩu',
-            href: '/san-pham/san-pham-may-xuat-khau',
+            label: t('breadcrumb.parent'),
+            href: `/${locale}/san-pham/san-pham-may-xuat-khau`,
         },
         {
-            label: 'Quần tây',
-            href: '/san-pham/san-pham-may-xuat-khau/quan-tay',
+            label: t('breadcrumb.current'),
+            href: `/${locale}/san-pham/san-pham-may-xuat-khau/quan-tay`,
         },
     ];
 
     // Related products
     const relatedProducts: ProductType[] = [
         {
-            name: 'Veston',
+            name: t('related.suits'),
             slug: 'veston',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/veston.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Bảo hộ lao động',
+            name: t('related.workwear'),
             slug: 'bao-ho-lao-dong',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/bao-ho.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Áo khoác',
+            name: t('related.jackets'),
             slug: 'ao-khoac',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/ao-khoac.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Dệt kim',
+            name: t('related.knitwear'),
             slug: 'det-kim',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/det-kim.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
@@ -70,7 +76,7 @@ export default function QuanTayPage() {
         <>
             <ContentPageLayout
                 bannerImage="/images/san-pham/san-pham-may-xuat-khau/banner.png"
-                bannerAlt="Sản phẩm may xuất khẩu"
+                bannerAlt={t('banner.alt')}
                 breadcrumbItems={breadcrumbItems}
                 containerClassName="bg-[#F5F5F5]"
             >
@@ -94,9 +100,9 @@ export default function QuanTayPage() {
                                                     <div className="relative h-[400px] flex items-center justify-center">
                                                         <Image
                                                             src={image}
-                                                            alt={`Quần tây - ảnh ${
-                                                                index + 1
-                                                            }`}
+                                                            alt={`${t(
+                                                                'product_image'
+                                                            )} ${index + 1}`}
                                                             width={800}
                                                             height={600}
                                                             className="w-full h-full object-contain"
@@ -121,9 +127,9 @@ export default function QuanTayPage() {
                                                 <div className="img cursor-pointer">
                                                     <Image
                                                         src={image}
-                                                        alt={`Quần tây - thumbnail ${
-                                                            index + 1
-                                                        }`}
+                                                        alt={`${t(
+                                                            'thumbnail'
+                                                        )} ${index + 1}`}
                                                         width={100}
                                                         height={70}
                                                         className="w-auto h-auto object-contain"
@@ -137,50 +143,25 @@ export default function QuanTayPage() {
 
                             {/* Product Information */}
                             <div className="product-info">
-                                <VerticalPageTitle title="Quần tây" />
+                                <VerticalPageTitle title={t('title')} />
                                 <div className="brief mt-6">
                                     <p>
-                                        <strong>Thông tin chung:</strong>
+                                        <strong>
+                                            {t('general_info.title')}
+                                        </strong>
                                     </p>
-                                    <p>
-                                        Quần tây là một trong những dòng sản
-                                        phẩm xuất khẩu chủ lực của MINH MINH TÂM. Với
-                                        nhiều kinh nghiệm sản xuất, sản phẩm
-                                        quần tây của MINH MINH TÂM được nhiều khách
-                                        hàng trong và ngoài nước tin dùng nhờ
-                                        chất lượng đảm bảo, thiết kế phù hợp
-                                        nhiều phong cách, và giá thành hợp lý.
-                                    </p>
+                                    <p>{t('general_info.content')}</p>
                                 </div>
                                 <div className="full-content mt-6">
                                     <h3 className="font-bold text-lg mb-2">
-                                        Chi tiết sản phẩm:
+                                        {t('details.title')}
                                     </h3>
                                     <ul className="list-disc pl-5 mb-4">
-                                        <li>
-                                            Form dáng phù hợp với nhiều đối
-                                            tượng: Regular fit, Slim fit, Skinny
-                                            fit
-                                        </li>
-                                        <li>
-                                            Chất liệu đa dạng: Polyester,
-                                            Cotton, Wool blend, Kaki, Vải
-                                            stretch co giãn
-                                        </li>
-                                        <li>
-                                            Đa dạng về màu sắc và kiểu dáng:
-                                            Trơn màu, caro, kẻ sọc
-                                        </li>
-                                        <li>
-                                            Phù hợp nhiều mục đích sử dụng: công
-                                            sở, dự tiệc, đi làm, đi chơi
-                                        </li>
-                                        <li>
-                                            Chi tiết tinh xảo: Đường may chắc
-                                            chắn, túi quần thiết kế đẹp mắt,
-                                            khóa kéo cao cấp, cúc và chốt quần
-                                            chắc chắn
-                                        </li>
+                                        <li>{t('details.point1')}</li>
+                                        <li>{t('details.point2')}</li>
+                                        <li>{t('details.point3')}</li>
+                                        <li>{t('details.point4')}</li>
+                                        <li>{t('details.point5')}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -189,7 +170,7 @@ export default function QuanTayPage() {
 
                     {/* Related Products */}
                     <div className="mt-12">
-                        <VerticalPageTitle title="Sản phẩm khác" />
+                        <VerticalPageTitle title={t('other_products')} />
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
                             {relatedProducts.map((product, index) => (
                                 <ProductCard key={index} {...product} />

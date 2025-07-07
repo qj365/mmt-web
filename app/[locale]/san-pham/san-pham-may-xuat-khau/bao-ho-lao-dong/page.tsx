@@ -12,8 +12,14 @@ import 'swiper/css/thumbs';
 import { Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperClass } from 'swiper/types';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 export default function BaoHoLaoDongPage() {
+    const t = useTranslations('products.garments.workwear');
+    const params = useParams();
+    const locale = params.locale as string;
+
     const [thumbsSwiper, setThumbsSwiper] = React.useState<SwiperClass | null>(
         null
     );
@@ -21,37 +27,37 @@ export default function BaoHoLaoDongPage() {
     // Breadcrumb items for the page
     const breadcrumbItems = [
         {
-            label: 'Sản phẩm may xuất khẩu',
-            href: '/san-pham/san-pham-may-xuat-khau',
+            label: t('breadcrumb.parent'),
+            href: `/${locale}/san-pham/san-pham-may-xuat-khau`,
         },
         {
-            label: 'Bảo hộ lao động',
-            href: '/san-pham/san-pham-may-xuat-khau/bao-ho-lao-dong',
+            label: t('breadcrumb.current'),
+            href: `/${locale}/san-pham/san-pham-may-xuat-khau/bao-ho-lao-dong`,
         },
     ];
 
     // Related products
     const relatedProducts: ProductType[] = [
         {
-            name: 'Veston',
+            name: t('related.suits'),
             slug: 'veston',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/veston.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Quần tây',
+            name: t('related.trousers'),
             slug: 'quan-tay',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/quan-tay.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Áo khoác',
+            name: t('related.jackets'),
             slug: 'ao-khoac',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/ao-khoac.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
         },
         {
-            name: 'Dệt kim',
+            name: t('related.knitwear'),
             slug: 'det-kim',
             imageSrc: '/images/san-pham/san-pham-may-xuat-khau/det-kim.png',
             basePath: '/san-pham/san-pham-may-xuat-khau',
@@ -70,7 +76,7 @@ export default function BaoHoLaoDongPage() {
         <>
             <ContentPageLayout
                 bannerImage="/images/san-pham/san-pham-may-xuat-khau/banner.png"
-                bannerAlt="Sản phẩm may xuất khẩu"
+                bannerAlt={t('banner.alt')}
                 breadcrumbItems={breadcrumbItems}
                 containerClassName="bg-[#F5F5F5]"
             >
@@ -94,9 +100,9 @@ export default function BaoHoLaoDongPage() {
                                                     <div className="relative h-[400px] flex items-center justify-center">
                                                         <Image
                                                             src={image}
-                                                            alt={`Bảo hộ lao động - ảnh ${
-                                                                index + 1
-                                                            }`}
+                                                            alt={`${t(
+                                                                'product_image'
+                                                            )} ${index + 1}`}
                                                             width={800}
                                                             height={600}
                                                             className="w-full h-full object-contain"
@@ -121,9 +127,9 @@ export default function BaoHoLaoDongPage() {
                                                 <div className="img cursor-pointer">
                                                     <Image
                                                         src={image}
-                                                        alt={`Bảo hộ lao động - thumbnail ${
-                                                            index + 1
-                                                        }`}
+                                                        alt={`${t(
+                                                            'thumbnail'
+                                                        )} ${index + 1}`}
                                                         width={100}
                                                         height={70}
                                                         className="w-auto h-auto object-contain"
@@ -137,35 +143,17 @@ export default function BaoHoLaoDongPage() {
 
                             {/* Product Information */}
                             <div className="product-info">
-                                <VerticalPageTitle title="Bảo hộ lao động" />
+                                <VerticalPageTitle title={t('title')} />
                                 <div className="brief mt-6">
                                     <p>
-                                        <strong>Bảo hộ lao động (BHLĐ)</strong>
+                                        <strong>
+                                            {t('general_info.title')}
+                                        </strong>
                                     </p>
-                                    <p>
-                                        Đây chính là một trong những dòng hàng
-                                        xuất khẩu chủ lực của MINH MINH TÂM nhiều năm
-                                        qua. Nhu cầu thị trường đồ BHLĐ ngày
-                                        càng tăng khi nhận thức về an toàn lao
-                                        động tại các công ty ngày càng tăng cao.
-                                        Mỗi sản phẩm bảo hộ lao động được sản
-                                        xuất để dành riêng cho những người lao
-                                        động đặc thù và chuyên nghiệp trong các
-                                        lĩnh vực khác nhau như: công xưởng sản
-                                        xuất, xây dựng, cơ khí, y tế,...
-                                    </p>
+                                    <p>{t('general_info.content')}</p>
                                 </div>
                                 <div className="full-content mt-6">
-                                    <p>
-                                        Nắm bắt được nhu cầu của thị trường, Hoà
-                                        Thọ đã tập trung năng lực sản xuất cho
-                                        dòng sản phẩm này, tạo ra nhiều sản phẩm
-                                        đẹp đúng tiêu chuẩn theo yêu cầu của
-                                        khách hàng. Đến nay, các sản phẩm BHLĐ
-                                        của MINH MINH TÂM luôn nhận được sự tin tưởng
-                                        và đánh giá cao từ khách hàng trong và
-                                        ngoài nước.
-                                    </p>
+                                    <p>{t('details.content')}</p>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +161,7 @@ export default function BaoHoLaoDongPage() {
 
                     {/* Related Products */}
                     <div className="mt-12">
-                        <VerticalPageTitle title="Sản phẩm khác" />
+                        <VerticalPageTitle title={t('other_products')} />
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
                             {relatedProducts.map((product, index) => (
                                 <ProductCard key={index} {...product} />

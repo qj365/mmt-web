@@ -22,8 +22,8 @@ export default function Footer() {
                             <div className="wrapper">
                                 <div className="title text-lg uppercase leading-normal font-bold mb-6">
                                     {currentLocale === 'ja'
-                                        ? 'ミン ミン タム紡織株式会社'
-                                        : 'Tổng Công ty Cổ phần Dệt may MINH MINH TÂM'}
+                                        ? 'ミン ミン タム縫製有限責任会社'
+                                        : 'Công ty TNHH May Minh Minh Tâm'}
                                 </div>
                                 <div className="content">
                                     <p>
