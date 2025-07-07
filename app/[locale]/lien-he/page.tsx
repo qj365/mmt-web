@@ -4,40 +4,42 @@ import React from 'react';
 import ContentPageLayout from '@/components/layout/ContentPageLayout';
 import PageTitle from '@/components/shared/PageTitle';
 import { BreadcrumbItem } from '@/app/types';
+import { useTranslations } from 'next-intl';
 
 export default function ContactPage() {
+    // Get translations
+    const t = useTranslations('contact');
+    const menuT = useTranslations('menu');
+
     // Define breadcrumb items
     const breadcrumbItems: BreadcrumbItem[] = [
-        { label: 'Trang chủ', href: '/' },
-        { label: 'Liên hệ', href: '/lien-he' },
+        { label: menuT('home'), href: '/' },
+        { label: menuT('contact'), href: '/lien-he' },
     ];
 
     return (
         <ContentPageLayout
             bannerImage="/images/lien-he/banner.png"
-            bannerAlt="Liên hệ"
+            bannerAlt={t('banner.alt')}
             breadcrumbItems={breadcrumbItems}
             containerBackground="/images/lien-he/bg.png"
             containerClassName="py-10"
         >
             <div className="contact-information">
-                <PageTitle title="Công ty TNHH May Minh Minh Tâm" />
+                <PageTitle title={t('company_name')} />
 
                 <div className="content-wrapper mt-8 bg-white shadow-lg rounded-[20px] p-8">
                     <div className="block mb-6">
                         <div className="ctn">
+                            <p>{t('address')}</p>
                             <p>
-                                Địa chỉ: 36 Đ. Số 19B, Phường An Khánh, Thủ Đức,
-                                Hồ Chí Minh, Việt Nam
-                            </p>
-                            <p>
-                                Email:{' '}
+                                {t('email_label')}{' '}
                                 <a href="mailto:minhminhtam.binhthuan@gmail.com">
                                     minhminhtam.binhthuan@gmail.com
                                 </a>
                             </p>
                             <p>
-                                Tổng đài:{' '}
+                                {t('phone_label')}{' '}
                                 <a href="tel:(+84) 252 672 5858">
                                     (+84) 252 672 5858
                                 </a>
@@ -49,107 +51,35 @@ export default function ContactPage() {
                         <div>
                             <div className="ctn">
                                 <div className="title font-bold mb-4">
-                                    <p>PHỤ TRÁCH NGÀNH MAY</p>
+                                    <p>{t('department.title')}</p>
                                 </div>
                                 <p>
                                     <strong>
-                                        Khối May 1: Ms. Hoàng Thùy Oanh – Phó
-                                        Tổng Giám đốc
+                                        {t('department.block1.name')}
                                     </strong>
                                     <br />
-                                    Mặt hàng chủ lực:
+                                    {t('department.main_products')}
                                     <br />
                                     <span className="ml-4">
-                                        - Thời trang nam: quần, áo veston các
-                                        loại, áo ghi lê
+                                        - {t('department.block1.product1')}
                                     </span>
                                     <br />
                                     <span className="ml-4">
-                                        - Thời trang nữ: quần, áo veston, áo ghi
-                                        lê
+                                        - {t('department.block1.product2')}
                                     </span>
                                     <br />
-                                    <span className="ml-4">
-                                        - Thời trang trẻ em nam: quần, áo veston
-                                        các loại, áo ghi lê
-                                    </span>
-                                    <br />
-                                    Email:{' '}
+                                    {t('email_label')}{' '}
                                     <a href="mailto:minhminhtam.binhthuan@gmail.com">
                                         minhminhtam.binhthuan@gmail.com
                                     </a>
                                     <br />
-                                    Điện thoại:{' '}
+                                    {t('tel_label')}{' '}
                                     <a href="(+84) 252 672 5858">
                                         (+84) 252 672 5858
                                     </a>
                                     <br />
-                                    Fax: (+84) 28 6272 5525
+                                    {t('fax_label')} (+84) 28 6272 5525
                                     <br />
-                                    <br />
-                                    <strong>
-                                        Khối May 2: Ms. Trần Hòa Châu – Phó Tổng
-                                        Giám đốc
-                                    </strong>
-                                    <br />
-                                    Mặt hàng chủ lực: Jacket, Bảo hộ lao động,
-                                    hàng dệt kim, quần áo trẻ em, váy đầm các
-                                    loại.
-                                    <br />
-                                    Email:{' '}
-                                    <a href="mailto:minhminhtam.binhthuan@gmail.com">
-                                        minhminhtam.binhthuan@gmail.com
-                                    </a>
-                                    <br />
-                                    Điện thoại:{' '}
-                                    <a href="(+84) 252 672 5858">
-                                        (+84) 252 672 5858
-                                    </a>
-                                    <br />
-                                    Fax: (+84) 28 6272 5525
-                                </p>
-                                <p>
-                                    <a
-                                        href="/Data/Sites/1/media/hoatho_catalogue.pdf"
-                                        className="underline"
-                                    >
-                                        Garment profile
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div className="ctn">
-                                <div className="title font-bold mb-4">
-                                    <p>PHỤ TRÁCH NGÀNH SỢI</p>
-                                </div>
-                                <p>
-                                    Ms. Nguyễn Thị Hoài Thanh - Trưởng Phòng
-                                    Kinh Doanh Sợi
-                                </p>
-                                <p>
-                                    Email:{' '}
-                                    <a href="mailto:minhminhtam.binhthuan@gmail.co">
-                                        minhminhtam.binhthuan@gmail.co
-                                    </a>
-                                </p>
-                                <p>
-                                    Điện thoại:{' '}
-                                    <a href="tel:(+84) 252 672 5858">
-                                        (+84) 252 672 5858
-                                    </a>
-                                </p>
-                                <p>Fax: (+84) 28 6272 5525</p>
-                                <p>
-                                    <a
-                                        href="/Data/Sites/1/media/HoaThoYarnProfile2024.pdf"
-                                        target="_blank"
-                                        title="Yarn Profile"
-                                        className="underline"
-                                    >
-                                        Yarn profile
-                                    </a>
                                 </p>
                             </div>
                         </div>
@@ -165,7 +95,7 @@ export default function ContactPage() {
                         style={{ border: 0 }}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="Minh Minh Tâm Location"
+                        title={t('map.title')}
                     ></iframe>
                 </div>
             </div>

@@ -110,7 +110,7 @@ export default function Footer() {
             <div className="footer-2 bg-[#56c1f9] py-4 sm:py-[22px]">
                 <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-[15px]">
                     <div className="title text-center text-xs sm:text-sm leading-4 font-normal">
-                        © {new Date().getFullYear()} {t('copyright')}
+                        {t('copyright')}
                     </div>
                 </div>
             </div>

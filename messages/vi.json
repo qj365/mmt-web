@@ -567,5 +567,28 @@
         "map": {
             "title": "Vị trí bản đồ"
         }
+    },
+    "contact": {
+        "banner": {
+            "alt": "Liên hệ - Dệt may Minh Minh Tâm"
+        },
+        "company_name": "Công ty TNHH May Minh Minh Tâm",
+        "address": "Địa chỉ: 36 Đ. Số 19B, Phường An Khánh, Thủ Đức, Hồ Chí Minh, Việt Nam",
+        "email_label": "Email:",
+        "phone_label": "Tổng đài:",
+        "tel_label": "Điện thoại:",
+        "fax_label": "Fax:",
+        "department": {
+            "title": "PHỤ TRÁCH NGÀNH MAY",
+            "main_products": "Mặt hàng chủ lực:",
+            "block1": {
+                "name": "Khối May 1: Ms. Vũ Thị Thanh Thanh – Tổng Giám đốc",
+                "product1": "Bảo hộ lao động",
+                "product2": "Thời trang y tế"
+            }
+        },
+        "map": {
+            "title": "Vị trí Minh Minh Tâm"
+        }
     }
 }

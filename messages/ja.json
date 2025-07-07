@@ -567,5 +567,28 @@
         "map": {
             "title": "地図位置"
         }
+    },
+    "contact": {
+        "banner": {
+            "alt": "お問い合わせ - ミン ミン タム紡織"
+        },
+        "company_name": "ミン ミン タム縫製有限責任会社",
+        "address": "住所：ベトナム・ホーチミン市・トゥードゥック区・アンカイン区・19B通り36番",
+        "email_label": "メール：",
+        "phone_label": "代表電話：",
+        "tel_label": "電話：",
+        "fax_label": "ファックス：",
+        "department": {
+            "title": "縫製部門責任者",
+            "main_products": "主力製品：",
+            "block1": {
+                "name": "縫製部門1：ヴー・ティ・タイン・タイン – 代表取締役",
+                "product1": "作業着",
+                "product2": "医療用ユニフォーム"
+            }
+        },
+        "map": {
+            "title": "ミン ミン タム所在地"
+        }
     }
 }
