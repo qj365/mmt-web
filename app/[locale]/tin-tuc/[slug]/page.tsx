@@ -3,16 +3,20 @@ import ContentPageLayout from '@/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/types/index';
 import { getNewsItemBySlug, getRelatedNewsItems } from '@/app/lib/api';
 import { notFound } from 'next/navigation';
-import { formatDate, lexicalToHtml } from '@/app/lib/utils';
+import { formatDate, rewriteImageSrc } from '@/app/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NewsItem } from '@/app/types/news';
+import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical';
+import { convertLexicalToHTML } from '@payloadcms/richtext-lexical/html';
 
 export default async function NewsDetailPage({
-    params,
+    params: paramsPromise,
 }: {
-    params: { locale: string; slug: string };
+    params: Promise<{ locale: string; slug: string }>;
 }) {
+    // Await the params object as required by Next.js
+    const params = await paramsPromise;
     // Fetch the article data based on the slug parameter
     const article = await getNewsItemBySlug(params.slug);
 
@@ -35,7 +39,13 @@ export default async function NewsDetailPage({
     ];
 
     // Convert Lexical JSON content to HTML
-    const htmlContent = lexicalToHtml(article.content);
+    const htmlContent = convertLexicalToHTML({
+        data: article.content,
+    });
+    const htmlWithFullImageUrls = rewriteImageSrc(
+        htmlContent,
+        process.env.NEXT_PUBLIC_API_URL || ''
+    );
 
     return (
         <ContentPageLayout
@@ -63,7 +73,7 @@ export default async function NewsDetailPage({
                     <div className="article-content prose max-w-none">
                         <div
                             dangerouslySetInnerHTML={{
-                                __html: htmlContent,
+                                __html: htmlWithFullImageUrls,
                             }}
                         />
                     </div>
@@ -78,8 +88,9 @@ export default async function NewsDetailPage({
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {relatedArticles.map((article: NewsItem) => (
-                            <div
+                            <Link
                                 key={article.id}
+                                href={`/tin-tuc/${article.slug}`}
                                 className="bg-white shadow-md rounded-lg sm:rounded-3xl overflow-hidden"
                             >
                                 <div className="relative w-full h-[200px]">
@@ -111,7 +122,7 @@ export default async function NewsDetailPage({
                                         </Link>
                                     </h3>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

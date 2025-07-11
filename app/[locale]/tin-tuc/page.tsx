@@ -10,10 +10,11 @@ import { ApiListResponse } from '@/app/types/api';
 import { formatDate } from '@/app/lib/utils';
 
 export default async function NewsPage({
-    searchParams,
+    searchParams: searchParamsPromise,
 }: {
-    searchParams: { page?: string };
+    searchParams: Promise<{ page?: string }>;
 }) {
+    const searchParams = await searchParamsPromise;
     // Get current page from query params or default to page 1
     const currentPage = searchParams.page ? parseInt(searchParams.page) : 1;
     const pageSize = 9;
@@ -69,7 +70,7 @@ export default async function NewsPage({
 
                 {/* News items grid */}
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
-                    {newsItems.map(item => (
+                    {newsItems?.map(item => (
                         <Link
                             href={`/tin-tuc/${item.slug}`}
                             key={item.id}
