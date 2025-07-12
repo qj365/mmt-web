@@ -143,69 +143,18 @@
             },
             "title": "Lịch sử hình thành",
             "timeline": {
-                "1962": "Được thành lập vào năm 1962, ban đầu được biết đến với tên gọi Nhà máy Dệt Minh Minh Tâm (SICOVINA) trực thuộc Công ty Công nghiệp Bông sợi Việt Nam. Năm 1975, khi thành phố Bình Thuận được giải phóng, Nhà máy Dệt Minh Minh Tâm được Chính phủ tiếp quản và bắt đầu hoạt động trở lại vào ngày 21 tháng 4 năm 1975.",
-                "1975": {
-                    "title": "Thành lập Nhà máy Sợi Minh Minh Tâm:",
-                    "capacity": "Công suất: 22.000 cọc sợi",
-                    "products": "Sản phẩm chính: Sợi CD, TCD, OE, sợi xe, sợi tái chế",
-                    "certifications": "Chứng nhận: Oeko-Tex Standard 100, ISO 9001-2008, Cotton USA, BCI, Usterized"
+                "1996": "Bắt đầu hoạt động tại Việt Nam với Nhà máy May Minh Tâm, chuyên sản xuất và gia công các mặt hàng thời trang y tế, áo gile, áo khoác, v.v.",
+                "2009": {
+                    "title": "Đầu tư mở rộng và phát triển thành Công ty TNHH May Phú Minh Tâm, tập trung sản xuất đồng phục và thiết bị bảo hộ y tế.",
+                    "products": "Sản phẩm chính: sản xuất đồng phục y tế và đồ bảo hộ, Recycled Yarn.",
+                    "certifications": "Các chứng nhận: Oeko-Tex standard 100, ISO 9001-2008, cotton USA, BCI, Usterized."
                 },
-                "1993": {
-                    "rename": "Đổi tên thành Công ty Dệt Hòa Thọ theo quyết định số 241/TCLĐ của Bộ Công nghiệp nhẹ vào ngày 24 tháng 3 năm 1993.",
-                    "investment": "Đầu tư vào nhà máy dệt với 20.000 cọc sợi và 400 máy dệt."
-                },
-                "1997": {
-                    "title": "Thành lập Nhà máy May Minh Minh Tâm 1:",
-                    "products": "Sản phẩm chính: Veston, áo blazer, quần tây",
-                    "certifications": "Chứng nhận: WRAP, GSV, WCA (Haggar), Kohl's, Macy's, Perry Elps",
-                    "brands": "Thương hiệu: Haggar, Oakhill, Kohl's, Gold Series, Island Passport và các thương hiệu khác"
-                },
-                "1999": {
-                    "title": "Thành lập Nhà máy May Minh Minh Tâm 2:",
-                    "products": "Sản phẩm chính: Veston, áo blazer, quần tây",
-                    "certifications": "Chứng nhận: WRAP, GSV, WCA (Haggar), Walmart, Kohl's, Express và các chứng nhận khác",
-                    "brands": "Thương hiệu: Express, Marc Anthony, Michael Kors, Van Huesen, Calvin Klein, Bar III, Crown & Ivy và các thương hiệu khác"
-                },
-                "2001": {
-                    "title": "Thành lập Công ty May Minh Minh Tâm - Điện Bàn:",
-                    "products": "Sản phẩm chính: Quần áo bảo hộ lao động, đồng phục dệt kim",
-                    "certifications": "Chứng nhận: WCA, 5.11, Seven & I HLDGS, AEON",
-                    "brands": "Thương hiệu: Snickers, Kansai, Toyota, Yonex và các thương hiệu khác"
-                },
-                "2002": {
-                    "title": "Thành lập thêm 2 đơn vị:",
-                    "factory3": "Thành lập Nhà máy May Minh Minh Tâm 3, sau đó sáp nhập vào Nhà máy May Minh Minh Tâm 2 vào năm 2010 (hiện nay là Nhà máy May Veston Minh Minh Tâm)",
-                    "quangnam": "Thành lập Công ty May Minh Minh Tâm - Quảng Nam"
-                },
-                "2003": {
-                    "title": "Thành lập Công ty May Minh Minh Tâm - Hội An:",
-                    "capacity": "Công suất: 650.000 sản phẩm/năm",
-                    "products": "Sản phẩm chính: Đồng phục y tế, quần, áo khoác",
-                    "brands": "Thương hiệu: Fjallraven, Kazen",
-                    "address": "Địa chỉ: 26 Nguyễn Tất Thành, Phường Tân An, TP. Hội An, Quảng Nam, Việt Nam"
-                },
-                "2006": "Ngày 15 tháng 11 năm 2006, theo Quyết định số 3252/QĐ-BCN của Bộ Công nghiệp, công ty đổi tên thành Công ty TNHH May Minh Minh Tâm và chính thức hoạt động từ ngày 01 tháng 02 năm 2007.",
-                "2007": {
-                    "title": "Đầu tư thêm 2 công ty:",
-                    "duyxuyen": {
-                        "title": "Công ty May Minh Minh Tâm - Duy Xuyên:",
-                        "products": "Sản phẩm chính: Quần tây cao cấp",
-                        "certifications": "Chứng nhận: Perry Ellis Portfolio, Farah, Savane, Stafford và các chứng nhận khác",
-                        "address": "Địa chỉ: KCN Gò Đồi, Huyện Duy Xuyên, Quảng Nam, Việt Nam, cách Đà Nẵng 32km"
-                    },
-                    "dongha": {
-                        "title": "Công ty May Minh Minh Tâm - Đông Hà:",
-                        "products": "Sản phẩm chính: Áo khoác, quần áo bảo hộ lao động",
-                        "certifications": "Chứng nhận: WRAP, BSCI, GMP, PVH",
-                        "brands": "Thương hiệu: Marc O's Polo, S.Oliver, Head, Fjallraven, Lands'end, Tommy Hilger, Calvin Klein, DKNY và các thương hiệu khác",
-                        "address": "Địa chỉ: KCN Nam Đông Hà, TP. Đông Hà, Quảng Trị, Việt Nam, cách Bình Thuận 165km"
-                    }
-                },
-                "2011": {
-                    "title": "Thành lập Nhà máy May Veston Minh Minh Tâm:",
-                    "products": "Sản phẩm chính: Veston, blazer, áo gile, quần tây cao cấp",
-                    "certifications": "Chứng nhận: WRAP, GSV, PVH, Macy's, Kohl's, Express, GAP (Banana Republic)",
-                    "brands": "Thương hiệu: Calvin Klein, Chaps, Marc Anthony, Michael Kors, Express, Banana Republic, Bar III, Crown & Ivy và các thương hiệu khác"
+                "2019": {
+                    "title": "Thành lập Công ty TNHH May Minh Minh Tâm, tiếp tục mở rộng quy mô nhà máy, tập trung vào việc nâng cao năng lực sản xuất các sản phẩm đồng phục y tế và đồ bảo hộ.",
+                    "factory_info": "Thông tin nhà máy:",
+                    "area": "Diện tích: 4.125 m²",
+                    "investment": "Tổng vốn đầu tư: 5 tỷ VNĐ",
+                    "business_scope": "Phạm vi kinh doanh: Sản xuất các loại đồng phục, đặc biệt là thời trang y tế"
                 }
             }
         }

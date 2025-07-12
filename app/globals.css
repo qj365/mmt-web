@@ -344,3 +344,12 @@
 .payload-richtext * {
     all: revert;
 }
+
+.payload-richtext h1,
+.payload-richtext h2,
+.payload-richtext h3,
+.payload-richtext h4,
+.payload-richtext h5,
+.payload-richtext h6 {
+    color: var(--color-primary);
+}
