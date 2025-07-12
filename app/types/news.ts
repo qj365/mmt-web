@@ -6,6 +6,6 @@ export type NewsItem = {
     content: string;
     featuredImage: {
         url: string;
-        alt?: string;
-    } | null;
+        alt: string;
+    };
 };

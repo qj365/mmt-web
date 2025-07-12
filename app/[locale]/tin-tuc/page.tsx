@@ -79,7 +79,7 @@ export default async function NewsPage({
                             <div className="relative w-full h-[200px]">
                                 <Image
                                     src={`${process.env.NEXT_PUBLIC_API_URL}${item.featuredImage?.url}`}
-                                    alt={item.title}
+                                    alt={item.featuredImage.alt || ''}
                                     fill
                                     style={{ objectFit: 'cover' }}
                                 />

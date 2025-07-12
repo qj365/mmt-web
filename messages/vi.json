@@ -22,6 +22,11 @@
         "careers": "Tuyển dụng",
         "contact": "Liên hệ"
     },
+    "notFound": {
+        "title": "Không tìm thấy trang",
+        "message": "Trang bạn đang tìm kiếm có thể đã bị xóa, đổi tên hoặc tạm thời không có sẵn.",
+        "homeButton": "Quay về trang chủ"
+    },
     "gioi-thieu": {
         "tong-quan": {
             "banner": {

@@ -2,91 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContentPageLayout from '@/components/layout/ContentPageLayout';
-
-// This is a sample job data - in a real app, this would come from an API or CMS
-const jobData = {
-    'it-developer': {
-        title: 'CHUYÊN VIÊN PHÁT TRIỂN PHẦN MỀM (IT DEVELOPER)',
-        image: '/images/tuyen-dung/tuyen-dung-1.png',
-        details: [
-            { icon: 'attach_money', label: 'Mức lương', value: 'Thỏa thuận' },
-            {
-                icon: 'work',
-                label: 'Hình thức làm việc',
-                value: 'Toàn thời gian',
-            },
-            {
-                icon: 'maps_home_work',
-                label: 'Địa điểm làm việc',
-                value: 'Bình Thuận',
-            },
-            {
-                icon: 'supervisor_account',
-                label: 'Chức vụ',
-                value: 'Nhân viên',
-            },
-            { icon: 'school', label: 'Bằng cấp', value: 'Đại học' },
-            { icon: 'person', label: 'Độ tuổi', value: '22-35' },
-            { icon: 'poll', label: 'Kinh nghiệm', value: '2-5 năm' },
-            { icon: 'male', label: 'Yêu cầu giới tính', value: 'Nam/nữ' },
-            {
-                icon: 'calendar_today',
-                label: 'Thời hạn nộp hồ sơ',
-                value: '20/09/2024',
-            },
-        ],
-        description: `
-      <p>- Tham gia phát triển và triển khai các dự án chuyển đổi số của Tổng Công ty.</p>
-      <p>- Khảo sát, phân tích yêu cầu người sử dụng.</p>
-      <p>- Xây dựng hồ sơ thiết kế ứng dụng.</p>
-      <p>- Lập trình phát triển các chức năng của ứng dụng.</p>
-      <p>- Chạy thử và sửa lỗi, điều chỉnh cho phù hợp.</p>
-      <p>- Viết tài liệu hướng dẫn sử dụng phần mềm.</p>
-      <p>- Đào tạo hướng dẫn sử dụng.</p>
-      <p>- Bảo trì: xử lý lỗi khi triển khai ứng dụng, phát triển các yêu cầu bổ sung từ phía người sử dụng, cải tiến nâng cấp chức năng, ...</p>
-    `,
-        requirements: `
-      <p>- Sử dụng thành thạo một số ngôn ngữ lập trình như VB.NET, ASP.NET, C#.NET, Xamarin, React Native … và cơ sở dữ liệu SQL, JSON.</p>
-      <p>- Lập trình phát triển ứng dụng winform và web.</p>
-      <p>- Lập trình phát triển ứng dụng trên thiết bị di động.</p>
-      <p>- Am hiểu về các công nghệ 4.0 như AI, Big Data, Blockchain, BI, RFID, RPA, IoT, Smart Factory,…</p>
-      <p>- Kỹ năng làm việc theo nhóm, nghiên cứu, sáng tạo.</p>
-      <p>- Kỹ năng quản lý dự án theo phương pháp luận Agile.</p>
-      <p>- Kỹ năng phân tích, thiết kế hệ thống tin quản trị doanh nghiệp.</p>
-    `,
-        benefits: `
-      <p>- Mức lương: Từ 20.000.000đ trở lên</p>
-      <p>- Được đài thọ bữa ăn sáng, trưa, chiều hoặc phụ cấp ăn chiều.</p>
-      <p>- Được hưởng lương tháng 13, thưởng Tết âm lịch; đóng BHXH, BHYT, BHTN, Bảo hiểm rủi ro (24/24); thưởng ngày Lễ, Tết, các chế độ nghỉ ốm đau, thai sản, và các chế độ khác theo quy định của Pháp luật và Tổng Công ty.</p>
-      <p>- Được làm việc trong môi trường chuyên nghiệp, an toàn sạch sẽ, công việc ổn định, lâu dài, nhiều cơ hội thăng tiến.</p>
-      <p>- Được đào tạo miễn phí.</p>
-    `,
-        application: `
-      <p>- Đơn xin việc.</p>
-      <p>- Sơ yếu lý lịch, Phiếu khám sức khỏe; Bản sao các giấy tờ Sổ hộ khẩu/Xác nhận nơi cư trú, CCCD, Giấy khai sinh, Các văn bằng, chứng chỉ có liên quan đến công việc.</p>
-      <p>- Bảng thông tin ứng viên theo mẫu của Tổng công ty được đăng tại mục Tuyển dụng trên website: www.minhminhtam.com.vn. Link tải trực tiếp: bit.ly/3XZvd7A.</p>
-      <p>• Nộp hồ sơ qua email hoặc trực tiếp tại: Văn phòng Công ty TNHH May Minh Minh Tâm - 36 Đ. Số 19B, Phường An Khánh, Thủ Đức, Hồ Chí Minh, Việt Nam. Mọi chi tiết xin liên hệ: Mr Dũng - Chuyên viên Văn phòng qua điện thoại số: 0252 672 5858 hoặc email: minhminhtam.binhthuan@gmail.com.</p>
-      <p>THỜI GIAN NHẬN HỒ SƠ: đến 20/09/2024 hoặc khi đã tuyển được ứng viên.</p>
-    `,
-    },
-    // Add more job data as needed
-};
-
-// Other job listings
-const otherJobs = [
-    {
-        slug: 'chuyen-gia-cao-cap',
-        title: 'Chuyên gia cao cấp Nghiên cứu và phát triển sản phẩm may (R&D Team Leader)',
-        image: '/images/tuyen-dung/tuyen-dung-1.png',
-        location: 'Bình Thuận',
-    },
-    {
-        slug: 'nhan-vien-theo-doi-don-hang',
-        title: 'NHÂN VIÊN THEO DÕI ĐƠN HÀNG MAY MẶC XUẤT KHẨU (MERCHANDISER)',
-        image: '/images/tuyen-dung/tuyen-dung-1.png',
-        location: 'Bình Thuận',
-    },
-];
+import { getJobItemBySlug, getJobItems } from '@/app/lib/api';
+import { JobItem } from '@/app/types/recruitment';
+import { notFound } from 'next/navigation';
+import { formatDate, rewriteImageSrc } from '@/app/lib/utils';
+import { convertLexicalToHTML } from '@payloadcms/richtext-lexical/html';
 
 export default async function JobDetail({
     params,
@@ -94,16 +14,93 @@ export default async function JobDetail({
     params: Promise<{ locale: string; slug: string }>;
 }) {
     const { slug } = await params;
-    const job = jobData[slug as keyof typeof jobData];
 
-    // This would be a proper 404 page in a real app
+    // Fetch job details from API
+    const job = await getJobItemBySlug(slug);
+
+    // If job not found, return 404
     if (!job) {
-        return <div>Job not found</div>;
+        notFound();
     }
+
+    // Fetch other jobs (limit to 2)
+    const otherJobsResponse = await getJobItems(3, 1);
+    const otherJobs = otherJobsResponse.docs
+        .filter((item: JobItem) => item.slug !== slug)
+        .slice(0, 2);
+
+    const education = {
+        vocational: 'Trung cấp',
+        associate: 'Cao đẳng',
+        bachelor: 'Đại học',
+        postgraduate: 'Sau đại học',
+        noRequirement: 'Không yêu cầu',
+    };
+
+    const workType = {
+        fullTime: 'Toàn thời gian',
+        partTime: 'Bán thời gian',
+        internship: 'Thực tập',
+        remote: 'Từ xa',
+    };
+    const gender = {
+        male: 'Nam',
+        female: 'Nữ',
+        any: 'Nam/nữ',
+    };
+
+    // Map job details to UI format
+    const jobDetails = [
+        {
+            icon: 'attach_money',
+            label: 'Mức lương',
+            value: job.salary,
+        },
+        {
+            icon: 'work',
+            label: 'Hình thức làm việc',
+            value: workType[job.workType as keyof typeof workType],
+        },
+        {
+            icon: 'maps_home_work',
+            label: 'Địa điểm làm việc',
+            value: job.location,
+        },
+        {
+            icon: 'supervisor_account',
+            label: 'Chức vụ',
+            value: job.position,
+        },
+        {
+            icon: 'school',
+            label: 'Bằng cấp',
+            value: education[job.education as keyof typeof education],
+        },
+        {
+            icon: 'person',
+            label: 'Độ tuổi',
+            value: job.ageRange,
+        },
+        {
+            icon: 'poll',
+            label: 'Kinh nghiệm',
+            value: job.experience,
+        },
+        {
+            icon: 'male',
+            label: 'Yêu cầu giới tính',
+            value: gender[job.gender as keyof typeof gender],
+        },
+        {
+            icon: 'calendar_today',
+            label: 'Thời hạn nộp hồ sơ',
+            value: formatDate(job.applicationDeadline),
+        },
+    ];
 
     const breadcrumbItems = [
         { label: 'Tuyển dụng', href: '/tuyen-dung' },
-        { label: job.title, href: `/tuyen-dung/${slug}` },
+        { label: job.jobTitle, href: `/tuyen-dung/${slug}` },
     ];
 
     return (
@@ -122,8 +119,11 @@ export default async function JobDetail({
                                     <div className="img md:w-2/5 relative">
                                         <div className="relative h-full min-h-[250px]">
                                             <Image
-                                                src={job.image}
-                                                alt={job.title}
+                                                src={`${process.env.NEXT_PUBLIC_API_URL}${job.featuredImage.url}`}
+                                                alt={
+                                                    job.featuredImage?.alt ||
+                                                    job.jobTitle
+                                                }
                                                 fill
                                                 className="object-cover"
                                             />
@@ -131,12 +131,12 @@ export default async function JobDetail({
                                     </div>
                                     <div className="information p-6 md:w-3/5 flex flex-col">
                                         <h1 className="font-bold text-2xl leading-7 text-[#338dcc] uppercase mb-6">
-                                            {job.title}
+                                            {job.jobTitle}
                                         </h1>
-                                        <div className="table mb-6 opacity-80">
-                                            <table className="w-full">
+                                        <div className="table mb-6">
+                                            <table className="w-full opacity-80 border-t border-gray-300">
                                                 <tbody>
-                                                    {job.details.map(
+                                                    {jobDetails.map(
                                                         (detail, index) => (
                                                             <tr key={index}>
                                                                 <td className="py-1.5 w-1/2">
@@ -167,7 +167,7 @@ export default async function JobDetail({
                                     </div>
                                 </div>
 
-                                <div className="job-description bg-white shadow-lg rounded-3xl mt-8 p-6 space-y-8">
+                                <div className="job-description bg-white shadow-lg rounded-3xl mt-8 px-8 py-6 space-y-8">
                                     <div className="block">
                                         <h2 className="text-[#338dcc] font-bold text-2xl leading-6 mb-4">
                                             Mô tả công việc
@@ -175,7 +175,14 @@ export default async function JobDetail({
                                         <div
                                             className="text-gray-700 text-base leading-7 font-normal"
                                             dangerouslySetInnerHTML={{
-                                                __html: job.description,
+                                                __html: rewriteImageSrc(
+                                                    convertLexicalToHTML({
+                                                        data: job.description,
+                                                    }),
+                                                    process.env
+                                                        .NEXT_PUBLIC_API_URL ||
+                                                        ''
+                                                ),
                                             }}
                                         />
                                     </div>
@@ -187,7 +194,14 @@ export default async function JobDetail({
                                         <div
                                             className="text-gray-700 text-base leading-7 font-normal"
                                             dangerouslySetInnerHTML={{
-                                                __html: job.requirements,
+                                                __html: rewriteImageSrc(
+                                                    convertLexicalToHTML({
+                                                        data: job.requirements,
+                                                    }),
+                                                    process.env
+                                                        .NEXT_PUBLIC_API_URL ||
+                                                        ''
+                                                ),
                                             }}
                                         />
                                     </div>
@@ -199,7 +213,14 @@ export default async function JobDetail({
                                         <div
                                             className="text-gray-700 text-base leading-7 font-normal"
                                             dangerouslySetInnerHTML={{
-                                                __html: job.benefits,
+                                                __html: rewriteImageSrc(
+                                                    convertLexicalToHTML({
+                                                        data: job.benefits,
+                                                    }),
+                                                    process.env
+                                                        .NEXT_PUBLIC_API_URL ||
+                                                        ''
+                                                ),
                                             }}
                                         />
                                     </div>
@@ -211,12 +232,19 @@ export default async function JobDetail({
                                         <div
                                             className="text-gray-700 text-base leading-7 font-normal"
                                             dangerouslySetInnerHTML={{
-                                                __html: job.application,
+                                                __html: rewriteImageSrc(
+                                                    convertLexicalToHTML({
+                                                        data: job.application,
+                                                    }),
+                                                    process.env
+                                                        .NEXT_PUBLIC_API_URL ||
+                                                        ''
+                                                ),
                                             }}
                                         />
                                     </div>
 
-                                    <div className="block">
+                                    <div className="block border-t border-gray-200 pt-4">
                                         <h2 className="text-[#338dcc] font-bold text-2xl leading-6 mb-4">
                                             Liên hệ với chúng tôi
                                         </h2>
@@ -228,7 +256,7 @@ export default async function JobDetail({
                                                 <i className="fa fa-phone-alt text-white"></i>
                                             </a>
                                             <a
-                                                href="mailto:office@hoatho.com.vn"
+                                                href="mailto:minhminhtam.binhthuan@gmail.com"
                                                 className="w-10 h-10 bg-[#338dcc] text-white rounded-full flex items-center justify-center hover:bg-[#56c1f9] transition-colors"
                                             >
                                                 <i className="fa fa-envelope text-white"></i>
@@ -252,50 +280,55 @@ export default async function JobDetail({
                                     Tuyển dụng khác
                                 </h2>
                                 <div className="other-recruit grid grid-cols-1 gap-6">
-                                    {otherJobs.map((job, index) => (
-                                        <div className="item" key={index}>
-                                            <div className="bg-white rounded-3xl overflow-hidden shadow-md">
+                                    {otherJobs.map((job: JobItem) => (
+                                        <Link
+                                            href={`/tuyen-dung/${job.slug}`}
+                                            className="item"
+                                            key={job.id}
+                                        >
+                                            <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col group">
                                                 <div className="img">
-                                                    <Link
-                                                        href={`/tuyen-dung/${job.slug}`}
-                                                    >
+                                                    <div>
                                                         <div className="aspect-[4/3] relative">
                                                             <Image
-                                                                src={job.image}
-                                                                alt={job.title}
+                                                                src={`${process.env.NEXT_PUBLIC_API_URL}${job.featuredImage.url}`}
+                                                                alt={
+                                                                    job
+                                                                        .featuredImage
+                                                                        ?.alt ||
+                                                                    job.jobTitle
+                                                                }
                                                                 fill
                                                                 className="object-cover rounded-t-3xl"
                                                             />
                                                         </div>
-                                                    </Link>
+                                                    </div>
                                                 </div>
-                                                <div className="content p-4">
-                                                    <h3 className="font-bold text-lg leading-6 text-[#338dcc] mb-4 uppercase">
-                                                        <Link
-                                                            href={`/tuyen-dung/${job.slug}`}
-                                                        >
-                                                            {job.title}
-                                                        </Link>
+                                                <div className="p-4">
+                                                    <h3 className="font-bold text-lg text-[#338dcc] mb-4 uppercase line-clamp-3 group-hover:text-secondary transition-colors duration-300">
+                                                        {job.jobTitle}
                                                     </h3>
                                                     <div className="info-list space-y-3">
                                                         <div className="info flex items-center">
                                                             <div className="icon mr-3 flex items-center">
                                                                 <Image
-                                                                    src="/images/home/menu-icon.svg"
+                                                                    src="/images/tuyen-dung/calendar.svg"
                                                                     width={24}
                                                                     height={24}
-                                                                    alt="icon"
+                                                                    alt="calendar"
                                                                     className="w-6 h-6 text-[#338dcc]"
                                                                 />
                                                             </div>
                                                             <div className="text-base text-black">
-                                                                ...
+                                                                {formatDate(
+                                                                    job.applicationDeadline
+                                                                )}
                                                             </div>
                                                         </div>
                                                         <div className="info flex items-center">
                                                             <div className="icon mr-3 flex items-center">
                                                                 <Image
-                                                                    src="/images/shared/home.svg"
+                                                                    src="/images/tuyen-dung/location.svg"
                                                                     width={24}
                                                                     height={24}
                                                                     alt="location"
@@ -309,7 +342,7 @@ export default async function JobDetail({
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     ))}
                                 </div>
                             </div>

@@ -22,6 +22,11 @@
         "careers": "採用情報",
         "contact": "お問い合わせ"
     },
+    "notFound": {
+        "title": "ページが見つかりません",
+        "message": "お探しのページは削除されたか、名前が変更されたか、一時的に利用できない可能性があります。",
+        "homeButton": "ホームページに戻る"
+    },
     "gioi-thieu": {
         "tong-quan": {
             "banner": {

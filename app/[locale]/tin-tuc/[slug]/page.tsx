@@ -7,7 +7,6 @@ import { formatDate, rewriteImageSrc } from '@/app/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NewsItem } from '@/app/types/news';
-import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical';
 import { convertLexicalToHTML } from '@payloadcms/richtext-lexical/html';
 
 export default async function NewsDetailPage({
@@ -97,10 +96,7 @@ export default async function NewsDetailPage({
                                     {article.featuredImage ? (
                                         <Image
                                             src={`${process.env.NEXT_PUBLIC_API_URL}${article.featuredImage.url}`}
-                                            alt={
-                                                article.featuredImage.alt ||
-                                                article.title
-                                            }
+                                            alt={article.featuredImage.alt}
                                             fill
                                             style={{ objectFit: 'cover' }}
                                         />
