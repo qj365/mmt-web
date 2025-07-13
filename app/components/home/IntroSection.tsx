@@ -98,7 +98,7 @@ const IntroSection = () => {
 
     return (
         <section
-            className="index-1 section bg-white xl:pb-[80px] flex flex-col justify-center"
+            className="index-1 section bg-white xl:pb-[80px] flex flex-col justify-center "
             style={{
                 backgroundColor: '#f5f5f5',
                 backgroundImage: 'url(/images/home/background.png)',
@@ -108,7 +108,7 @@ const IntroSection = () => {
                 ...(sectionHeight ? { minHeight: `${sectionHeight}px` } : {}),
             }}
         >
-            <div className="container">
+            <div className="max-w-[1260px] mx-auto">
                 <PageTitle title={t('title')} />
                 <div className="des text-center mx-auto leading-6 text-[18px] max-w-[1050px] w-full font-medium mt-7">
                     {t('description')}

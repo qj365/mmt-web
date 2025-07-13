@@ -39,7 +39,7 @@ export default function MainBanner() {
                         <div className="swiper-slide relative">
                             <div className="img">
                                 <Image
-                                    src="https://picsum.photos/1920/1080"
+                                    src="/images/home/factory.png"
                                     alt="Banner 1"
                                     width={1920}
                                     height={1080}
@@ -63,7 +63,7 @@ export default function MainBanner() {
                         <div className="swiper-slide relative">
                             <div className="img">
                                 <Image
-                                    src="https://picsum.photos/1920/1081"
+                                    src="/images/home/factory-4.png"
                                     alt="Banner 2"
                                     width={1920}
                                     height={1080}

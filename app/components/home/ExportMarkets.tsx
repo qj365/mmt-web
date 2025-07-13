@@ -29,7 +29,7 @@ export default function ExportMarkets() {
 
     return (
         <section
-            className="index-3 section py-4 md:py-0 flex flex-col overflow-hidden"
+            className="index-3 section pt-4 md:py-0 flex flex-col overflow-hidden"
             style={
                 !isMobile && sectionHeight
                     ? { minHeight: `${sectionHeight}px` }

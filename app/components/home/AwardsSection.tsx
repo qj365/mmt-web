@@ -44,7 +44,7 @@ export default function AwardsSection() {
                     backgroundPosition: 'center',
                 }}
             >
-                <div className="container">
+                <div className="max-w-[1260px] mx-auto">
                     <div className="relative section py-16 lg:py-24">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {awards.map(award => (

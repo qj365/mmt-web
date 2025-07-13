@@ -13,24 +13,24 @@ export default function ProductsSection() {
     const productCategories = [
         {
             title: t('yarn'),
-            image: 'https://picsum.photos/600/800',
+            image: '/images/home/sp-soi.png',
             url: '/san-pham/san-pham-soi',
         },
         {
             title: t('garment'),
-            image: 'https://picsum.photos/601/800',
+            image: '/images/home/may-xk.jpg',
             url: '/san-pham/san-pham-may-xuat-khau',
         },
         {
             title: t('domesticFashion'),
-            image: 'https://picsum.photos/602/800',
+            image: '/images/home/sp-noi-dia.png',
             url: '/san-pham/thoi-trang-noi-dia',
         },
     ];
 
     return (
         <section
-            className="index-4 section pb-5 flex items-center"
+            className="index-4 section pb-5 flex items-center max-w-[1260px] mx-auto"
             style={sectionHeight ? { minHeight: `${sectionHeight}px` } : {}}
         >
             <div className="container">
