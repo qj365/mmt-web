@@ -100,7 +100,7 @@ export function useLanguageSwitcher() {
         }
 
         // Preserve query parameters
-        const query = searchParams.toString();
+        const query = searchParams?.toString() || '';
         const queryString = query ? `?${query}` : '';
 
         // Preserve hash fragment

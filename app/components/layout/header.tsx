@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import Image from 'next/image';
 import { Link } from '../../i18n/navigation';
 import type { ComponentProps } from 'react';
@@ -281,8 +281,8 @@ const NavLink = ({
                                             ? 'text-[16px] font-normal'
                                             : 'text-[16px] font-normal'
                                         : isChildActive(child.href)
-                                        ? 'text-base text-white'
-                                        : 'text-base xl:text-inherit'
+                                          ? 'text-base text-white'
+                                          : 'text-base xl:text-inherit'
                                 }`}
                             >
                                 {child.title}
@@ -295,13 +295,59 @@ const NavLink = ({
     );
 };
 
+// Language switcher component wrapped in Suspense
+const LanguageSwitcherWithSuspense = () => {
+    const { switchLanguage } = useLanguageSwitcher();
+    const params = useParams();
+    const currentLocale = (params.locale || 'vi') as string;
+
+    return (
+        <div className="language">
+            <div className="language-list">
+                <ul className="list-none p-0 flex items-center">
+                    {locales.map(locale => (
+                        <li
+                            key={locale}
+                            className={`text-sm font-normal uppercase ${
+                                locale !== 'vi'
+                                    ? 'border-l border-[#e5e5e5] ml-[11px] pl-[11px]'
+                                    : ''
+                            } ${currentLocale === locale ? 'active' : ''}`}
+                        >
+                            <button
+                                onClick={() => switchLanguage(locale)}
+                                className={`
+                                    cursor-pointer ${
+                                        currentLocale === locale
+                                            ? 'text-[#ea222d]'
+                                            : 'text-[#999] hover:text-[#338dcc]'
+                                    }`}
+                            >
+                                {localeLabels[locale]}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    );
+};
+
+// Use this component in the header instead of directly using useLanguageSwitcher
+const LanguageSwitcher = () => {
+    return (
+        <Suspense fallback={<div className="language-fallback h-6 w-16"></div>}>
+            <LanguageSwitcherWithSuspense />
+        </Suspense>
+    );
+};
+
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
     const [isScrollingDown, setIsScrollingDown] = useState(false);
     const [prevScrollY, setPrevScrollY] = useState(0);
     const [isHeaderHovered, setIsHeaderHovered] = useState(false);
-    const { switchLanguage } = useLanguageSwitcher();
     const params = useParams();
     const currentLocale = (params.locale || 'vi') as string;
     const t = useTranslations('menu');
@@ -436,41 +482,7 @@ const Header = () => {
                         </div>
 
                         <div className="tool-items flex items-center">
-                            <div className="language">
-                                <div className="language-list">
-                                    <ul className="list-none p-0 flex items-center">
-                                        {locales.map(locale => (
-                                            <li
-                                                key={locale}
-                                                className={`text-sm font-normal uppercase ${
-                                                    locale !== 'vi'
-                                                        ? 'border-l border-[#e5e5e5] ml-[11px] pl-[11px]'
-                                                        : ''
-                                                } ${
-                                                    currentLocale === locale
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
-                                            >
-                                                <button
-                                                    onClick={() =>
-                                                        switchLanguage(locale)
-                                                    }
-                                                    className={`
-                                                        cursor-pointer ${
-                                                            currentLocale ===
-                                                            locale
-                                                                ? 'text-[#ea222d]'
-                                                                : 'text-[#999] hover:text-[#338dcc]'
-                                                        }`}
-                                                >
-                                                    {localeLabels[locale]}
-                                                </button>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
+                            <LanguageSwitcher />
                         </div>
                     </div>
                 </div>
