@@ -98,7 +98,7 @@ const IntroSection = () => {
 
     return (
         <section
-            className="index-1 section bg-white xl:pb-[80px] flex flex-col justify-center "
+            className="index-1 container py-28 bg-white xl:pb-[80px] flex flex-col justify-center "
             style={{
                 backgroundColor: '#f5f5f5',
                 backgroundImage: 'url(/images/home/background.png)',

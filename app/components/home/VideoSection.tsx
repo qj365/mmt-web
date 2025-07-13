@@ -10,7 +10,7 @@ export default function VideoSection() {
 
     return (
         <section
-            className="index-2 section xl:pb-[85px] flex items-center"
+            className="index-2 xl:pb-[85px] flex items-center"
             style={{
                 backgroundColor: '#e0e0e0',
                 ...(sectionHeight ? { minHeight: `${sectionHeight}px` } : {}),

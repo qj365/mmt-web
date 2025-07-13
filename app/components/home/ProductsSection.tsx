@@ -30,7 +30,7 @@ export default function ProductsSection() {
 
     return (
         <section
-            className="index-4 section pb-5 flex items-center max-w-[1260px] mx-auto"
+            className="index-4 pb-5 flex items-center max-w-[1260px] mx-auto"
             style={sectionHeight ? { minHeight: `${sectionHeight}px` } : {}}
         >
             <div className="container">

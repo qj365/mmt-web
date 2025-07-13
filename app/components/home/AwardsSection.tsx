@@ -29,7 +29,7 @@ export default function AwardsSection() {
 
     return (
         <section
-            className="awards-section py-16 flex flex-col"
+            className="awards-section py-20 flex flex-col"
             style={sectionHeight ? { minHeight: `${sectionHeight}px` } : {}}
         >
             <div className="container">

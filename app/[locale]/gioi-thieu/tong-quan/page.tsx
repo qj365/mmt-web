@@ -86,7 +86,7 @@ export default function TongQuanPage() {
                                 <div className="medium-title text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold leading-tight uppercase text-gray-700 mt-[10px] mb-4 sm:mb-[30px]">
                                     {t('letter.subtitle')}
                                 </div>
-                                <div className="des text-base leading-6 text-left text-gray-600 lg:pl-[44px]">
+                                <div className="des text-base leading-6 text-gray-600 lg:pl-[44px] text-justify">
                                     <p className="mb-4">
                                         {t('letter.paragraph_1')}
                                     </p>
