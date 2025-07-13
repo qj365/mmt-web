@@ -137,21 +137,29 @@ const NavLink = ({
         ? pathname === '/' ||
           pathname === `/${currentLocale}` ||
           pathname === `/${currentLocale}/`
-        : (currentLocale === 'vi' && pathname === item.href) || // Direct match for Vietnamese as default
+        : (currentLocale === 'vi' &&
+              (pathname === item.href ||
+                  pathname.startsWith(`${item.href}/`))) || // Match for Vietnamese as default or dynamic routes
           pathname ===
               `/${currentLocale}${item.href === '/' ? '' : item.href}` ||
+          pathname.startsWith(`/${currentLocale}${item.href}/`) || // Handle dynamic routes
           (item.children?.some(
               child =>
-                  (currentLocale === 'vi' && pathname === child.href) || // Direct match for Vietnamese children
+                  (currentLocale === 'vi' &&
+                      (pathname === child.href ||
+                          pathname.startsWith(`${child.href}/`))) || // Direct match for Vietnamese children
                   pathname ===
-                      `/${currentLocale}${child.href === '/' ? '' : child.href}`
+                      `/${currentLocale}${child.href === '/' ? '' : child.href}` ||
+                  pathname.startsWith(`/${currentLocale}${child.href}/`) // Handle dynamic routes for children
           ) ??
               false);
 
     // Check if active style should be applied to children items
     const isChildActive = (childHref: string) =>
-        (currentLocale === 'vi' && pathname === childHref) || // Direct match for Vietnamese
-        pathname === `/${currentLocale}${childHref === '/' ? '' : childHref}`;
+        (currentLocale === 'vi' &&
+            (pathname === childHref || pathname.startsWith(`${childHref}/`))) || // Direct match for Vietnamese
+        pathname === `/${currentLocale}${childHref === '/' ? '' : childHref}` ||
+        pathname.startsWith(`/${currentLocale}${childHref}/`); // Handle dynamic routes
 
     // Check if any child is active to auto-open mobile dropdown
     const hasActiveChild =

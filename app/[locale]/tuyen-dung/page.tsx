@@ -30,7 +30,6 @@ export default async function TuyenDungPage({
 
     // Define breadcrumb items
     const breadcrumbItems: BreadcrumbItem[] = [
-        { label: 'Trang chủ', href: '/' },
         { label: 'Tuyển dụng', href: '/tuyen-dung' },
     ];
 
