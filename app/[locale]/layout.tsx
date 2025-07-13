@@ -45,22 +45,6 @@ export default async function LocaleLayout({
 
     return (
         <html lang={locale}>
-            <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com/" />
-                <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com/"
-                    crossOrigin=""
-                />
-                <link
-                    rel="stylesheet"
-                    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-                />
-                <link
-                    rel="stylesheet"
-                    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-                />
-            </head>
             <body
                 className={`${baiJamjuree.variable} homepage section-grey ${locale} bg-[#F5F5F5]`}
             >

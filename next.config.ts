@@ -19,6 +19,12 @@ const nextConfig: NextConfig = {
                 port: '3000',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'mmt-cms.vercel.app',
+                port: '',
+                pathname: '/**',
+            },
         ],
     },
 };

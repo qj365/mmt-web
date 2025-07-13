@@ -172,7 +172,7 @@ export default function TongQuanPage() {
             </section>
 
             {/* Section 3: Video Section */}
-            <section className="intro-tongquan-3 section xl:pb-[80px] py-16">
+            {/* <section className="intro-tongquan-3 section xl:pb-[80px] py-16">
                 <div className="container mx-auto px-4">
                     <div className="box-wrapper flex flex-wrap lg:justify-between gap-8">
                         <div className="box-left hidden lg:flex items-center flex-[0_0_100%] lg:flex-[0_0_40%] xl:flex-[0_0_calc(460/1230*100%)] xl:max-w-[calc(460/1230*100%)] xl:mt-9">
@@ -216,7 +216,7 @@ export default function TongQuanPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </ContentPageLayout>
     );
 }

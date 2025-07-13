@@ -66,20 +66,20 @@ export default function Footer() {
                                             className="object-contain"
                                         />
                                     </div>
-                                    <div className="flex justify-center relative">
+                                    <div className="flex justify-center relative w-16 h-16">
                                         <Image
                                             src="/images/footer/i-2.png"
                                             alt={t('certification')}
-                                            layout="fill"
-                                            objectFit="contain"
+                                            fill
+                                            className="object-contain"
                                         />
                                     </div>
-                                    <div className="flex justify-center relative">
+                                    <div className="flex justify-center relative w-16 h-16">
                                         <Image
                                             src="/images/footer/i-3.png"
                                             alt={t('certification')}
-                                            layout="fill"
-                                            objectFit="contain"
+                                            fill
+                                            className="object-contain"
                                         />
                                     </div>
                                 </div>
