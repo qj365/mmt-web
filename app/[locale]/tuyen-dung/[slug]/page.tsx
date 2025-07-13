@@ -7,6 +7,61 @@ import { JobItem } from '@/app/types/recruitment';
 import { notFound } from 'next/navigation';
 import { formatDate, rewriteImageSrc } from '@/app/lib/utils';
 import { convertLexicalToHTML } from '@payloadcms/richtext-lexical/html';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+    params: paramsPromise,
+}: {
+    params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+    // Await the params object
+    const params = await paramsPromise;
+    const { locale, slug } = params;
+
+    // Fetch the job data based on the slug parameter
+    const job = await getJobItemBySlug(slug);
+
+    // If job not found, return a basic metadata object
+    if (!job) {
+        return {
+            title: 'Job Not Found',
+            description: 'The requested job position could not be found.',
+        };
+    }
+
+    // Define metadata based on the job content
+    const imageUrl = job.featuredImage
+        ? `${process.env.NEXT_PUBLIC_API_URL}${job.featuredImage.url}`
+        : '/images/tuyen-dung/banner.png';
+
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: `${job.jobTitle} - Dệt may Minh Minh Tâm`,
+            description: `Thông tin tuyển dụng vị trí ${job.jobTitle} tại Công ty TNHH May Minh Minh Tâm - Địa điểm: ${job.location}`,
+            keywords: `${job.jobTitle}, tuyển dụng, việc làm, dệt may, Minh Minh Tâm, ${job.position}, ${job.location}`,
+            openGraph: {
+                title: `${job.jobTitle} - Dệt may Minh Minh Tâm`,
+                description: `Thông tin tuyển dụng vị trí ${job.jobTitle} tại Công ty TNHH May Minh Minh Tâm - Địa điểm: ${job.location}`,
+                images: [imageUrl],
+                type: 'article',
+            },
+        },
+        ja: {
+            title: `${job.jobTitle} - ミン ミン タム紡織`,
+            description: `ミン ミン タム縫製有限会社での${job.jobTitle}の採用情報 - 場所: ${job.location}`,
+            keywords: `${job.jobTitle}, 採用, 仕事, 紡織, ミン ミン タム, ${job.position}, ${job.location}`,
+            openGraph: {
+                title: `${job.jobTitle} - ミン ミン タム紡織`,
+                description: `ミン ミン タム縫製有限会社での${job.jobTitle}の採用情報 - 場所: ${job.location}`,
+                images: [imageUrl],
+                type: 'article',
+            },
+        },
+    };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
+}
 
 export default async function JobDetail({
     params,

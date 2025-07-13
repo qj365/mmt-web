@@ -8,6 +8,49 @@ import { JobItem } from '@/app/types/recruitment';
 import { ApiListResponse } from '@/app/types/api';
 import { getJobItems } from '@/app/lib/api';
 import { formatDate } from '@/app/lib/utils';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Get the locale from params
+    const { locale } = await params;
+
+    // Define metadata for different languages
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: 'Tuyển dụng - Dệt may Minh Minh Tâm',
+            description:
+                'Thông tin tuyển dụng của Công ty TNHH May Minh Minh Tâm - cơ hội nghề nghiệp và phát triển sự nghiệp tại doanh nghiệp dệt may hàng đầu Việt Nam.',
+            keywords:
+                'tuyển dụng, việc làm, dệt may, Minh Minh Tâm, cơ hội nghề nghiệp, công việc dệt may, nhân sự',
+            openGraph: {
+                title: 'Tuyển dụng - Dệt may Minh Minh Tâm',
+                description:
+                    'Thông tin tuyển dụng của Công ty TNHH May Minh Minh Tâm - cơ hội nghề nghiệp và phát triển sự nghiệp tại doanh nghiệp dệt may hàng đầu Việt Nam.',
+                images: ['/images/tuyen-dung/banner.png'],
+            },
+        },
+        ja: {
+            title: '採用情報 - ミン ミン タム紡織',
+            description:
+                'ベトナムの主要な繊維企業であるミン ミン タム縫製有限会社でのキャリア機会と職業開発に関する採用情報をご覧ください。',
+            keywords:
+                '採用, 仕事, 紡維, ミン ミン タム, キャリア機会, 繊維業界の仕事, 人材',
+            openGraph: {
+                title: '採用情報 - ミン ミン タム紡織',
+                description:
+                    'ベトナムの主要な繊維企業であるミン ミン タム縫製有限会社でのキャリア機会と職業開発に関する採用情報をご覧ください。',
+                images: ['/images/tuyen-dung/banner.png'],
+            },
+        },
+    };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
+}
 
 export default async function TuyenDungPage({
     searchParams: searchParamsPromise,
