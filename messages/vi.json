@@ -54,7 +54,7 @@
                 "established": "Thành lập từ năm",
                 "year": "1996",
                 "company_name": "Minh Minh Tâm",
-                "description": "là một trong những doanh nghiệp dệt may có lịch sử lâu đời và quy mô lớn, tập trung chủ yếu vào 2 lĩnh vực:",
+                "description": "Công ty TNHH May Minh Minh Tâm là một trong những doanh nghiệp dệt may có lịch sử lâu đời và quy mô lớn, tập trung vào lĩnh vực sản xuất hàng may mặc và kéo sợi. Thành lập từ năm 1996, Minh Minh Tâm đã trở thành nhà cung cấp hàng đầu trong chuỗi cung ứng sợi và may mặc của Việt Nam.",
                 "area1": "1- Sản xuất hàng may mặc",
                 "area2": "2- Kéo sợi",
                 "not_only": "Không chỉ là",
@@ -70,6 +70,8 @@
             "banner": {
                 "alt": "Cơ cấu tổ chức - Dệt may Minh Minh Tâm"
             },
+            "title": "Cơ cấu tổ chức",
+            "meta_description": "Cơ cấu tổ chức Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.",
             "image_alt": "Sơ đồ cơ cấu tổ chức của Dệt may Minh Minh Tâm"
         },
         "tam-nhin-su-menh": {
@@ -77,6 +79,7 @@
                 "alt": "Tầm nhìn sứ mệnh - Dệt may Minh Minh Tâm"
             },
             "title": "Tầm nhìn - sứ mệnh",
+            "meta_description": "Tầm nhìn và sứ mệnh của Dệt may Minh Minh Tâm - Trở thành Doanh nghiệp tiên phong và phát triển bền vững trong ngành dệt may, là Đối tác tin cậy trong chuỗi cung ứng dệt may toàn cầu.",
             "vision": {
                 "title": "Tầm nhìn:",
                 "content": "Trở thành Doanh nghiệp tiên phong và phát triển bền vững trong ngành dệt may."
@@ -113,6 +116,7 @@
             "banner": {
                 "alt": "Lời cam kết - Dệt may Minh Minh Tâm"
             },
+            "meta_description": "Lời cam kết của Dệt may Minh Minh Tâm với khách hàng và nhân viên, về chất lượng sản phẩm, trách nhiệm xã hội, môi trường làm việc và phát triển nguồn nhân lực.",
             "customer": {
                 "title": "Lời cam kết đến khách hàng",
                 "point1": "Chất lượng sản phẩm và dịch vụ ngày càng được nâng lên, đáp ứng yêu cầu ngày càng cao của khách hàng.",
@@ -131,6 +135,7 @@
             "banner": {
                 "alt": "Thành tích - Dệt may Minh Minh Tâm"
             },
+            "meta_description": "Những thành tích nổi bật và giải thưởng của Dệt may Minh Minh Tâm bao gồm Doanh nghiệp ưu tiên về hải quan, Giải thưởng Thương hiệu Quốc gia và Doanh nghiệp xuất khẩu uy tín.",
             "achievements": {
                 "customs": "Doanh nghiệp ưu tiên về hải quan từ năm 2018 đến nay",
                 "nationalBrand": "Giải thưởng Thương hiệu Quốc gia 2014, 2016, 2018, 2020, 2022, 2024",
@@ -142,6 +147,7 @@
                 "alt": "Lịch sử hình thành - Dệt may Minh Minh Tâm"
             },
             "title": "Lịch sử hình thành",
+            "meta_description": "Lịch sử hình thành và phát triển của Công ty TNHH May Minh Minh Tâm từ năm 1996 đến nay, từ xưởng may Minh Tâm đến một trong những doanh nghiệp dệt may hàng đầu của Việt Nam.",
             "timeline": {
                 "1996": "Bắt đầu hoạt động tại Việt Nam với Nhà máy May Minh Tâm, chuyên sản xuất và gia công các mặt hàng thời trang y tế, áo gile, áo khoác, v.v.",
                 "2009": {

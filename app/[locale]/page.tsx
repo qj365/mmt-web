@@ -9,6 +9,7 @@ import ProductsSection from '../components/home/ProductsSection';
 import VideoSection from '../components/home/VideoSection';
 import { setRequestLocale } from 'next-intl/server';
 import { routing } from '../i18n/routing';
+import { OrganizationJsonLd } from '../components/shared/JsonLd';
 
 export function generateStaticParams() {
     return routing.locales.map(locale => ({ locale }));
@@ -27,6 +28,7 @@ export default async function Home({
 
     return (
         <>
+            <OrganizationJsonLd locale={locale} />
             <Header />
             <main>
                 <MainBanner />

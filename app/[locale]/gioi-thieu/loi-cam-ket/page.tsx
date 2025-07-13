@@ -21,6 +21,7 @@ export async function generateMetadata({
 
     return {
         title: `${t('title')} - Minh Minh Tâm`,
+        description: `${t('meta_description')}`,
     };
 }
 

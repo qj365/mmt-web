@@ -4,6 +4,7 @@ import { Bai_Jamjuree } from 'next/font/google';
 import { routing } from '../i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import '../globals.css';
+import { Metadata } from 'next';
 
 const baiJamjuree = Bai_Jamjuree({
     subsets: ['latin', 'thai', 'vietnamese', 'latin-ext'],
@@ -15,16 +16,45 @@ export function generateStaticParams() {
     return routing.locales.map(locale => ({ locale }));
 }
 
-export const metadata = {
-    title: {
-        vi: 'Trang chủ - Dệt may Minh Minh Tâm',
-        ja: 'ホームページ - ミン ミン タム紡織会社',
-    },
-    description: {
-        vi: 'Trang chủ Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
-        ja: 'ミン ミン タム縫製有限責任会社（ビンタン市、ベトナム）- Vinatexのメンバー、糸および輸出衣料品の製造・販売を専門としています。',
-    },
-};
+// SEO-optimized metadata with proper translations for each locale
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const { locale } = await params;
+
+    return {
+        title:
+            locale === 'vi'
+                ? 'Trang chủ - Dệt may Minh Minh Tâm'
+                : 'ホームページ - ミン ミン タム紡織会社',
+        description:
+            locale === 'vi'
+                ? 'Trang chủ Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.'
+                : 'ミン ミン タム縫製有限責任会社（ビンタン市、ベトナム）- Vinatexのメンバー、糸および輸出衣料品の製造・販売を専門としています。',
+        openGraph: {
+            images: [
+                {
+                    url: '/images/home/logo.png',
+                    width: 800,
+                    height: 600,
+                    alt:
+                        locale === 'vi'
+                            ? 'Logo Dệt may Minh Minh Tâm'
+                            : 'ミン ミン タム紡織会社のロゴ',
+                },
+            ],
+        },
+        alternates: {
+            canonical: '/',
+            languages: {
+                vi: '/',
+                ja: '/ja',
+            },
+        },
+    };
+}
 
 export default async function LocaleLayout({
     children,

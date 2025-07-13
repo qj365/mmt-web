@@ -3,19 +3,32 @@ import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import PageTitle from '@/app/components/shared/PageTitle';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { BreadcrumbItem } from '@/app/types/';
 
-export const metadata: Metadata = {
-    title: 'Cơ cấu tổ chức - Dệt may Minh Minh Tâm',
-    description:
-        'Cơ cấu tổ chức Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
-    openGraph: {
-        title: 'Cơ cấu tổ chức',
-        description:
-            'Cơ cấu tổ chức Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
-        siteName: 'Dệt may Minh Minh Tâm',
-    },
-};
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Await params first to access the locale property
+    const { locale } = await params;
+
+    const t = await getTranslations({
+        locale,
+        namespace: 'gioi-thieu.co-cau-to-chuc',
+    });
+
+    return {
+        title: `${t('title')} - Minh Minh Tâm`,
+        description: t('meta_description'),
+        openGraph: {
+            title: t('title'),
+            description: t('meta_description'),
+            siteName: 'Dệt may Minh Minh Tâm',
+        },
+    };
+}
 
 export default function OrganizationalStructure() {
     const t = useTranslations('gioi-thieu.co-cau-to-chuc');

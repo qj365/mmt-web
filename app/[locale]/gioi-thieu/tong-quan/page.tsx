@@ -4,6 +4,27 @@ import ContentPageLayout from '@/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/app/types/';
 import PageTitle from '@/app/components/shared/PageTitle';
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Await params first to access the locale property
+    const { locale } = await params;
+
+    const t = await getTranslations({
+        locale,
+        namespace: 'gioi-thieu.tong-quan',
+    });
+
+    return {
+        title: `${t('intro.title')} - Minh Minh Tâm`,
+        description: t('intro.description'),
+    };
+}
 
 export default function TongQuanPage() {
     const t = useTranslations('gioi-thieu.tong-quan');
