@@ -15,7 +15,7 @@
         "export_markets": "輸出市場",
         "products": "製品",
         "yarn_products": "糸製品",
-        "garment_products": "輸出衣料品",
+        "export_garment_products": "輸出衣料品",
         "domestic_fashion": "国内ファッション",
         "factories": "工場・ブランド",
         "news": "ニュース",
@@ -381,16 +381,54 @@
         "downloadBrochure": "パンフレットダウンロード"
     },
     "thi-truong-xuat-khau": {
+        "meta": {
+            "title": "輸出市場",
+            "description": "ミン ミン タムの製品は、米国、日本、EU、韓国、ASEANなど、世界中の主要市場で販売されています。"
+        },
         "banner": {
             "alt": "輸出市場 - ミン ミン タム紡織"
         },
-        "chart_title": "輸出金額のグラフ",
-        "chart_alt": "輸出金額のグラフ",
-        "market_title": "輸出市場",
-        "market_alt": "グローバル輸出市場"
+        "chart_title": "輸出割合チャート",
+        "chart_alt": "市場別輸出割合チャート",
+        "market_title": "市場マップ",
+        "market_alt": "グローバル輸出市場マップ"
     },
     "san-pham": {
+        "may-xuat-khau": {
+            "meta": {
+                "title": "輸出衣料品",
+                "description": "ミン ミン タムの高品質輸出衣料品には、スーツ、ズボン、ジャケット、ニット製品、作業服が含まれます。"
+            },
+            "banner": {
+                "alt": "輸出衣料品 - ミン ミン タム"
+            },
+            "title": "輸出衣料品",
+            "products": {
+                "veston": {
+                    "name": "スーツ"
+                },
+                "quan_tay": {
+                    "name": "ズボン"
+                },
+                "bao_ho": {
+                    "name": "作業服"
+                },
+                "ao_khoac": {
+                    "name": "ジャケット"
+                },
+                "det_kim": {
+                    "name": "ニット製品"
+                }
+            }
+        },
         "san-pham-soi": {
+            "meta": {
+                "title": "糸製品",
+                "description": "ミン ミン タムの高品質糸製品には、紡績業界で使用されるTC糸、CD糸、CVC糸、各種撚糸が含まれます。"
+            },
+            "banner": {
+                "alt": "糸製品 - ミン ミン タム"
+            },
             "title": "糸製品",
             "breadcrumb_products": "製品",
             "breadcrumb_yarn_products": "糸製品",
@@ -529,26 +567,30 @@
         }
     },
     "contact": {
-        "banner": {
-            "alt": "お問い合わせ - ミン ミン タム紡織"
+        "meta": {
+            "title": "ミン ミン タムへのお問い合わせ",
+            "description": "ミン ミン タム縫製有限責任会社の連絡先情報。住所、メール、電話番号、および関連部門の詳細。"
         },
         "company_name": "ミン ミン タム縫製有限責任会社",
-        "address": "住所：ベトナム・ホーチミン市・トゥードゥック区・アンカイン区・19B通り36番",
+        "address": "ウェン・ヴァン・リン通り、スアン・アン、ファンティエット市、ビンタン省",
         "email_label": "メール：",
-        "phone_label": "代表電話：",
+        "phone_label": "電話：",
         "tel_label": "電話：",
         "fax_label": "ファックス：",
         "department": {
-            "title": "縫製部門責任者",
-            "main_products": "主力製品：",
+            "title": "部門：",
             "block1": {
-                "name": "縫製部門1：ヴー・ティ・タイン・タイン – 代表取締役",
-                "product1": "作業着",
-                "product2": "医療用ユニフォーム"
-            }
+                "name": "営業部門",
+                "product1": "衣料品",
+                "product2": "糸製品"
+            },
+            "main_products": "主な製品："
         },
         "map": {
-            "title": "ミン ミン タム所在地"
+            "title": "地図"
+        },
+        "banner": {
+            "alt": "お問い合わせ - ミン ミン タム"
         }
     }
 }

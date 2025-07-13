@@ -15,12 +15,39 @@
         "export_markets": "Thị trường xuất khẩu",
         "products": "Sản phẩm",
         "yarn_products": "Sản phẩm sợi",
-        "garment_products": "Sản phẩm may xuất khẩu",
+        "export_garment_products": "Sản phẩm may xuất khẩu",
         "domestic_fashion": "Thời trang nội địa",
         "factories": "Nhà máy - Thương hiệu",
         "news": "Tin tức",
         "careers": "Tuyển dụng",
         "contact": "Liên hệ"
+    },
+    "contact": {
+        "meta": {
+            "title": "Liên hệ với Minh Minh Tâm",
+            "description": "Thông tin liên hệ của Công ty TNHH May Minh Minh Tâm. Địa chỉ, email, số điện thoại và các phòng ban liên quan."
+        },
+        "company_name": "Công ty TNHH May Minh Minh Tâm",
+        "address": "Đường Nguyễn Văn Linh, Xuân An, TP Phan Thiết, Tỉnh Bình Thuận",
+        "email_label": "Email:",
+        "phone_label": "Điện thoại:",
+        "tel_label": "Tel:",
+        "fax_label": "Fax:",
+        "department": {
+            "title": "Các bộ phận:",
+            "block1": {
+                "name": "Bộ phận kinh doanh",
+                "product1": "Hàng may mặc",
+                "product2": "Hàng sợi"
+            },
+            "main_products": "Các sản phẩm chính:"
+        },
+        "map": {
+            "title": "Bản đồ"
+        },
+        "banner": {
+            "alt": "Liên hệ - Minh Minh Tâm"
+        }
     },
     "notFound": {
         "title": "Không tìm thấy trang",
@@ -224,331 +251,102 @@
         "downloadBrochure": "Tải brochure"
     },
     "thi-truong-xuat-khau": {
+        "meta": {
+            "title": "Thị trường xuất khẩu",
+            "description": "Sản phẩm của Minh Minh Tâm đã có mặt tại nhiều thị trường lớn trên thế giới như Mỹ, Nhật Bản, EU, Hàn Quốc và các nước ASEAN."
+        },
         "banner": {
             "alt": "Thị trường xuất khẩu - Dệt may Minh Minh Tâm"
         },
-        "chart_title": "Biểu đồ kim ngạch xuất khẩu",
-        "chart_alt": "Biểu đồ kim ngạch xuất khẩu",
-        "market_title": "Thị trường xuất khẩu",
-        "market_alt": "Thị trường xuất khẩu toàn cầu"
+        "chart_title": "Biểu đồ tỷ lệ xuất khẩu",
+        "chart_alt": "Biểu đồ tỷ lệ xuất khẩu các thị trường",
+        "market_title": "Bản đồ thị trường",
+        "market_alt": "Bản đồ thị trường xuất khẩu toàn cầu"
     },
     "san-pham": {
-        "san-pham-soi": {
-            "title": "Sản phẩm sợi",
-            "breadcrumb_products": "Sản phẩm",
-            "breadcrumb_yarn_products": "Sản phẩm sợi",
-            "related_products": "Sản phẩm liên quan",
+        "may-xuat-khau": {
+            "meta": {
+                "title": "Sản phẩm may xuất khẩu",
+                "description": "Các sản phẩm may mặc xuất khẩu chất lượng cao của Minh Minh Tâm bao gồm veston, quần tây, áo khoác, dệt kim và đồ bảo hộ lao động."
+            },
+            "banner": {
+                "alt": "Sản phẩm may xuất khẩu - Minh Minh Tâm"
+            },
+            "title": "Sản phẩm may xuất khẩu",
             "products": {
-                "soi-tc": {
-                    "name": "Sợi TC",
-                    "breadcrumb": "Sợi TC",
-                    "alt": "Sợi TC",
-                    "thumbnail_alt": "Sợi TC - thumbnail",
-                    "brief": "Sợi TC là sản phẩm sợi pha trộn từ 65% polyester và 35% cotton, mang đến chất lượng vượt trội, độ bền cao và cảm giác thoải mái khi sử dụng.",
-                    "features_title": "Đặc điểm nổi bật:",
-                    "features": [
-                        "Đặc điểm: Được pha từ 65% polyester và 35% cotton",
-                        "Chất lượng: Đạt tiêu chuẩn xuất khẩu, ổn định, đồng đều",
-                        "Độ bền: Cao, ít nhăn và giữ dáng tốt",
-                        "Cảm giác: Mềm mại, thoải mái khi sử dụng",
-                        "Ứng dụng: Dệt vải may mặc, đồng phục, khăn trải giường..."
-                    ],
-                    "specs_title": "Thông số kỹ thuật:",
-                    "specs": [
-                        "Thành phần: 65% polyester / 35% cotton",
-                        "Độ mảnh: Ne 30/1, Ne 32/1, Ne 40/1",
-                        "Độ xoắn: TM 3.8 - 4.2",
-                        "Độ đều: CVm% 13 - 15",
-                        "Độ bền: CSP 2100 - 2300",
-                        "Màu sắc: Trắng sáng hoặc theo yêu cầu"
-                    ]
+                "veston": {
+                    "name": "Veston"
                 },
-                "soi-cvc": {
-                    "name": "Sợi CVC",
-                    "breadcrumb": "Sợi CVC",
-                    "alt": "Sợi CVC",
-                    "thumbnail_alt": "Sợi CVC - thumbnail",
-                    "brief": [
-                        "Sợi CVC là loại sợi pha giữa sợi polyester và cotton. Ngược lại với sợi TC, sợi CVC có thành phần cotton chiếm trên 50%.",
-                        "Sợi CVC khi sử dụng cho cảm giác dễ chịu, dễ thấm mồ hôi khi tiếp xúc da người."
-                    ],
-                    "features_title": "Đặc điểm nổi bật:",
-                    "features": [
-                        "Thành phần: Pha giữa polyester và cotton, với cotton chiếm trên 50%",
-                        "So với TC: Ngược lại với sợi TC, sợi CVC có tỷ lệ cotton cao hơn",
-                        "Cảm giác: Mang lại cảm giác dễ chịu khi tiếp xúc với da",
-                        "Tính năng: Dễ thấm hút mồ hôi, thoáng khí tốt"
-                    ],
-                    "specs_title": "Thông số kỹ thuật:",
-                    "specs": [
-                        "Thành phần: Cotton chiếm trên 50%, phần còn lại là polyester",
-                        "Tỷ lệ phổ biến: 60% cotton / 40% polyester",
-                        "Độ mảnh: Ne 20/1, Ne 30/1, Ne 32/1, Ne 40/1",
-                        "Độ xoắn: TM 3.8 - 4.2",
-                        "Độ bền: Kết hợp độ bền của cotton và polyester"
-                    ]
+                "quan_tay": {
+                    "name": "Quần tây"
                 },
-                "soi-cd": {
-                    "name": "Sợi CD",
-                    "breadcrumb": "Sợi CD",
-                    "alt": "Sợi CD",
-                    "thumbnail_alt": "Sợi CD - thumbnail",
-                    "brief": [
-                        "Sợi CD là loại sợi cotton có thành phần 100% từ xơ bông. Đây là chất liệu được dùng phổ biến nhất trong ngành may mặc hiện nay.",
-                        "Sợi CD có tính năng hút ẩm cao, thấm hút mồ hôi rất tốt, vì thế các loại vải được dệt bằng sợi CD khi sử dụng rất thoáng mát, dễ chịu."
-                    ],
-                    "features_title": "Đặc điểm nổi bật:",
-                    "features": [
-                        "Thành phần: 100% cotton từ xơ bông tự nhiên",
-                        "Tính năng: Hút ẩm cao, thấm hút mồ hôi tốt",
-                        "Cảm giác: Tạo cảm giác thoáng mát, dễ chịu khi sử dụng",
-                        "Phổ biến: Được sử dụng nhiều nhất trong ngành may mặc"
-                    ],
-                    "specs_title": "Thông số kỹ thuật:",
-                    "specs": [
-                        "Thành phần: 100% cotton",
-                        "Độ mảnh: Ne 20/1, Ne 30/1, Ne 32/1, Ne 40/1",
-                        "Độ xoắn: TM 3.8 - 4.2",
-                        "Độ đều: CVm% 13 - 15",
-                        "Độ bền: CSP 2200 - 2400"
-                    ]
+                "bao_ho": {
+                    "name": "Bảo hộ lao động"
                 },
-                "soi-xe-cac-loai": {
-                    "name": "Sợi xe các loại",
-                    "breadcrumb": "Sợi xe các loại",
-                    "alt": "Sợi xe các loại",
-                    "thumbnail_alt": "Sợi xe các loại - thumbnail",
-                    "brief": [
-                        "Sợi xe được hình thành từ việc chập 2 hay 3 sợi đơn với nhau và xe lại thành sợi với độ săn được thiết kế phù hợp.",
-                        "Sợi xe có độ bền cao hơn, phù hợp với các loại vải thô hoặc chỉ may."
-                    ],
-                    "features_title": "Đặc điểm nổi bật:",
-                    "features": [
-                        "Cấu tạo: Được hình thành từ việc chập 2 hay 3 sợi đơn với nhau",
-                        "Độ bền: Cao hơn so với sợi đơn",
-                        "Ứng dụng: Phù hợp với các loại vải thô hoặc làm chỉ may",
-                        "Đặc tính: Độ săn được thiết kế phù hợp với từng mục đích sử dụng"
-                    ],
-                    "specs_title": "Thông số kỹ thuật:",
-                    "specs": [
-                        "Số lượng sợi đơn: 2-3 sợi đơn",
-                        "Thành phần: Có thể từ cotton, polyester hoặc hỗn hợp",
-                        "Độ xoắn: Có thể điều chỉnh theo yêu cầu cụ thể",
-                        "Khả năng: Chịu lực tốt, độ bền cao"
-                    ]
+                "ao_khoac": {
+                    "name": "Áo khoác"
+                },
+                "det_kim": {
+                    "name": "Dệt kim"
                 }
             }
         },
-        "garments": {
-            "jackets": {
-                "title": "Áo khoác",
-                "banner": {
-                    "alt": "Sản phẩm may xuất khẩu"
-                },
-                "breadcrumb": {
-                    "parent": "Sản phẩm may xuất khẩu",
-                    "current": "Áo khoác"
-                },
-                "product_image": "Áo khoác - ảnh",
-                "thumbnail": "Áo khoác - thumbnail",
-                "general_info": {
-                    "title": "Thông tin chung",
-                    "content": "Dòng sản phẩm Jacket có nhiều kiểu dáng và thiết kế đa dạng từ formal (sang trọng, nghiêm túc) cho đến casual (giản dị, thoải mái). Sản phẩm dễ phối đồ và phù hợp nhiều loại thời tiết. Jackets được sử dụng rộng rãi trong nhiều hoạt động khác nhau như chơi thể thao, đi chơi, làm việc (môi trường công nghiệp nặng, công nghiệp nhẹ)."
-                },
-                "details": {
-                    "title": "Thông tin chi tiết",
-                    "point1": "Đa dạng về chất liệu vải: vải denim, da thật hoặc giả da, Nylon, Polyester, Fleece…để đáp ứng yêu cầu sử dụng, sở thích khác nhau của khách hàng",
-                    "point2": "Đa dạng về thiết kế: Jacket seamseal (chống thấm nước), Jacket Down (Lông vịt giữ nhiệt tốt), Jacket Padding, Jacket 1 lớp, 2 lớp, 3 lớp …",
-                    "point3": "Các mẫu được thiết kế ở form rộng rãi để khoác ngoài nên rất thoải mái cho người mặc, dễ dàng vận động mà không làm khó chịu."
-                },
-                "other_products": "Sản phẩm khác",
-                "related": {
-                    "suits": "Veston",
-                    "trousers": "Quần tây",
-                    "workwear": "Bảo hộ lao động",
-                    "knitwear": "Dệt kim"
-                }
+        "san-pham-soi": {
+            "meta": {
+                "title": "Sản phẩm sợi",
+                "description": "Sản phẩm sợi chất lượng cao của Minh Minh Tâm bao gồm sợi TC, sợi CD, sợi CVC và sợi xe các loại dùng trong dệt may."
             },
-            "trousers": {
-                "title": "Quần tây",
-                "banner": {
-                    "alt": "Sản phẩm may xuất khẩu"
-                },
-                "breadcrumb": {
-                    "parent": "Sản phẩm may xuất khẩu",
-                    "current": "Quần tây"
-                },
-                "product_image": "Quần tây - ảnh",
-                "thumbnail": "Quần tây - thumbnail",
-                "general_info": {
-                    "title": "Thông tin chung:",
-                    "content": "Quần tây là một trong những dòng sản phẩm xuất khẩu chủ lực của Minh Minh Tâm. Với nhiều kinh nghiệm sản xuất, sản phẩm quần tây của Minh Minh Tâm được nhiều khách hàng trong và ngoài nước tin dùng nhờ chất lượng đảm bảo, thiết kế phù hợp nhiều phong cách, và giá thành hợp lý."
-                },
-                "details": {
-                    "title": "Chi tiết sản phẩm:",
-                    "point1": "Form dáng phù hợp với nhiều đối tượng: Regular fit, Slim fit, Skinny fit",
-                    "point2": "Chất liệu đa dạng: Polyester, Cotton, Wool blend, Kaki, Vải stretch co giãn",
-                    "point3": "Đa dạng về màu sắc và kiểu dáng: Trơn màu, caro, kẻ sọc",
-                    "point4": "Phù hợp nhiều mục đích sử dụng: công sở, dự tiệc, đi làm, đi chơi",
-                    "point5": "Chi tiết tinh xảo: Đường may chắc chắn, túi quần thiết kế đẹp mắt, khóa kéo cao cấp, cúc và chốt quần chắc chắn"
-                },
-                "other_products": "Sản phẩm khác",
-                "related": {
-                    "suits": "Veston",
-                    "workwear": "Bảo hộ lao động",
-                    "jackets": "Áo khoác",
-                    "knitwear": "Dệt kim"
-                }
+            "banner": {
+                "alt": "Sản phẩm sợi - Minh Minh Tâm"
             },
-            "suits": {
-                "title": "Veston",
-                "banner": {
-                    "alt": "Sản phẩm may xuất khẩu"
+            "title": "Sản phẩm sợi",
+            "breadcrumb_products": "Sản phẩm",
+            "breadcrumb_yarn_products": "Sản phẩm sợi",
+            "products": {
+                "soi-tc": {
+                    "name": "Sợi TC"
                 },
-                "breadcrumb": {
-                    "parent": "Sản phẩm may xuất khẩu",
-                    "current": "Veston"
+                "soi-xe-cac-loai": {
+                    "name": "Sợi xe các loại"
                 },
-                "product_image": "Veston - ảnh",
-                "thumbnail": "Veston - thumbnail",
-                "general_info": {
-                    "title": "Thông tin chung:",
-                    "content": "Là dòng sản phẩm may xuất khẩu chủ lực của Minh Minh Tâm. Với nhiều năm kinh nghiệm sản xuất, các dòng sản phẩm áo veston của Minh Minh Tâm đã tạo được sự tin tưởng và hợp tác từ các khách hàng trong và ngoài nước."
+                "soi-cd": {
+                    "name": "Sợi CD"
                 },
-                "details": {
-                    "suit": {
-                        "title": "Chi tiết áo vest:",
-                        "point1": "Form dáng phù hợp với nhiều nhóm đối tượng khách hàng.",
-                        "point2": "Chất liệu đa dạng: cotton, polyester, wool, knit, linen,.. đi kèm nhiều chủng loại hoa văn khác nhau: trơn, caro, sọc, vải họa tiết...",
-                        "point3": "Đa dạng thiết kế: áo cơ bản, tuxedo, áo lót lửng, áo không lót..."
-                    },
-                    "vest": {
-                        "title": "Chi tiết áo ghile:",
-                        "point1": "Form dáng phù hợp với nhiều nhóm đối tượng khách hàng.",
-                        "point2": "Chất liệu đa dạng: cotton, polyester, wool, knit, linen, nhung.... đi kèm nhiều chủng loại hoa văn khác nhau: trơn, caro, sọc, vải họa tiết...",
-                        "point3": "Đa dạng thiết kế: áo ghile 1 hàng cúc, áo ghile 2 hàng cúc, áo ghile có ve."
-                    }
-                },
-                "other_products": "Sản phẩm khác",
-                "related": {
-                    "trousers": "Quần tây",
-                    "workwear": "Bảo hộ lao động",
-                    "jackets": "Áo khoác",
-                    "knitwear": "Dệt kim"
-                }
-            },
-            "knitwear": {
-                "title": "Dệt kim",
-                "banner": {
-                    "alt": "Sản phẩm may xuất khẩu"
-                },
-                "breadcrumb": {
-                    "parent": "Sản phẩm may xuất khẩu",
-                    "current": "Dệt kim"
-                },
-                "product_image": "Dệt kim - ảnh",
-                "thumbnail": "Dệt kim - thumbnail",
-                "general_info": {
-                    "title": "Thông tin chung:",
-                    "content": "Dệt kim là một trong những dòng sản phẩm xuất khẩu đa dạng của Minh Minh Tâm. Sản phẩm dệt kim được sản xuất bằng công nghệ hiện đại, đáp ứng các tiêu chuẩn chất lượng quốc tế và được xuất khẩu đến nhiều thị trường khó tính trên thế giới."
-                },
-                "details": {
-                    "title": "Chi tiết sản phẩm:",
-                    "point1": "Đa dạng về chất liệu: Cotton, Polyester, TC, CVC, Spandex, Viscose và các loại vải đặc biệt khác theo yêu cầu",
-                    "point2": "Phong phú về kiểu dáng: Áo thun, áo polo, áo hoodie, áo sweater, đồ thể thao,...",
-                    "point3": "Thiết kế đa dạng: Từ casual đến sporty, phù hợp mọi đối tượng",
-                    "point4": "Có khả năng co giãn tốt, thoáng khí, thoải mái khi mặc",
-                    "point5": "Màu sắc phong phú, bền màu, không xù lông, không co rút sau nhiều lần giặt",
-                    "point6": "Công nghệ in ấn hiện đại: In lụa, in chuyển nhiệt, thêu vi tính cao cấp,..."
-                },
-                "other_products": "Sản phẩm khác",
-                "related": {
-                    "suits": "Veston",
-                    "trousers": "Quần tây",
-                    "jackets": "Áo khoác",
-                    "workwear": "Bảo hộ lao động"
-                }
-            },
-            "workwear": {
-                "title": "Bảo hộ lao động",
-                "banner": {
-                    "alt": "Sản phẩm may xuất khẩu"
-                },
-                "breadcrumb": {
-                    "parent": "Sản phẩm may xuất khẩu",
-                    "current": "Bảo hộ lao động"
-                },
-                "product_image": "Bảo hộ lao động - ảnh",
-                "thumbnail": "Bảo hộ lao động - thumbnail",
-                "general_info": {
-                    "title": "Bảo hộ lao động (BHLĐ)",
-                    "content": "Đây chính là một trong những dòng hàng xuất khẩu chủ lực của Minh Minh Tâm nhiều năm qua. Nhu cầu thị trường đồ BHLĐ ngày càng tăng khi nhận thức về an toàn lao động tại các công ty ngày càng tăng cao. Mỗi sản phẩm bảo hộ lao động được sản xuất để dành riêng cho những người lao động đặc thù và chuyên nghiệp trong các lĩnh vực khác nhau như: công xưởng sản xuất, xây dựng, cơ khí, y tế,..."
-                },
-                "details": {
-                    "content": "Nắm bắt được nhu cầu của thị trường, Hoà Thọ đã tập trung năng lực sản xuất cho dòng sản phẩm này, tạo ra nhiều sản phẩm đẹp đúng tiêu chuẩn theo yêu cầu của khách hàng. Đến nay, các sản phẩm BHLĐ của Minh Minh Tâm luôn nhận được sự tin tưởng và đánh giá cao từ khách hàng trong và ngoài nước."
-                },
-                "other_products": "Sản phẩm khác",
-                "related": {
-                    "suits": "Veston",
-                    "trousers": "Quần tây",
-                    "jackets": "Áo khoác",
-                    "knitwear": "Dệt kim"
+                "soi-cvc": {
+                    "name": "Sợi CVC"
                 }
             }
         }
     },
     "nha-may-thuong-hieu": {
         "meta": {
-            "title": "Nhà máy sợi - Dệt may Minh Minh Tâm",
-            "description": "Thông tin chi tiết về nhà máy sợi của Công ty TNHH May Minh Minh Tâm"
+            "title": "Nhà máy và thương hiệu",
+            "description": "Thông tin về nhà máy sợi và thương hiệu của Công ty TNHH May Minh Minh Tâm tại Bình Thuận, Việt Nam."
         },
         "banner": {
-            "alt": "Nhà máy - Thương hiệu"
+            "alt": "Nhà máy sợi - Minh Minh Tâm"
         },
-        "title": "Nhà máy May Minh Minh Tâm",
         "breadcrumb": {
             "factory_brand": "Nhà máy - Thương hiệu",
             "yarn_factory": "Nhà máy sợi"
         },
-        "factory_image": {
-            "alt": "Nhà máy May Minh Minh Tâm"
-        },
+        "title": "Nhà máy sợi Minh Minh Tâm",
         "factory_info": {
             "title": "Thông tin nhà máy",
-            "area": "Diện tích 4.125m2",
-            "workers": "Lao động 150 người",
-            "production_capacity": "Năng lực sản xuất 22.000 cọc sợi",
-            "annual_output": "5.000 tấn/năm",
-            "address": "Khu phố 1, TT Tân Nghĩa, Hàm Tân, Bình Thuận, Việt Nam",
-            "main_products": "Đồng phục y tế, đồng phục bảo hộ",
-            "certifications": "OEKO-TEX STANDARD 100, ISO 9001-2015, COTTON USA, BCI, USTERIZED, GOTS, GRS CERTIFICATE",
-            "yarn_count": "Ne16-Ne32"
+            "area": "Tổng diện tích: 12.000 m²",
+            "workers": "Tổng số nhân viên: 256 người",
+            "production_capacity": "Công suất sản xuất: 550 tấn/tháng",
+            "annual_output": "Sản lượng hàng năm: 6.600 tấn",
+            "address": "Địa chỉ: Đường Nguyễn Văn Linh, Xuân An, TP Phan Thiết, Tỉnh Bình Thuận",
+            "main_products": "Sản phẩm chính: TC, CD, CVC và sợi xe các loại",
+            "certifications": "Các chứng nhận: ISO 9001:2015, Oeko-Tex Standard 100, BCI, GOTS, GRS",
+            "yarn_count": "Số sợi: 100% sợi Cotton từ Ne 16/1 - Ne 40/1, TC từ Ne 20/1 - Ne 45/1, CVC từ Ne 20/1 - Ne 45/1"
         },
         "map": {
-            "title": "Vị trí bản đồ"
-        }
-    },
-    "contact": {
-        "banner": {
-            "alt": "Liên hệ - Dệt may Minh Minh Tâm"
+            "title": "Vị trí nhà máy"
         },
-        "company_name": "Công ty TNHH May Minh Minh Tâm",
-        "address": "Địa chỉ: 36 Đ. Số 19B, Phường An Khánh, Thủ Đức, Hồ Chí Minh, Việt Nam",
-        "email_label": "Email:",
-        "phone_label": "Tổng đài:",
-        "tel_label": "Điện thoại:",
-        "fax_label": "Fax:",
-        "department": {
-            "title": "PHỤ TRÁCH NGÀNH MAY",
-            "main_products": "Mặt hàng chủ lực:",
-            "block1": {
-                "name": "Khối May 1: Ms. Vũ Thị Thanh Thanh – Tổng Giám đốc",
-                "product1": "Bảo hộ lao động",
-                "product2": "Thời trang y tế"
-            }
-        },
-        "map": {
-            "title": "Vị trí Minh Minh Tâm"
+        "factory_image": {
+            "alt": "Nhà máy sợi Minh Minh Tâm"
         }
     }
 }
