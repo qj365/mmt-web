@@ -5,6 +5,7 @@ import { routing } from '../i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import '../globals.css';
 import NextTopLoader from 'nextjs-toploader';
+import { Metadata } from 'next';
 
 const baiJamjuree = Bai_Jamjuree({
     subsets: ['latin', 'thai', 'vietnamese', 'latin-ext'],
@@ -16,16 +17,32 @@ export function generateStaticParams() {
     return routing.locales.map(locale => ({ locale }));
 }
 
-export const metadata = {
-    title: {
-        vi: 'Trang chủ - Dệt may Minh Minh Tâm',
-        ja: 'ホームページ - ミン ミン タム紡織会社',
-    },
-    description: {
-        vi: 'Trang chủ Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
-        ja: 'ミン ミン タム縫製有限責任会社（ビンタン市、ベトナム）- Vinatexのメンバー、糸および輸出衣料品の製造・販売を専門としています。',
-    },
-};
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Get the locale from params
+    const { locale } = await params;
+
+    // Define metadata for different languages
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: 'Dệt may Minh Minh Tâm',
+            description:
+                'Dệt may Minh Minh Tâm - Trang web chính thức của công ty',
+            keywords: 'dệt may, hàng may mặc, xuất khẩu, Minh Minh Tâm',
+        },
+        ja: {
+            title: 'ミンミンタム織物',
+            description: 'ミンミンタム織物 - 公式ウェブサイト',
+            keywords: '織物, アパレル, 輸出, ミンミンタム',
+        },
+    };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
+}
 
 export default async function LocaleLayout({
     children,
