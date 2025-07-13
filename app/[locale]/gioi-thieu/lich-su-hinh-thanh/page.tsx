@@ -4,7 +4,6 @@ import PageTitle from '@/app/components/shared/PageTitle';
 import Image from 'next/image';
 import { BreadcrumbItem } from '@/app/types';
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -12,17 +11,41 @@ export async function generateMetadata({
 }: {
     params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-    // Await params first to access the locale property
+    // Get the locale from params
     const { locale } = await params;
 
-    const t = await getTranslations({
-        locale,
-        namespace: 'gioi-thieu.lich-su',
-    });
-
-    return {
-        title: `${t('title')} - Minh Minh Tâm`,
+    // Define metadata for different languages
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: 'Lịch sử hình thành - Dệt may Minh Minh Tâm',
+            description:
+                'Tìm hiểu lịch sử hình thành và phát triển của Công ty TNHH May Minh Minh Tâm từ năm 1996 đến nay, cùng những cột mốc quan trọng trong hành trình phát triển.',
+            keywords:
+                'lịch sử hình thành, cột mốc phát triển, Minh Minh Tâm, doanh nghiệp dệt may, lịch sử công ty',
+            openGraph: {
+                title: 'Lịch sử hình thành - Dệt may Minh Minh Tâm',
+                description:
+                    'Tìm hiểu lịch sử hình thành và phát triển của Công ty TNHH May Minh Minh Tâm từ năm 1996 đến nay, cùng những cột mốc quan trọng trong hành trình phát triển.',
+                images: ['/images/gioi-thieu/lich-su/banner.png'],
+            },
+        },
+        ja: {
+            title: '沿革 - ミン ミン タム紡織',
+            description:
+                '1996年から現在までのミン ミン タム縫製有限会社の歴史と発展、および発展の道のりにおける重要なマイルストーンについて。',
+            keywords:
+                '沿革, 発展マイルストーン, ミン ミン タム, 繊維企業, 会社の歴史',
+            openGraph: {
+                title: '沿革 - ミン ミン タム紡織',
+                description:
+                    '1996年から現在までのミン ミン タム縫製有限会社の歴史と発展、および発展の道のりにおける重要なマイルストーンについて。',
+                images: ['/images/gioi-thieu/lich-su/banner.png'],
+            },
+        },
     };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
 }
 
 export default function LichSuPage() {

@@ -3,7 +3,6 @@ import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/app/types';
 import PageTitle from '@/app/components/shared/PageTitle';
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -11,17 +10,41 @@ export async function generateMetadata({
 }: {
     params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-    // Await params first to access the locale property
+    // Get the locale from params
     const { locale } = await params;
 
-    const t = await getTranslations({
-        locale,
-        namespace: 'gioi-thieu.loi-cam-ket',
-    });
-
-    return {
-        title: `${t('title')} - Minh Minh Tâm`,
+    // Define metadata for different languages
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: 'Lời cam kết - Dệt may Minh Minh Tâm',
+            description:
+                'Những cam kết của Công ty TNHH May Minh Minh Tâm đối với khách hàng và nhân viên - đảm bảo chất lượng sản phẩm, thực hiện trách nhiệm xã hội và tạo môi trường làm việc chuyên nghiệp.',
+            keywords:
+                'lời cam kết, cam kết với khách hàng, cam kết với nhân viên, trách nhiệm xã hội, Minh Minh Tâm',
+            openGraph: {
+                title: 'Lời cam kết - Dệt may Minh Minh Tâm',
+                description:
+                    'Những cam kết của Công ty TNHH May Minh Minh Tâm đối với khách hàng và nhân viên - đảm bảo chất lượng sản phẩm, thực hiện trách nhiệm xã hội và tạo môi trường làm việc chuyên nghiệp.',
+                images: ['/images/gioi-thieu/loi-cam-ket/bg.png'],
+            },
+        },
+        ja: {
+            title: 'コミットメント - ミン ミン タム紡織',
+            description:
+                'ミン ミン タム縫製有限会社のお客様と従業員に対する約束 - 製品品質の保証、社会的責任の実行、そしてプロフェッショナルな職場環境の創出。',
+            keywords:
+                'コミットメント, お客様への約束, 従業員への約束, 社会的責任, ミン ミン タム',
+            openGraph: {
+                title: 'コミットメント - ミン ミン タム紡織',
+                description:
+                    'ミン ミン タム縫製有限会社のお客様と従業員に対する約束 - 製品品質の保証、社会的責任の実行、そしてプロフェッショナルな職場環境の創出。',
+                images: ['/images/gioi-thieu/loi-cam-ket/bg.png'],
+            },
+        },
     };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
 }
 
 export default function LoiCamKet() {

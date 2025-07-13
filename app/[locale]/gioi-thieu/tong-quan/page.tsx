@@ -4,6 +4,49 @@ import ContentPageLayout from '@/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/app/types/';
 import PageTitle from '@/app/components/shared/PageTitle';
 import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Get the locale from params
+    const { locale } = await params;
+
+    // Define metadata for different languages
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: 'Tổng quan về công ty - Dệt may Minh Minh Tâm',
+            description:
+                'Tìm hiểu tổng quan về lịch sử, tầm nhìn và sứ mệnh của Công ty TNHH May Minh Minh Tâm - một trong những doanh nghiệp dệt may hàng đầu tại Việt Nam.',
+            keywords:
+                'tổng quan, dệt may, công ty may, Minh Minh Tâm, doanh nghiệp dệt may Việt Nam',
+            openGraph: {
+                title: 'Tổng quan về công ty - Dệt may Minh Minh Tâm',
+                description:
+                    'Tìm hiểu tổng quan về lịch sử, tầm nhìn và sứ mệnh của Công ty TNHH May Minh Minh Tâm - một trong những doanh nghiệp dệt may hàng đầu tại Việt Nam.',
+                images: ['/images/gioi-thieu/tong-quan/banner.png'],
+            },
+        },
+        ja: {
+            title: '会社概要 - ミン ミン タム紡織',
+            description:
+                'ベトナムの主要な繊維企業の一つであるミン ミン タム縫製有限会社の歴史、ビジョン、使命について学ぶ。',
+            keywords:
+                '会社概要, 紡織, 縫製会社, ミン ミン タム, ベトナム繊維企業',
+            openGraph: {
+                title: '会社概要 - ミン ミン タム紡織',
+                description:
+                    'ベトナムの主要な繊維企業の一つであるミン ミン タム縫製有限会社の歴史、ビジョン、使命について学ぶ。',
+                images: ['/images/gioi-thieu/tong-quan/banner.png'],
+            },
+        },
+    };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
+}
 
 export default function TongQuanPage() {
     const t = useTranslations('gioi-thieu.tong-quan');

@@ -2,7 +2,6 @@ import React from 'react';
 import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/app/types';
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -10,17 +9,41 @@ export async function generateMetadata({
 }: {
     params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-    // Await params first to access the locale property
+    // Get the locale from params
     const { locale } = await params;
 
-    const t = await getTranslations({
-        locale,
-        namespace: 'gioi-thieu.tam-nhin-su-menh',
-    });
-
-    return {
-        title: `${t('title')} - Minh Minh Tâm`,
+    // Define metadata for different languages
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: 'Tầm nhìn sứ mệnh - Dệt may Minh Minh Tâm',
+            description:
+                'Khám phá tầm nhìn, sứ mệnh và giá trị cốt lõi của Công ty TNHH May Minh Minh Tâm - những định hướng phát triển và triết lý kinh doanh của doanh nghiệp.',
+            keywords:
+                'tầm nhìn, sứ mệnh, giá trị cốt lõi, Minh Minh Tâm, phát triển bền vững, đối tác tin cậy',
+            openGraph: {
+                title: 'Tầm nhìn sứ mệnh - Dệt may Minh Minh Tâm',
+                description:
+                    'Khám phá tầm nhìn, sứ mệnh và giá trị cốt lõi của Công ty TNHH May Minh Minh Tâm - những định hướng phát triển và triết lý kinh doanh của doanh nghiệp.',
+                images: ['/images/gioi-thieu/tam-nhin/banner.png'],
+            },
+        },
+        ja: {
+            title: 'ビジョンと使命 - ミン ミン タム紡織',
+            description:
+                'ミン ミン タム縫製有限会社のビジョン、使命、そして企業としての開発指針とビジネス哲学を支える中核的価値観について。',
+            keywords:
+                'ビジョン, 使命, 中核的価値観, ミン ミン タム, 持続可能な発展, 信頼できるパートナー',
+            openGraph: {
+                title: 'ビジョンと使命 - ミン ミン タム紡織',
+                description:
+                    'ミン ミン タム縫製有限会社のビジョン、使命、そして企業としての開発指針とビジネス哲学を支える中核的価値観について。',
+                images: ['/images/gioi-thieu/tam-nhin/banner.png'],
+            },
+        },
     };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
 }
 
 export default function TamNhinSuMenh() {

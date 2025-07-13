@@ -5,17 +5,46 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { BreadcrumbItem } from '@/app/types/';
 
-export const metadata: Metadata = {
-    title: 'Cơ cấu tổ chức - Dệt may Minh Minh Tâm',
-    description:
-        'Cơ cấu tổ chức Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
-    openGraph: {
-        title: 'Cơ cấu tổ chức',
-        description:
-            'Cơ cấu tổ chức Công ty TNHH May Minh Minh Tâm (TP Bình Thuận, Việt Nam) – thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
-        siteName: 'Dệt may Minh Minh Tâm',
-    },
-};
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Get the locale from params
+    const { locale } = await params;
+
+    // Define metadata for different languages
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: 'Cơ cấu tổ chức - Dệt may Minh Minh Tâm',
+            description:
+                'Tìm hiểu về cơ cấu tổ chức và bộ máy quản lý của Công ty TNHH May Minh Minh Tâm - thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
+            keywords:
+                'cơ cấu tổ chức, bộ máy quản lý, sơ đồ tổ chức, Minh Minh Tâm, doanh nghiệp dệt may',
+            openGraph: {
+                title: 'Cơ cấu tổ chức - Dệt may Minh Minh Tâm',
+                description:
+                    'Tìm hiểu về cơ cấu tổ chức và bộ máy quản lý của Công ty TNHH May Minh Minh Tâm - thành viên Vinatex, chuyên sản xuất kinh doanh sợi và may mặc xuất khẩu.',
+                images: ['/images/gioi-thieu/co-cau-to-chuc/image.png'],
+            },
+        },
+        ja: {
+            title: '組織体制 - ミン ミン タム紡織',
+            description:
+                'Vinatexのメンバーであり、糸と輸出衣料品の製造・販売を専門とするミン ミン タム縫製有限会社の組織体制と管理構造について。',
+            keywords: '組織体制, 管理構造, 組織図, ミン ミン タム, 繊維企業',
+            openGraph: {
+                title: '組織体制 - ミン ミン タム紡織',
+                description:
+                    'Vinatexのメンバーであり、糸と輸出衣料品の製造・販売を専門とするミン ミン タム縫製有限会社の組織体制と管理構造について。',
+                images: ['/images/gioi-thieu/co-cau-to-chuc/image.png'],
+            },
+        },
+    };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
+}
 
 export default function OrganizationalStructure() {
     const t = useTranslations('gioi-thieu.co-cau-to-chuc');

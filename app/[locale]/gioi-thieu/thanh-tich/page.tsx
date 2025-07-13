@@ -4,7 +4,6 @@ import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import { BreadcrumbItem } from '@/app/types';
 import PageTitle from '@/app/components/shared/PageTitle';
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -12,17 +11,40 @@ export async function generateMetadata({
 }: {
     params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-    // Await params first to access the locale property
+    // Get the locale from params
     const { locale } = await params;
 
-    const t = await getTranslations({
-        locale,
-        namespace: 'gioi-thieu.thanh-tich',
-    });
-
-    return {
-        title: `${t('title')} - Minh Minh Tâm`,
+    // Define metadata for different languages
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: 'Thành tích - Dệt may Minh Minh Tâm',
+            description:
+                'Khám phá những thành tích và giải thưởng nổi bật của Công ty TNHH May Minh Minh Tâm, bao gồm giải thưởng Thương hiệu Quốc gia, Doanh nghiệp ưu tiên về hải quan và Doanh nghiệp xuất khẩu uy tín.',
+            keywords:
+                'thành tích, giải thưởng, thương hiệu quốc gia, doanh nghiệp xuất khẩu, Minh Minh Tâm',
+            openGraph: {
+                title: 'Thành tích - Dệt may Minh Minh Tâm',
+                description:
+                    'Khám phá những thành tích và giải thưởng nổi bật của Công ty TNHH May Minh Minh Tâm, bao gồm giải thưởng Thương hiệu Quốc gia, Doanh nghiệp ưu tiên về hải quan và Doanh nghiệp xuất khẩu uy tín.',
+                images: ['/images/gioi-thieu/thanh-tich/banner.png'],
+            },
+        },
+        ja: {
+            title: '業績 - ミン ミン タム紡織',
+            description:
+                '国家ブランド賞、優良通関企業、信頼できる輸出企業などを含む、ミン ミン タム縫製有限会社の顕著な業績と受賞歴について。',
+            keywords: '業績, 賞, 国家ブランド, 輸出企業, ミン ミン タム',
+            openGraph: {
+                title: '業績 - ミン ミン タム紡織',
+                description:
+                    '国家ブランド賞、優良通関企業、信頼できる輸出企業などを含む、ミン ミン タム縫製有限会社の顕著な業績と受賞歴について。',
+                images: ['/images/gioi-thieu/thanh-tich/banner.png'],
+            },
+        },
     };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
 }
 
 export default function ThanhTichPage() {
