@@ -27,7 +27,7 @@ export default function TongQuanPage() {
                         <div className="box-left flex-auto lg:flex-[0_0_40%] xl:flex-[0_0_calc(460/1230*100%)] lg:mt-16">
                             <div className="img mx-auto lg:mx-0 w-fit lg:w-auto">
                                 <Image
-                                    src="https://picsum.photos/400/500?random=1"
+                                    src="/images/gioi-thieu/tong-quan/factory-2.png"
                                     alt={t('letter.image_alt')}
                                     width={400}
                                     height={500}
@@ -95,14 +95,14 @@ export default function TongQuanPage() {
                             <div className="image-wrapper relative">
                                 <div className="img rounded-3xl lg:rounded-[200px] lg:rounded-br-none overflow-hidden">
                                     <Image
-                                        src="https://picsum.photos/600/400?random=3"
+                                        src="/images/gioi-thieu/tong-quan/worker.png"
                                         alt={t('intro.image_alt')}
                                         width={600}
                                         height={400}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="content mt-7 sm:mt-0 rounded-3xl lg:rounded-[75px] sm:rounded-br-none lg:rounded-br-none bg-primary px-3 py-5 lg:p-10 lg:pb-12 lg:pr-6 sm:absolute sm:bottom-[-15px] sm:right-[-15px] lg:bottom-[-30px] lg:right-[-30px] w-full sm:max-w-[253px]">
+                                <div className="content mt-7 sm:mt-0 rounded-3xl lg:rounded-[75px] sm:rounded-br-none lg:rounded-br-none bg-primary px-3 py-5 lg:p-10 lg:pb-12 lg:pr-6 sm:absolute sm:bottom-[-15px] sm:right-[-15px] lg:bottom-[-80px] lg:right-[-30px] w-full sm:max-w-[253px]">
                                     <div className="item mb-6">
                                         <div className="icon mb-[10px] flex justify-center sm:justify-start">
                                             <Image
