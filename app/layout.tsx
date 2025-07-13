@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import 'material-icons/iconfont/material-icons.css';
 
 export const metadata: Metadata = {
     title: 'Dệt may Minh Minh Tâm',

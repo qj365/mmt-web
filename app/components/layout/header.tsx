@@ -231,8 +231,8 @@ const NavLink = ({
                     onClick={() => isMobile && setIsOpen(!isOpen)}
                     aria-label={isOpen ? 'Close submenu' : 'Open submenu'}
                 >
-                    <i
-                        className="fal fa-angle-down xl:!hidden text-[1.875rem]"
+                    <span
+                        className="material-icons xl:!hidden text-[1.875rem]"
                         style={{
                             transform: isOpen
                                 ? 'rotate(180deg)'
@@ -240,7 +240,9 @@ const NavLink = ({
                             transition:
                                 'transform 0.4s cubic-bezier(0.45, 0, 0.55, 1)',
                         }}
-                    ></i>
+                    >
+                        expand_more
+                    </span>
                 </button>
             </div>
             <div

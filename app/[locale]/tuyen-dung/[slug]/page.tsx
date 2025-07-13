@@ -253,19 +253,25 @@ export default async function JobDetail({
                                                 href="tel:02363846290"
                                                 className="w-10 h-10 bg-[#338dcc] text-white rounded-full flex items-center justify-center hover:bg-[#56c1f9] transition-colors"
                                             >
-                                                <i className="fa fa-phone-alt text-white"></i>
+                                                <span className="material-icons text-white">
+                                                    phone
+                                                </span>
                                             </a>
                                             <a
                                                 href="mailto:minhminhtam.binhthuan@gmail.com"
                                                 className="w-10 h-10 bg-[#338dcc] text-white rounded-full flex items-center justify-center hover:bg-[#56c1f9] transition-colors"
                                             >
-                                                <i className="fa fa-envelope text-white"></i>
+                                                <span className="material-icons text-white">
+                                                    mail
+                                                </span>
                                             </a>
                                             <a
                                                 href="#"
                                                 className="w-10 h-10 bg-[#338dcc] text-white rounded-full flex items-center justify-center hover:bg-[#56c1f9] transition-colors"
                                             >
-                                                <i className="fab fa-facebook-square text-white"></i>
+                                                <span className="material-icons text-white">
+                                                    facebook
+                                                </span>
                                             </a>
                                         </div>
                                     </div>

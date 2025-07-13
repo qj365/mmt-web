@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@payloadcms/richtext-lexical": "^3.46.0",
+        "material-icons": "^1.13.14",
         "next": "15.3.3",
         "next-intl": "^4.3.4",
         "qs-esm": "^7.0.2",
