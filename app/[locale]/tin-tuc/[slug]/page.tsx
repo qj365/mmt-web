@@ -31,7 +31,7 @@ export default async function NewsDetailPage({
     const breadcrumbItems: BreadcrumbItem[] = [
         { label: 'Tin tức', href: '/tin-tuc' },
         {
-            label: 'Thông Tin Tổng Công Ty',
+            label: 'Thông Tin Công Ty',
             href: '/tin-tuc',
         },
         { label: article.title, href: `/tin-tuc/${params.slug}` },

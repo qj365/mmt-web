@@ -65,7 +65,7 @@ export default async function NewsPage({
             containerClassName="bg-gray-50"
         >
             <div className="flex flex-col items-center">
-                <PageTitle title="Thông Tin Tổng Công Ty" className="mb-10" />
+                <PageTitle title="Thông Tin Công Ty" className="mb-10" />
 
                 {/* News items grid */}
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
