@@ -28,8 +28,6 @@ const nextConfig: NextConfig = {
     },
     // Enable output compression for better performance
     compress: true,
-    // Reduce JavaScript bundle size
-    swcMinify: true,
     // Configure output for better performance
     output: 'standalone',
     // Enable static exports for pages that don't require server-side rendering

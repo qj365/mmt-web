@@ -263,6 +263,14 @@
         "market_title": "Bản đồ thị trường",
         "market_alt": "Bản đồ thị trường xuất khẩu toàn cầu"
     },
+    "tin-tuc": {
+        "meta_title": "Tin tức - Thông tin công ty",
+        "meta_description": "Cập nhật thông tin mới nhất về hoạt động, sự kiện và các thành tựu của Công ty TNHH May Minh Minh Tâm."
+    },
+    "tuyen-dung": {
+        "meta_title": "Tuyển dụng - Cơ hội nghề nghiệp",
+        "meta_description": "Thông tin về các vị trí tuyển dụng tại Công ty TNHH May Minh Minh Tâm. Gia nhập đội ngũ chuyên nghiệp của chúng tôi."
+    },
     "san-pham": {
         "may-xuat-khau": {
             "meta": {

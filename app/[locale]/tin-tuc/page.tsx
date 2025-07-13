@@ -8,6 +8,41 @@ import { NewsItem } from '@/app/types/news';
 import { getNewsItems } from '@/app/lib/api';
 import { ApiListResponse } from '@/app/types/api';
 import { formatDate } from '@/app/lib/utils';
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Await params first to access the locale property
+    const { locale } = await params;
+
+    // Get translations for SEO metadata
+    const t = await getTranslations({ locale, namespace: 'tin-tuc' });
+
+    return {
+        title: `${t('meta_title')} - Minh Minh Tâm`,
+        description: t('meta_description'),
+        openGraph: {
+            title: `${t('meta_title')} - Minh Minh Tâm`,
+            description: t('meta_description'),
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/tin-tuc`,
+            siteName: 'Minh Minh Tâm',
+            locale: locale,
+            type: 'website',
+            images: [
+                {
+                    url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/tin-tuc/banner.png`,
+                    width: 1200,
+                    height: 630,
+                    alt: t('meta_title'),
+                },
+            ],
+        },
+    };
+}
 
 export default async function NewsPage({
     searchParams: searchParamsPromise,

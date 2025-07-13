@@ -1,5 +1,13 @@
+import React from 'react';
+
 type JsonLdProps = {
-    type: 'Organization' | 'BreadcrumbList' | 'Product' | 'Article' | 'WebPage';
+    type:
+        | 'Organization'
+        | 'BreadcrumbList'
+        | 'Product'
+        | 'Article'
+        | 'WebPage'
+        | 'JobPosting';
     data: Record<string, unknown>;
 };
 
@@ -110,4 +118,115 @@ export function ProductJsonLd({
     };
 
     return <JsonLd type="Product" data={data} />;
+}
+
+// JobPosting JSON-LD for job detail pages
+export function JobPostingJsonLd({
+    jobTitle,
+    description,
+    datePosted,
+    validThrough,
+    employmentType,
+    location,
+    companyName = 'Minh Minh Tâm',
+    companyLogo,
+    baseSiteUrl,
+}: {
+    jobTitle: string;
+    description: string;
+    datePosted: string;
+    validThrough: string;
+    employmentType: string;
+    location: string;
+    companyName?: string;
+    companyLogo?: string;
+    baseSiteUrl?: string;
+}) {
+    const data = {
+        title: jobTitle,
+        description,
+        datePosted,
+        validThrough,
+        employmentType: mapEmploymentType(employmentType),
+        hiringOrganization: {
+            '@type': 'Organization',
+            name: companyName,
+            sameAs: baseSiteUrl || process.env.NEXT_PUBLIC_BASE_URL,
+            logo:
+                companyLogo ||
+                `${process.env.NEXT_PUBLIC_BASE_URL}/images/home/logo.png`,
+        },
+        jobLocation: {
+            '@type': 'Place',
+            address: {
+                '@type': 'PostalAddress',
+                addressLocality: location,
+            },
+        },
+    };
+
+    return <JsonLd type="JobPosting" data={data} />;
+}
+
+// Article JSON-LD for news articles
+export function ArticleJsonLd({
+    title,
+    description,
+    publishedAt,
+    modifiedAt,
+    authorName,
+    publisherName = 'Minh Minh Tâm',
+    publisherLogo,
+    imageUrl,
+    url,
+}: {
+    title: string;
+    description: string;
+    publishedAt: string;
+    modifiedAt?: string;
+    authorName?: string;
+    publisherName?: string;
+    publisherLogo?: string;
+    imageUrl: string;
+    url: string;
+}) {
+    const data = {
+        headline: title,
+        description,
+        image: imageUrl,
+        datePublished: publishedAt,
+        dateModified: modifiedAt || publishedAt,
+        author: {
+            '@type': 'Person',
+            name: authorName || 'Minh Minh Tâm',
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: publisherName,
+            logo: {
+                '@type': 'ImageObject',
+                url:
+                    publisherLogo ||
+                    `${process.env.NEXT_PUBLIC_BASE_URL}/images/home/logo.png`,
+            },
+        },
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': url,
+        },
+    };
+
+    return <JsonLd type="Article" data={data} />;
+}
+
+// Helper function to map employment types
+function mapEmploymentType(type: string): string {
+    const mappings: Record<string, string> = {
+        fullTime: 'FULL_TIME',
+        partTime: 'PART_TIME',
+        internship: 'INTERN',
+        remote: 'REMOTE',
+    };
+
+    return mappings[type] || 'OTHER';
 }

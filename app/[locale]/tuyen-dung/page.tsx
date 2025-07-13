@@ -8,6 +8,41 @@ import { JobItem } from '@/app/types/recruitment';
 import { ApiListResponse } from '@/app/types/api';
 import { getJobItems } from '@/app/lib/api';
 import { formatDate } from '@/app/lib/utils';
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Await params first to access the locale property
+    const { locale } = await params;
+
+    // Get translations for SEO metadata
+    const t = await getTranslations({ locale, namespace: 'tuyen-dung' });
+
+    return {
+        title: `${t('meta_title')} - Minh Minh Tâm`,
+        description: t('meta_description'),
+        openGraph: {
+            title: `${t('meta_title')} - Minh Minh Tâm`,
+            description: t('meta_description'),
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/tuyen-dung`,
+            siteName: 'Minh Minh Tâm',
+            locale: locale,
+            type: 'website',
+            images: [
+                {
+                    url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/tuyen-dung/banner.png`,
+                    width: 1200,
+                    height: 630,
+                    alt: t('meta_title'),
+                },
+            ],
+        },
+    };
+}
 
 export default async function TuyenDungPage({
     searchParams: searchParamsPromise,
