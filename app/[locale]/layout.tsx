@@ -66,7 +66,7 @@ export default async function LocaleLayout({
             <body
                 className={`${baiJamjuree.variable} homepage section-grey ${locale} bg-[#F5F5F5]`}
             >
-                <NextTopLoader />
+                <NextTopLoader showSpinner={false} />
                 <NextIntlClientProvider>{children}</NextIntlClientProvider>
             </body>
         </html>
