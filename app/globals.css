@@ -345,6 +345,23 @@
     all: revert;
 }
 
+.payload-richtext {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.payload-richtext img,
+.payload-richtext video,
+.payload-richtext iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .payload-richtext h1,
 .payload-richtext h2,
 .payload-richtext h3,
