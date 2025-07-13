@@ -8,6 +8,49 @@ import { NewsItem } from '@/app/types/news';
 import { getNewsItems } from '@/app/lib/api';
 import { ApiListResponse } from '@/app/types/api';
 import { formatDate } from '@/app/lib/utils';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Get the locale from params
+    const { locale } = await params;
+
+    // Define metadata for different languages
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: 'Tin tức - Dệt may Minh Minh Tâm',
+            description:
+                'Cập nhật tin tức mới nhất về Công ty TNHH May Minh Minh Tâm - thông tin hoạt động, sự kiện và các thành tựu của doanh nghiệp dệt may hàng đầu tại Việt Nam.',
+            keywords:
+                'tin tức, dệt may, Minh Minh Tâm, thông tin công ty, sự kiện, hoạt động doanh nghiệp, doanh nghiệp dệt may Việt Nam',
+            openGraph: {
+                title: 'Tin tức - Dệt may Minh Minh Tâm',
+                description:
+                    'Cập nhật tin tức mới nhất về Công ty TNHH May Minh Minh Tâm - thông tin hoạt động, sự kiện và các thành tựu của doanh nghiệp dệt may hàng đầu tại Việt Nam.',
+                images: ['/images/tin-tuc/banner.png'],
+            },
+        },
+        ja: {
+            title: 'ニュース - ミン ミン タム紡織',
+            description:
+                'ベトナムの主要な繊維企業であるミン ミン タム縫製有限会社に関する最新ニュース、イベント、業績についての最新情報をお届けします。',
+            keywords:
+                'ニュース, 紡織, ミン ミン タム, 会社情報, イベント, 企業活動, ベトナム繊維企業',
+            openGraph: {
+                title: 'ニュース - ミン ミン タム紡織',
+                description:
+                    'ベトナムの主要な繊維企業であるミン ミン タム縫製有限会社に関する最新ニュース、イベント、業績についての最新情報をお届けします。',
+                images: ['/images/tin-tuc/banner.png'],
+            },
+        },
+    };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
+}
 
 export default async function NewsPage({
     searchParams: searchParamsPromise,

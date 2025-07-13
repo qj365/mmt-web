@@ -8,6 +8,71 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { NewsItem } from '@/app/types/news';
 import { convertLexicalToHTML } from '@payloadcms/richtext-lexical/html';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+    params: paramsPromise,
+}: {
+    params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+    // Await the params object
+    const params = await paramsPromise;
+    const { locale, slug } = params;
+
+    // Fetch the article data based on the slug parameter
+    const article = await getNewsItemBySlug(slug);
+
+    // If article not found, return a basic metadata object
+    if (!article) {
+        return {
+            title: 'Article Not Found',
+            description: 'The requested article could not be found.',
+        };
+    }
+
+    // Define metadata based on the article content
+    const imageUrl = article.featuredImage
+        ? `${process.env.NEXT_PUBLIC_API_URL}${article.featuredImage.url}`
+        : '/images/tin-tuc/banner.png';
+
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: `${article.title} - Dệt may Minh Minh Tâm`,
+            description:
+                article.excerpt ||
+                'Thông tin chi tiết về bài viết từ Dệt may Minh Minh Tâm',
+            keywords: `${article.title}, tin tức, dệt may, Minh Minh Tâm, thông tin công ty`,
+            openGraph: {
+                title: `${article.title} - Dệt may Minh Minh Tâm`,
+                description:
+                    article.excerpt ||
+                    'Thông tin chi tiết về bài viết từ Dệt may Minh Minh Tâm',
+                images: [imageUrl],
+                type: 'article',
+                publishedTime: article.publishedAt,
+                modifiedTime: article.updatedAt,
+            },
+        },
+        ja: {
+            title: `${article.title} - ミン ミン タム紡織`,
+            description:
+                article.excerpt || 'ミン ミン タム紡織からの記事の詳細情報',
+            keywords: `${article.title}, ニュース, 紡織, ミン ミン タム, 会社情報`,
+            openGraph: {
+                title: `${article.title} - ミン ミン タム紡織`,
+                description:
+                    article.excerpt || 'ミン ミン タム紡織からの記事の詳細情報',
+                images: [imageUrl],
+                type: 'article',
+                publishedTime: article.publishedAt,
+                modifiedTime: article.updatedAt,
+            },
+        },
+    };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
+}
 
 export default async function NewsDetailPage({
     params: paramsPromise,
