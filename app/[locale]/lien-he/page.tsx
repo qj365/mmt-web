@@ -1,10 +1,51 @@
-'use client';
-
 import React from 'react';
 import ContentPageLayout from '@/components/layout/ContentPageLayout';
 import PageTitle from '@/components/shared/PageTitle';
 import { BreadcrumbItem } from '@/app/types';
 import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    // Get the locale from params
+    const { locale } = await params;
+
+    // Define metadata for different languages
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: 'Liên hệ - Dệt may Minh Minh Tâm',
+            description:
+                'Thông tin liên hệ Công ty TNHH May Minh Minh Tâm - địa chỉ, số điện thoại, email và bản đồ chỉ đường đến trụ sở chính và các nhà máy.',
+            keywords:
+                'liên hệ, địa chỉ công ty may, Minh Minh Tâm, số điện thoại, email, bản đồ',
+            openGraph: {
+                title: 'Liên hệ - Dệt may Minh Minh Tâm',
+                description:
+                    'Thông tin liên hệ Công ty TNHH May Minh Minh Tâm - địa chỉ, số điện thoại, email và bản đồ chỉ đường đến trụ sở chính và các nhà máy.',
+                images: ['/images/lien-he/banner.png'],
+            },
+        },
+        ja: {
+            title: 'お問い合わせ - ミン ミン タム紡織',
+            description:
+                'ミン ミン タム縫製有限会社の連絡先情報 - 住所、電話番号、メールアドレス、および本社と工場への地図。',
+            keywords:
+                'お問い合わせ, 縫製会社の住所, ミン ミン タム, 電話番号, メール, 地図',
+            openGraph: {
+                title: 'お問い合わせ - ミン ミン タム紡織',
+                description:
+                    'ミン ミン タム縫製有限会社の連絡先情報 - 住所、電話番号、メールアドレス、および本社と工場への地図。',
+                images: ['/images/lien-he/banner.png'],
+            },
+        },
+    };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
+}
 
 export default function ContactPage() {
     // Get translations

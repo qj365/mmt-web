@@ -4,7 +4,6 @@ import ContentPageLayout from '@/app/components/layout/ContentPageLayout';
 import PageTitle from '@/app/components/shared/PageTitle';
 import { BreadcrumbItem } from '@/app/types';
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -14,15 +13,38 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = await params;
 
-    const t = await getTranslations({
-        locale,
-        namespace: 'nha-may-thuong-hieu',
-    });
-
-    return {
-        title: t('meta.title'),
-        description: t('meta.description'),
+    // Define metadata for different languages
+    const metadata: Record<string, Metadata> = {
+        vi: {
+            title: 'Nhà máy và thương hiệu - Dệt may Minh Minh Tâm',
+            description:
+                'Thông tin chi tiết về nhà máy và thương hiệu của Công ty TNHH May Minh Minh Tâm - quy mô, công suất, sản phẩm chính và hệ thống cơ sở vật chất.',
+            keywords:
+                'nhà máy sợi, thương hiệu dệt may, Minh Minh Tâm, công suất sản xuất, sản phẩm sợi, chứng nhận chất lượng',
+            openGraph: {
+                title: 'Nhà máy và thương hiệu - Dệt may Minh Minh Tâm',
+                description:
+                    'Thông tin chi tiết về nhà máy và thương hiệu của Công ty TNHH May Minh Minh Tâm - quy mô, công suất, sản phẩm chính và hệ thống cơ sở vật chất.',
+                images: ['/images/nha-may-thuong-hieu/banner-1.png'],
+            },
+        },
+        ja: {
+            title: '工場とブランド - ミン ミン タム紡織',
+            description:
+                'ミン ミン タム縫製有限会社の工場とブランドに関する詳細情報 - 規模、生産能力、主要製品、施設の概要。',
+            keywords:
+                '糸工場, 繊維ブランド, ミン ミン タム, 生産能力, 糸製品, 品質認証',
+            openGraph: {
+                title: '工場とブランド - ミン ミン タム紡織',
+                description:
+                    'ミン ミン タム縫製有限会社の工場とブランドに関する詳細情報 - 規模、生産能力、主要製品、施設の概要。',
+                images: ['/images/nha-may-thuong-hieu/banner-1.png'],
+            },
+        },
     };
+
+    // Return metadata for the current locale, or fall back to vi
+    return metadata[locale] || metadata.vi;
 }
 
 export default function NhaMaySoi() {
