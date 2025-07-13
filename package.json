@@ -13,6 +13,7 @@
         "material-icons": "^1.13.14",
         "next": "15.3.3",
         "next-intl": "^4.3.4",
+        "nextjs-toploader": "^3.8.16",
         "qs-esm": "^7.0.2",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",

@@ -4,6 +4,7 @@ import { Bai_Jamjuree } from 'next/font/google';
 import { routing } from '../i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import '../globals.css';
+import NextTopLoader from 'nextjs-toploader';
 
 const baiJamjuree = Bai_Jamjuree({
     subsets: ['latin', 'thai', 'vietnamese', 'latin-ext'],
@@ -48,6 +49,7 @@ export default async function LocaleLayout({
             <body
                 className={`${baiJamjuree.variable} homepage section-grey ${locale} bg-[#F5F5F5]`}
             >
+                <NextTopLoader />
                 <NextIntlClientProvider>{children}</NextIntlClientProvider>
             </body>
         </html>
