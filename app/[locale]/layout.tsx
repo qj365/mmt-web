@@ -32,11 +32,36 @@ export async function generateMetadata({
             description:
                 'Dệt may Minh Minh Tâm - Trang web chính thức của công ty',
             keywords: 'dệt may, hàng may mặc, xuất khẩu, Minh Minh Tâm',
+            robots: {
+                index: true,
+                follow: true,
+            },
+            alternates: {
+                canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`,
+            },
+            openGraph: {
+                title: 'Dệt may Minh Minh Tâm',
+                description:
+                    'Dệt may Minh Minh Tâm - Trang web chính thức của công ty',
+                images: ['/images/home/logo.png'],
+            },
         },
         ja: {
             title: 'ミンミンタム織物',
             description: 'ミンミンタム織物 - 公式ウェブサイト',
             keywords: '織物, アパレル, 輸出, ミンミンタム',
+            robots: {
+                index: true,
+                follow: true,
+            },
+            alternates: {
+                canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`,
+            },
+            openGraph: {
+                title: 'ミンミンタム織物',
+                description: 'ミンミンタム織物 - 公式ウェブサイト',
+                images: ['/images/home/logo.png'],
+            },
         },
     };
 
