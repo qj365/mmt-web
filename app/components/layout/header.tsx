@@ -448,14 +448,14 @@ const Header = () => {
                         <div className="logo xl:static xl:translate-x-0 xl:mr-8 flex items-center justify-center h-full xl:w-[180px]">
                             <Link
                                 href={'/' as Href}
-                                className="flex items-center justify-center h-full w-full relative"
+                                className="inline-flex items-center justify-center relative"
                             >
                                 <Image
                                     src="/images/home/logo.png"
                                     alt="Dệt may Minh Minh Tâm"
                                     width={150}
                                     height={80}
-                                    className="scale-200 w-full h-full object-contain py-[5px] relative z-[1] xl:translate-y-6"
+                                    className="w-[105px] h-auto object-contain py-[5px] relative z-[1] xl:translate-y-6 xl:scale-125"
                                     priority
                                 />
                                 <span className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-[90px] w-[160px] h-[160px] z-0 transition-all duration-300 after:content-['']"></span>
