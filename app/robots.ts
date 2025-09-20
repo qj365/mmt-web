@@ -12,7 +12,7 @@ export default function robots(): MetadataRoute.Robots {
                 '/private/', // Protect private content if any
             ],
         },
-        sitemap: 'https://detmayminhmintam.com/sitemap.xml',
-        host: 'https://detmayminhmintam.com',
+        sitemap: `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`,
+        host: process.env.NEXT_PUBLIC_BASE_URL,
     };
 }
