@@ -19,6 +19,12 @@ const nextConfig: NextConfig = {
                 port: '',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'cms.thanhthanhmmt.com',
+                port: '',
+                pathname: '/**',
+            },
         ],
     },
     // Add server-side redirects for common patterns
