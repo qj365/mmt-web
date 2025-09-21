@@ -30,7 +30,7 @@ export async function generateMetadata({
         vi: {
             title: 'Dệt may Minh Minh Tâm',
             description:
-                'Dệt may Minh Minh Tâm - Trang web chính thức của công ty',
+                'Công ty TNHH May Minh Minh Tâm - Nhà sản xuất hàng đầu về dệt may và sản phẩm xuất khẩu tại Việt Nam. Chuyên sản xuất sợi, may mặc xuất khẩu với hơn 25 năm kinh nghiệm.',
             keywords: 'dệt may, hàng may mặc, xuất khẩu, Minh Minh Tâm',
             robots: {
                 index: true,
@@ -42,7 +42,7 @@ export async function generateMetadata({
             openGraph: {
                 title: 'Dệt may Minh Minh Tâm',
                 description:
-                    'Dệt may Minh Minh Tâm - Trang web chính thức của công ty',
+                    'Công ty TNHH May Minh Minh Tâm - Nhà sản xuất hàng đầu về dệt may và sản phẩm xuất khẩu tại Việt Nam. Chuyên sản xuất sợi, may mặc xuất khẩu với hơn 25 năm kinh nghiệm.',
                 images: ['/images/home/logo.png'],
             },
         },

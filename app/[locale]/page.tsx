@@ -29,14 +29,28 @@ export default async function Home({
     // Create homepage-specific JSON-LD
     const homeJsonLd = {
         '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        name: locale === 'vi' ? 'Dệt may Minh Minh Tâm' : 'ミンミンタム織物',
+        '@type': 'Organization',
+        name:
+            locale === 'vi'
+                ? 'Công ty TNHH May Minh Minh Tâm'
+                : 'ミンミンタム縫製有限責任会社',
+        alternateName:
+            locale === 'vi' ? 'Dệt may Minh Minh Tâm' : 'ミンミンタム織物',
         url: process.env.NEXT_PUBLIC_BASE_URL,
-        potentialAction: {
-            '@type': 'SearchAction',
-            target: `${process.env.NEXT_PUBLIC_BASE_URL}/search?q={search_term_string}`,
-            'query-input': 'required name=search_term_string',
+        logo: `${process.env.NEXT_PUBLIC_BASE_URL}/images/home/logo.png`,
+        description:
+            locale === 'vi'
+                ? 'Nhà sản xuất hàng đầu về dệt may và sản phẩm xuất khẩu tại Việt Nam với hơn 25 năm kinh nghiệm'
+                : 'ベトナムの主要な紡織・輸出製品メーカー、25年以上の経験',
+        foundingDate: '1996',
+        industry: locale === 'vi' ? 'Dệt may và may mặc' : '紡織・縫製',
+        numberOfEmployees: 150,
+        address: {
+            '@type': 'PostalAddress',
+            addressCountry: 'VN',
+            addressRegion: locale === 'vi' ? 'Bình Thuận' : 'ビントゥアン省',
         },
+        sameAs: [process.env.NEXT_PUBLIC_BASE_URL],
     };
 
     return (
